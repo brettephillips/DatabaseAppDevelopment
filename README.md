@@ -30,6 +30,7 @@ Brie McIntosh
 #### Scope
 * Out-of-scope: Players will not be able to play against each other using their saved decks.
 * We will only be dealing with English cards.
+* Information of individual cards and sets will be displayed.
 * The scope of the project includes searching through cards and saving cards in a “Deck List”.  The scope also includes viewing and rating saved card lists from other users.
 
 #### Input
@@ -64,6 +65,7 @@ Brie McIntosh
 #### Output
 * For players: A collection of personalized Magic the Gathering card decks.
 * Hobby Shop Owners: A searchable collection of Magic the Gathering cards to determine the most popular cards, so that they shop owners can purchase and profit off of certain cards.
+* Clicking on a individual card or set will display the detailed information for that item.
 
 #### Data Sources
 * https://magicthegathering.io/: A REST API that offers detailed data on Magic the Gathering cards. This data includes the card name, image, as well as attributes related to a single card.
