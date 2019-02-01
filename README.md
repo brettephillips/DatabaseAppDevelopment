@@ -20,7 +20,7 @@ Brie McIntosh
 * Users will be able to rate decklists saved by other users.
 
 #### Stakeholders
-* Players of “Magic the Gathering”, both casual and competitive.
+* Players of “Magic the Gathering”, both casual and competitive
   * They want to be able to easily print off their decklist for competitions.
   * They want to be able to scout their competition
   * They want to explore other decklist setups in order to improve their own
@@ -67,4 +67,27 @@ Brie McIntosh
 
 #### Data Sources
 * https://magicthegathering.io/: A REST API that offers detailed data on Magic the Gathering cards. This data includes the card name, image, as well as attributes related to a single card.
+
 #### Glossary
+* CMC
+	* Converted Mana Cost, the total cost to play a card within the game.
+* Color
+	* The color of the cards consist of, White(W), Blue(U), Black(B), Red(R), and Green(G). The single characters are considered the color identities of the card.
+* Decklist
+	* The number and combination of cards in the deck that are a minimum of 60 or a total of 100 cards, depending on the format.
+* Game format
+	* Standard, Modern, Pauper, Legacy, Commander/EDH, or Vintage.
+* Lands
+	* Locations under the player’s control that can be used to generate mana.
+* Legality
+	* Certain cards are banned within formats and this is a flag to show if the card is legal within a certain format.
+* Mana
+	* A resource used to play many of the game’s cards and abilities.
+* Power
+	* The amount of damage a creature will do when combat occurs.
+* Rarity
+	* Common, Uncommon, Rare, Mythic.
+* Toughness
+	* The amount of damage a creature can endure when combat occurs.
+* Type
+	* Creature, Enchantment, Instant, Sorcery, Artifact, Planeswalker, Tribal, Land.
