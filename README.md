@@ -9,11 +9,61 @@ Brie McIntosh
 
 ## Milestone 1 - Requirements
 #### Summary
+* This application will be used in the process of making decklists for magic the gathering players who want to save and keep track of their own decklists as well as the decklists of other players who have shared their lists through the app. The decks can be sorted by user input that will be done by color and format. The other use of the app will be that the user can create a deck, this will be done by searching for specific cards this can be done with anything from the name, and be as vague as the color of the card. Once the user finds the card they desire they can add it to the list, with a specified quantity of the card in the deck. The list will require a minimum of 60 cards total, or in some cases it will require 100 if the format is specified to be one of the 100 card total formats, this will also limit the user to only being able to add one of each card, excluding basic lands. The user will be able to look at the card and get all the information associated with the cards, including color, CMC(converted mana cost), power, toughness, type, set name, rarity, and the text on the card. This will be made use of by the players of the game that would like to look up other decks in order to prepare themselves for an event or so they can save their own decks in order to print them out of an event that decklists are needed at.
 #### Goals
+* Users will be able to search through cards based on selectable filters.  Some filters will be checkboxes, while others will accept text input.
+* Users will be able to select cards and add them to a saved decklist.
+  * A user can create, edit, save, share, and delete their saved decklists.
+* Users will be able to view saved decklists from other users.
+* Users can filter saved decklists by criteria.
+* Users will be able to rate decklists saved by other users.
+
 #### Stakeholders
+* Players of “Magic the Gathering”, both casual and competitive.
+  * They want to be able to easily print off their decklist for competitions.
+  * They want to be able to scout their competition
+  * They want to explore other decklist setups in order to improve their own
+* Hobby shop owners 
+  * They want to review popular cards and decklists for the purpose of making a profit.
+
 #### Scope
+* Out-of-scope: Players will not be able to play against each other using their saved decks.
+* We will only be dealing with English cards.
+* The scope of the project includes searching through cards and saving cards in a “Deck List”.  The scope also includes viewing and rating saved card lists from other users.
+
 #### Input
+* User input will be received as search queries based on filters.
+* Card and Set metadata from an online database API.
+* Users will enter the number of a single card needed for a deck, excluding basic lands.
+* User input will be entered into the database when saving, editing, or deleting a deck.
+* User input will be used to filter community made decklists.
+* Partial user input will be gathered for rating of decklists saved by other users.
+
 #### Processing
+* Card searching will be based off of filtered parameters selected by the user. Some filters will be checkboxes, while others will accept text input. These parameters will include:
+	* Name
+	* Color
+	* Type
+	* Mana Cost (cmc)
+	* Card Type
+	* Card Super-Type
+	* Card Subtype
+	* Rarity
+	* Set Name
+	* Text
+	* Power
+	* Toughness
+	* Game Format
+	* Legality
+* In order to persist data, creation of completed decklists, consisting of 60 cards or a total of 100 cards depending on the format, will be stored in a database.
+* Saved deck lists will be pulled from the local database and displayed in the application.
+* The rating of community decklists will be saved in the local database as well and be limited to a scale of 1-5.
+* All input will be sanitized and validated to prevent malicious content and user errors.
+
 #### Output
+* For players: A collection of personalized Magic the Gathering card decks.
+* Hobby Shop Owners: A searchable collection of Magic the Gathering cards to determine the most popular cards, so that they shop owners can purchase and profit off of certain cards.
+
 #### Data Sources
+* https://magicthegathering.io/: A REST API that offers detailed data on Magic the Gathering cards. This data includes the card name, image, as well as attributes related to a single card.
 #### Glossary
