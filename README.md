@@ -109,6 +109,23 @@ Brie McIntosh
 	* Daniel Eden
 	* Brett Phillips
 #### Background
+Magic the Gathering(MTG) is a card game that was started in 1993 by Richard Garfield and his team,
+now know to be Wizard's of the Coast(WOTC). 
+The cards were originally made with intent for them to be collected and played with for fun and no single person
+would need more than one copy of each card in their possesion, but eventually that turned to everyone needing 
+four of each card to conform to the new competetive rules that had come about.
+These competetive rules come out some time in 1996 when Organized Play was being put into place by WOTC,
+not all players jumped on the boat for this form of play right away and continued to play with their own rules
+or just the original rules they had played with before the new rules had come about, these players would be
+referred to as casual players since they did not use the Organized Play rules.
+The objective of the game is to get your opponent to zero life points, which in most games a player will start at 20,
+there are some formats of the game where a player can start at more life.
+There is a lesser know way to win and that is in the way of getting your opponent draw their entire deck
+and upon the attempt to draw a card when none are present in the deck that player loses.
+A normal game usually plays out with both players putting lands into play that are used to cast creatures, instants,
+sorceries, enchantments, artifacts, or planeswalker all of which are referred to as spells.
+These spells help in winning the game or sometimes just preventing the other player from winning all together
+which can result in a draw.
 #### Project Description
 #### Project Requirements
 #### Business Rules
