@@ -93,3 +93,13 @@ Brie McIntosh
 	* The amount of damage a creature can endure when combat occurs.
 * Type
 	* Creature, Enchantment, Instant, Sorcery, Artifact, Planeswalker, Tribal, Land.
+	
+## Milestone 2 - Requirements
+#### Team Members and Roles
+#### Background
+#### Project Description
+#### Project Requirements
+#### Business Rules
+#### Technologies Used
+#### Timeline
+#### Design Patterns
