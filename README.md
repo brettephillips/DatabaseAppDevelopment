@@ -118,4 +118,111 @@ Brie McIntosh
 * Hosting
 	* Heroku
 #### Timeline
-#### Design Patterns
+#### Design Patterns 
+
+##### Flask Application Design Patterns
+
+We will be following industry standard "best practices" when designing our Flask application architecture.
+
+**Project Root Back-end:**
+
+* Pages will be served using the main application file "mtg.py".
+* This file defines URL routes and provides GET and POST methods to pass data from the front-end to the back-end.
+
+EX: 
+`@app.route('/form-example', methods=['GET', 'POST'])`
+
+* Back-end data is presented to the web interface through rendered HTML templates.
+* The location of these templates and other static resources is denoted in this file.
+* This 
+
+* Below is the current proof of concept code we have developed for "mtg.py":
+
+```python
+# Import needed Flask packages
+from flask import Flask
+from flask import render_template
+
+# Set Project Root directory
+import os
+project_root = os.path.dirname(__file__)
+
+# Define template and static folders for flask app
+template_path = os.path.join(project_root, './templates')
+static_path = os.path.join(project_root, './static')
+
+# Import MTG API SDK 
+from mtgsdk import Card
+
+##################################################################################
+app = Flask(__name__, template_folder=template_path, static_folder=static_path)
+##################################################################################
+# Home Page
+@app.route("/")
+def home():
+	# Set home title
+	h_title = "MTG Deck Planner"
+
+	# Search parameters:
+	search_name = "card"
+
+	# Get some cards
+	cards = Card.where(page=1).where(pageSize=10).where(name=search_name).all()
+
+	# Set card name list to sent to template
+	c_names = []
+
+	# # Put card names in list
+	for c in cards:
+		if str(c.image_url) != "None":
+			c_names.append([c.name, c.image_url])
+
+	return render_template('home.html',
+		title=h_title,
+		cards=c_names
+		)
+
+	#return(h_title)
+
+##################################################################################
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
+```
+
+**HTML templates**
+
+* HTML templates in the ./templates folder are used to render the back-end data provided by mtg.py.
+* Back-end variables can be placed in specific places by inserting them in the template like:
+EX:
+`<title>{{title}}</title>`
+
+* Lists of backend data can be passed to the template and iterated over to create groups web elements
+EX: (this code uses a list 'cards' and iterates over each element 'n'.  n[0] is the card name and n[1] is the card image URL.)
+```
+<div id='card_return'>
+  {% for n in cards %}
+  <div class='card_show'>
+    <p>{{n[0]}}</p>
+    <img src="{{n[1]}}" alt="{{n[0]}}">
+  </div>
+  {% endfor %}
+</div>
+```
+
+* In addition, other HTML templates can be included in a template.  
+* This allows for segmenting code into meaningful, reusable chunks.
+* These can be called with:
+
+EX: (this will include the navigation menu) 	
+`{% include 'nav.html' %}`
+
+
+**Static Files**
+* The static folder is used to store web resources that will be used by the front end.
+* This includes "media", "js", and "css" sub-folders.
+* When the template and static folders are specified in the main application file (mtg.py) the HTML have access to the resources in the following path: /static
+EX: 
+`<img src="/static/media/magic_logo.png" alt="logo" width="150">`
+
+
+
