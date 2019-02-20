@@ -147,6 +147,59 @@ which can result in a draw.
 * Hosting
 	* Heroku
 #### Timeline
+* Milestone 1 - Requirements
+	* Due Date - Feb 1, 2019 11:59 PM
+	* For this milestone, include:
+		* Summary
+		* Goals
+		* Stakeholders
+		* Scope
+		* Input
+		* Processing
+		* Output
+		* Data Sources
+		* Glossary
+* Milestone 2 - Design and Design Patterns
+	* Due Date - Feb 22, 2019 11:59 PM
+	* For this milestone, include:
+		* Team Members and Roles
+		* Background
+		* Project Description
+		* Project Requirements
+		* Business Rules
+		* Technologies Used
+		* Timeline
+* Milestone 3 - Layering
+	* Due Date - Mar 1, 2019 11:59 PM
+	* For this milestone, include:
+		* In their own sections, the layers of the application
+		* Be descriptive such as explaining classes and their roles
+* Milestone 4 - Exception Handling
+	* Due Date - Mar 22, 2019 11:59 PM
+	* For this milestone, include:
+		* Categories of exceptions that we are expecting
+		* Examples of actual exception-handling code
+		* Where are the exceptions created/where are they being sent to and from
+* Milestone 5 - Performance and Refactoring
+	* Due Date - Apr 5, 2019 11:59 PM
+	* For this milestone, include:
+		* How do we plan to improve your performance?
+		* Give code examples of good coding practices
+		* Improve existing code
+* Milestone 6 - Testing
+	* Due Date - Apr 19, 2019 11:59 PM
+	* For this milestone, include:
+		* Identify the testing framework (include necessary diagrams)
+		* Provide code examples
+* Milestone 7 - Deployment, Packaging
+	* Due Date - Apr 26, 2019 11:59 PM
+	* For this milestone, include:
+		* Detail everything needed for packaging and deployment (A user should be able to read this and run the application)
+		* A help specification, detailing wha tkinds of help would be provided in a full-blown installation
+* Milestone 8 - Finalized Code
+	* Due Date - Apr 29, 2019 11:59 PM
+	* For this milestone, include:
+		* A submission of the full code in the dropbox
 #### Design Patterns 
 
 ##### Flask Application Design Patterns
