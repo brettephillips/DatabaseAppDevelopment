@@ -101,5 +101,21 @@ Brie McIntosh
 #### Project Requirements
 #### Business Rules
 #### Technologies Used
+* Frontend
+	* HTML/CSS
+	* JavaScript
+		* jQuery
+	* BootStrap
+* Backend
+	* Python
+		* Flask
+	* Magic API
+	* Magic Python SDK
+* DBMS
+	* SQLite 3
+* OS
+	* Ubuntu 18.04
+* Hosting
+	* Heroku
 #### Timeline
 #### Design Patterns
