@@ -96,6 +96,18 @@ Brie McIntosh
 	
 ## Milestone 2 - Requirements
 #### Team Members and Roles
+* Backend Developers
+	* Daniel Eden
+	* Alex Johnson
+* Frontend Developers
+	* Brett Phillips
+	* Brie McIntosh
+* Content Creators
+	* Alex Johnson
+	* Brie McIntosh
+* Database Developers
+	* Daniel Eden
+	* Brett Phillips
 #### Background
 #### Project Description
 #### Project Requirements
