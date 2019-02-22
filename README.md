@@ -117,7 +117,11 @@ This application will be used to make decklists for Magic the Gathering players 
 	* Users should be able to rate decklists saved by other users
 	
 ## Business Rules
-	
+* A saved deck must be at least 60 cards.
+* Up to fifteen cards may be included in your sideboard, if you use one.
+* Include no more than four copies of any individual card in your main deck and sideboard combined (except basic lands).
+* There's no maximum deck size, as long as you can shuffle your deck in your hands unassisted.
+
 ## Technologies Used
 * Frontend
 	* HTML/CSS
@@ -288,9 +292,9 @@ EX:
 * CMC
 	* Converted Mana Cost, the total cost to play a card within the game.
 * Color
-	* The color of the cards consist of, White(W), Blue(U), Black(B), Red(R), and Green(G). The single characters are considered the color identities of the card.
+	* The color of the cards consist of, White(W), Blue(U), Black(B), Red(R), and Green(G). The single characters are considered the color identities of the card.	
 * Decklist
-	* The number and combination of cards in the deck that are a minimum of 60 or a total of 100 cards, depending on the format.
+	* The number and combination of cards in the deck that are a minimum of 60 in standard format.
 * Game format
 	* Standard, Modern, Pauper, Legacy, Commander/EDH, or Vintage.
 * Lands
@@ -303,6 +307,8 @@ EX:
 	* The amount of damage a creature will do when combat occurs.
 * Rarity
 	* Common, Uncommon, Rare, Mythic.
+* Sideboard
+	* A group of additional cards the player may use to modify his or her deck between games of a match.
 * Toughness
 	* The amount of damage a creature can endure when combat occurs.
 * Type
