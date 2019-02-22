@@ -279,10 +279,12 @@ if __name__ == "__main__":
 
 * HTML templates in the ./templates folder are used to render the back-end data provided by mtg.py.
 * Back-end variables can be placed in specific places by inserting them in the template like:
+
 EX:
 `<title>{{title}}</title>`
 
 * Lists of backend data can be passed to the template and iterated over to create groups web elements
+
 EX: (this code uses a list 'cards' and iterates over each element 'n'.  n[0] is the card name and n[1] is the card image URL.)
 ```
 <div id='card_return'>
@@ -307,6 +309,7 @@ EX: (this will include the navigation menu)
 * The static folder is used to store web resources that will be used by the front end.
 * This includes "media", "js", and "css" sub-folders.
 * When the template and static folders are specified in the main application file (mtg.py) the HTML have access to the resources in the following path: /static
+
 EX: 
 `<img src="/static/media/magic_logo.png" alt="logo" width="150">`
 
