@@ -72,15 +72,15 @@ ISTE 432
 		* A submission of the full code in the dropbox
 
 ## Background
-Magic the Gathering(MTG) is a card game that was started in 1993 by Richard Garfield and his team, now known to be Wizard's of the Coast(WOTC).  The cards were originally made with intent for them to be collected and played with for fun.  No single person would need more than one copy of each card in their possession, but eventually that turned to everyone needing four of each card to conform to the new competitive rules that had come about. These competitive rules came out in 1996 when "Organized Play" was being put into place by WOTC.  Not all players jumped on the boat for this form of play right away.  Many continued to play with their own rules, or the original rules they had played with before the new rules where established.  These players would be referred to as casual players since they did not use the official "Organized Play" rules.  
+Magic the Gathering(MTG) is a card game that was started in 1993 by Richard Garfield and his team, now known to be Wizard's of the Coast(WOTC).  The cards were originally made with intent for them to be collected and played with for fun.  No single person would need more than one copy of each card in their possession, but eventually that turned to everyone needing four of each card to conform to the new competitive rules that had come about. These competitive rules came out in 1996 when "Organized Play" was being put into place by WOTC.  Not all players jumped on the boat for this form of play right away. Many continued to play with their own rules, or the original rules they had played with before the new rules where established. These players would be referred to as casual players since they did not use the official "Organized Play" rules.  
 
-The objective of the game is to get your opponent to zero life points.  In most games a player will start at 20 life points, however there are some formats of the game where a player can start at more life.  There is a lesser known way to win which requires your opponent draw their entire deck.  When the player with the exhausted deck attempts to draw a card when none are present in the deck, that player loses.  A normal game usually plays out with both players putting lands into play that are used to cast creatures, instants, sorceries, enchantments, artifacts, or planeswalker, all of which are referred to as spells. Playing these spell cards can be used to defeat the opponent or prevent the opponent from winning all together, which can result in a draw.
+The objective of the game is to get your opponent to zero life points. In most games a player will start at 20 life points, however there are some formats of the game where a player can start at more life. There is a lesser known way to win which requires your opponent draw their entire deck.  When the player with the exhausted deck attempts to draw a card when none are present in the deck, that player loses.  A normal game usually plays out with both players putting lands into play that are used to cast creatures, instants, sorceries, enchantments, artifacts, or planeswalker, all of which are referred to as spells. Playing these spell cards can be used to defeat the opponent or prevent the opponent from winning all together, which can result in a draw.
 
 ## Summary/Project Description
-This application will be used to make decklists for Magic the Gathering players who want to save and keep track of their own decklists as well as the decklists of other players. The decks can be sorted by user input and filters such as color and format. The other use of the application will be for users that want to create a deck. This will be done by searching for specific cards, which can be done with attributes like name, color of the card, and rarity of the card. Once the user finds the card they desire, they can add it to the list. The list will require a minimum of 60 cards total, or in some cases it will require 100 depending on the game type. Users are allowed to have multiple identical cards if they are playing the 100 card format of the game. The user will be able to view any card and acquire all of the information associated with the cards, including color, CMC(converted mana cost), power, toughness, type, set name, rarity, and the text on the card. This application will be helpful to players of the game because it allows them to look up other decks in order to prepare themselves for an event. In addition, they can save their own decks in order to print them out for an event in which decklists are required.
+This application will be used to make decklists for Magic the Gathering players who want to save and keep track of their own decklists as well as the decklists of other players. The decks can be sorted by user input and filters such as color and format. The other use of the application will be for users that want to create a deck. This will be done by searching for specific cards, which can be done with attributes like name, color of the card, and rarity of the card. Once the user finds the card they desire, they can add it to the list. The user will be able to view any card and acquire all of the information associated with the cards, including color, CMC(converted mana cost), power, toughness, type, set name, rarity, and the text on the card. This application will be helpful to players of the game because it allows them to look up other decks in order to prepare themselves for an event. In addition, they can save their own decks in order to print them out for an event in which decklists are required.
 
 ## Goals
-* Users will be able to search through cards based on selectable filters.  Some filters will be checkboxes, while others will accept text input.
+* Users will be able to search through cards based on selectable filters. Some filters will be checkboxes, while others will accept text input.
 * Users will be able to select cards and add them to a saved decklist.
 * A user can create, edit, save, share, and delete their saved decklists.
 * Users will be able to view saved decklists from other users.
@@ -99,7 +99,7 @@ This application will be used to make decklists for Magic the Gathering players 
 * Out-of-scope: Players will not be able to play against each other using their saved decks.
 * We will only be dealing with English cards.
 * Information of individual cards and sets will be displayed.
-* The scope of the project includes searching through cards and saving cards in a “Deck List”.  The scope also includes viewing and rating saved card lists from other users.
+* The scope of the project includes searching through cards and saving cards in a “Deck List”. The scope also includes viewing and rating saved card lists from other users.
 
 ## Project Requirements
 * Card Viewing
@@ -160,7 +160,7 @@ Card searching will be based off of filtered parameters selected by the user. So
 	* Toughness
 	* Game Format
 	* Legality
-* In order to persist data, creation of completed decklists, consisting of 60 cards or a total of 100 cards depending on the format, will be stored in a database.
+* In order to persist data, creation of completed decklists, consisting of 60+ cards, will be stored in a database.
 * Saved deck lists will be pulled from the local database and displayed in the application.
 * The rating of community decklists will be saved in the local database as well and be limited to a scale of 1-5.
 * All input will be sanitized and validated to prevent malicious content and user errors.
