@@ -24,7 +24,7 @@ Brie McIntosh
   * They want to be able to easily print off their decklist for competitions.
   * They want to be able to scout their competition
   * They want to explore other decklist setups in order to improve their own
-* Hobby shop owners 
+* Hobby shop owners
   * They want to review popular cards and decklists for the purpose of making a profit.
 
 #### Scope
@@ -93,7 +93,7 @@ Brie McIntosh
 	* The amount of damage a creature can endure when combat occurs.
 * Type
 	* Creature, Enchantment, Instant, Sorcery, Artifact, Planeswalker, Tribal, Land.
-	
+
 ## Milestone 2 - Requirements
 #### Team Members and Roles
 * Backend Developers
@@ -110,9 +110,9 @@ Brie McIntosh
 	* Brett Phillips
 #### Background
 Magic the Gathering(MTG) is a card game that was started in 1993 by Richard Garfield and his team,
-now know to be Wizard's of the Coast(WOTC). 
+now know to be Wizard's of the Coast(WOTC).
 The cards were originally made with intent for them to be collected and played with for fun and no single person
-would need more than one copy of each card in their possesion, but eventually that turned to everyone needing 
+would need more than one copy of each card in their possesion, but eventually that turned to everyone needing
 four of each card to conform to the new competetive rules that had come about.
 These competetive rules come out some time in 1996 when Organized Play was being put into place by WOTC,
 not all players jumped on the boat for this form of play right away and continued to play with their own rules
@@ -127,16 +127,17 @@ sorceries, enchantments, artifacts, or planeswalker all of which are referred to
 These spells help in winning the game or sometimes just preventing the other player from winning all together
 which can result in a draw.
 #### Project Description
+Please see Milestone 1 - Summary Section
 #### Project Requirements
 * Card Viewing
-	* Users must be able to view a list of cards and the card's attributes 
+	* Users must be able to view a list of cards and the card's attributes
 	* Users must be able to view decklists they have created as well as decklists created by other users
 * Searching
 	* Users must be able to apply search filters when searching cards (like searching for most popular)
 	* Users must be able to apply search filters when searching saved decklists
 * Creating Card Decks
 	* Users must be able to select cards to add to a deck
-	* Users must be able to save their decks 
+	* Users must be able to save their decks
 	* Users must be able to edit and delete saved decks
 	* Users must be able to share decks
 * Rating
@@ -214,9 +215,9 @@ which can result in a draw.
 	* Due Date - Apr 29, 2019 11:59 PM
 	* For this milestone, include:
 		* A submission of the full code in the dropbox
-#### Design Patterns 
+#### Design Patterns
 
-We will be employing a layered architecture following a MVC (Model–View–Controller) design pattern.  Our data layer will include the API that we will making calls from, and a SQLite3 database that we will store users and saved decks.  Our business layer will include our controller in the form of a Python Flask application and model classes for cards and decks.  Our application layer will be viewed through a web browser where users will authenticate, send search queries, save decks, and view saved decks.  Below is a diagram of our layered architecture: 
+We will be employing a layered architecture following a MVC (Model–View–Controller) design pattern.  Our data layer will include the API that we will making calls from, and a SQLite3 database that we will store users and saved decks.  Our business layer will include our controller in the form of a Python Flask application and model classes for cards and decks.  Our application layer will be viewed through a web browser where users will authenticate, send search queries, save decks, and view saved decks.  Below is a diagram of our layered architecture:
 
 ![alt text](https://github.com/brettephillips/DatabaseAppDevelopment/blob/master/layered_arch.png)
 
@@ -229,12 +230,12 @@ When developing our controller we will be following industry standard "best prac
 * Pages will be served using the main application file "mtg.py".
 * This file defines URL routes and provides GET and POST methods to pass data from the front-end to the back-end.
 
-EX: 
+EX:
 `@app.route('/form-example', methods=['GET', 'POST'])`
 
 * Back-end data is presented to the web interface through rendered HTML templates.
 * The location of these templates and other static resources is denoted in this file.
-* This 
+* This
 
 * Below is the current proof of concept code we have developed for "mtg.py":
 
@@ -251,7 +252,7 @@ project_root = os.path.dirname(__file__)
 template_path = os.path.join(project_root, './templates')
 static_path = os.path.join(project_root, './static')
 
-# Import MTG API SDK 
+# Import MTG API SDK
 from mtgsdk import Card
 
 ##################################################################################
@@ -324,8 +325,5 @@ EX: (this will include the navigation menu)
 * This includes "media", "js", and "css" sub-folders.
 * When the template and static folders are specified in the main application file (mtg.py) the HTML have access to the resources in the following path: /static
 
-EX: 
+EX:
 `<img src="/static/media/magic_logo.png" alt="logo" width="150">`
-
-
-
