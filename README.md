@@ -128,6 +128,20 @@ These spells help in winning the game or sometimes just preventing the other pla
 which can result in a draw.
 #### Project Description
 #### Project Requirements
+* Card Viewing
+	* Users must be able to view a list of cards and the card's attributes 
+	* Users must be able to view decklists they have created as well as decklists created by other users
+* Searching
+	* Users must be able to apply search filters when searching cards (like searching for most popular)
+	* Users must be able to apply search filters when searching saved decklists
+* Creating Card Decks
+	* Users must be able to select cards to add to a deck
+	* Users must be able to save their decks 
+	* Users must be able to edit and delete saved decks
+	* Users must be able to share decks
+* Rating
+    * Users should be able to rate decklists saved by other users
+
 #### Business Rules
 #### Technologies Used
 * Frontend
