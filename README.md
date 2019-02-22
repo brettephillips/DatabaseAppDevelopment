@@ -202,9 +202,13 @@ which can result in a draw.
 		* A submission of the full code in the dropbox
 #### Design Patterns 
 
+We will be employing a layered architecture following a MVC (Model–View–Controller) design pattern.  Our data layer will include the API that we will making calls from, and a SQLite3 database that we will store users and saved decks.  Our business layer will include our controller in the form of a Python Flask application and model classes for cards and decks.  Our application layer will be viewed through a web browser where users will authenticate, send search queries, save decks, and view saved decks.  Below is a diagram of our layered architecture: 
+
+![alt text](https://github.com/brettephillips/DatabaseAppDevelopment/blob/master/layered_arch.png)
+
 ##### Flask Application Design Patterns
 
-We will be following industry standard "best practices" when designing our Flask application architecture.
+When developing our controller we will be following industry standard "best practices" for our Flask application architecture.  Below is a breakdown of the Flask app organization.
 
 **Project Root Back-end:**
 
