@@ -127,7 +127,9 @@ sorceries, enchantments, artifacts, or planeswalker all of which are referred to
 These spells help in winning the game or sometimes just preventing the other player from winning all together
 which can result in a draw.
 #### Project Description
+Please see Milestone 1 - Summary Section
 #### Project Requirements
+Please see Milestone 1
 #### Business Rules
 #### Technologies Used
 * Frontend
