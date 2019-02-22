@@ -72,23 +72,9 @@ ISTE 432
 		* A submission of the full code in the dropbox
 
 ## Background
-Magic the Gathering(MTG) is a card game that was started in 1993 by Richard Garfield and his team,
-now know to be Wizard's of the Coast(WOTC).
-The cards were originally made with intent for them to be collected and played with for fun and no single person
-would need more than one copy of each card in their possesion, but eventually that turned to everyone needing
-four of each card to conform to the new competetive rules that had come about.
-These competetive rules come out some time in 1996 when Organized Play was being put into place by WOTC,
-not all players jumped on the boat for this form of play right away and continued to play with their own rules
-or just the original rules they had played with before the new rules had come about, these players would be
-referred to as casual players since they did not use the Organized Play rules.
-The objective of the game is to get your opponent to zero life points, which in most games a player will start at 20,
-there are some formats of the game where a player can start at more life.
-There is a lesser know way to win and that is in the way of getting your opponent draw their entire deck
-and upon the attempt to draw a card when none are present in the deck that player loses.
-A normal game usually plays out with both players putting lands into play that are used to cast creatures, instants,
-sorceries, enchantments, artifacts, or planeswalker all of which are referred to as spells.
-These spells help in winning the game or sometimes just preventing the other player from winning all together
-which can result in a draw.
+Magic the Gathering(MTG) is a card game that was started in 1993 by Richard Garfield and his team, now known to be Wizard's of the Coast(WOTC).  The cards were originally made with intent for them to be collected and played with for fun.  No single person would need more than one copy of each card in their possession, but eventually that turned to everyone needing four of each card to conform to the new competitive rules that had come about. These competitive rules came out in 1996 when "Organized Play" was being put into place by WOTC.  Not all players jumped on the boat for this form of play right away.  Many continued to play with their own rules, or the original rules they had played with before the new rules where established.  These players would be referred to as casual players since they did not use the official "Organized Play" rules.  
+
+The objective of the game is to get your opponent to zero life points.  In most games a player will start at 20 life points, however there are some formats of the game where a player can start at more life.  There is a lesser known way to win which requires your opponent draw their entire deck.  When the player with the exhausted deck attempts to draw a card when none are present in the deck, that player loses.  A normal game usually plays out with both players putting lands into play that are used to cast creatures, instants, sorceries, enchantments, artifacts, or planeswalker, all of which are referred to as spells. Playing these spell cards can be used to defeat the opponent or prevent the opponent from winning all together, which can result in a draw.
 
 ## Summary/Project Description
 This application will be used to make decklists for Magic the Gathering players who want to save and keep track of their own decklists as well as the decklists of other players. The decks can be sorted by user input and filters such as color and format. The other use of the application will be for users that want to create a deck. This will be done by searching for specific cards, which can be done with attributes like name, color of the card, and rarity of the card. Once the user finds the card they desire, they can add it to the list. The list will require a minimum of 60 cards total, or in some cases it will require 100 depending on the game type. Users are allowed to have multiple identical cards if they are playing the 100 card format of the game. The user will be able to view any card and acquire all of the information associated with the cards, including color, CMC(converted mana cost), power, toughness, type, set name, rarity, and the text on the card. This application will be helpful to players of the game because it allows them to look up other decks in order to prepare themselves for an event. In addition, they can save their own decks in order to print them out for an event in which decklists are required.
