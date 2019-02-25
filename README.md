@@ -294,6 +294,7 @@ https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications
 First Install dependencies
 
 `sudo apt update`
+
 `sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools`
 
 Start by installing the python3-venv package, which will install the venv module:
@@ -303,6 +304,7 @@ Start by installing the python3-venv package, which will install the venv module
 Next, let's make a parent directory for our Flask project. Move into the directory after you create it:
 
 `mkdir ~/mtg`
+
 `cd ~/mtg`
 
 Repo files will go in this directory
