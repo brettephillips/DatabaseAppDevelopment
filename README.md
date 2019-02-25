@@ -288,6 +288,49 @@ EX: (this will include the navigation menu)
 EX:
 `<img src="/static/media/magic_logo.png" alt="logo" width="150">`
 
+## Deploy Python 3 Flask Virtual Development Environment
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04
+
+First Install dependencies
+
+`sudo apt update`
+`sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools`
+
+Start by installing the python3-venv package, which will install the venv module:
+
+`sudo apt install python3-venv`
+
+Next, let's make a parent directory for our Flask project. Move into the directory after you create it:
+
+`mkdir ~/mtg`
+`cd ~/mtg`
+
+Repo files will go in this directory
+
+Create a virtual environment to store your Flask project's Python requirements by typing:
+
+`python3.6 -m venv mtg`
+
+Before installing applications within the virtual environment, you need to activate it. Do so by typing:
+
+`source mtg/bin/activate`
+
+Next, let's install dependencies:
+
+`pip install wheel uwsgi flask mtgsdk`
+
+you need to allow access to port 5000:
+
+`sudo ufw allow 5000`
+
+Now, you can test your Flask app by typing:
+
+`python mtg.py`
+
+Visit your server's IP address followed by :5000 in your web browser:
+
+http://localhost:5000
+
 ## Glossary
 * CMC
 	* Converted Mana Cost, the total cost to play a card within the game.
