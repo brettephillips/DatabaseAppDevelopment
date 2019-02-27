@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>{{title}}</title>
+
+<!-- Header Resources -------------------------------------------------------------------->
+{% include 'resources.html' %}
+<!-- ================================================= -->
+
+</head>
+<body>
+
+<!-- NAV Bar -------------------------------------------------------------------->
+{% include 'nav.html' %}
+
+<!-- Content -------------------------------------------------------------------->
+
+<div id='card_return'>
+  {% for n in cards %}
+  <div class='card_show'>
+    <p>{{n[0]}}</p>
+    <a href="card/{{n[2]}}" ><img src="{{n[1]}}" alt="{{n[0]}}"></a>
+  </div>
+  {% endfor %}
+</div>
+
+
+</body>
+</html>

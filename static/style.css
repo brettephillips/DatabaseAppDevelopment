@@ -1,0 +1,51 @@
+/*<!-- Bootstrap CSS Overrides -->*/
+
+/*Nacigation*/
+.bg-light {
+    background-color: black!important;
+}
+
+.navbar-light .navbar-brand {
+    color: rgba(220,220,220,.9);
+}
+
+.navbar-light .navbar-brand:hover {
+    color: rgba(255,255,255,.9);
+}
+
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(255,255,255,.9);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(220,220,220,.9);
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-color: rgba(145,145,145,.9);
+    border-radius: 5px;
+}
+
+/*Sarch Page*/
+#card_return {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.card_show {
+  margin: 5px;
+}
+
+/*Card Deatils Page*/
+#card_name {
+    text-align: center;
+}
+
+#card_details_container {
+    margin: 15px;
+}
+
+#card_image {
+    float:right;
+}

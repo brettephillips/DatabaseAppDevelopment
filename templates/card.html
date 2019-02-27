@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>{{title}}</title>
+
+<!-- Header Resources -------------------------------------------------------------------->
+{% include 'resources.html' %}
+<!-- ================================================= -->
+<link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+
+<!-- NAV Bar -------------------------------------------------------------------->
+{% include 'nav.html' %}
+
+<h2 id="card_name">{{name}}</h2>
+<div id="card_details_container">
+	<img id="card_image" src="{{image_url}}" alt="{{name}}">
+
+	<p>layout: {{layout}}</p>
+
+
+	<div id="mana_cost"></div>
+
+
+	<p>cmc: {{cmc}}</p>
+	<p>colors: {{colors}}</p>
+	<p>color_identity: {{color_identity}}</p>
+	<p>type: {{type}}</p>
+	<p>supertypes: {{supertypes}}</p>
+	<p>subtypes: {{subtypes}}</p>
+	<p>rarity: {{rarity}}</p>
+	<p>text: {{text}}</p>
+	<p>flavor: {{flavor}}</p>
+	<p>power: {{power}}</p>
+	<p>toughness: {{toughness}}</p>
+	<p>life: {{life}}</p>
+	<p>legalities: {{legalities}}</p>
+
+	<p>set: {{set}}</p>
+	<p>set_name: {{set_name}}</p>
+
+</div> <!-- End card_details_container -->
+
+<script>
+
+// Function to show mana cost images
+window.onload = function(){ 
+	var cost = '{{mana_cost}}';
+
+    console.log(cost);
+
+    var cost_html = "";
+
+    if (cost == "None") {
+    	cost_html += "None"
+    }
+    else {
+	    for(var i = 0; i < cost.length; i++) {
+	    	if(cost.charAt(i) != "{" && cost.charAt(i) != "}") {
+	    		cost_html += "<img src='../static/media/"+cost.charAt(i)+".png' width='40'/>"
+	    	}
+	    }
+	}
+
+    console.log(cost_html);
+    document.getElementById("mana_cost").innerHTML = cost_html;
+
+}
+
+</script>
+
+</body>
+</html>
