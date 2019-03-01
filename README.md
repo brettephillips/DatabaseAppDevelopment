@@ -177,10 +177,16 @@ Card searching will be based off of filtered parameters selected by the user. So
 ## Data Sources
 * https://magicthegathering.io/: A REST API that offers detailed data on Magic the Gathering cards. This data includes the card name, image, as well as attributes related to a single card.
 
-## Design Patterns
+## Design Patterns / Layered Architecture
 We will be employing a layered architecture following a MVC (Model–View–Controller) design pattern.  Our data layer will include the API that we will making calls from, and a SQLite3 database that we will store users and saved decks.  Our business layer will include our controller in the form of a Python Flask application and model classes for cards and decks.  Our application layer will be viewed through a web browser where users will authenticate, send search queries, save decks, and view saved decks.  Below is a diagram of our layered architecture:
 
 ![alt text](https://github.com/brettephillips/DatabaseAppDevelopment/blob/master/layered_arch.png)
+
+#### Database
+
+Our SQLite3 database will be comprised of four tables.  First, the USER table will hold a user's name and password for authentication.  A user may create multiple decks stored in the DECK table.  Each deck can be rated and the rating will be stored in this table.  Each deck can have cards added to it and this is tracked by the DECK_CARD associative table.  The CARD table will hold the MTG multiverse ID of the card so it can be reference by the API.  Below is a diagram of our database.
+
+![alt text](https://github.com/brettephillips/DatabaseAppDevelopment/blob/master/DB%20Scripts/schema.png?raw=true)
 
 #### Flask Application Design Patterns
 When developing our controller we will be following industry standard "best practices" for our Flask application architecture.  Below is a breakdown of the Flask app organization.
@@ -348,6 +354,8 @@ http://localhost:5000
 	* Certain cards are banned within formats and this is a flag to show if the card is legal within a certain format.
 * Mana
 	* A resource used to play many of the game’s cards and abilities.
+* MTG multiverse ID
+	* The unique ID of each card stored in the API
 * Power
 	* The amount of damage a creature will do when combat occurs.
 * Rarity
