@@ -23,30 +23,78 @@
 	<h2 id="card_name">{{name}}</h2>
 	<div id="card_details_container">
 
-		<img id="card_image" src="{{image_url}}" alt="{{name}}">
-
-		<p>layout: {{layout}}</p>
-
-
-		<div id="mana_cost"></div>
-
-
-		<p>cmc: {{cmc}}</p>
-		<p>colors: {{colors}}</p>
-		<p>color_identity: {{color_identity}}</p>
-		<p>type: {{type}}</p>
-		<p>supertypes: {{supertypes}}</p>
-		<p>subtypes: {{subtypes}}</p>
-		<p>rarity: {{rarity}}</p>
-		<p>text: {{text}}</p>
-		<p>flavor: {{flavor}}</p>
-		<p>power: {{power}}</p>
-		<p>toughness: {{toughness}}</p>
-		<p>life: {{life}}</p>
-		<p>legalities: {{legalities}}</p>
-
-		<p>set: {{set}}</p>
-		<p>set_name: {{set_name}}</p>
+		<img id="card_image" class="mx-auto d-block" src="{{image_url}}" alt="{{name}}">
+		<table class="table table-striped">
+			<tbody>
+				<tr>
+					<th>Layout</th>
+					<td>{{layout}}<td>
+				</tr>
+					<th>Layout</th>
+					<td id="mana_cost"><td>
+				</tr>
+				<tr>
+					<th>CMC</th>
+					<td>{{cmc}}<td>
+				</tr>
+				<tr>
+					<th>Colors</th>
+					<td id="colors"><td>
+				</tr>
+				<tr>
+					<th>Color Identity</th>
+					<td id="identity"><td>
+				</tr>
+				<tr>
+					<th>Type</th>
+					<td>{{type}}<td>
+				</tr>
+				<tr>
+					<th>Supertypes</th>
+					<td id="supertypes"><td>
+				</tr>
+				<tr>
+					<th>Subtypes</th>
+					<td id="subtypes"><td>
+				</tr>
+				<tr>
+					<th>Rarity</th>
+					<td>{{rarity}}<td>
+				</tr>
+				<tr>
+					<th>Text</th>
+					<td>{{text}}<td>
+				</tr>
+				<tr>
+					<th>Flavor</th>
+					<td>{{flavor}}<td>
+				</tr>
+				<tr>
+					<th>Power</th>
+					<td>{{power}}<td>
+				</tr>
+				<tr>
+					<th>Toughness</th>
+					<td>{{toughness}}<td>
+				</tr>
+				<tr>
+					<th>Life</th>
+					<td>{{life}}<td>
+				</tr>
+				<tr>
+					<th>Legal</th>
+					<td id="legalities"><td>
+				</tr>
+				<tr>
+					<th>Set</th>
+					<td>{{set}}<td>
+				</tr>
+				<tr>
+					<th>Set Name</th>
+					<td>{{set_name}}<td>
+				</tr>
+			</tbody>
+		</table>
 
 	</div> <!-- End card_details_container -->
 
@@ -55,7 +103,13 @@
 
 // Function to show mana cost images
 window.onload = function(){ 
-	var cost = '{{mana_cost}}';
+	var cost = '{{mana_cost}}'
+     var legalities = {{legalities|tojson|safe}};
+     var legalitiesArr = [];
+     var colors = {{colors|safe}};
+     var supertypes = {{supertypes|safe}};
+     var subtypes = {{subtypes|safe}};
+     var identity = {{color_identity|safe}};
 
     console.log(cost);
 
@@ -74,6 +128,16 @@ window.onload = function(){
 
     console.log(cost_html);
     document.getElementById("mana_cost").innerHTML = cost_html;
+    
+    for(var i = 0; i < legalities.length; i++) {
+        legalitiesArr.push(legalities[i].format);
+    }
+
+    document.getElementById("legalities").innerHTML = legalitiesArr.join(', ');
+    document.getElementById("colors").innerHTML = colors.join(', ');
+    document.getElementById("supertypes").innerHTML = supertypes.join(', ');
+    document.getElementById("subtypes").innerHTML = subtypes.join(', ');
+    document.getElementById("identity").innerHTML = identity.join(', ');
 
 }
 
