@@ -65,7 +65,8 @@ span:hover {
 }
 
 #card_image {
-    float:right;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 #myVideo {
