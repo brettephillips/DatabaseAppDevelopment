@@ -1,5 +1,19 @@
 /*<!-- Bootstrap CSS Overrides -->*/
 
+/*Home*/
+#login-form {
+  margin-top: 18rem !important;
+}
+
+.show {
+  display: none !important;
+}
+
+span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 /*Navigation*/
 .bg-light {
     background-color: black!important;
