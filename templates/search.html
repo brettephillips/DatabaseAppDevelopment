@@ -17,12 +17,20 @@
 <!-- Content -------------------------------------------------------------------->
 
 <div id='card_return'>
+	
+{% if cards == 'error' %}
+	<h2>Error Searching for Cards</h2>
+{% else %}
+
   {% for n in cards %}
   <div class='card_show'>
     <p>{{n[0]}}</p>
     <a href="card/{{n[2]}}" ><img src="{{n[1]}}" alt="{{n[0]}}"></a>
   </div>
   {% endfor %}
+
+{% endif %} 
+
 </div>
 
 

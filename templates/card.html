@@ -13,35 +13,44 @@
 <!-- NAV Bar -------------------------------------------------------------------->
 {% include 'nav.html' %}
 
-<h2 id="card_name">{{name}}</h2>
-<div id="card_details_container">
-	<img id="card_image" src="{{image_url}}" alt="{{name}}">
 
-	<p>layout: {{layout}}</p>
+<!-- Content -------------------------------------------------------------------->
+{% if name == 'error' %}
+
+	<h2 id="card_name">Error Finding Card</h2>
+	
+{% else %}
+	<h2 id="card_name">{{name}}</h2>
+	<div id="card_details_container">
+
+		<img id="card_image" src="{{image_url}}" alt="{{name}}">
+
+		<p>layout: {{layout}}</p>
 
 
-	<div id="mana_cost"></div>
+		<div id="mana_cost"></div>
 
 
-	<p>cmc: {{cmc}}</p>
-	<p>colors: {{colors}}</p>
-	<p>color_identity: {{color_identity}}</p>
-	<p>type: {{type}}</p>
-	<p>supertypes: {{supertypes}}</p>
-	<p>subtypes: {{subtypes}}</p>
-	<p>rarity: {{rarity}}</p>
-	<p>text: {{text}}</p>
-	<p>flavor: {{flavor}}</p>
-	<p>power: {{power}}</p>
-	<p>toughness: {{toughness}}</p>
-	<p>life: {{life}}</p>
-	<p>legalities: {{legalities}}</p>
+		<p>cmc: {{cmc}}</p>
+		<p>colors: {{colors}}</p>
+		<p>color_identity: {{color_identity}}</p>
+		<p>type: {{type}}</p>
+		<p>supertypes: {{supertypes}}</p>
+		<p>subtypes: {{subtypes}}</p>
+		<p>rarity: {{rarity}}</p>
+		<p>text: {{text}}</p>
+		<p>flavor: {{flavor}}</p>
+		<p>power: {{power}}</p>
+		<p>toughness: {{toughness}}</p>
+		<p>life: {{life}}</p>
+		<p>legalities: {{legalities}}</p>
 
-	<p>set: {{set}}</p>
-	<p>set_name: {{set_name}}</p>
+		<p>set: {{set}}</p>
+		<p>set_name: {{set_name}}</p>
 
-</div> <!-- End card_details_container -->
+	</div> <!-- End card_details_container -->
 
+<!-- Card Script -------------------------------------------------------------------->
 <script>
 
 // Function to show mana cost images
@@ -69,6 +78,9 @@ window.onload = function(){
 }
 
 </script>
+
+{% endif %} 
+<!-- end error if -->
 
 </body>
 </html>

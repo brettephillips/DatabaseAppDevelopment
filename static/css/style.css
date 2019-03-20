@@ -55,11 +55,12 @@
 }
 
 #myVideo {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 93px;
   min-width: 100%; 
   min-height: 100%;
     display: block;
     margin: 0 auto;
+    z-index: -4;
 }
