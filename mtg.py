@@ -17,14 +17,31 @@ from mtgsdk import Card
 # Import card class 
 import card
 
+# Import SQLite3
+import sqlite3
+
+conn = sqlite3.connect('DB Scripts/mtg.sqlite3')
+
 ##################################################################################
 app = Flask(__name__, template_folder=template_path, static_folder=static_path)
+##################################################################################
+# Card Sarch Page
+@app.route("/", methods=['GET','POST'])
+def home():
+
+	title = "MTG Deck Planner"
+
+	return render_template('home.html',
+		title=title
+	)
+
+
 ##################################################################################
 # Card Sarch Page
 @app.route("/search", methods=['GET','POST'])
 def search():
 	# Set home title
-	h_title = "MTG Deck Planner"
+	title = "MTG Deck Planner | Card Search"
 
 	# Search parameters:
 	#search_name = "city of ass"
@@ -42,61 +59,19 @@ def search():
 			c_names.append([c.name, c.image_url, c.multiverse_id])
 
 	return render_template('search.html',
-		title=h_title,
+		title=title,
 		cards=c_names
-		)
+	)
 
-# Card Sarch Page
+##################################################################################
+# Card Details Page
 @app.route("/card/<string:card_id>", methods=['GET','POST'])
 def card(card_id):
 
-	title = "MTG Deck Planner - Card Details"
+	title = "MTG Deck Planner | Card Details"
 
 	# card card details from API based on multiverse ID
 	api_card = Card.find(card_id)
-
-	# #create Card class objecct
-	# card = Card(
-	# 		name 			= api_card.name,
-	# 		multiverse_id 	= api_card.multiverse_id,
-	# 		layout 			= api_card.layout,
-	# 		mana_cost 		= api_card.mana_cost,
-	# 		cmc 			= api_card.cmc,
-	# 		colors 			= api_card.colors,
-	# 		color_identity 	= api_card.color_identity,
-	# 		type 			= api_card.type,
-	# 		supertypes 		= api_card.supertypes,
-	# 		subtypes 		= api_card.subtypes,
-	# 		rarity 			= api_card.rarity,
-	# 		text 			= api_card.text,
-	# 		power 			= api_card.power,
-	# 		toughness 		= api_card.toughness,
-	# 		life 			= api_card.life,
-	# 		legalities 		= api_card.legalities,
-	# 		image_url 		= api_card.image_url,
-	# 		set 			= api_card.set,
-	# 		set_name 		= api_card.set_name,
-	# 	)
-
-# name
-# multiverse_id
-# layout
-# mana_cost
-# cmc
-# colors
-# color_identity
-# type
-# supertypes
-# subtypes
-# rarity
-# text
-# power
-# toughness
-# life
-# legalities
-# image_url
-# set
-# set_name
 
 	return render_template('card.html',
 		title=title,
@@ -121,7 +96,53 @@ def card(card_id):
 		image_url = api_card.image_url,
 		set = api_card.set,
 		set_name = api_card.set_name
-		)
+	)
+
+##################################################################################
+# SIgnUP
+@app.route("/signup", methods=['GET','POST'])
+def signup():
+
+	username = request.form.get('signup-name')
+	password = request.form.get('signup-pass')
+
+	#create cursor
+	cursor = conn.cursor()
+
+	# Insert a row of data
+	cursor.execute("INSERT INTO USER (username, password) VALUES (?,?)", (username, password))
+
+	# Save (commit) the changes
+	conn.commit()
+
+	title = "MTG Deck Planner"
+
+	return render_template('home.html',
+		title=title
+	)
+
+# Login
+@app.route("/login", methods=['GET','POST'])
+def login():
+
+	# username = request.form.get('signup-name')
+	# password = request.form.get('signup-pass')
+
+	# #create cursor
+	# cursor = conn.cursor()
+
+	# # Insert a row of data
+	# cursor.execute("INSERT INTO USER (username, password) VALUES (?,?)", (username, password))
+
+	# # Save (commit) the changes
+	# conn.commit()
+
+	title = "MTG Deck Planner"
+
+	return render_template('home.html',
+		title=title
+	)
+
 
 ##################################################################################
 if __name__ == "__main__":

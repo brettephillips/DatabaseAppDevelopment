@@ -1,6 +1,6 @@
 /*<!-- Bootstrap CSS Overrides -->*/
 
-/*Nacigation*/
+/*Navigation*/
 .bg-light {
     background-color: black!important;
 }
@@ -10,7 +10,7 @@
 }
 
 .navbar-light .navbar-brand:hover {
-    color: rgba(255,255,255,.9);
+    color: white;
 }
 
 
@@ -21,11 +21,15 @@
 .navbar-light .navbar-nav .nav-link {
     color: rgba(220,220,220,.9);
 }
+.navbar-light .navbar-nav .nav-link:hover {
+    color:white;
+}
 
 .navbar-light .navbar-toggler-icon {
     background-color: rgba(145,145,145,.9);
     border-radius: 5px;
 }
+
 
 /*Sarch Page*/
 #card_return {
@@ -48,4 +52,14 @@
 
 #card_image {
     float:right;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  top: 93px;
+  min-width: 100%; 
+  min-height: 100%;
+    display: block;
+    margin: 0 auto;
 }
