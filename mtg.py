@@ -20,10 +20,11 @@ import card
 # Import SQLite3
 import sqlite3
 
-#import error logging model
+# Import error logging model
 from errorLog import logError
 
-conn = sqlite3.connect('DB Scripts/mtg.sqlite3')
+#Import Password Hashing
+import bcrypt
 
 ##################################################################################
 app = Flask(__name__, template_folder=template_path, static_folder=static_path)
@@ -126,46 +127,97 @@ def card(card_id):
 @app.route("/signup", methods=['GET','POST'])
 def signup():
 
-	username = request.form.get('signup-name')
-	password = request.form.get('signup-pass')
+	title = "MTG Deck Planner | Register"
 
-	#create cursor
-	cursor = conn.cursor()
+	# get passed in username and password
+	username = request.form.get('username')
+	password = request.form.get('password')
 
-	# Insert a row of data
-	cursor.execute("INSERT INTO USER (username, password) VALUES (?,?)", (username, password))
+	# hash password
+	hashed_pw = bcrypt.hashpw(password.encode('utf8'), bcrypt.gensalt())
 
-	# Save (commit) the changes
-	conn.commit()
+	try:
+		# Connect to DB
+		conn = sqlite3.connect('mtg.sqlite3')
 
-	title = "MTG Deck Planner"
+		#create cursor
+		cursor = conn.cursor()
 
-	return render_template('home.html',
-		title=title
-	)
+		# Insert new username and hashed password
+		cursor.execute("INSERT INTO USER (username, password) VALUES (?,?)", (username, hashed_pw))
 
+		# Save (commit) the changes to DB
+		conn.commit()
+
+		# render SignUp Page
+
+		return render_template('signup.html',
+			title=title,
+			username=username,
+			password=password
+		)
+	# catch and log DB error
+	except Exception as ex:
+		logError("DB Insert New USER",ex)
+
+		return render_template('signup.html',
+			title=title,
+			username="error",
+			password="error"
+		)
+
+##################################################################################
 # Login
 @app.route("/login", methods=['GET','POST'])
 def login():
 
-	# username = request.form.get('signup-name')
-	# password = request.form.get('signup-pass')
-
-	# #create cursor
-	# cursor = conn.cursor()
-
-	# # Insert a row of data
-	# cursor.execute("INSERT INTO USER (username, password) VALUES (?,?)", (username, password))
-
-	# # Save (commit) the changes
-	# conn.commit()
-
 	title = "MTG Deck Planner"
 
-	return render_template('home.html',
-		title=title
-	)
+	# get passed in username and password
+	username = request.form.get('username')
+	password = request.form.get('password')
 
+	try:
+		# Connect to DB
+		conn = sqlite3.connect('mtg.sqlite3')
+
+		#create cursor
+		cursor = conn.cursor()
+
+		# Select password from passed username
+		cursor.execute("SELECT password FROM USER WHERE username = '%s'" % username)
+
+		# Get Password
+		hashed = cursor.fetchone()
+
+		good = ""
+
+		# Check if nothing is returned from DB (bad username)
+		if hashed is None:
+			good = "bad"
+		else:
+			# Check if passed password matches the stored password for the passed username
+			if bcrypt.checkpw(password.encode('utf8'), hashed[0]):
+				# (good username and password)
+				good = "valid"
+			else:
+				# (bad password)
+				good = "bad"
+
+		return render_template('login.html',
+			title=title,
+			username=username,
+			good=good
+		)
+	# catch and log DB error
+	except Exception as ex:
+		logError("DB User Auth",ex)
+
+		return render_template('login.html',
+			title=title,
+			username="error",
+			good="error"
+		)
 
 ##################################################################################
 if __name__ == "__main__":
