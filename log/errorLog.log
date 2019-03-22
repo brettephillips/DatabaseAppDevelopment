@@ -12,4 +12,14 @@
 2019-03-21 19:47:59 : DB User Auth - 'bytes' object has no attribute 'encode'
 2019-03-21 19:48:43 : DB User Auth - Invalid salt
 2019-03-21 19:51:59 : DB User Auth - 'NoneType' object is not subscriptable
+2019-03-22 14:14:22 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
+2019-03-22 14:14:27 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
+2019-03-22 14:14:35 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
+2019-03-22 14:16:15 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
+2019-03-22 14:18:15 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
+2019-03-22 14:18:59 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
+2019-03-22 14:19:18 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
+2019-03-22 14:20:26 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
+2019-03-22 14:23:55 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
+2019-03-22 14:25:54 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
 

@@ -95,6 +95,20 @@
 				</tr>
 			</tbody>
 		</table>
+		<table id="t2" class="table table-striped">
+			<thead>
+				<th>Legality</th>
+				<th>Format</th>
+			</thead>
+			<tbody>
+			  {% for i in legalities %}
+			    <tr>
+			      <td>{{i.legality}}</td>
+			      <td>{{i.format}}</td>
+			    </tr>
+			  {% endfor %}
+			</tbody>
+		</table>
 
 	</div> <!-- End card_details_container -->
 
@@ -105,7 +119,6 @@
 window.onload = function(){ 
 	var cost = '{{mana_cost}}'
      var legalities = {{legalities|tojson|safe}};
-     var legalitiesArr = [];
      var colors = {{colors|safe}};
      var supertypes = {{supertypes|safe}};
      var subtypes = {{subtypes|safe}};
@@ -128,12 +141,7 @@ window.onload = function(){
 
     console.log(cost_html);
     document.getElementById("mana_cost").innerHTML = cost_html;
-    
-    for(var i = 0; i < legalities.length; i++) {
-        legalitiesArr.push(legalities[i].format);
-    }
 
-    document.getElementById("legalities").innerHTML = legalitiesArr.join(', ');
     document.getElementById("colors").innerHTML = colors.join(', ');
     document.getElementById("supertypes").innerHTML = supertypes.join(', ');
     document.getElementById("subtypes").innerHTML = subtypes.join(', ');
