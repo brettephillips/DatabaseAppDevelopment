@@ -30,7 +30,7 @@
 					<th>Layout</th>
 					<td>{{layout}}<td>
 				</tr>
-					<th>Cost</th>
+					<th>Layout</th>
 					<td id="mana_cost"><td>
 				</tr>
 				<tr>
@@ -95,20 +95,6 @@
 				</tr>
 			</tbody>
 		</table>
-		<!--<table id="t2" class="table table-striped">
-			<thead>
-				<th>Layout</th>
-				<th>Format<td>
-			</thead>
-			<tbody>
-				{%for i in legalities%} 
-					<tr>
-						<td>{{legalities[i].legality}}</td>
-						<td>{{legalities[i].format}}</td>
-					</tr> 
-				{%endfor%} 
-			</tbody>
-		</table>-->
 
 	</div> <!-- End card_details_container -->
 
@@ -118,13 +104,17 @@
 // Function to show mana cost images
 window.onload = function(){ 
 	var cost = '{{mana_cost}}'
-      var legalitiesArr = [];
+     var legalities = {{legalities|tojson|safe}};
+     var legalitiesArr = [];
      var colors = {{colors|safe}};
      var supertypes = {{supertypes|safe}};
      var subtypes = {{subtypes|safe}};
      var identity = {{color_identity|safe}};
+
     console.log(cost);
+
     var cost_html = "";
+
     if (cost == "None") {
     	cost_html += "None"
     }
@@ -135,12 +125,14 @@ window.onload = function(){
 	    	}
 	    }
 	}
+
     console.log(cost_html);
     document.getElementById("mana_cost").innerHTML = cost_html;
     
     for(var i = 0; i < legalities.length; i++) {
         legalitiesArr.push(legalities[i].format);
     }
+
     document.getElementById("legalities").innerHTML = legalitiesArr.join(', ');
     document.getElementById("colors").innerHTML = colors.join(', ');
     document.getElementById("supertypes").innerHTML = supertypes.join(', ');
