@@ -184,7 +184,7 @@ We will be employing a layered architecture following a MVC (Model–View–Cont
 
 #### Error Handling
 
-We will be employing an error handling model that will collect any error generated inside a Try / Except block.  Any API, Database, model, or controller error is caught and processed by the main controller file mtg.py.  The error handling model accepts two parameters: error type and error message.  
+We will be employing an error handling model that will collect any error generated inside a Try / Except block.  Any API, Database, model, or controller error is caught and processed by the main controller file __mtg.py__.  The error handling model accepts two parameters: error type and error message.  
 
 __snippet from mtg.py__
 ``` python
@@ -398,7 +398,7 @@ Before installing applications within the virtual environment, you need to activ
 
 Next, let's install dependencies:
 
-`pip install wheel uwsgi flask mtgsdk`
+`pip install wheel uwsgi flask mtgsdk bcrypt`
 
 you need to allow access to port 5000:
 
