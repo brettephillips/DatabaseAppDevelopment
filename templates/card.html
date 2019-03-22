@@ -118,17 +118,13 @@
 // Function to show mana cost images
 window.onload = function(){ 
 	var cost = '{{mana_cost}}'
-     var legalities = {{legalities|tojson|safe}};
+      var legalitiesArr = [];
      var colors = {{colors|safe}};
      var supertypes = {{supertypes|safe}};
      var subtypes = {{subtypes|safe}};
      var identity = {{color_identity|safe}};
-
     console.log(cost);
-    console.log(legalities);
-
     var cost_html = "";
-
     if (cost == "None") {
     	cost_html += "None"
     }
@@ -139,10 +135,13 @@ window.onload = function(){
 	    	}
 	    }
 	}
-
     console.log(cost_html);
     document.getElementById("mana_cost").innerHTML = cost_html;
-
+    
+    for(var i = 0; i < legalities.length; i++) {
+        legalitiesArr.push(legalities[i].format);
+    }
+    document.getElementById("legalities").innerHTML = legalitiesArr.join(', ');
     document.getElementById("colors").innerHTML = colors.join(', ');
     document.getElementById("supertypes").innerHTML = supertypes.join(', ');
     document.getElementById("subtypes").innerHTML = subtypes.join(', ');
