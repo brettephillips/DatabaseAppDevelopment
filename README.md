@@ -182,6 +182,77 @@ We will be employing a layered architecture following a MVC (Model–View–Cont
 
 ![alt text](https://github.com/brettephillips/DatabaseAppDevelopment/blob/master/layered_arch.png)
 
+#### Error Handling
+
+We will be employing an error handling model that will collect any error generated inside a Try / Except block.  All exection handling is done in the main controller file.  This includes any API or Database error.  The error handling model accepts two parameters: error type and error message.  
+
+``` python
+	# Get some cards
+	try:
+		cards = Card.where(page=1).where(pageSize=40).where(name=search_name).all()
+
+		# Set card name list to sent to template
+		c_names = []
+
+		# # Put card names in list
+		for c in cards:
+			if str(c.image_url) != "None":
+				c_names.append([c.name, c.image_url, c.multiverse_id])
+
+		return render_template('search.html',
+			title=title,
+			cards=c_names
+		)
+
+	# catch and log error
+	except Exception as ex:
+		logError("API Get Card Search",ex)
+
+		return render_template('search.html',
+			title=title,
+			cards="error"
+		)
+```
+
+When an exception is thrown, the model will take these two peices of information with a timestamp, and write it to a log file.  Below is the error logging model code:
+
+__errorLog.py__
+
+``` python
+import datetime
+
+def logError(errorType, errorMessage):
+	# Set log Filename
+	filename = "log/errorLog.log"
+
+	# Open log file for appending
+	logfile = open(filename,"a+")
+
+	# Get current Time
+	now = datetime.datetime.now()
+	formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
+
+	fullMessage = (formattedTime +" : "+ errorType + " - " + str(errorMessage) + "\n\r")
+
+	# log error message
+	logfile.write(fullMessage)
+
+	# close file
+	logfile.close()
+```
+
+When an error is generated in the controller, a non-speficic, generic message is passed to the presentation layer to let the user know something went wrong.  The html templates will check if an error is passed in the following fashion:
+
+``` html
+{% if name == 'error' %}
+
+	<h2 id="card_name">Error Finding Card</h2>
+	
+{% else %}
+	.... successfull code here
+```
+
+
 #### Database
 
 Our SQLite3 database will be comprised of four tables.  First, the USER table will hold a user's name and password for authentication.  A user may create multiple decks stored in the DECK table.  Each deck can be rated and the rating will be stored in this table.  Each deck can have cards added to it and this is tracked by the DECK_CARD associative table.  The CARD table will hold the MTG multiverse ID of the card so it can be reference by the API.  Below is a diagram of our database.
