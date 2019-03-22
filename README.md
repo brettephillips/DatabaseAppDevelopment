@@ -184,8 +184,9 @@ We will be employing a layered architecture following a MVC (Model–View–Cont
 
 #### Error Handling
 
-We will be employing an error handling model that will collect any error generated inside a Try / Except block.  All exection handling is done in the main controller file.  This includes any API or Database error.  The error handling model accepts two parameters: error type and error message.  
+We will be employing an error handling model that will collect any error generated inside a Try / Except block.  Any API, Database, model, or controller error is caught and processed by the main controller file mtg.py.  The error handling model accepts two parameters: error type and error message.  
 
+__snippet from mtg.py__
 ``` python
 	# Get some cards
 	try:
@@ -243,6 +244,7 @@ def logError(errorType, errorMessage):
 
 When an error is generated in the controller, a non-speficic, generic message is passed to the presentation layer to let the user know something went wrong.  The html templates will check if an error is passed in the following fashion:
 
+__snippet from an html template__
 ``` html
 {% if name == 'error' %}
 
