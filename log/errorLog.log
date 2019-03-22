@@ -1,0 +1,15 @@
+2019-03-20 15:37:12 : API Get Card - type object 'Card' has no attribute 'Xfind'
+2019-03-20 15:37:12 : API Get Card - type object 'Card' has no attribute 'Xfind'
+2019-03-20 15:37:40 : API Get Card - type object 'Card' has no attribute 'Xfind'
+2019-03-20 15:37:40 : API Get Card - type object 'Card' has no attribute 'Xfind'
+2019-03-20 15:37:43 : API Get Card - type object 'Card' has no attribute 'Xfind'
+2019-03-20 15:37:43 : API Get Card - type object 'Card' has no attribute 'Xfind'
+2019-03-20 15:46:44 : API Get Card - type object 'Card' has no attribute 'Xfind'
+2019-03-20 15:47:30 : API Get Card - type object 'Card' has no attribute 'Xfind'
+2019-03-20 16:07:30 : API Get Card Search - type object 'Card' has no attribute 'Xwhere'
+2019-03-21 19:35:16 : DB User Auth - Incorrect number of bindings supplied. The current statement uses 1, and there are 3 supplied.
+2019-03-21 19:43:48 : DB User Auth - 'tuple' object has no attribute 'encode'
+2019-03-21 19:47:59 : DB User Auth - 'bytes' object has no attribute 'encode'
+2019-03-21 19:48:43 : DB User Auth - Invalid salt
+2019-03-21 19:51:59 : DB User Auth - 'NoneType' object is not subscriptable
+
