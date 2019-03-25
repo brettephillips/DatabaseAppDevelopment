@@ -52,4 +52,15 @@
 2019-03-25 16:07:18 : users pass/id debug - 2
 2019-03-25 16:20:01 : DB Get User Decks - 'mydecks' is undefined
 2019-03-25 16:20:08 : DB Get User Decks - 'mydecks' is undefined
+2019-03-25 19:19:57 : DB Get User Decks - 'int' object is not subscriptable
+2019-03-25 19:22:54 : DB Get User Decks - 'int' object is not subscriptable
+2019-03-25 19:24:18 : deck debug1 - [(1, 'My First Deck'), (2, 'My Second Deck')]
+2019-03-25 19:24:18 : DB Get User Decks - 'int' object is not subscriptable
+2019-03-25 19:24:55 : deck debug1 - [(1, 'My First Deck'), (2, 'My Second Deck')]
+2019-03-25 19:24:55 : deck debug2 - [1, 2]
+2019-03-25 19:24:55 : deck debug3 - ['My First Deck', 'My Second Deck']
+2019-03-25 19:33:28 : DB Get User Decks - no such column: api_id
+2019-03-25 19:33:36 : DB Get User Decks - no such column: api_id
+2019-03-25 19:38:54 : DB Get User Decks - expected token ':', got '}'
+2019-03-25 19:46:29 : DB Get User Decks - 'list' object is not callable
 

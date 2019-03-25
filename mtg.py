@@ -34,7 +34,10 @@ app.secret_key = b'_5#y2L"F4#gg88opQ8z\n\xec]/'
 app.config['SESSION_TYPE'] = 'filesystem'
 
 
-##################################################################################
+
+
+#########################################################################################################################
+#########################################################################################################################
 # Card Sarch Page
 @app.route("/", methods=['GET','POST'])
 def home():
@@ -51,7 +54,11 @@ def home():
 	)
 
 
-##################################################################################
+
+
+
+
+#########################################################################################################################
 # Card Sarch Page
 @app.route("/search", methods=['GET','POST'])
 def search():
@@ -95,7 +102,12 @@ def search():
 			cards="error",
 			logged_in=logged_in
 		)
-##################################################################################
+
+
+
+
+
+#########################################################################################################################
 # Card Details Page
 @app.route("/card/<string:card_id>", methods=['GET','POST'])
 def card(card_id):
@@ -148,7 +160,11 @@ def card(card_id):
 		)
 
 
-##################################################################################
+
+
+
+
+#########################################################################################################################
 # Mydecks Page
 @app.route("/mydecks", methods=['GET','POST'])
 def mydecks():
@@ -173,19 +189,52 @@ def mydecks():
 			# Get / List all decks of user
 			cursor = conn.cursor()
 
-			# Select user_id of loggedin username
-			cursor.execute("SELECT name FROM DECK WHERE user_id = '%s'" % session['user_id'])
+			# Select user_id of logged in username
+			cursor.execute("SELECT deck_id, name FROM DECK WHERE user_id = '%s' ORDER BY deck_id"% session['user_id'])
 
 			decks = cursor.fetchall()
 
+			#logError("deck debug1",decks)	
+
+			deck_ids = []
+			deck_names = []
+			num_decks = 0
+			deck_cards = []
+
+			# parse / get deck ids and deck names
 			if decks is None:
-				decks = "none"
+				deck_ids = "none"
+				deck_names = "none"
+				num_decks = 0
+			else:
+				num_decks = len(decks)
+
+				for deck in decks:
+					deck_ids.append(deck[0])
+					deck_names.append(deck[1])
+
+					#logError("deck debug2",deck_ids)		
+					#logError("deck debug3",deck_names)	
+
+				# get the cards in each deck
+				for _id in deck_ids:
+					conn = sqlite3.connect('mtg.sqlite3')
+					cursor = conn.cursor()
+					# Select user_id of logged in username
+					cursor.execute("SELECT api_id FROM DECK_CARD WHERE deck_id = '%s'"% _id)
+					cards = cursor.fetchall()	
+
+					deck_cards.append(cards)
+
+
 		
 			return render_template('mydecks.html',
 				title=title,
 				username=session['user_id'],
 				logged_in=logged_in,
-				decks=decks
+				num_decks=num_decks,
+				deck_names=deck_names,
+				deck_cards=deck_cards
 			)
 		except Exception as ex:
 			logError("DB Get User Decks",ex)
@@ -228,7 +277,7 @@ def mydecks():
 
 
 
-##################################################################################
+#########################################################################################################################
 # SIgnUP
 @app.route("/signup", methods=['GET','POST'])
 def signup():
@@ -298,7 +347,12 @@ def signup():
 			logged_in=logged_in
 		)
 
-##################################################################################
+
+
+
+
+
+#########################################################################################################################
 # Login
 @app.route("/login", methods=['GET','POST'])
 def login():
@@ -341,7 +395,7 @@ def login():
 			# Check if passed password matches the stored password for the passed username
 			if bcrypt.checkpw(password.encode('utf8'), hashed[0][0]):
 				# (good username and password)				
-				#set session name
+				#set session data: username and user_id
 				session['username'] = username
 				session['user_id'] = hashed[0][1]
 
@@ -365,13 +419,24 @@ def login():
 			logged_in=logged_in
 		)
 
-##################################################################################
+
+
+
+
+
+#########################################################################################################################
 # Logout
 @app.route("/logout", methods=['GET','POST'])
 def logout():
 	session.pop('username')
 	return redirect(url_for('home'))
 
-##################################################################################
+
+
+
+
+
+#########################################################################################################################
+#########################################################################################################################
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
