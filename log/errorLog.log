@@ -22,4 +22,10 @@
 2019-03-22 14:20:26 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
 2019-03-22 14:23:55 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
 2019-03-22 14:25:54 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
+2019-03-25 12:28:07 : DB User Auth - name 'session' is not defined
+2019-03-25 12:29:13 : DB User Auth - The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2019-03-25 12:37:39 : DB User Auth - The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2019-03-25 12:41:09 : DB User Auth - mydecks.html
+2019-03-25 13:33:42 : DB User Auth - name 'logged_in' is not defined
+2019-03-25 13:41:51 : DB User Auth - name 'logged_in' is not defined
 

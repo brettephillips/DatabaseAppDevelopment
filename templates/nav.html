@@ -14,9 +14,19 @@
       <li class="nav-item">
         <a class="nav-link" href="{{ url_for('home') }}">Explore Decks</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ url_for('home') }}">My Decks</a>
-      </li>
+
+
+      {% if logged_in != 'not' %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('mydecks') }}">My Decks</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+        </li>
+      {% endif %}
+
+
     </ul>
 
     <form class="form-inline my-2 my-lg-0" action="{{ url_for('search') }}" method="POST">

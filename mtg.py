@@ -1,7 +1,7 @@
 # Import needed Flask packages
 from flask import Flask
 from flask import render_template
-from flask import request
+from flask import request, session, redirect, url_for
 
 # Set Project Root directory
 import os
@@ -28,15 +28,26 @@ import bcrypt
 
 ##################################################################################
 app = Flask(__name__, template_folder=template_path, static_folder=static_path)
+
+# set sesssion key
+app.secret_key = b'_5#y2L"F4#gg88opQ8z\n\xec]/'
+app.config['SESSION_TYPE'] = 'filesystem'
+
+
 ##################################################################################
 # Card Sarch Page
 @app.route("/", methods=['GET','POST'])
 def home():
 
-	title = "MTG Deck Planner"
+	# check if user is logged in
+	logged_in = 'not'
+	if 'username' in session:
+		logged_in = session['username']
 
 	return render_template('home.html',
-		title=title
+		title="MTG Deck Planner",
+		bad_login="no",
+		logged_in=logged_in
 	)
 
 
@@ -44,6 +55,12 @@ def home():
 # Card Sarch Page
 @app.route("/search", methods=['GET','POST'])
 def search():
+
+	# check if user is logged in
+	logged_in = 'not'
+	if 'username' in session:
+		logged_in = session['username']
+
 	# Set home title
 	title = "MTG Deck Planner | Card Search"
 
@@ -65,7 +82,8 @@ def search():
 
 		return render_template('search.html',
 			title=title,
-			cards=c_names
+			cards=c_names,
+			logged_in=logged_in
 		)
 
 	# catch and log error
@@ -74,12 +92,19 @@ def search():
 
 		return render_template('search.html',
 			title=title,
-			cards="error"
+			cards="error",
+			logged_in=logged_in
 		)
 ##################################################################################
 # Card Details Page
 @app.route("/card/<string:card_id>", methods=['GET','POST'])
 def card(card_id):
+
+	# check if user is logged in
+	logged_in = 'not'
+	if 'username' in session:
+		logged_in = session['username']
+	
 
 	title = "MTG Deck Planner | Card Details"
 
@@ -89,7 +114,7 @@ def card(card_id):
 
 		return render_template('card.html',
 			title=title,
-
+			logged_in=logged_in,
 			name = api_card.name,
 			multiverse_id = api_card.multiverse_id,
 			layout = api_card.layout,
@@ -118,9 +143,29 @@ def card(card_id):
 
 		return render_template('card.html',
 			title=title,
-
 			name = "error",
+			logged_in=logged_in
 		)
+
+
+##################################################################################
+# Mydecks Page
+@app.route("/mydecks", methods=['GET','POST'])
+def mydecks():
+
+	# check if user is logged in
+	logged_in = 'not'
+	if 'username' in session:
+		logged_in = session['username']
+
+	title = "MTG Deck Planner | My Saved Decks"
+
+	return render_template('mydecks.html',
+		title=title,
+		username=session['username'],
+		logged_in=logged_in
+	)
+
 
 ##################################################################################
 # SIgnUP
@@ -171,6 +216,11 @@ def signup():
 @app.route("/login", methods=['GET','POST'])
 def login():
 
+	# check if user is logged in
+	logged_in = 'not'
+	if 'username' in session:
+		logged_in = session['username']
+
 	title = "MTG Deck Planner"
 
 	# get passed in username and password
@@ -190,25 +240,30 @@ def login():
 		# Get Password
 		hashed = cursor.fetchone()
 
-		good = ""
-
 		# Check if nothing is returned from DB (bad username)
 		if hashed is None:
-			good = "bad"
+			return render_template('home.html',
+				title="MTG Deck Planner",
+				bad_login="yes",
+				logged_in=logged_in
+			)
 		else:
 			# Check if passed password matches the stored password for the passed username
 			if bcrypt.checkpw(password.encode('utf8'), hashed[0]):
-				# (good username and password)
-				good = "valid"
+				# (good username and password)				
+				#set session name
+				session['username'] = username
+
+				return redirect(url_for('mydecks'))
+
 			else:
 				# (bad password)
-				good = "bad"
+				return render_template('home.html',
+					title="MTG Deck Planner",
+					bad_login="yes",
+					logged_in=logged_in
+				)
 
-		return render_template('login.html',
-			title=title,
-			username=username,
-			good=good
-		)
 	# catch and log DB error
 	except Exception as ex:
 		logError("DB User Auth",ex)
@@ -216,8 +271,15 @@ def login():
 		return render_template('login.html',
 			title=title,
 			username="error",
-			good="error"
+			logged_in=logged_in
 		)
+
+##################################################################################
+# Logout
+@app.route("/logout", methods=['GET','POST'])
+def logout():
+	session.pop('username')
+	return redirect(url_for('home'))
 
 ##################################################################################
 if __name__ == "__main__":

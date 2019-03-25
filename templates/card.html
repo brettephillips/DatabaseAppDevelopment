@@ -20,6 +20,14 @@
 	<h2 id="card_name">Error Finding Card</h2>
 	
 {% else %}
+
+	{% if logged_in == 'not' %}
+		<p id="save_to_deck">Log in to save to a deck</p>
+	{% else %}
+		<p id="save_to_deck">{{logged_in}}: Save to Deck</p>
+	{% endif %} 
+
+
 	<h2 id="card_name">{{name}}</h2>
 	<div id="card_details_container">
 
