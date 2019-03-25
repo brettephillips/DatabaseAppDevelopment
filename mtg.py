@@ -157,14 +157,75 @@ def mydecks():
 	logged_in = 'not'
 	if 'username' in session:
 		logged_in = session['username']
+		user_id = session['user_id']
 
 	title = "MTG Deck Planner | My Saved Decks"
 
-	return render_template('mydecks.html',
-		title=title,
-		username=session['username'],
-		logged_in=logged_in
-	)
+	# get add deck form value
+	add_deck_name = request.form.get('add_deck_name')
+
+	# see if add deck is empty - render normal page
+	if add_deck_name is None:
+		try:
+			# Connect to DB
+			conn = sqlite3.connect('mtg.sqlite3')
+
+			# Get / List all decks of user
+			cursor = conn.cursor()
+
+			# Select user_id of loggedin username
+			cursor.execute("SELECT name FROM DECK WHERE user_id = '%s'" % session['user_id'])
+
+			decks = cursor.fetchall()
+
+			if decks is None:
+				decks = "none"
+		
+			return render_template('mydecks.html',
+				title=title,
+				username=session['user_id'],
+				logged_in=logged_in,
+				decks=decks
+			)
+		except Exception as ex:
+			logError("DB Get User Decks",ex)
+
+			return render_template('mydecks.html',
+				title=title,
+				username=session['user_id'],
+				logged_in=logged_in,
+				decks="error"
+			)
+	else:
+		# create new deck INSERT
+		try:
+			# Connect to DB
+			conn = sqlite3.connect('mtg.sqlite3')
+
+			#create cursor
+			cursor = conn.cursor()
+
+			# Insert Deck
+			cursor.execute("INSERT INTO DECK (name, user_id) VALUES (?,?)", (add_deck_name, user_id))
+
+			conn.commit()
+
+			return redirect(url_for('mydecks'))
+
+		# catch and log DB error
+		except Exception as ex:
+			logError("DB Insert/Delete Deck",ex)
+
+			return render_template('mydecks.html',
+				title=title,
+				username=session['username'],
+				logged_in=logged_in, 
+				error='error'
+			)
+
+
+
+
 
 
 ##################################################################################
@@ -172,7 +233,10 @@ def mydecks():
 @app.route("/signup", methods=['GET','POST'])
 def signup():
 
-	title = "MTG Deck Planner | Register"
+	# check if user is logged in
+	logged_in = 'not'
+	if 'username' in session:
+		logged_in = session['username']
 
 	# get passed in username and password
 	username = request.form.get('username')
@@ -188,27 +252,50 @@ def signup():
 		#create cursor
 		cursor = conn.cursor()
 
-		# Insert new username and hashed password
-		cursor.execute("INSERT INTO USER (username, password) VALUES (?,?)", (username, hashed_pw))
+		# Select password from passed username
+		cursor.execute("SELECT username FROM USER")
 
-		# Save (commit) the changes to DB
-		conn.commit()
+		# Get user tuples from DB
+		db_users = cursor.fetchall()
+		# Get just user names to a list
+		users = []
+		for row in db_users:
+			users.append(row[0])
 
-		# render SignUp Page
+		# cehck if username exists
+		if username in users:
+			return render_template('home.html',
+				title="MTG Deck Planner",
+				bad_login="no",
+				registered="Username already exists",
+				logged_in=logged_in
+			)
+		else:
+			cursor2 = conn.cursor()
 
-		return render_template('signup.html',
-			title=title,
-			username=username,
-			password=password
-		)
+			# Insert new username and hashed password
+			cursor2.execute("INSERT INTO USER (username, password) VALUES (?,?)", (username, hashed_pw))
+
+			# Save (commit) the changes to DB
+			conn.commit()
+
+			# render SignUp Page
+
+			return render_template('home.html',
+				title="MTG Deck Planner",
+				bad_login="no",
+				registered="yes",
+				logged_in=logged_in
+			)
 	# catch and log DB error
 	except Exception as ex:
 		logError("DB Insert New USER",ex)
 
-		return render_template('signup.html',
-			title=title,
-			username="error",
-			password="error"
+		return render_template('home.html',
+			title="MTG Deck Planner",
+			bad_login="no",
+			registered="There was an error registering, try again",
+			logged_in=logged_in
 		)
 
 ##################################################################################
@@ -235,10 +322,13 @@ def login():
 		cursor = conn.cursor()
 
 		# Select password from passed username
-		cursor.execute("SELECT password FROM USER WHERE username = '%s'" % username)
+		cursor.execute("SELECT password, user_id FROM USER WHERE username = '%s'" % username)
 
 		# Get Password
-		hashed = cursor.fetchone()
+		hashed = cursor.fetchall()
+
+		# logError("users pass/id debug",type(hashed[0][0]))
+		# logError("users pass/id debug",hashed[0][1])
 
 		# Check if nothing is returned from DB (bad username)
 		if hashed is None:
@@ -249,10 +339,11 @@ def login():
 			)
 		else:
 			# Check if passed password matches the stored password for the passed username
-			if bcrypt.checkpw(password.encode('utf8'), hashed[0]):
+			if bcrypt.checkpw(password.encode('utf8'), hashed[0][0]):
 				# (good username and password)				
 				#set session name
 				session['username'] = username
+				session['user_id'] = hashed[0][1]
 
 				return redirect(url_for('mydecks'))
 

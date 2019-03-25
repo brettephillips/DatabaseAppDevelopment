@@ -28,4 +28,28 @@
 2019-03-25 12:41:09 : DB User Auth - mydecks.html
 2019-03-25 13:33:42 : DB User Auth - name 'logged_in' is not defined
 2019-03-25 13:41:51 : DB User Auth - name 'logged_in' is not defined
+2019-03-25 15:21:56 : users debug - [('dan',), ('Alex',), ('test',)]
+2019-03-25 15:22:14 : users debug - [('dan',), ('Alex',), ('test',), ('test',)]
+2019-03-25 15:25:15 : users debug - ['dan', 'Alex', 'test', 'test', 'test']
+2019-03-25 15:26:13 : users debug - ['dan', 'Alex', 'test']
+2019-03-25 15:26:34 : users debug - ['dan', 'Alex', 'test']
+2019-03-25 15:27:03 : users debug - ['dan', 'Alex']
+2019-03-25 15:56:55 : DB User Auth - list index out of range
+2019-03-25 15:58:43 : users pass/id debug - [(b'$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)]
+2019-03-25 15:58:43 : DB User Auth - list index out of range
+2019-03-25 16:00:08 : users pass/id debug - [(b'$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)]
+2019-03-25 16:00:08 : DB User Auth - expected string or bytes-like object
+2019-03-25 16:02:05 : users pass/id debug - [(b'$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)]
+2019-03-25 16:02:05 : DB User Auth - list index out of range
+2019-03-25 16:03:51 : DB User Auth - unsupported operand type(s) for +: 'type' and 'tuple'
+2019-03-25 16:04:50 : users pass/id debug - <class 'tuple'>
+2019-03-25 16:04:50 : users pass/id debug - (b'$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)
+2019-03-25 16:04:50 : DB User Auth - expected string or bytes-like object
+2019-03-25 16:06:15 : users pass/id debug - <class 'bytes'>
+2019-03-25 16:06:15 : users pass/id debug - (b'$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)
+2019-03-25 16:06:15 : DB User Auth - expected string or bytes-like object
+2019-03-25 16:07:18 : users pass/id debug - <class 'bytes'>
+2019-03-25 16:07:18 : users pass/id debug - 2
+2019-03-25 16:20:01 : DB Get User Decks - 'mydecks' is undefined
+2019-03-25 16:20:08 : DB Get User Decks - 'mydecks' is undefined
 

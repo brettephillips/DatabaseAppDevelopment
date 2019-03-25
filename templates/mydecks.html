@@ -16,9 +16,20 @@
 {% include 'nav.html' %}
 
 <!-- Content -------------------------------------------------------------------->
-<p>LOGIN</p>
+<p>UserID: {{username}}</p>
 
-<p>{{username}}</p>
+<!-- add new deck form -->
+<form id="add_deck" action="{{url_for('mydecks')}}" method="POST"> 
+
+<input type="text" id="add_deck_name" name="add_deck_name" placeholder="Deck Name...">
+
+<button type="submit">Add Deck</button>
+
+</form>
+
+<!-- list of decks -->
+{{decks}}
+
 
 </body>
 </html>

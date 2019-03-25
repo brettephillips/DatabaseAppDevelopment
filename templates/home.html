@@ -36,6 +36,14 @@
 		<p style='color:red'>Bad Username or Password</p>
 	{% endif %}
 
+	{% if registered is defined %}
+		{% if registered == 'yes' %}
+			<p style='color:green'>Registered, you may now log in.</p>
+		{% else %}
+			<p style='color:red'>{{registered}}</p>
+		{% endif %}
+	{% endif %}
+
 	<div class="form-group">
 	  <input type="text" name="username"
 	  class="form-control"
