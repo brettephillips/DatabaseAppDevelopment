@@ -31,11 +31,23 @@
 <!-- list of decks -->
 <h3>My Saved Decks</h3>
 <hr/>
+
+<div class="deck">
 {% for i in range(deck_names|length) %}
-	{{ deck_names[i] }}
-	{{ deck_cards[i] }}
+	{{ deck_names[i] }} <!-- Deck Name --> <br/>
+	<div class='deck_cards_holder'>
+	{% for card in deck_cards[i] %}
+		<a href='card/{{ card[0] }}'>
+			<div class='deck_card'>
+				{{ card[1] }} <!-- Card Name --> <br/>
+				<img src="{{ card[2] }}" height="88">
+			</div>
+		</a>
+	{% endfor %}	
+	</div>
 	<hr/>
 {% endfor %}
+</div>
 
 
 </body>

@@ -63,4 +63,16 @@
 2019-03-25 19:33:36 : DB Get User Decks - no such column: api_id
 2019-03-25 19:38:54 : DB Get User Decks - expected token ':', got '}'
 2019-03-25 19:46:29 : DB Get User Decks - 'list' object is not callable
+2019-03-27 12:03:46 : DB Get User Decks - name 'deck_card_ids' is not defined
+2019-03-27 12:03:50 : DB Get User Decks - name 'deck_card_ids' is not defined
+2019-03-27 13:36:25 : DB Get User Decks - list object has no element 2
+2019-03-27 13:36:52 : DB Get User Decks - list object has no element 2
+2019-03-27 13:37:18 : DB Get User Decks - list object has no element 2
+2019-03-27 13:37:19 : DB Get User Decks - list object has no element 2
+2019-03-27 13:38:13 : DB Get User Decks - list object has no element 2
+2019-03-27 13:39:58 : DB Get User Decks - list object has no element 2
+2019-03-27 13:44:25 : DB Get User Decks - expected token 'end of print statement', got 'c'
+2019-03-27 13:44:51 : DB Get User Decks - expected token 'end of print statement', got 'c'
+2019-03-27 13:44:52 : DB Get User Decks - expected token 'end of print statement', got 'c'
+2019-03-27 13:48:42 : DB Get User Decks - list object has no element 2
 

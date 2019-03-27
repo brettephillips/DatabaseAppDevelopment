@@ -83,3 +83,16 @@ span:hover {
 #t2 {
  margin-top: 4rem; 
 }
+
+.deck_cards_holder {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.deck_card {
+    border: 1px solid;
+    margin: 5px;
+    width: 90px;
+    text-align: center;
+    padding: 5px;
+}

@@ -196,9 +196,9 @@ def mydecks():
 
 			#logError("deck debug1",decks)	
 
+			# List containers
 			deck_ids = []
 			deck_names = []
-			num_decks = 0
 			deck_cards = []
 
 			# parse / get deck ids and deck names
@@ -221,18 +221,16 @@ def mydecks():
 					conn = sqlite3.connect('mtg.sqlite3')
 					cursor = conn.cursor()
 					# Select user_id of logged in username
-					cursor.execute("SELECT api_id FROM DECK_CARD WHERE deck_id = '%s'"% _id)
+					cursor.execute("SELECT api_id, card_name, image_url FROM DECK_CARD WHERE deck_id = '%s'"% _id)
 					cards = cursor.fetchall()	
 
 					deck_cards.append(cards)
-
 
 		
 			return render_template('mydecks.html',
 				title=title,
 				username=session['user_id'],
 				logged_in=logged_in,
-				num_decks=num_decks,
 				deck_names=deck_names,
 				deck_cards=deck_cards
 			)
