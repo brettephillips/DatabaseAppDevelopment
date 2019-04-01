@@ -17,9 +17,6 @@ from mtgsdk import Card
 # Import card class 
 import card
 
-# Import SQLite3
-import sqlite3
-
 # Import error logging model
 from errorLog import logError
 
@@ -32,6 +29,8 @@ app = Flask(__name__, template_folder=template_path, static_folder=static_path)
 # set sesssion key
 app.secret_key = b'_5#y2L"F4#gg88opQ8z\n\xec]/'
 app.config['SESSION_TYPE'] = 'filesystem'
+
+
 
 
 
@@ -54,7 +53,36 @@ def home():
 	)
 
 
+#########################################################################################################################
 
+# Import Database
+
+
+`sudo -u postgres psql`
+`ALTER USER postgres PASSWORD 'student';`
+`\q`
+`sudo systemctl restart postgresql`
+
+
+##### import sqlite3 - OLD
+import psycopg2
+from config import config
+
+# Postgres DB Connection Method
+def dbConnect():
+	conn = None
+
+	try:
+		# read connection parameters
+		params = config()
+
+		# connect to the PostgreSQL server
+		conn = psycopg2.connect(**params)
+
+		return conn
+
+	except (Exception, psycopg2.DatabaseError) as error:
+		logError("DB Connection",error)
 
 
 
@@ -122,13 +150,13 @@ def card(card_id):
 		#get user's deck lists
 		try:
 			# Connect to DB
-			conn = sqlite3.connect('mtg.sqlite3')
+			conn = dbConnect()
 
 			# Get / List all decks of user
 			cursor = conn.cursor()
 
 			# Select user_id of logged in username
-			cursor.execute("SELECT deck_id, name FROM DECK WHERE user_id = '%s' ORDER BY deck_id"% session['user_id'])
+			cursor.execute("SELECT deck_id, name FROM deck WHERE user_id = '%s' ORDER BY deck_id"% session['user_id'])
 
 			decks = cursor.fetchall()
 
@@ -203,13 +231,13 @@ def mydecks():
 	if add_deck_name is None:
 		try:
 			# Connect to DB
-			conn = sqlite3.connect('mtg.sqlite3')
+			conn = dbConnect()
 
 			# Get / List all decks of user
 			cursor = conn.cursor()
 
 			# Select user_id of logged in username
-			cursor.execute("SELECT deck_id, name FROM DECK WHERE user_id = '%s' ORDER BY deck_id"% session['user_id'])
+			cursor.execute("SELECT deck_id, name FROM deck WHERE user_id = '%s' ORDER BY deck_id"% session['user_id'])
 
 			decks = cursor.fetchall()
 
@@ -237,10 +265,10 @@ def mydecks():
 
 				# get the cards in each deck
 				for _id in deck_ids:
-					conn = sqlite3.connect('mtg.sqlite3')
+					conn = dbConnect()
 					cursor = conn.cursor()
 					# Select user_id of logged in username
-					cursor.execute("SELECT api_id, card_name, image_url FROM DECK_CARD WHERE deck_id = '%s'"% _id)
+					cursor.execute("SELECT api_id, card_name, image_url FROM deck_card WHERE deck_id = '%s'"% _id)
 					cards = cursor.fetchall()	
 
 					deck_cards.append(cards)
@@ -266,13 +294,13 @@ def mydecks():
 		# create new deck INSERT
 		try:
 			# Connect to DB
-			conn = sqlite3.connect('mtg.sqlite3')
+			conn = dbConnect()
 
 			#create cursor
 			cursor = conn.cursor()
 
 			# Insert Deck
-			cursor.execute("INSERT INTO DECK (name, user_id) VALUES (?,?)", (add_deck_name, user_id))
+			cursor.execute("INSERT INTO deck (name, user_id) VALUES (%s,%s)", (add_deck_name, user_id))
 
 			conn.commit()
 
@@ -313,13 +341,13 @@ def signup():
 
 	try:
 		# Connect to DB
-		conn = sqlite3.connect('mtg.sqlite3')
+		conn = dbConnect()
 
 		#create cursor
 		cursor = conn.cursor()
 
 		# Select password from passed username
-		cursor.execute("SELECT username FROM USER")
+		cursor.execute("SELECT username FROM users")
 
 		# Get user tuples from DB
 		db_users = cursor.fetchall()
@@ -340,7 +368,7 @@ def signup():
 			cursor2 = conn.cursor()
 
 			# Insert new username and hashed password
-			cursor2.execute("INSERT INTO USER (username, password) VALUES (?,?)", (username, hashed_pw))
+			cursor2.execute("INSERT INTO users (username, password) VALUES (%s,%s)", (username, hashed_pw))
 
 			# Save (commit) the changes to DB
 			conn.commit()
@@ -387,13 +415,15 @@ def login():
 
 	try:
 		# Connect to DB
-		conn = sqlite3.connect('mtg.sqlite3')
+		#conn = sqlite3.connect('mtg.sqlite3')
+		conn = dbConnect()
+
 
 		#create cursor
 		cursor = conn.cursor()
 
 		# Select password from passed username
-		cursor.execute("SELECT password, user_id FROM USER WHERE username = '%s'" % username)
+		cursor.execute("SELECT password, user_id FROM users WHERE username = '%s'" % username)
 
 		# Get Password
 		hashed = cursor.fetchall()
@@ -410,7 +440,7 @@ def login():
 			)
 		else:
 			# Check if passed password matches the stored password for the passed username
-			if bcrypt.checkpw(password.encode('utf8'), hashed[0][0]):
+			if bcrypt.checkpw(password.encode('utf8'), hashed[0][0].encode('utf8')):
 				# (good username and password)				
 				#set session data: username and user_id
 				session['username'] = username
@@ -430,7 +460,7 @@ def login():
 	except Exception as ex:
 		logError("DB User Auth",ex)
 
-		return render_template('login.html',
+		return render_template('home.html',
 			title=title,
 			username="error",
 			logged_in=logged_in
