@@ -112,10 +112,28 @@ def search():
 @app.route("/card/<string:card_id>", methods=['GET','POST'])
 def card(card_id):
 
+	decks = []
+
 	# check if user is logged in
 	logged_in = 'not'
 	if 'username' in session:
 		logged_in = session['username']
+
+		#get user's deck lists
+		try:
+			# Connect to DB
+			conn = sqlite3.connect('mtg.sqlite3')
+
+			# Get / List all decks of user
+			cursor = conn.cursor()
+
+			# Select user_id of logged in username
+			cursor.execute("SELECT deck_id, name FROM DECK WHERE user_id = '%s' ORDER BY deck_id"% session['user_id'])
+
+			decks = cursor.fetchall()
+
+		except Exception as ex:
+			logError("DB Get User's Decks",ex)
 	
 
 	title = "MTG Deck Planner | Card Details"
@@ -146,7 +164,8 @@ def card(card_id):
 			legalities = api_card.legalities,
 			image_url = api_card.image_url,
 			set = api_card.set,
-			set_name = api_card.set_name
+			set_name = api_card.set_name,
+			decks=decks
 		)
 
 	# catch and log error

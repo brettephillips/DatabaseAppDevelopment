@@ -25,6 +25,13 @@
 		<p id="save_to_deck">Log in to save to a deck</p>
 	{% else %}
 		<p id="save_to_deck">{{logged_in}}: Save to Deck</p>
+		<form action="" method="POST">
+		<select name="decks">
+			{% for d in decks %}
+		  		<option value="{{ d[1] }}">{{ d[1] }}</option>
+			{% endfor %}
+		</select>
+		</form>
 	{% endif %} 
 
 

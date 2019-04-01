@@ -75,4 +75,5 @@
 2019-03-27 13:44:51 : DB Get User Decks - expected token 'end of print statement', got 'c'
 2019-03-27 13:44:52 : DB Get User Decks - expected token 'end of print statement', got 'c'
 2019-03-27 13:48:42 : DB Get User Decks - list object has no element 2
+2019-03-27 15:23:18 : API Get Card Details - Could not build url for endpoint 'card'. Did you forget to specify values ['card_id']?
 
