@@ -46,13 +46,19 @@ span:hover {
 
 
 /*Sarch Page*/
-#card_return {
-    display: inline-flex;
-    flex-wrap: wrap;
+.filters, #filter_button{
+  margin-top: 2rem;
 }
 
+#card_return{
+  margin-top: 4rem;
+}
 .card_show {
   margin: 5px;
+}
+
+.hide {
+  display: none;
 }
 
 /*Card Deatils Page*/
