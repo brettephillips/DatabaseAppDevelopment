@@ -23,6 +23,9 @@ from errorLog import logError
 #Import Password Hashing
 import bcrypt
 
+
+import json
+
 ##################################################################################
 app = Flask(__name__, template_folder=template_path, static_folder=static_path)
 
@@ -58,10 +61,16 @@ def home():
 # Import Database
 
 
-`sudo -u postgres psql`
-`ALTER USER postgres PASSWORD 'student';`
-`\q`
-`sudo systemctl restart postgresql`
+# `sudo -u postgres psql`
+# `ALTER USER postgres PASSWORD 'student';`
+# `\q`
+# `sudo systemctl restart postgresql`
+
+#IMPORT DB
+# psql < ./DB\ Scripts/createTables.sql
+
+#DUMP DB
+# pg_dump mtg > ./DB\ Scripts/databaseExport.sql
 
 
 ##### import sqlite3 - OLD
@@ -100,7 +109,6 @@ def search():
 	title = "MTG Deck Planner | Card Search"
 
 	# Search parameters:
-	#search_name = "city of ass"
 	search_name = request.form.get('search')
 
 	# Get some cards
@@ -141,6 +149,7 @@ def search():
 def card(card_id):
 
 	decks = []
+	added = "no"
 
 	# check if user is logged in
 	logged_in = 'not'
@@ -149,9 +158,7 @@ def card(card_id):
 
 		#get user's deck lists
 		try:
-			# Connect to DB
 			conn = dbConnect()
-
 			# Get / List all decks of user
 			cursor = conn.cursor()
 
@@ -207,7 +214,31 @@ def card(card_id):
 		)
 
 
+#########################################################################################################################
+# Mydecks Page
+@app.route("/add_to_deck", methods=['GET','POST'])
+def add_to_deck():
+	try:
+		if request.method == "POST":
+			deck_id   = request.form.get('deck_id')
+			card_name = request.form.get('card_name')
+			api_id    = request.form.get('api_id')
+			image_url = request.form.get('image_url')
 
+			conn = dbConnect()
+
+			cursor = conn.cursor()
+
+			# Insert new username and hashed password
+			cursor.execute("INSERT INTO deck_card (deck_id, api_id, card_name, image_url) VALUES (%s,%s,%s,%s)", (deck_id, api_id, card_name, image_url))
+			# Save (commit) the changes to DB
+			conn.commit()
+
+			return json.dumps({'status':'OK'});
+
+	except Exception as ex:
+		logError("DB Add Card to Deck",ex)
+		return json.dumps({'status':'BAD'});
 
 
 

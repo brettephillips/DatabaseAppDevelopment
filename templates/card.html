@@ -20,21 +20,66 @@
 	<h2 id="card_name">Error Finding Card</h2>
 	
 {% else %}
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		// Function to set deck_id value for POST
+		function setDeckId() {
+
+			var deck_id = $("#deck_selector :selected").attr("deck_id");
+			var deck_name = document.getElementById("deck_selector").value;
+			var card_name = document.getElementById("card_name").value;
+			var api_id = document.getElementById("api_id").value;
+			var image_url = document.getElementById("image_url").value;
+
+			console.log(deck_name);
+
+			$.ajax({
+			    url: "{{url_for('add_to_deck')}}",
+			    method: "POST",
+			    data:{
+					"deck_id":deck_id,
+					"card_name":card_name,
+					"api_id":api_id,
+					"image_url":image_url
+			    },
+			    success: function(data) {
+			    	document.getElementById("success").innerHTML = card_name + " successfully added to " + deck_name;
+			    },
+	            error: function(error) {
+	                console.log(error);
+	                document.getElementById("success").innerHTML = "Error adding card";
+	            }
+			});
+		}
+	</script>
 
 	{% if logged_in == 'not' %}
+		<!-- dont show add to deck options -->
 		<p id="save_to_deck">Log in to save to a deck</p>
 	{% else %}
+
+		<!-- Show Add Card to Deck Options -->
 		<p id="save_to_deck">{{logged_in}}: Save to Deck</p>
-		<form action="" method="POST">
-		<select name="decks">
+
+		<select id="deck_selector" name="deck_name">
 			{% for d in decks %}
-		  		<option value="{{ d[1] }}">{{ d[1] }}</option>
+		  		<option deck_id="{{ d[0] }}" value="{{ d[1] }}">{{ d[1] }}</option>
 			{% endfor %}
-		</select>
-		<!-- <button  -->
-		</form>
+
+		<!-- Hidden value to send data to post -->
+		<input type="hidden" id="deck_id" name="deck_id" value="X">
+		<input type="hidden" id="card_name" name="card_name" value="{{name}}">
+		<input type="hidden" id="api_id" name="api_id" value="{{multiverse_id}}">
+		<input type="hidden" id="image_url" name="image_url" value="{{image_url}}">
+
+		<button onclick="setDeckId();">Add to Deck</button>
+
+		<!-- Show Add Card success message -->
+		<p id="success" style="color:green"></p>
 	{% endif %} 
 
+
+<!-- <button onclick="setDeckId();">Add to Deck</button> -->
 
 	<h2 id="card_name">{{name}}</h2>
 	<div id="card_details_container">

@@ -138,4 +138,33 @@ LINE 1: INSERT INTO users (username, password) VALUES (?,?)
 
 2019-04-01 17:37:51 : DB User Auth - Unicode-objects must be encoded before checking
 2019-04-01 17:38:17 : DB User Auth - Unicode-objects must be encoded before checking
+2019-04-01 18:54:36 : DB Add Card to Deck - invalid input syntax for integer: ""
+LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
+                                                             ^
+
+2019-04-01 18:54:36 : DB Get User's Decks - current transaction is aborted, commands ignored until end of transaction block
+
+2019-04-01 18:54:37 : API Get Card Details - Unexpected end of template. Jinja was looking for the following tags: 'endif'. The innermost block that needs to be closed is 'if'.
+2019-04-01 18:54:45 : DB Add Card to Deck - invalid input syntax for integer: ""
+LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
+                                                             ^
+
+2019-04-01 18:54:45 : DB Get User's Decks - current transaction is aborted, commands ignored until end of transaction block
+
+2019-04-01 18:54:46 : API Get Card Details - Unexpected end of template. Jinja was looking for the following tags: 'endif'. The innermost block that needs to be closed is 'if'.
+2019-04-01 18:55:13 : DB Add Card to Deck - invalid input syntax for integer: ""
+LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
+                                                             ^
+
+2019-04-01 18:55:13 : DB Get User's Decks - current transaction is aborted, commands ignored until end of transaction block
+
+2019-04-01 18:57:17 : DB Add Card to Deck - invalid input syntax for integer: ""
+LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
+                                                             ^
+
+2019-04-01 19:24:36 : DB Add Card to Deck - name 'conn1' is not defined
+2019-04-01 19:25:09 : DB Add Card to Deck - name 'conn1' is not defined
+2019-04-01 19:25:15 : DB Add Card to Deck - name 'conn1' is not defined
+2019-04-01 19:31:34 : DB Add Card to Deck - name 'jsonify' is not defined
+2019-04-01 19:32:45 : DB Add Card to Deck - name 'json' is not defined
 

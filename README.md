@@ -259,6 +259,8 @@ __snippet from an html template__
 
 Our SQLite3 database will be comprised of four tables.  First, the USER table will hold a user's name and password for authentication.  A user may create multiple decks stored in the DECK table.  Each deck can be rated and the rating will be stored in this table.  Each deck can have cards added to it and this is tracked by the DECK_CARD associative table.  The CARD table will hold the MTG multiverse ID of the card so it can be reference by the API.  Below is a diagram of our database.
 
+Export Postgres Database ```pg_dump mtg > ./DB\ Scripts/databaseExport.sql```
+
 ![alt text](https://github.com/brettephillips/DatabaseAppDevelopment/blob/master/DB%20Scripts/schema.png?raw=true)
 
 #### Flask Application Design Patterns
