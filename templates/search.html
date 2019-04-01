@@ -15,24 +15,112 @@
 {% include 'nav.html' %}
 
 <!-- Content -------------------------------------------------------------------->
+<div class="container">
+    <form action="{{ url_for('login') }}" method="POST">
+	    <div class="form-row filters">
+	      <div class="col">
+		      <label class="form-check-label">Filter By Color:
+		      <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="White">
+			<label class="form-check-label">White</label>
+		      </div>
+		      <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Blue">
+			<label class="form-check-label">Blue</label>
+		      </div>
+		      <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Black">
+			<label class="form-check-label">Black</label>
+		      </div>
+		      <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Red">
+			<label class="form-check-label">Red</label>
+		      </div>
+		      <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Green">
+			<label class="form-check-label">Green</label>
+		      </div>
+	      </div>
+	      <div class="col">
+		      <label>Filter By CMC:
+		      <div class="form-check">
+		        <input class="form-check-input" type="radio" name="cmcSign" value="Equals" checked>
+		        <label class="form-check-label">=</label>
+		      </div>
+		      <div class="form-check">
+		        <input class="form-check-input" type="radio" name="cmcSign" value="greater">
+		        <label class="form-check-label">>=</label>
+		      </div>
+		      <div class="form-check">
+		        <input class="form-check-input" type="radio" name="cmcSign" value="less">
+		        <label class="form-check-label"><=</label>
+		      </div>
+		      <div class="form-group">
+	      		<input type="text" class="form-control" name="cmcValue">
+		      </div>
+	      </div>
+	      <div class="col">
+		      <label>Filter By Power:
+		      <div class="form-check">
+		        <input class="form-check-input" type="radio" name="powerSign" value="Equals" checked>
+		        <label class="form-check-label">=</label>
+		      </div>
+		      <div class="form-check">
+		        <input class="form-check-input" type="radio" name="powerSign" value="greater">
+		        <label class="form-check-label">>=</label>
+		      </div>
+		      <div class="form-check">
+		        <input class="form-check-input" type="radio" name="powerSign" value="less">
+		        <label class="form-check-label"><=</label>
+		      </div>
+		      <div class="form-group">
+	      		<input type="text" class="form-control" name="powerValue">
+		      </div>
+	      </div>
+	      <div class="col">
+		      <label>Filter By Toughness:
+		      <div class="form-check">
+		        <input class="form-check-input" type="radio" name="touchnessSign" value="Equals" checked>
+		        <label class="form-check-label">=</label>
+		      </div>
+		      <div class="form-check">
+		        <input class="form-check-input" type="radio" name="touchnessSign" value="greater">
+		        <label class="form-check-label">>=</label>
+		      </div>
+		      <div class="form-check">
+		        <input class="form-check-input" type="radio" name="touchnessSign" value="less">
+		        <label class="form-check-label"><=</label>
+		      </div>
+		      <div class="form-group">
+	      		<input type="text" class="form-control" name="toughnessValue">
+		      </div>
+	      </div>
+          </div>
+	  <div class="form-row">
+	      <div class="col">
+		      <div class="form-group">
+		  	<button type="submit" class="btn btn-dark btn-block" id="filter_button">Submit</button>
+		      </div>
+	      </div>
+	  </div>
+    </form>
+</div>
 
-<div id='card_return'>
-	
+<div id='card_return' class="container">
+<div class="row">
 {% if cards == 'error' %}
 	<h2>Error Searching for Cards</h2>
 {% else %}
-
+		  
   {% for n in cards %}
-  <div class='card_show'>
+  <div class="card_show col">
     <p>{{n[0]}}</p>
     <a href="card/{{n[2]}}" ><img src="{{n[1]}}" alt="{{n[0]}}"></a>
   </div>
   {% endfor %}
 
 {% endif %} 
-
 </div>
-
-
+</div>
 </body>
 </html>
