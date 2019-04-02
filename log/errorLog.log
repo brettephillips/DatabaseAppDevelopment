@@ -203,4 +203,16 @@ DETAIL:  Key (deck_id)=(2) is still referenced from table "deck_card".
 DETAIL:  Key (deck_id)=(2) is still referenced from table "deck_card".
 
 2019-04-01 23:40:58 : DB Create Deck - name 'cur' is not defined
+2019-04-02 18:59:45 : DB Create Deck - not all arguments converted during string formatting
+2019-04-02 18:59:47 : DB Create Deck - not all arguments converted during string formatting
+2019-04-02 18:59:56 : DB Create Deck - not all arguments converted during string formatting
+2019-04-02 19:00:22 : DB Create Deck - not all arguments converted during string formatting
+2019-04-02 19:00:34 : DB Create Deck - not all arguments converted during string formatting
+2019-04-02 19:00:50 : DB Create Deck - not all arguments converted during string formatting
+2019-04-02 19:02:04 : DB remove_deck - not all arguments converted during string formatting
+2019-04-02 19:04:25 : DB remove_deck - unsupported format character 'd' (0x64) at index 39
+2019-04-02 19:28:22 : DB Get User Decks - 'card' is undefined
+2019-04-02 19:28:27 : DB Get User Decks - 'card' is undefined
+2019-04-02 19:29:24 : DB Get User Decks - 'card' is undefined
+2019-04-02 19:29:25 : DB Get User Decks - 'card' is undefined
 

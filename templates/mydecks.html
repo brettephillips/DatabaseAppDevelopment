@@ -45,13 +45,16 @@
 			});
 		}
 
-
+		// function to remove a user's deck
 		function removeDeck(deck_id) {
 
 			$.ajax({
+				// call remove_deck route in mtg.py
 			    url: "{{url_for('remove_deck')}}",
+			    // send POST data
 			    method: "POST",
 			    data:{
+			    	// send the deck_id to be removed (unique PK)
 					"deck_id":deck_id
 			    },
 			    success: function(data) {
@@ -65,43 +68,75 @@
 	            }
 			});
 		}	
+
+		// function to remove a user's deck
+		function removeCard(card_id) {
+
+			$.ajax({
+				// call remove_card route in mtg.py
+			    url: "{{url_for('remove_card')}}",
+			    // send POST data
+			    method: "POST",
+			    data:{
+			    	// send the card_id to be removed (unique PK)
+			    	"card_id":card_id
+			    },
+			    success: function(data) {
+			    	console.log("Removed Card");
+			    	document.getElementById("card"+card_id).style.display =  "none";
+			    	//location.reload();
+			    },
+	            error: function(error) {
+	                console.log(error);
+	                //document.getElementById("success").innerHTML = "Error adding card";
+	            }
+			});
+		}	
+
 	</script>
 
-<!-- add new deck form -->
-<h3>Create a New Deck</h3>
-<!-- <form id="add_deck" action="{{url_for('mydecks')}}" method="POST">  -->
-	<input class="form-control" type="text" id="add_deck_name" name="add_deck_name" placeholder="Deck Name...">
-	<button class="btn btn-success" onclick="addDeck()">Add Deck</button>
-<!-- </form> -->
+<div id="page_container">
+	<!-- add new deck form -->
+	<h3>Create a New Deck</h3>
+	<!-- <form id="add_deck" action="{{url_for('mydecks')}}" method="POST">  -->
+		<input class="form-control" type="text" maxlength="50" id="add_deck_name" name="add_deck_name" placeholder="Deck Name..." required>
+		<br/>
+		<button class="btn btn-success" onclick="addDeck()">Add Deck</button>
+	<!-- </form> -->
 
-<br/><br/><br/>
+	<br/><br/><br/>
 
-<!-- list of decks -->
-<h3>My Saved Decks</h3>
-<hr/>
-
-<div class="deck">
-{% for i in range(deck_names|length) %}
-
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{ deck_ids[i] }}" >
-    {{ deck_names[i] }}
-  </button>
-  <button type="button" class="btn btn-dark" onclick="removeDeck('{{ deck_ids[i] }}')">X</button>
-  	<input type="hidden" id="{{ deck_ids[i] }}" name="deck_id" value="{{ deck_ids[i] }}">
-	<div id="collapseExample{{ deck_ids[i] }}" class="collapse">
-		<div class="card card-body deck_cards_holder">
-		{% for card in deck_cards[i] %}
-			<a href='card/{{ card[0] }}'>
-				<div class="deck_card">
-					{{ card[1] }} <!-- Card Name --> <br/>
-					<img src="{{ card[2] }}" height="88">
-				</div>
-			</a>
-		{% endfor %}	
-		</div>
-	</div>
+	<!-- list of decks -->
+	<h3>My Saved Decks</h3>
 	<hr/>
-{% endfor %}
+
+	<div class="deck">
+	{% for i in range(deck_names|length) %}
+
+	  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{ deck_ids[i] }}" >
+	    {{ deck_names[i] }}
+	  </button>
+	  <button type="button" class="btn btn-dark" onclick="removeDeck('{{ deck_ids[i] }}')">X</button>
+	  	<input type="hidden" id="{{ deck_ids[i] }}" name="deck_id" value="{{ deck_ids[i] }}">
+		<div id="collapseExample{{ deck_ids[i] }}" class="collapse">
+			<div class="card card-body deck_cards_holder">
+			{% for card in deck_cards[i] %}
+				<div class="deck_card" id="card{{ card[3] }}">
+					
+					<a href='card/{{ card[0] }}'>
+					
+						{{ card[1] }} <!-- Card Name --> <br/>
+						<img src="{{ card[2] }}" height="88">
+					</a>
+					<button type="button" class="btn btn-dark" onclick="removeCard('{{ card[3] }}')">X</button>
+				</div>
+				
+			{% endfor %}	
+			</div>
+		</div>
+		<hr/>
+	{% endfor %}
+	</div>
 </div>
 
 

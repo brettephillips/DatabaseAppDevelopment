@@ -332,8 +332,8 @@ def mydecks():
 			for _id in deck_ids:
 				conn = dbConnect()
 				cursor = conn.cursor()
-				# Select user_id of logged in username
-				cursor.execute("SELECT api_id, card_name, image_url FROM deck_card WHERE deck_id = '%s'"% _id)
+				# Select deck_card data
+				cursor.execute("SELECT api_id, card_name, image_url, card_id FROM deck_card WHERE deck_id = '%s'"% _id)
 				cards = cursor.fetchall()	
 
 				deck_cards.append(cards)
@@ -374,7 +374,7 @@ def add_deck():
 		cursor = conn.cursor()
 
 		# Insert Deck
-		cursor.execute("INSERT INTO deck (name, user_id) VALUES (%s,%s)", (add_deck_name, session['user_id']))
+		cursor.execute("INSERT INTO deck (name, user_id) VALUES (%s,%s)", (add_deck_name, session['user_id'],))
 
 		conn.commit()
 
@@ -402,8 +402,8 @@ def remove_deck():
 		cursor = conn.cursor()
 
 		# delete Deck
-		cursor.execute("DELETE FROM deck_card WHERE deck_id = %s;", (deck_id))
-		cursor.execute("DELETE FROM deck WHERE deck_id = %s;", (deck_id))
+		cursor.execute("DELETE FROM deck_card WHERE deck_id = %s;", (deck_id,))
+		cursor.execute("DELETE FROM deck WHERE deck_id = %s;", (deck_id,))
 
 		conn.commit()
 
@@ -413,7 +413,35 @@ def remove_deck():
 
 	# catch and log DB error
 	except Exception as ex:
-		logError("DB Create Deck",ex)
+		logError("DB remove_deck",ex)
+		return json.dumps({'status':'BAD'});
+
+
+# remove_deck
+@app.route("/remove_card", methods=['GET','POST'])
+def remove_card():
+	# get add deck form value
+	card_id = request.form.get('card_id')
+	# create new deck INSERT
+	try:
+		# Connect to DB
+		conn = dbConnect()
+
+		#create cursor
+		cursor = conn.cursor()
+
+		# delete Deck
+		cursor.execute("DELETE FROM deck_card WHERE card_id = %s;", (card_id,))
+
+		conn.commit()
+
+		cursor.close()
+
+		return json.dumps({'status':'OK'});
+
+	# catch and log DB error
+	except Exception as ex:
+		logError("DB remove_deck",ex)
 		return json.dumps({'status':'BAD'});
 
 #########################################################################################################################
