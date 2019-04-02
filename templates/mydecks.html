@@ -16,15 +16,63 @@
 {% include 'nav.html' %}
 
 <!-- Content -------------------------------------------------------------------->
-<p>UserID: {{username}}</p>
+<!-- <p>UserID: {{username}}</p> -->
 
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		// Function to set deck_id value for POST
+		function addDeck() {
+
+			var add_deck_name = document.getElementById("add_deck_name").value;
+
+			// console.log(deck_name);
+
+			$.ajax({
+			    url: "{{url_for('add_deck')}}",
+			    method: "POST",
+			    data:{
+					"add_deck_name":add_deck_name
+			    },
+			    success: function(data) {
+			    	console.log("Added Deck");
+			    	//document.getElementById("success").innerHTML = card_name + " successfully added to " + deck_name;
+			    	location.reload();
+			    },
+	            error: function(error) {
+	                console.log(error);
+	                //document.getElementById("success").innerHTML = "Error adding card";
+	            }
+			});
+		}
+
+
+		function removeDeck(deck_id) {
+
+			$.ajax({
+			    url: "{{url_for('remove_deck')}}",
+			    method: "POST",
+			    data:{
+					"deck_id":deck_id
+			    },
+			    success: function(data) {
+			    	console.log("Removed Deck");
+			    	//document.getElementById("success").innerHTML = card_name + " successfully added to " + deck_name;
+			    	location.reload();
+			    },
+	            error: function(error) {
+	                console.log(error);
+	                //document.getElementById("success").innerHTML = "Error adding card";
+	            }
+			});
+		}	
+	</script>
 
 <!-- add new deck form -->
 <h3>Create a New Deck</h3>
-<form id="add_deck" action="{{url_for('mydecks')}}" method="POST"> 
-	<input type="text" id="add_deck_name" name="add_deck_name" placeholder="Deck Name...">
-	<button type="submit">Add Deck</button>
-</form>
+<!-- <form id="add_deck" action="{{url_for('mydecks')}}" method="POST">  -->
+	<input class="form-control" type="text" id="add_deck_name" name="add_deck_name" placeholder="Deck Name...">
+	<button class="btn btn-success" onclick="addDeck()">Add Deck</button>
+<!-- </form> -->
 
 <br/><br/><br/>
 
@@ -34,20 +82,28 @@
 
 <div class="deck">
 {% for i in range(deck_names|length) %}
-	{{ deck_names[i] }} <!-- Deck Name --> <br/>
-	<div class='deck_cards_holder'>
-	{% for card in deck_cards[i] %}
-		<a href='card/{{ card[0] }}'>
-			<div class='deck_card'>
-				{{ card[1] }} <!-- Card Name --> <br/>
-				<img src="{{ card[2] }}" height="88">
-			</div>
-		</a>
-	{% endfor %}	
+
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{ deck_ids[i] }}" >
+    {{ deck_names[i] }}
+  </button>
+  <button type="button" class="btn btn-dark" onclick="removeDeck('{{ deck_ids[i] }}')">X</button>
+  	<input type="hidden" id="{{ deck_ids[i] }}" name="deck_id" value="{{ deck_ids[i] }}">
+	<div id="collapseExample{{ deck_ids[i] }}" class="collapse">
+		<div class="card card-body deck_cards_holder">
+		{% for card in deck_cards[i] %}
+			<a href='card/{{ card[0] }}'>
+				<div class="deck_card">
+					{{ card[1] }} <!-- Card Name --> <br/>
+					<img src="{{ card[2] }}" height="88">
+				</div>
+			</a>
+		{% endfor %}	
+		</div>
 	</div>
 	<hr/>
 {% endfor %}
 </div>
+
 
 
 </body>

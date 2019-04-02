@@ -5,9 +5,9 @@
   margin-top: 18rem !important;
 }
 
-.show {
+/*.show {
   display: none !important;
-}
+}*/
 
 span:hover {
   cursor: pointer;
@@ -90,9 +90,15 @@ span:hover {
  margin-top: 4rem; 
 }
 
+#add_to_deck_controls {
+  max-width: 200px;
+}
+
 .deck_cards_holder {
   display: inline-flex;
   flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row !important;
 }
 
 .deck_card {
@@ -102,3 +108,5 @@ span:hover {
     text-align: center;
     padding: 5px;
 }
+
+

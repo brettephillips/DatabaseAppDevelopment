@@ -88,6 +88,9 @@
       </form>
 <script>
 
+
+	$(document).ready(function() { document.getElementsByClassName("show")[0].style.display = "none !important" });
+
 	function changeForm() {
 		if($('#register').hasClass('show') == true) {
 			$('#login').addClass('show');

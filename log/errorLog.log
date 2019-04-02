@@ -167,4 +167,40 @@ LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
 2019-04-01 19:25:15 : DB Add Card to Deck - name 'conn1' is not defined
 2019-04-01 19:31:34 : DB Add Card to Deck - name 'jsonify' is not defined
 2019-04-01 19:32:45 : DB Add Card to Deck - name 'json' is not defined
+2019-04-01 20:03:06 : DB Insert/Delete Deck - duplicate key value violates unique constraint "deck_pkey"
+DETAIL:  Key (deck_id)=(1) already exists.
+
+2019-04-01 22:10:56 : DB Get User Decks - 'user_id'
+2019-04-01 22:51:55 : DB User Auth - list index out of range
+2019-04-01 22:52:41 : DB User Auth - list index out of range
+2019-04-01 22:54:03 : DB User Auth - list index out of range
+2019-04-01 22:54:49 : DB User Auth - list index out of range
+2019-04-01 22:54:59 : DB User Auth - list index out of range
+2019-04-01 22:56:05 : DB User Auth - list index out of range
+2019-04-01 22:56:18 : DB User Auth - list index out of range
+2019-04-01 22:57:18 : DB User Auth - list index out of range
+2019-04-01 22:58:18 : DB User Auth - list index out of range
+2019-04-01 22:58:51 : DB User Auth - list index out of range
+2019-04-01 22:58:57 : DB User Auth - list index out of range
+2019-04-01 22:59:26 : DB User Auth - list index out of range
+2019-04-01 22:59:48 : DB User Auth - list index out of range
+2019-04-01 23:01:50 : DB User Auth - list index out of range
+2019-04-01 23:02:10 : DB User Auth - list index out of range
+2019-04-01 23:02:27 : DB User Auth - list index out of range
+2019-04-01 23:02:34 : DB User Auth - list index out of range
+2019-04-01 23:02:38 : DB User Auth - list index out of range
+2019-04-01 23:02:47 : DB User Auth - list index out of range
+2019-04-01 23:02:55 : DB User Auth - list index out of range
+2019-04-01 23:03:38 : DB User Auth - list index out of range
+2019-04-01 23:03:51 : DB User Auth - list index out of range
+2019-04-01 23:12:12 : DB Insert/Delete Deck - duplicate key value violates unique constraint "deck_pkey"
+DETAIL:  Key (deck_id)=(4) already exists.
+
+2019-04-01 23:37:14 : DB Create Deck - update or delete on table "deck" violates foreign key constraint "deck_card_deck_id_fkey" on table "deck_card"
+DETAIL:  Key (deck_id)=(2) is still referenced from table "deck_card".
+
+2019-04-01 23:37:19 : DB Create Deck - update or delete on table "deck" violates foreign key constraint "deck_card_deck_id_fkey" on table "deck_card"
+DETAIL:  Key (deck_id)=(2) is still referenced from table "deck_card".
+
+2019-04-01 23:40:58 : DB Create Deck - name 'cur' is not defined
 

@@ -255,103 +255,130 @@ def mydecks():
 
 	title = "MTG Deck Planner | My Saved Decks"
 
-	# get add deck form value
-	add_deck_name = request.form.get('add_deck_name')
+
 
 	# see if add deck is empty - render normal page
-	if add_deck_name is None:
-		try:
-			# Connect to DB
-			conn = dbConnect()
+	try:
+		# Connect to DB
+		conn = dbConnect()
 
-			# Get / List all decks of user
-			cursor = conn.cursor()
+		# Get / List all decks of user
+		cursor = conn.cursor()
 
-			# Select user_id of logged in username
-			cursor.execute("SELECT deck_id, name FROM deck WHERE user_id = '%s' ORDER BY deck_id"% session['user_id'])
+		# Select user_id of logged in username
+		cursor.execute("SELECT deck_id, name FROM deck WHERE user_id = '%s' ORDER BY deck_id"% session['user_id'])
 
-			decks = cursor.fetchall()
+		decks = cursor.fetchall()
 
-			#logError("deck debug1",decks)	
+		#logError("deck debug1",decks)	
 
-			# List containers
-			deck_ids = []
-			deck_names = []
-			deck_cards = []
+		# List containers
+		deck_ids = []
+		deck_names = []
+		deck_cards = []
 
-			# parse / get deck ids and deck names
-			if decks is None:
-				deck_ids = "none"
-				deck_names = "none"
-				num_decks = 0
-			else:
-				num_decks = len(decks)
+		# parse / get deck ids and deck names
+		if decks is None:
+			deck_ids = "none"
+			deck_names = "none"
+			num_decks = 0
+		else:
+			num_decks = len(decks)
 
-				for deck in decks:
-					deck_ids.append(deck[0])
-					deck_names.append(deck[1])
+			for deck in decks:
+				deck_ids.append(deck[0])
+				deck_names.append(deck[1])
 
-					#logError("deck debug2",deck_ids)		
-					#logError("deck debug3",deck_names)	
+				#logError("deck debug2",deck_ids)		
+				#logError("deck debug3",deck_names)	
 
-				# get the cards in each deck
-				for _id in deck_ids:
-					conn = dbConnect()
-					cursor = conn.cursor()
-					# Select user_id of logged in username
-					cursor.execute("SELECT api_id, card_name, image_url FROM deck_card WHERE deck_id = '%s'"% _id)
-					cards = cursor.fetchall()	
+			# get the cards in each deck
+			for _id in deck_ids:
+				conn = dbConnect()
+				cursor = conn.cursor()
+				# Select user_id of logged in username
+				cursor.execute("SELECT api_id, card_name, image_url FROM deck_card WHERE deck_id = '%s'"% _id)
+				cards = cursor.fetchall()	
 
-					deck_cards.append(cards)
+				deck_cards.append(cards)
 
-		
-			return render_template('mydecks.html',
-				title=title,
-				username=session['user_id'],
-				logged_in=logged_in,
-				deck_names=deck_names,
-				deck_cards=deck_cards
-			)
-		except Exception as ex:
-			logError("DB Get User Decks",ex)
+	
+		return render_template('mydecks.html',
+			title=title,
+			username=session['user_id'],
+			logged_in=logged_in,
+			deck_names=deck_names,
+			deck_cards=deck_cards,
+			deck_ids=deck_ids
+		)
+	except Exception as ex:
+		logError("DB Get User Decks",ex)
 
-			return render_template('mydecks.html',
-				title=title,
-				username=session['user_id'],
-				logged_in=logged_in,
-				decks="error"
-			)
-	else:
-		# create new deck INSERT
-		try:
-			# Connect to DB
-			conn = dbConnect()
-
-			#create cursor
-			cursor = conn.cursor()
-
-			# Insert Deck
-			cursor.execute("INSERT INTO deck (name, user_id) VALUES (%s,%s)", (add_deck_name, user_id))
-
-			conn.commit()
-
-			return redirect(url_for('mydecks'))
-
-		# catch and log DB error
-		except Exception as ex:
-			logError("DB Insert/Delete Deck",ex)
-
-			return render_template('mydecks.html',
-				title=title,
-				username=session['username'],
-				logged_in=logged_in, 
-				error='error'
-			)
+		return render_template('mydecks.html',
+			title=title,
+			username=session['user_id'],
+			logged_in=logged_in,
+			decks="error"
+		)
 
 
 
+#########################################################################################################################
+# add_deck
+@app.route("/add_deck", methods=['GET','POST'])
+def add_deck():
+	# get add deck form value
+	add_deck_name = request.form.get('add_deck_name')
+	# create new deck INSERT
+	try:
+		# Connect to DB
+		conn = dbConnect()
 
+		#create cursor
+		cursor = conn.cursor()
 
+		# Insert Deck
+		cursor.execute("INSERT INTO deck (name, user_id) VALUES (%s,%s)", (add_deck_name, session['user_id']))
+
+		conn.commit()
+
+		cursor.close()
+
+		return json.dumps({'status':'OK'});
+
+	# catch and log DB error
+	except Exception as ex:
+		logError("DB Create Deck",ex)
+		return json.dumps({'status':'BAD'});
+
+#########################################################################################################################
+# remove_deck
+@app.route("/remove_deck", methods=['GET','POST'])
+def remove_deck():
+	# get add deck form value
+	deck_id = request.form.get('deck_id')
+	# create new deck INSERT
+	try:
+		# Connect to DB
+		conn = dbConnect()
+
+		#create cursor
+		cursor = conn.cursor()
+
+		# delete Deck
+		cursor.execute("DELETE FROM deck_card WHERE deck_id = %s;", (deck_id))
+		cursor.execute("DELETE FROM deck WHERE deck_id = %s;", (deck_id))
+
+		conn.commit()
+
+		cursor.close()
+
+		return json.dumps({'status':'OK'});
+
+	# catch and log DB error
+	except Exception as ex:
+		logError("DB Create Deck",ex)
+		return json.dumps({'status':'BAD'});
 
 #########################################################################################################################
 # SIgnUP

@@ -210,6 +210,8 @@ ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.u
 COPY public.deck (deck_id, name, user_id) FROM stdin;
 1	My First Deck	2
 4	My Second Deck	2
+3	Blue	2
+10	Test	2
 \.
 
 
@@ -252,6 +254,23 @@ COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdi
 30	4	135184	Stalking Tiger	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135184&type=card
 31	1	135184	Stalking Tiger	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135184&type=card
 32	4	684	Unholy Strength	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=684&type=card
+33	1	684	Unholy Strength	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=684&type=card
+34	1	1298	Gray Ogre	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1298&type=card
+35	4	433281	Licia, Sanguine Tribune	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=433281&type=card
+36	4	132123	Icatian Priest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=132123&type=card
+38	3	4041	Dwarven Catapult	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=4041&type=card
+39	3	129733	Rootwater Commando	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129733&type=card
+41	10	51110	Wayfarer's Bauble	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=51110&type=card
+42	10	51110	Wayfarer's Bauble	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=51110&type=card
+43	10	51110	Wayfarer's Bauble	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=51110&type=card
+44	1	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
+45	1	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
+46	1	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
+47	1	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
+48	1	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
+49	3	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
+50	10	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
+51	1	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
 \.
 
 
@@ -279,14 +298,14 @@ COPY public.users (user_id, username, password) FROM stdin;
 -- Name: deck_card_card_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_card_card_id_seq', 32, true);
+SELECT pg_catalog.setval('public.deck_card_card_id_seq', 51, true);
 
 
 --
 -- Name: deck_deck_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_deck_id_seq', 1, false);
+SELECT pg_catalog.setval('public.deck_deck_id_seq', 10, true);
 
 
 --
