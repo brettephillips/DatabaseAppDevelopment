@@ -100,7 +100,7 @@ def dbConnect():
 @app.route("/search", methods=['GET','POST'])
 def search():
 
-	# check if user is logged in
+	# check if user is logged incards
 	logged_in = 'not'
 	if 'username' in session:
 		logged_in = session['username']
@@ -109,17 +109,53 @@ def search():
 	title = "MTG Deck Planner | Card Search"
 
 	# Search parameters:
+	#search_name = "city of ass"
 	search_name = request.form.get('search')
+	cmc_sign = request.form.get('cmcSign')
+	cmc_value = request.form.get('cmcValue')
+	power_sign = request.form.get('powerSign')
+	power_value = request.form.get('powerValue')
+	toughness_sign = request.form.get('toughnessSign')
+	toughness_value = request.form.get('toughnessValue')
+	button_value = request.form.get('button')
 
 	# Get some cards
 	try:
-		cards = Card.where(page=1).where(pageSize=40).where(name=search_name).all()
+		cards = []
+		if button_value == 'search' or (cmc_value == '' and power_value == '' and toughness_value == ''):
+			if cmc_value == '' and power_value == '' and toughness_value == '':
+				search_name = '';		
+			cards += Card.where(page=1).where(pageSize=40).where(name=search_name).all()
+		else:
+			if cmc_value != '':
+				if cmc_sign == 'equals':
+					cards += Card.where(page=1).where(pageSize=40).where(cmc=cmc_value).all()
+				#elif cmc_sign == 'greater':
+				#	cards += Card.where(page=1).where(pageSize=40).where(cmc>=cmc_value).all()
+				#elif cmc_sign == 'less':
+				#	cards += Card.where(page=1).where(pageSize=40).where(cmc<=cmc_value).all()
+			if power_value != '':
+				if power_sign == 'equals':
+					cards += Card.where(page=1).where(pageSize=40).where(power=power_value).all()
+				#elif power_sign == 'greater':
+				#	cards += Card.where(page=1).where(pageSize=40).where(power>=power_value).all()
+				#elif power_sign == 'less':
+				#	cards += Card.where(page=1).where(pageSize=40).where(power<=power_value).all()
+			if toughness_value != '':
+				if toughness_sign == 'equals':
+					cards += Card.where(page=1).where(pageSize=40).where(toughness=toughness_value).all()
+				#elif toughness_sign == 'greater':
+				#	cards += Card.where(page=1).where(pageSize=40).where(toughness>=toughness_value).all()
+				#elif toughness_sign == 'less':
+				#	cards += Card.where(page=1).where(pageSize=40).where(toughness<=toughness_value).all()
 
 		# Set card name list to sent to template
 		c_names = []
 
-		# # Put card names in list
+		# Put card names in list
 		for c in cards:
+			if [c.name, c.image_url, c.multiverse_id] in c_names:
+				continue
 			if str(c.image_url) != "None":
 				c_names.append([c.name, c.image_url, c.multiverse_id])
 

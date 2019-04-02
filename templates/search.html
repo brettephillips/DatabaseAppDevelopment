@@ -16,35 +16,35 @@
 
 <!-- Content -------------------------------------------------------------------->
 <div class="container">
-    <form action="{{ url_for('login') }}" method="POST">
+    <form action="{{ url_for('search') }}" method="POST">
 	    <div class="form-row filters">
 	      <div class="col">
 		      <label class="form-check-label">Filter By Color:
 		      <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="White">
+			<input class="form-check-input" name="check" type="checkbox" value="White">
 			<label class="form-check-label">White</label>
 		      </div>
 		      <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="Blue">
+			<input class="form-check-input" name="check" type="checkbox" value="Blue">
 			<label class="form-check-label">Blue</label>
 		      </div>
 		      <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="Black">
+			<input class="form-check-input" name="check" type="checkbox" value="Black">
 			<label class="form-check-label">Black</label>
 		      </div>
 		      <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="Red">
+			<input class="form-check-input" name="check" type="checkbox" value="Red">
 			<label class="form-check-label">Red</label>
 		      </div>
 		      <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="Green">
+			<input class="form-check-input" name="check" type="checkbox" value="Green">
 			<label class="form-check-label">Green</label>
 		      </div>
 	      </div>
 	      <div class="col">
 		      <label>Filter By CMC:
 		      <div class="form-check">
-		        <input class="form-check-input" type="radio" name="cmcSign" value="Equals" checked>
+		        <input class="form-check-input" type="radio" name="cmcSign" value="equals" checked>
 		        <label class="form-check-label">=</label>
 		      </div>
 		      <div class="form-check">
@@ -62,7 +62,7 @@
 	      <div class="col">
 		      <label>Filter By Power:
 		      <div class="form-check">
-		        <input class="form-check-input" type="radio" name="powerSign" value="Equals" checked>
+		        <input class="form-check-input" type="radio" name="powerSign" value="equals" checked>
 		        <label class="form-check-label">=</label>
 		      </div>
 		      <div class="form-check">
@@ -80,7 +80,7 @@
 	      <div class="col">
 		      <label>Filter By Toughness:
 		      <div class="form-check">
-		        <input class="form-check-input" type="radio" name="touchnessSign" value="Equals" checked>
+		        <input class="form-check-input" type="radio" name="touchnessSign" value="equals" checked>
 		        <label class="form-check-label">=</label>
 		      </div>
 		      <div class="form-check">
@@ -99,7 +99,7 @@
 	  <div class="form-row">
 	      <div class="col">
 		      <div class="form-group">
-		  	<button type="submit" class="btn btn-dark btn-block" id="filter_button">Submit</button>
+		  	<button type="submit" class="btn btn-dark btn-block" id="filter_button" name="button" value="filter">Submit</button>
 		      </div>
 	      </div>
 	  </div>
