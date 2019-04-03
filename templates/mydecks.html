@@ -156,14 +156,17 @@
 		</div>
 
 
-
-
 	  	<input type="hidden" id="{{ deck_ids[i] }}" name="deck_id" value="{{ deck_ids[i] }}">
 		<div id="collapseExample{{ deck_ids[i] }}" class="collapse">
 			<div class="card card-body deck_cards_holder">
 			{% for card in deck_cards[i] %}
 				<div class="deck_card" id="card{{ card[3] }}">
-					{{ loop.index }}
+
+
+					<!-- {{ loop.index }} -->
+					<span class="count"></span>
+
+
 					<a href='card/{{ card[0] }}'>
 					
 						{{ card[1] }} <!-- Card Name --> <br/>
@@ -204,11 +207,25 @@
 			</div>
 		</div>
 		<hr/>
+
 	{% endfor %}
 	</div>
 </div>
 
+<script>
+	//print count
+	$(document).ready(function() { countCards(); });
 
+	function countCards() {
+		var decks = document.getElementsByClassName("deck_cards_holder");
+		for (var deck in decks) {
+			var cards = deck.childNodes;
+			for (var j =1; j <= cards.length; j++) {
+				console.log(""+j);
+			}
+		}
+	}
+</script>
 
 </body>
 </html>

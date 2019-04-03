@@ -122,8 +122,12 @@ def search():
 	# Get some cards
 	try:
 		cards = []
+		logError("button_value DEBUG 0",button_value)
+		logError("SearchName DEBUG 0",search_name)
 		if button_value == 'search' or (cmc_value == '' and power_value == '' and toughness_value == ''):
+			logError("SearchName DEBUG 1 ",search_name)
 			if cmc_value == '' and power_value == '' and toughness_value == '':
+				logError("SearchName DEBUG 2",search_name)
 				search_name = '';		
 			cards += Card.where(page=1).where(pageSize=40).where(name=search_name).all()
 		else:
