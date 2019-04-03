@@ -215,4 +215,5 @@ DETAIL:  Key (deck_id)=(2) is still referenced from table "deck_card".
 2019-04-02 19:28:27 : DB Get User Decks - 'card' is undefined
 2019-04-02 19:29:24 : DB Get User Decks - 'card' is undefined
 2019-04-02 19:29:25 : DB Get User Decks - 'card' is undefined
+2019-04-02 20:46:44 : DB Get User Decks - expected token 'end of print statement', got 'n'
 

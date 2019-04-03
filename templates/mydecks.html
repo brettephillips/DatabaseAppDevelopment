@@ -19,7 +19,8 @@
 <!-- <p>UserID: {{username}}</p> -->
 
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript">	
+
 		// Function to set deck_id value for POST
 		function addDeck() {
 
@@ -69,6 +70,8 @@
 			});
 		}	
 
+
+
 		// function to remove a user's deck
 		function removeCard(card_id) {
 
@@ -83,8 +86,13 @@
 			    },
 			    success: function(data) {
 			    	console.log("Removed Card");
+
+			    	// remove modal backdrop
+					$('body').removeClass('modal-open');
+					$('.modal-backdrop').remove();
+
+					// remove card
 			    	document.getElementById("card"+card_id).style.display =  "none";
-			    	//location.reload();
 			    },
 	            error: function(error) {
 	                console.log(error);
@@ -111,24 +119,85 @@
 	<hr/>
 
 	<div class="deck">
+
 	{% for i in range(deck_names|length) %}
 
 	  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{ deck_ids[i] }}" >
 	    {{ deck_names[i] }}
 	  </button>
-	  <button type="button" class="btn btn-dark" onclick="removeDeck('{{ deck_ids[i] }}')">X</button>
+	  
+	  <!-- remove a deck -->
+	  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#deckModal{{ deck_ids[i] }}">X</button>
+		<!-- Modal -->
+		<script>
+			$(document).on("click", "#rd_button{{ deck_ids[i] }}", function(event){
+    			removeDeck('{{ deck_ids[i] }}');
+			});
+
+		</script>
+		<div class="modal fade" id="deckModal{{ deck_ids[i] }}" tabindex="-1" role="dialog" aria-labelledby="deckModal{{ deck_ids[i] }}Label" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="deckModal{{ deck_ids[i] }}Label">Remove Deck?</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        Really remove deck {{deck_names[i]}}?
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-primary" id="rd_button{{ deck_ids[i] }}")">Remove Deck</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+
+
 	  	<input type="hidden" id="{{ deck_ids[i] }}" name="deck_id" value="{{ deck_ids[i] }}">
 		<div id="collapseExample{{ deck_ids[i] }}" class="collapse">
 			<div class="card card-body deck_cards_holder">
 			{% for card in deck_cards[i] %}
 				<div class="deck_card" id="card{{ card[3] }}">
-					
+					{{ loop.index }}
 					<a href='card/{{ card[0] }}'>
 					
 						{{ card[1] }} <!-- Card Name --> <br/>
 						<img src="{{ card[2] }}" height="88">
 					</a>
-					<button type="button" class="btn btn-dark" onclick="removeCard('{{ card[3] }}')">X</button>
+
+					<!-- remove a card -->
+					<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#cardModal{{ card[3] }}">X</button>
+						<!-- Modal -->
+						<script>
+							$(document).on("click", "#rc_button{{ card[3] }}", function(event){
+				    			removeCard('{{ card[3] }}');
+							});
+
+						</script>
+						<div class="modal fade" id="cardModal{{ card[3] }}" tabindex="-1" role="dialog" aria-labelledby="cardModal{{ card[3] }}Label" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="cardModal{{ card[3] }}Label">Remove Card?</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        Really remove  {{ card[1] }} from {{deck_names[i]}}?
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+						        <button type="button" class="btn btn-primary" id="rc_button{{ card[3] }}">Remove Card</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
 				</div>
 				
 			{% endfor %}	
