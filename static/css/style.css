@@ -5,9 +5,9 @@
   margin-top: 18rem !important;
 }
 
-/*.show {
+.loginregister {
   display: none !important;
-}*/
+}
 
 span:hover {
   cursor: pointer;
