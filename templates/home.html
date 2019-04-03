@@ -65,7 +65,7 @@
 	</div>
       </form>
 
-      <form id="register" class="bg-white p-3 show" action="{{ url_for('signup') }}" method="POST">
+      <form id="register" class="bg-white p-3 loginregister" action="{{ url_for('signup') }}" method="POST">
 	<div class="form-group">
 	  <input type="text" name="username"
 	  class="form-control"
@@ -89,15 +89,15 @@
 <script>
 
 
-	$(document).ready(function() { document.getElementsByClassName("show")[0].style.display = "none !important" });
+	$(document).ready(function() { document.getElementsByClassName("loginregister")[0].style.display = "none !important" });
 
 	function changeForm() {
-		if($('#register').hasClass('show') == true) {
-			$('#login').addClass('show');
-			$('#register').removeClass('show');
+		if($('#register').hasClass('loginregister') == true) {
+			$('#login').addClass('loginregister');
+			$('#register').removeClass('loginregister');
 		} else {
-			$('#login').removeClass('show');
-			$('#register').addClass('show');
+			$('#login').removeClass('loginregister');
+			$('#register').addClass('loginregister');
 		}
 	}
 
