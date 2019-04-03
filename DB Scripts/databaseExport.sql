@@ -209,9 +209,7 @@ ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.u
 
 COPY public.deck (deck_id, name, user_id) FROM stdin;
 1	My First Deck	2
-4	My Second Deck	2
-3	Blue	2
-10	Test	2
+19	Test21	2
 \.
 
 
@@ -220,57 +218,14 @@ COPY public.deck (deck_id, name, user_id) FROM stdin;
 --
 
 COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdin;
-2	1	1234	Water Elemental	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1234&type=card
-3	1	5678	Intrepid Hero	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=5678&type=card
-1	1	23056	Wild Research	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=23056&type=card
-2	1	23056	Wild Research	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=23056&type=card
-3	4	23056	Wild Research	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=23056&type=card
-4	4	23056	Wild Research	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=23056&type=card
-5	4	23056	Wild Research	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=23056&type=card
-6	4	442791	Inventor's Goggles	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442791&type=card
-7	4	442791	Inventor's Goggles	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442791&type=card
-8	4	130995	Hate Weaver	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130995&type=card
-9	1	443110	Juggernaut	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=443110&type=card
-10	4	1093	Aladdin's Ring	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1093&type=card
-11	4	1093	Aladdin's Ring	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1093&type=card
-12	4	130995	Hate Weaver	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130995&type=card
-13	4	2641	Orcish Cannoneers	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2641&type=card
-14	1	2641	Orcish Cannoneers	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2641&type=card
-15	1	2641	Orcish Cannoneers	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2641&type=card
-16	4	2641	Orcish Cannoneers	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2641&type=card
-17	1	176456	Fatestitcher	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=176456&type=card
-18	4	176456	Fatestitcher	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=176456&type=card
-19	4	433281	Licia, Sanguine Tribune	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=433281&type=card
-20	4	433281	Licia, Sanguine Tribune	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=433281&type=card
-21	4	433281	Licia, Sanguine Tribune	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=433281&type=card
-22	1	433281	Licia, Sanguine Tribune	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=433281&type=card
-23	1	433281	Licia, Sanguine Tribune	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=433281&type=card
-24	1	433281	Licia, Sanguine Tribune	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=433281&type=card
-25	4	433281	Licia, Sanguine Tribune	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=433281&type=card
-26	1	129718	Scathe Zombies	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129718&type=card
-27	4	129718	Scathe Zombies	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129718&type=card
-28	4	135184	Stalking Tiger	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135184&type=card
-29	1	135184	Stalking Tiger	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135184&type=card
-30	4	135184	Stalking Tiger	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135184&type=card
-31	1	135184	Stalking Tiger	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135184&type=card
-32	4	684	Unholy Strength	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=684&type=card
-33	1	684	Unholy Strength	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=684&type=card
-34	1	1298	Gray Ogre	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1298&type=card
-35	4	433281	Licia, Sanguine Tribune	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=433281&type=card
-36	4	132123	Icatian Priest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=132123&type=card
-38	3	4041	Dwarven Catapult	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=4041&type=card
-39	3	129733	Rootwater Commando	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129733&type=card
-41	10	51110	Wayfarer's Bauble	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=51110&type=card
-42	10	51110	Wayfarer's Bauble	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=51110&type=card
-43	10	51110	Wayfarer's Bauble	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=51110&type=card
-44	1	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
-45	1	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
-46	1	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
-47	1	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
-48	1	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
-49	3	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
-50	10	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
-51	1	1362	Reverse Polarity	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1362&type=card
+55	1	130550	Ancestor's Chosen	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130550&type=card
+58	1	130550	Ancestor's Chosen	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130550&type=card
+59	1	130550	Ancestor's Chosen	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130550&type=card
+64	19	129477	Ballista Squad	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129477&type=card
+65	19	129477	Ballista Squad	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129477&type=card
+66	19	129477	Ballista Squad	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129477&type=card
+68	19	129477	Ballista Squad	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129477&type=card
+69	19	129477	Ballista Squad	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129477&type=card
 \.
 
 
@@ -298,14 +253,14 @@ COPY public.users (user_id, username, password) FROM stdin;
 -- Name: deck_card_card_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_card_card_id_seq', 51, true);
+SELECT pg_catalog.setval('public.deck_card_card_id_seq', 69, true);
 
 
 --
 -- Name: deck_deck_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_deck_id_seq', 10, true);
+SELECT pg_catalog.setval('public.deck_deck_id_seq', 19, true);
 
 
 --
