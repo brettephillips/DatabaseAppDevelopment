@@ -315,4 +315,7 @@ DETAIL:  Key (deck_id)=(24) is not present in table "deck".
 2019-04-03 20:30:38 : button_value DEBUG 0 - search
 2019-04-03 20:30:38 : SearchName DEBUG 0 - card
 2019-04-03 20:30:38 : SearchName DEBUG 1  - card
+2019-04-03 21:05:16 : button_value DEBUG 0 - search
+2019-04-03 21:05:16 : SearchName DEBUG 0 - watcher
+2019-04-03 21:05:16 : SearchName DEBUG 1  - watcher
 

@@ -151,8 +151,11 @@ span:hover {
 
 
 
-#page_container {
+.page_container {
   padding: 12px;
 }
 
+.a_deck {
+    margin-bottom: 6px;
+}
 

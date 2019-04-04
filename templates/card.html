@@ -67,26 +67,28 @@
 		<!-- dont show add to deck options -->
 		<p id="save_to_deck">Log in to save to a deck</p>
 	{% else %}
-			<!-- Show Add Card success message -->
-			<div id="success"></div>
-		<!-- Show Add Card to Deck Options -->
-		<div id=add_to_deck_controls>
-			<h3>Choose Deck</h3>
+		<!-- Show Add Card success message -->
+		<div id="success"></div>
+		<div class="page_container">
+			<!-- Show Add Card to Deck Options -->
+			<div id=add_to_deck_controls>
+				<h3>Choose Deck</h3>
 
-			<select class="form-control" id="deck_selector" name="deck_name">
-				{% for d in decks %}
-			  		<option deck_id="{{ d[0] }}" value="{{ d[1] }}">{{ d[1] }}</option>
-				{% endfor %}
-			</select>
-			<!-- Hidden value to send data to post -->
-			<input type="hidden" id="deck_id" name="deck_id" value="X">
-			<input type="hidden" id="card_name" name="card_name" value="{{name}}">
-			<input type="hidden" id="api_id" name="api_id" value="{{multiverse_id}}">
-			<input type="hidden" id="image_url" name="image_url" value="{{image_url}}">
+				<select class="form-control" id="deck_selector" name="deck_name">
+					{% for d in decks %}
+				  		<option deck_id="{{ d[0] }}" value="{{ d[1] }}">{{ d[1] }}</option>
+					{% endfor %}
+				</select>
+				<!-- Hidden value to send data to post -->
+				<input type="hidden" id="deck_id" name="deck_id" value="X">
+				<input type="hidden" id="card_name" name="card_name" value="{{name}}">
+				<input type="hidden" id="api_id" name="api_id" value="{{multiverse_id}}">
+				<input type="hidden" id="image_url" name="image_url" value="{{image_url}}">
+				<br/>
+				<button class="btn btn-success" onclick="setDeckId();">Add to Deck</button>
 
-			<button class="btn btn-success" onclick="setDeckId();">Add to Deck</button>
 
-
+			</div>
 		</div>
 	{% endif %} 
 

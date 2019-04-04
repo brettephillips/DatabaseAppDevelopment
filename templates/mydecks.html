@@ -112,7 +112,7 @@
 
 	</script>
 
-<div id="page_container">
+<div class="page_container">
 	<!-- add new deck form -->
 	<h3>Create a New Deck</h3> <span id="add_deck_error" style="color:red"></span>
 	<!-- <form id="add_deck" action="{{url_for('mydecks')}}" method="POST">  -->
@@ -133,16 +133,17 @@
 	<div class="deck">
 
 	{% for i in range(deck_names|length) %}
+	<div class="a_deck">
+		  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{ deck_ids[i] }}" >
+		    {{ deck_names[i] }}
+		  </button>
+		  
+		  <!-- remove a deck -->
+		  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#deckModal{{ deck_ids[i] }}">X</button>
 
-	  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{ deck_ids[i] }}" >
-	    {{ deck_names[i] }}
-	  </button>
-	  
-	  <!-- remove a deck -->
-	  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#deckModal{{ deck_ids[i] }}">X</button>
-
-	  <!-- number of cards -->
-	  <span class="cards_in_deck"></span>
+		  <!-- number of cards -->
+		  <span class="cards_in_deck"></span>
+	 </div>
 		<!-- Modal -->
 		<script>
 			$(document).on("click", "#rd_button{{ deck_ids[i] }}", function(event){
