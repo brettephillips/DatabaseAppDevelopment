@@ -187,6 +187,9 @@
 <script>
 
 // Function to show mana cost images
+String.prototype.inList=function(list){
+    return (Array.apply(null, arguments).indexOf(this.toString()) != -1)
+}
 window.onload = function(){ 
 	var cost = '{{mana_cost}}'
      var legalities = {{legalities|tojson|safe}};
@@ -194,8 +197,10 @@ window.onload = function(){
      var supertypes = {{supertypes|safe}};
      var subtypes = {{subtypes|safe}};
      var identity = {{color_identity|safe}};
+     var temp = '';
+     var temp2 = '';
 
-    console.log(cost);
+    // console.log(cost);
 
     var cost_html = "";
 
@@ -205,7 +210,26 @@ window.onload = function(){
     else {
 	    for(var i = 0; i < cost.length; i++) {
 	    	if(cost.charAt(i) != "{" && cost.charAt(i) != "}") {
-	    		cost_html += "<img src='../static/media/"+cost.charAt(i)+".png' width='40'/>"
+			if(cost.charAt(i) == '/' || cost.charAt(i+1) == '/') {
+				temp = ''
+				if(cost.charAt(i+1) == '/'){
+					temp = temp+cost.charAt(i)+cost.charAt(i+2)
+					i++
+					i++
+					cost_html += "<img src='../static/media/"+temp+".png' width='40'/>"
+					temp = ''
+				}
+				if(cost.charAt(i) == '/'){
+					temp = temp+cost.charAt(i-1)+cost.charAt(i+1)
+					i++
+					cost_html += "<img src='../static/media/"+temp+".png' width='40'/>"
+					temp = ''
+				}
+			}
+			else{
+				cost_html += "<img src='../static/media/"+cost.charAt(i)+".png' width='40'/>"
+			}
+				
 	    	}
 	    }
 	}
