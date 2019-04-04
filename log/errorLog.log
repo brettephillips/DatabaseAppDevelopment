@@ -220,4 +220,99 @@ DETAIL:  Key (deck_id)=(2) is still referenced from table "deck_card".
 2019-04-03 14:06:38 : SearchName DEBUG 0 - ascasc
 2019-04-03 14:08:31 : button_value DEBUG 0 - None
 2019-04-03 14:08:31 : SearchName DEBUG 0 - test
+2019-04-03 14:12:30 : button_value DEBUG 0 - 
+2019-04-03 14:12:30 : SearchName DEBUG 0 - dog
+2019-04-03 14:13:07 : button_value DEBUG 0 - filter
+2019-04-03 14:13:07 : SearchName DEBUG 0 - None
+2019-04-03 14:13:07 : SearchName DEBUG 1  - None
+2019-04-03 14:13:07 : SearchName DEBUG 2 - None
+2019-04-03 14:15:24 : button_value DEBUG 0 - 
+2019-04-03 14:15:24 : SearchName DEBUG 0 - dog
+2019-04-03 14:15:32 : button_value DEBUG 0 - search
+2019-04-03 14:15:32 : SearchName DEBUG 0 - dragon
+2019-04-03 14:15:32 : SearchName DEBUG 1  - dragon
+2019-04-03 14:15:46 : button_value DEBUG 0 - search
+2019-04-03 14:15:46 : SearchName DEBUG 0 - dragon
+2019-04-03 14:15:46 : SearchName DEBUG 1  - dragon
+2019-04-03 14:15:56 : button_value DEBUG 0 - search
+2019-04-03 14:15:56 : SearchName DEBUG 0 - dog
+2019-04-03 14:15:56 : SearchName DEBUG 1  - dog
+2019-04-03 14:20:41 : button_value DEBUG 0 - search
+2019-04-03 14:20:41 : SearchName DEBUG 0 - 
+2019-04-03 14:20:41 : SearchName DEBUG 1  - 
+2019-04-03 14:26:46 : button_value DEBUG 0 - search
+2019-04-03 14:26:46 : SearchName DEBUG 0 - 
+2019-04-03 14:26:46 : SearchName DEBUG 1  - 
+2019-04-03 14:27:02 : button_value DEBUG 0 - filter
+2019-04-03 14:27:02 : SearchName DEBUG 0 - None
+2019-04-03 14:27:02 : API Get Card Search - name 'cmc' is not defined
+2019-04-03 14:33:16 : button_value DEBUG 0 - search
+2019-04-03 14:33:16 : SearchName DEBUG 0 - cat
+2019-04-03 14:33:16 : SearchName DEBUG 1  - cat
+2019-04-03 14:33:35 : button_value DEBUG 0 - search
+2019-04-03 14:33:35 : SearchName DEBUG 0 - cat
+2019-04-03 14:33:35 : SearchName DEBUG 1  - cat
+2019-04-03 14:33:43 : button_value DEBUG 0 - filter
+2019-04-03 14:33:43 : SearchName DEBUG 0 - None
+2019-04-03 14:33:43 : API Get Card Search - name 'cmc' is not defined
+2019-04-03 14:43:22 : button_value DEBUG 0 - filter
+2019-04-03 14:43:22 : SearchName DEBUG 0 - None
+2019-04-03 14:44:05 : button_value DEBUG 0 - filter
+2019-04-03 14:44:05 : SearchName DEBUG 0 - None
+2019-04-03 14:44:09 : button_value DEBUG 0 - search
+2019-04-03 14:44:09 : SearchName DEBUG 0 - cat
+2019-04-03 14:44:09 : SearchName DEBUG 1  - cat
+2019-04-03 14:48:59 : button_value DEBUG 0 - search
+2019-04-03 14:48:59 : SearchName DEBUG 0 - cat
+2019-04-03 14:48:59 : SearchName DEBUG 1  - cat
+2019-04-03 14:49:06 : button_value DEBUG 0 - filter
+2019-04-03 14:49:06 : SearchName DEBUG 0 - None
+2019-04-03 14:49:33 : button_value DEBUG 0 - search
+2019-04-03 14:49:33 : SearchName DEBUG 0 - dog
+2019-04-03 14:49:33 : SearchName DEBUG 1  - dog
+2019-04-03 19:48:42 : button_value DEBUG 0 - search
+2019-04-03 19:48:42 : SearchName DEBUG 0 - watcher
+2019-04-03 19:48:42 : SearchName DEBUG 1  - watcher
+2019-04-03 19:48:55 : button_value DEBUG 0 - search
+2019-04-03 19:48:55 : SearchName DEBUG 0 - watcher
+2019-04-03 19:48:55 : SearchName DEBUG 1  - watcher
+2019-04-03 20:03:42 : button_value DEBUG 0 - search
+2019-04-03 20:03:42 : SearchName DEBUG 0 - robot
+2019-04-03 20:03:42 : SearchName DEBUG 1  - robot
+2019-04-03 20:03:48 : button_value DEBUG 0 - search
+2019-04-03 20:03:48 : SearchName DEBUG 0 - cyb
+2019-04-03 20:03:48 : SearchName DEBUG 1  - cyb
+2019-04-03 20:03:55 : button_value DEBUG 0 - search
+2019-04-03 20:03:55 : SearchName DEBUG 0 - cat
+2019-04-03 20:03:55 : SearchName DEBUG 1  - cat
+2019-04-03 20:12:03 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
+DETAIL:  Key (deck_id)=(24) is not present in table "deck".
+
+2019-04-03 20:12:03 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
+DETAIL:  Key (deck_id)=(24) is not present in table "deck".
+
+2019-04-03 20:12:03 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
+DETAIL:  Key (deck_id)=(24) is not present in table "deck".
+
+2019-04-03 20:12:03 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
+DETAIL:  Key (deck_id)=(24) is not present in table "deck".
+
+2019-04-03 20:12:04 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
+DETAIL:  Key (deck_id)=(24) is not present in table "deck".
+
+2019-04-03 20:14:58 : button_value DEBUG 0 - search
+2019-04-03 20:14:58 : SearchName DEBUG 0 - Z
+2019-04-03 20:14:58 : SearchName DEBUG 1  - Z
+2019-04-03 20:15:15 : button_value DEBUG 0 - search
+2019-04-03 20:15:15 : SearchName DEBUG 0 - 
+2019-04-03 20:15:15 : SearchName DEBUG 1  - 
+2019-04-03 20:19:52 : button_value DEBUG 0 - search
+2019-04-03 20:19:52 : SearchName DEBUG 0 - 
+2019-04-03 20:19:52 : SearchName DEBUG 1  - 
+2019-04-03 20:23:43 : button_value DEBUG 0 - search
+2019-04-03 20:23:43 : SearchName DEBUG 0 - 
+2019-04-03 20:23:43 : SearchName DEBUG 1  - 
+2019-04-03 20:30:38 : button_value DEBUG 0 - search
+2019-04-03 20:30:38 : SearchName DEBUG 0 - card
+2019-04-03 20:30:38 : SearchName DEBUG 1  - card
 

@@ -101,13 +101,55 @@ span:hover {
   flex-direction: row !important;
 }
 
+.deck_card:nth-child(odd) {
+    background-color: #888888;
+}
+
+.deck_card:nth-child(even) {
+    background-color: #666666;
+}
+
+
 .deck_card {
-    border: 1px solid;
-    margin: 5px;
-    width: 90px;
+    /*border: 1px solid;*/
+    margin: 10px;
+    width: 135px;
+    border-radius: 20px; 
     text-align: center;
     padding: 5px;
+    box-shadow: 10px 10px 5px #dddddd;
 }
+
+.deck_card:hover {
+  background-color: #444444;
+}
+
+.count {
+  color: #ffe884;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.deck_card a{
+  color:white;
+  position: relative;
+  top: -4px;
+  text-decoration: none;
+}
+.deck_card a img {
+    position: relative;
+    top: -13px;
+}
+
+.card_name {
+  font-size: 1.05em;
+  font-weight: normal;
+  height: 3em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
 
 #page_container {
   padding: 12px;

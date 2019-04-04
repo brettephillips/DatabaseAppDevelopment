@@ -134,8 +134,8 @@ def search():
 			if cmc_value != '':
 				if cmc_sign == 'equals':
 					cards += Card.where(page=1).where(pageSize=40).where(cmc=cmc_value).all()
-				#elif cmc_sign == 'greater':
-				#	cards += Card.where(page=1).where(pageSize=40).where(cmc>=cmc_value).all()
+				# elif cmc_sign == 'greater':
+				# 	cards += Card.where(page=1).where(pageSize=40).where(cmc=cmc_value).all()
 				#elif cmc_sign == 'less':
 				#	cards += Card.where(page=1).where(pageSize=40).where(cmc<=cmc_value).all()
 			if power_value != '':
@@ -337,7 +337,7 @@ def mydecks():
 				conn = dbConnect()
 				cursor = conn.cursor()
 				# Select deck_card data
-				cursor.execute("SELECT api_id, card_name, image_url, card_id FROM deck_card WHERE deck_id = '%s'"% _id)
+				cursor.execute("SELECT api_id, card_name, image_url, card_id FROM deck_card WHERE deck_id = '%s' ORDER BY card_name"% _id)
 				cards = cursor.fetchall()	
 
 				deck_cards.append(cards)

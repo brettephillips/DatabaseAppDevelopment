@@ -26,24 +26,30 @@
 
 			var add_deck_name = document.getElementById("add_deck_name").value;
 
-			// console.log(deck_name);
+			// validate for empty name
+			if (add_deck_name == "") {
+				document.getElementById("add_deck_error").innerHTML = "Deck must have a name";
+				document.getElementById("add_deck_name").style.borderColor = "red";
 
-			$.ajax({
-			    url: "{{url_for('add_deck')}}",
-			    method: "POST",
-			    data:{
-					"add_deck_name":add_deck_name
-			    },
-			    success: function(data) {
-			    	console.log("Added Deck");
-			    	//document.getElementById("success").innerHTML = card_name + " successfully added to " + deck_name;
-			    	location.reload();
-			    },
-	            error: function(error) {
-	                console.log(error);
-	                //document.getElementById("success").innerHTML = "Error adding card";
-	            }
-			});
+			}
+			else {
+				$.ajax({
+				    url: "{{url_for('add_deck')}}",
+				    method: "POST",
+				    data:{
+						"add_deck_name":add_deck_name
+				    },
+				    success: function(data) {
+				    	console.log("Added Deck");
+				    	//document.getElementById("success").innerHTML = card_name + " successfully added to " + deck_name;
+				    	location.reload();
+				    },
+		            error: function(error) {
+		                console.log(error);
+		                //document.getElementById("success").innerHTML = "Error adding card";
+		            }
+				});
+			}
 		}
 
 		// function to remove a user's deck
@@ -92,7 +98,10 @@
 					$('.modal-backdrop').remove();
 
 					// remove card
-			    	document.getElementById("card"+card_id).style.display =  "none";
+			    	document.getElementById("card"+card_id).remove();
+
+			    	// re-order cards
+			    	countCards();
 			    },
 	            error: function(error) {
 	                console.log(error);
@@ -105,9 +114,12 @@
 
 <div id="page_container">
 	<!-- add new deck form -->
-	<h3>Create a New Deck</h3>
+	<h3>Create a New Deck</h3> <span id="add_deck_error" style="color:red"></span>
 	<!-- <form id="add_deck" action="{{url_for('mydecks')}}" method="POST">  -->
 		<input class="form-control" type="text" maxlength="50" id="add_deck_name" name="add_deck_name" placeholder="Deck Name..." required>
+		<div class="invalid-feedback">
+        	Please provide a valid state.
+      	</div>
 		<br/>
 		<button class="btn btn-success" onclick="addDeck()">Add Deck</button>
 	<!-- </form> -->
@@ -128,6 +140,9 @@
 	  
 	  <!-- remove a deck -->
 	  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#deckModal{{ deck_ids[i] }}">X</button>
+
+	  <!-- number of cards -->
+	  <span class="cards_in_deck"></span>
 		<!-- Modal -->
 		<script>
 			$(document).on("click", "#rd_button{{ deck_ids[i] }}", function(event){
@@ -164,15 +179,17 @@
 
 
 					<!-- {{ loop.index }} -->
-					<span class="count"></span>
+					<span class="count"></span> <br/>
 
 
 					<a href='card/{{ card[0] }}'>
 					
-						{{ card[1] }} <!-- Card Name --> <br/>
-						<img src="{{ card[2] }}" height="88">
+						<div class="card_name">
+						{{ card[1] }}
+						</div> <!-- Card Name --> <br/>
+						<img src="{{ card[2] }}" height="125">
 					</a>
-
+					<br/>
 					<!-- remove a card -->
 					<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#cardModal{{ card[3] }}">X</button>
 						<!-- Modal -->
@@ -213,15 +230,27 @@
 </div>
 
 <script>
-	//print count
+	// print count first tim eon page load
 	$(document).ready(function() { countCards(); });
 
+	// function to order the cards by printing the count
 	function countCards() {
+		// get all deck elements
 		var decks = document.getElementsByClassName("deck_cards_holder");
-		for (var deck in decks) {
-			var cards = deck.childNodes;
+
+		// for each deck...
+		for (var i = 0; i < decks.length; i++) {
+			// get all cards in this deck
+			var cards = decks[i].getElementsByClassName("count");
+
+			// cards_in_deck
+			document.getElementsByClassName("cards_in_deck")[i].innerHTML = "("+cards.length+") Cards";
+
+			// for each card
 			for (var j =1; j <= cards.length; j++) {
-				console.log(""+j);
+				//console.log(""+j);
+				// set card number
+				cards[j-1].innerHTML = ""+j;
 			}
 		}
 	}

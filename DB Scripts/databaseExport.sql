@@ -210,6 +210,7 @@ ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.u
 COPY public.deck (deck_id, name, user_id) FROM stdin;
 1	My First Deck	2
 19	Test21	2
+25	Blue	2
 \.
 
 
@@ -219,13 +220,31 @@ COPY public.deck (deck_id, name, user_id) FROM stdin;
 
 COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdin;
 55	1	130550	Ancestor's Chosen	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130550&type=card
-58	1	130550	Ancestor's Chosen	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130550&type=card
-59	1	130550	Ancestor's Chosen	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130550&type=card
 64	19	129477	Ballista Squad	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129477&type=card
-65	19	129477	Ballista Squad	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129477&type=card
-66	19	129477	Ballista Squad	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129477&type=card
-68	19	129477	Ballista Squad	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129477&type=card
-69	19	129477	Ballista Squad	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129477&type=card
+70	19	338472	Greater Mossdog	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=338472&type=card
+72	1	152059	Parapet Watchers	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=152059&type=card
+75	19	4184	Icatian Store	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=4184&type=card
+77	1	4184	Icatian Store	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=4184&type=card
+78	1	4184	Icatian Store	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=4184&type=card
+79	1	4184	Icatian Store	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=4184&type=card
+86	25	4184	Icatian Store	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=4184&type=card
+88	1	2141	Zombie Master	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2141&type=card
+89	19	2141	Zombie Master	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2141&type=card
+91	19	130550	Ancestor's Chosen	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130550&type=card
+92	25	130550	Ancestor's Chosen	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130550&type=card
+93	25	129572	Glorious Anthem	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129572&type=card
+95	19	129572	Glorious Anthem	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129572&type=card
+96	1	130554	Cho-Manno, Revolutionary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130554&type=card
+97	25	130554	Cho-Manno, Revolutionary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130554&type=card
+98	19	130554	Cho-Manno, Revolutionary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130554&type=card
+100	19	130554	Cho-Manno, Revolutionary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130554&type=card
+102	19	130554	Cho-Manno, Revolutionary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130554&type=card
+104	19	130554	Cho-Manno, Revolutionary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130554&type=card
+105	1	130528	Condemn	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130528&type=card
+106	19	130528	Condemn	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130528&type=card
+111	25	130528	Condemn	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130528&type=card
+112	19	74237	Our Market Research Shows That Players Like Really Long Card Names So We Made this Card to Have the Absolute Longest Card Name Ever Elemental	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=74237&type=card
+114	1	74237	Our Market Research Shows That Players Like Really Long Card Names So We Made this Card to Have the Absolute Longest Card Name Ever Elemental	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=74237&type=card
 \.
 
 
@@ -253,14 +272,14 @@ COPY public.users (user_id, username, password) FROM stdin;
 -- Name: deck_card_card_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_card_card_id_seq', 69, true);
+SELECT pg_catalog.setval('public.deck_card_card_id_seq', 114, true);
 
 
 --
 -- Name: deck_deck_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_deck_id_seq', 19, true);
+SELECT pg_catalog.setval('public.deck_deck_id_seq', 25, true);
 
 
 --
