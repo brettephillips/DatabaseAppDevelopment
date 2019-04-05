@@ -428,11 +428,11 @@ http://localhost:5000
 
 #### Performance Changes
 
-Once instance where we notice performance issues in our application is during API calls to the MTG API.  These can be slow when returning many cards at once.  Initially, we where going to make API calls to display the cards that are saved in each person's deck ("My Decks" page).  We quickly realized that when a user has many decks saved, each with up to 60 cards, this would result in a page that would load extremely slow.  The fix was to store more data in the database when saving a card to a deck.  Instead of storing just the unique API card identifier in the database and making an API call to get more data, we now store the identifier, card name, and image URL after making the initial API call for that single card.  Due to database access being significantly faster, we can now load the "My Decks" page with almost no delay.
+Once instance where we noticed performance issues in our application is during API calls to the MTG API.  These can be slow when returning many cards at once.  Initially, we were going to make API calls to display the cards that are saved in each person's deck ("My Decks" page).  We quickly realized that when a user has many decks saved, each with up to 60 cards or more, this would result in a page that would load extremely slow.  The fix was to store more data in the database when saving a card to a deck.  Instead of storing just the unique API card identifier in the database and making an API call to get more data, we now store the identifier, card name, and image URL after making the initial API call for that single card.  Due to database access being significantly faster, we can now load the "My Decks" page with almost no delay.
 
 #### Performance Testing
 
-Our application environment runs on the RIT Ubuntu 18.04 VM.  This machine is configured to use 2 virtual processors and 4096 MB of RAM.  Below are the page loading tests we have performed on the various pages of our application: 
+Our application environment runs on the RIT Ubuntu 18.04 VM.  This environment is configured to use 2 virtual processors and 4096 MB of RAM.  Below are the network loading tests we have performed on the various pages and functions of our application: 
 
 * Home Page: 314 ms
 * Full Card Search (40 cards): 1.74 seconds
