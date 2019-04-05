@@ -441,3 +441,8 @@ http://localhost:5000
 	* The amount of damage a creature can endure when combat occurs.
 * Type
 	* Creature, Enchantment, Instant, Sorcery, Artifact, Planeswalker, Tribal, Land.
+
+### Refactoring
+we spent a lot of time on refactoring. The refactoring that took place is mainly involving management's decision to change our DBMS. Originally, we had decided to use SQLite3, but due to changing requirements, we had to switch to PostgreSQL. Since our code was very abstract, it did not take long to implement the new database. During this process, we also decided to refactor certain aspects of the code by extracting repeated code and putting the repeated code into methods. As a result, our code looks cleaner and is easier to read. 
+
+In addition, we decided to use AJAX to send POST data to our endpoints instead of HTML forms. This allows us more flexibility when sending data to the main controller. Based on the response from the controller, we are able to provide the user with a more seamless interaction with the application as well as have more options for error handling on the controller.
