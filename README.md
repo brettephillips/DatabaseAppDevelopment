@@ -257,9 +257,19 @@ __snippet from an html template__
 
 #### Database
 
-Our PostgreSQL database will be comprised of four tables.  First, the USER table will hold a user's name and password for authentication.  A user may create multiple decks stored in the DECK table.  Each deck can be rated and the rating will be stored in this table.  Each deck can have cards added to it and this is tracked by the DECK_CARD associative table.  The CARD table will hold the MTG multiverse ID of the card so it can be reference by the API.  Below is a diagram of our database.
+Our PostgreSQL database will be comprised of four tables.  First, the USERS table will hold a user's name and password for authentication.  A user may create multiple decks stored in the DECK table.  Each deck can be rated and the rating will be stored in the RATING table.  Each deck can have cards added to it and this is tracked by the DECK_CARD table.  Below is a diagram of our database.
 
-Export Postgres Database ```pg_dump mtg > ./DB\ Scripts/databaseExport.sql```
+Setting up Postgres DB on Ubuntu:
+```
+sudo -u postgres psql
+ALTER USER postgres PASSWORD '<db password>';
+\q
+sudo systemctl restart postgresql
+```
+
+Import Postgres Database: ```psql < ./DB\ Scripts/createTables.sql```
+
+Export Postgres Database: ```pg_dump mtg > ./DB\ Scripts/databaseExport.sql```
 
 ![alt text](https://github.com/brettephillips/DatabaseAppDevelopment/blob/master/DB%20Scripts/schema.png?raw=true)
 
@@ -414,6 +424,117 @@ Visit your server's IP address followed by :5000 in your web browser:
 
 http://localhost:5000
 
+## Performance and Refactoring
+
+#### Performance Changes
+
+Once instance where we notice performance issues in our application is during API calls to the MTG API.  These can be slow when returning many cards at once.  Initially, we where going to make API calls to display the cards that are saved in each person's deck ("My Decks" page).  We quickly realized that when a user has many decks saved, each with up to 60 cards, this would result in a page that would load extremely slow.  The fix was to store more data in the database when saving a card to a deck.  Instead of storing just the unique API card identifier in the database and making an API call to get more data, we now store the identifier, card name, and image URL after making the initial API call for that single card.  Due to database access being significantly faster, we can now load the "My Decks" page with almost no delay.
+
+#### Performance Testing
+
+Our application environment runs on the RIT Ubuntu 18.04 VM.  This machine is configured to use 2 virtual processors and 4096 MB of RAM.  Below are the page loading tests we have performed on the various pages of our application: 
+
+* Home Page: 314 ms
+* Full Card Search (40 cards): 1.74 seconds
+* Single Card Details: 1.19 seconds
+* Add card to deck: 11 ms
+* My Decks (95 cards): 575 ms
+* Remove Card from deck: 19 ms
+* Remove Deck: 93 ms  
+* Explore Decks: not implemented yet
+
+    __Conclusion:__
+
+    At this point we are happy with the performance of our application.  All pages load within two seconds.  We will continue to conduct performance testing as developemt continues.
+
+### Refactoring
+we spent a lot of time on refactoring. The refactoring that took place is mainly involving management's decision to change our DBMS. Originally, we had decided to use SQLite3, but due to changing requirements, we had to switch to PostgreSQL. Since our code was very abstract, it did not take long to implement the new database.  The main challenge was setting up the Postgres connection method in our code.  Below is the method that all database calls now utilize:
+
+*Postgres DB Connection Method: in mtg.py*
+``` python
+import psycopg2
+from config import config
+def dbConnect():
+	conn = None
+
+	try:
+		# read connection parameters
+		params = config()
+
+		# connect to the PostgreSQL server
+		conn = psycopg2.connect(**params)
+
+		return conn
+
+	except (Exception, psycopg2.DatabaseError) as error:
+		logError("DB Connection",error)
+```
+__Note:__ The `config` import is from a file named `config.py`.  This file retrieves the database credentials stored in an `.ini` file.
+
+During this process, we also decided to refactor certain aspects of the code by extracting repeated code and putting the repeated code into methods. As a result, our code looks cleaner and is easier to read.  Part of this was deciding to separate our database endpoints into their own methods, rather than putting them within the page routes.
+
+*add_deck database endpoint within mtg.py*
+``` python
+# add_deck
+@app.route("/add_deck", methods=['GET','POST'])
+def add_deck():
+	# get add deck form value
+	add_deck_name = request.form.get('add_deck_name')
+	# create new deck INSERT
+	try:
+		# Connect to DB
+		conn = dbConnect()
+
+		#create cursor
+		cursor = conn.cursor()
+
+		# Insert Deck
+		cursor.execute("INSERT INTO deck (name, user_id) VALUES (%s,%s)", (add_deck_name, session['user_id'],))
+
+		# commit insert
+		conn.commit()
+
+		# close cursor
+		cursor.close()
+
+		return json.dumps({'status':'OK'});
+
+	# catch and log DB error
+	except Exception as ex:
+		logError("DB Create Deck",ex)
+		return json.dumps({'status':'BAD'});
+```
+
+In addition, we decided to use AJAX to send POST data to our endpoints instead of HTML forms. This allows us more flexibility when sending data to the main controller. Based on the response from the controller, we are able to provide the user with a more seamless interaction with the application as well as have more options for error handling on the controller.
+
+*example AJAX call from mydekcs.html*
+``` javascript
+// function to remove a user's deck
+function removeDeck(deck_id) {
+
+    $.ajax({
+        // call remove_deck route in mtg.py
+        url: "{{url_for('remove_deck')}}",
+        // send POST data
+        method: "POST",
+        data:{
+            // send the deck_id to be removed (unique PK)
+            "deck_id":deck_id
+        },
+        success: function(data) {
+            console.log("Removed Deck");
+            // reload page
+            location.reload();
+        },
+        error: function(error) {
+            console.log(error);
+            //error response in DOM
+            document.getElementById("success").innerHTML = "Error adding card";
+        }
+    });
+}
+```
+
 ## Glossary
 * CMC
 	* Converted Mana Cost, the total cost to play a card within the game.
@@ -442,7 +563,3 @@ http://localhost:5000
 * Type
 	* Creature, Enchantment, Instant, Sorcery, Artifact, Planeswalker, Tribal, Land.
 
-### Refactoring
-we spent a lot of time on refactoring. The refactoring that took place is mainly involving management's decision to change our DBMS. Originally, we had decided to use SQLite3, but due to changing requirements, we had to switch to PostgreSQL. Since our code was very abstract, it did not take long to implement the new database. During this process, we also decided to refactor certain aspects of the code by extracting repeated code and putting the repeated code into methods. As a result, our code looks cleaner and is easier to read. 
-
-In addition, we decided to use AJAX to send POST data to our endpoints instead of HTML forms. This allows us more flexibility when sending data to the main controller. Based on the response from the controller, we are able to provide the user with a more seamless interaction with the application as well as have more options for error handling on the controller.
