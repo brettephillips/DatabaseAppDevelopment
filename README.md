@@ -3,10 +3,10 @@
 ISTE 432
 
 ## Team Members and Roles
-* Backend Developers
+* Back-end Developers
 	* Daniel Eden
 	* Alex Johnson
-* Frontend Developers
+* Front-end Developers
 	* Brett Phillips
 	* Brie McIntosh
 * Content Creators
@@ -65,11 +65,11 @@ ISTE 432
 	* Due Date - Apr 26, 2019 11:59 PM
 	* For this milestone, include:
 		* Detail everything needed for packaging and deployment (A user should be able to read this and run the application)
-		* A help specification, detailing wha tkinds of help would be provided in a full-blown installation
+		* A help specification, detailing what kinds of help would be provided in a full-blown installation
 * Milestone 8 - Finalized Code
 	* Due Date - Apr 29, 2019 11:59 PM
 	* For this milestone, include:
-		* A submission of the full code in the dropbox
+		* A submission of the full code in the Dropbox
 
 ## Background
 Magic the Gathering(MTG) is a card game that was started in 1993 by Richard Garfield and his team, now known to be Wizard's of the Coast(WOTC).  The cards were originally made with intent for them to be collected and played with for fun.  No single person would need more than one copy of each card in their possession, but eventually that turned to everyone needing four of each card to conform to the new competitive rules that had come about. These competitive rules came out in 1996 when "Organized Play" was being put into place by WOTC.  Not all players jumped on the boat for this form of play right away. Many continued to play with their own rules, or the original rules they had played with before the new rules where established. These players would be referred to as casual players since they did not use the official "Organized Play" rules.  
@@ -77,23 +77,23 @@ Magic the Gathering(MTG) is a card game that was started in 1993 by Richard Garf
 The objective of the game is to get your opponent to zero life points. In most games a player will start at 20 life points, however there are some formats of the game where a player can start at more life. There is a lesser known way to win which requires your opponent draw their entire deck.  When the player with the exhausted deck attempts to draw a card when none are present in the deck, that player loses.  A normal game usually plays out with both players putting lands into play that are used to cast creatures, instants, sorceries, enchantments, artifacts, or planeswalker, all of which are referred to as spells. Playing these spell cards can be used to defeat the opponent or prevent the opponent from winning all together, which can result in a draw.
 
 ## Summary/Project Description
-This application will be used to make decklists for Magic the Gathering players who want to save and keep track of their own decklists as well as the decklists of other players. The decks can be sorted by user input and filters such as color and format. The other use of the application will be for users that want to create a deck. This will be done by searching for specific cards, which can be done with attributes like name, color of the card, and rarity of the card. Once the user finds the card they desire, they can add it to the list. The user will be able to view any card and acquire all of the information associated with the cards, including color, CMC(converted mana cost), power, toughness, type, set name, rarity, and the text on the card. This application will be helpful to players of the game because it allows them to look up other decks in order to prepare themselves for an event. In addition, they can save their own decks in order to print them out for an event in which decklists are required.
+This application will be used to make deck-lists for Magic the Gathering players who want to save and keep track of their own deck-lists as well as the deck-lists of other players. The decks can be sorted by user input and filters such as color and format. The other use of the application will be for users that want to create a deck. This will be done by searching for specific cards, which can be done with attributes like name, color of the card, and rarity of the card. Once the user finds the card they desire, they can add it to the list. The user will be able to view any card and acquire all of the information associated with the cards, including color, CMC(converted mana cost), power, toughness, type, set name, rarity, and the text on the card. This application will be helpful to players of the game because it allows them to look up other decks in order to prepare themselves for an event. In addition, they can save their own decks in order to print them out for an event in which deck-lists are required.
 
 ## Goals
-* Users will be able to search through cards based on selectable filters. Some filters will be checkboxes, while others will accept text input.
-* Users will be able to select cards and add them to a saved decklist.
-* A user can create, edit, save, share, and delete their saved decklists.
-* Users will be able to view saved decklists from other users.
-* Users can filter saved decklists by criteria.
-* Users will be able to rate decklists saved by other users.
+* Users will be able to search through cards based on selectable filters. Some filters will be check boxes, while others will accept text input.
+* Users will be able to select cards and add them to a saved deck-list.
+* A user can create, edit, save, share, and delete their saved deck-lists.
+* Users will be able to view saved deck-lists from other users.
+* Users can filter saved deck-lists by criteria.
+* Users will be able to rate deck-lists saved by other users.
 
 ## Stakeholders
 * Players of “Magic the Gathering”, both casual and competitive
-	* They want to be able to easily print off their decklist for competitions.
+	* They want to be able to easily print off their deck-list for competitions.
 	* They want to be able to scout their competition
-	* They want to explore other decklist setups in order to improve their own
+	* They want to explore other deck-list setups in order to improve their own
 * Hobby shop owners
-	* They want to review popular cards and decklists for the purpose of making a profit.
+	* They want to review popular cards and deck-lists for the purpose of making a profit.
 
 ## Scope
 * Out-of-scope: Players will not be able to play against each other using their saved decks.
@@ -104,17 +104,17 @@ This application will be used to make decklists for Magic the Gathering players 
 ## Project Requirements
 * Card Viewing
 	* Users must be able to view a list of cards and the card's attributes
-	* Users must be able to view decklists they have created as well as decklists created by other users
+	* Users must be able to view deck-lists they have created as well as deck-lists created by other users
 * Searching
 	* Users must be able to apply search filters when searching cards (like searching for most popular)
-	* Users must be able to apply search filters when searching saved decklists
+	* Users must be able to apply search filters when searching saved deck-lists
 * Creating Card Decks
 	* Users must be able to select cards to add to a deck
 	* Users must be able to save their decks
 	* Users must be able to edit and delete saved decks
 	* Users must be able to share decks
 * Rating
-	* Users should be able to rate decklists saved by other users
+	* Users should be able to rate deck-lists saved by other users
 	
 ## Business Rules
 * A saved deck must be at least 60 cards.
@@ -123,12 +123,12 @@ This application will be used to make decklists for Magic the Gathering players 
 * There's no maximum deck size, as long as you can shuffle your deck in your hands unassisted.
 
 ## Technologies Used
-* Frontend
+* Front-end
 	* HTML/CSS
 	* JavaScript
 		* jQuery
 	* BootStrap
-* Backend
+* Back-end
 	* Python
 		* Flask
 	* Magic API
@@ -145,11 +145,11 @@ This application will be used to make decklists for Magic the Gathering players 
 * Card and Set metadata from an online database API.
 * Users will enter the number of a single card needed for a deck, excluding basic lands.
 * User input will be entered into the database when saving, editing, or deleting a deck.
-* User input will be used to filter community made decklists.
-* Partial user input will be gathered for rating of decklists saved by other users.
+* User input will be used to filter community made deck-lists.
+* Partial user input will be gathered for rating of deck-lists saved by other users.
 
 ## Processing
-Card searching will be based off of filtered parameters selected by the user. Some filters will be checkboxes, while others will accept text input. These parameters will include:
+Card searching will be based off of filtered parameters selected by the user. Some filters will be check boxes, while others will accept text input. These parameters will include:
 	* Name
 	* Color
 	* Type
@@ -164,9 +164,9 @@ Card searching will be based off of filtered parameters selected by the user. So
 	* Toughness
 	* Game Format
 	* Legality
-* In order to persist data, creation of completed decklists, consisting of 60+ cards, will be stored in a database.
+* In order to persist data, creation of completed deck-lists, consisting of 60+ cards, will be stored in a database.
 * Saved deck lists will be pulled from the local database and displayed in the application.
-* The rating of community decklists will be saved in the local database as well and be limited to a scale of 1-5.
+* The rating of community deck-lists will be saved in the local database as well and be limited to a scale of 1-5.
 * All input will be sanitized and validated to prevent malicious content and user errors.
 
 ## Output
@@ -215,7 +215,7 @@ __snippet from mtg.py__
 		)
 ```
 
-When an exception is thrown, the model will take these two peices of information with a timestamp, and write it to a log file.  Below is the error logging model code:
+When an exception is thrown, the model will take these two pieces of information with a timestamp, and write it to a log file.  Below is the error logging model code:
 
 __errorLog.py__
 
@@ -242,7 +242,7 @@ def logError(errorType, errorMessage):
 	logfile.close()
 ```
 
-When an error is generated in the controller, a non-speficic, generic message is passed to the presentation layer to let the user know something went wrong.  The html templates will check if an error is passed in the following fashion:
+When an error is generated in the controller, a non-specific, generic message is passed to the presentation layer to let the user know something went wrong.  The HTML templates will check if an error is passed in the following fashion:
 
 __snippet from an html template__
 ``` html
@@ -251,7 +251,7 @@ __snippet from an html template__
 	<h2 id="card_name">Error Finding Card</h2>
 	
 {% else %}
-	.... successfull code here
+	.... successful code here
 ```
 
 
@@ -419,7 +419,7 @@ http://localhost:5000
 	* Converted Mana Cost, the total cost to play a card within the game.
 * Color
 	* The color of the cards consist of, White(W), Blue(U), Black(B), Red(R), and Green(G). The single characters are considered the color identities of the card.	
-* Decklist
+* Deck-list
 	* The number and combination of cards in the deck that are a minimum of 60 in standard format.
 * Game format
 	* Standard, Modern, Pauper, Legacy, Commander/EDH, or Vintage.
