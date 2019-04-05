@@ -271,7 +271,7 @@ Import Postgres Database: ```psql < ./DB\ Scripts/createTables.sql```
 
 Export Postgres Database: ```pg_dump mtg > ./DB\ Scripts/databaseExport.sql```
 
-![alt text](https://github.com/brettephillips/DatabaseAppDevelopment/blob/master/DB%20Scripts/schema.png?raw=true)
+![alt text](https://github.com/brettephillips/DatabaseAppDevelopment/blob/master/DB%20Scripts/schema2.png?raw=true)
 
 #### Flask Application Design Patterns
 When developing our controller we will be following industry standard "best practices" for our Flask application architecture.  Below is a breakdown of the Flask app organization.
