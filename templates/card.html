@@ -218,6 +218,7 @@ window.onload = function(){
 					i++
 					cost_html += "<img src='../static/media/"+temp+".png' width='40'/>"
 					temp = ''
+					continue
 				}
 				if(cost.charAt(i) == '/'){
 					temp = temp+cost.charAt(i-1)+cost.charAt(i+1)
@@ -244,8 +245,7 @@ window.onload = function(){
 			}
 			else{
 				cost_html += "<img src='../static/media/"+cost.charAt(i)+".png' width='40'/>"
-			}
-				
+			}   		
 	    	}
 	    }
 	}
