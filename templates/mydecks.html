@@ -66,12 +66,13 @@
 			    },
 			    success: function(data) {
 			    	console.log("Removed Deck");
-			    	//document.getElementById("success").innerHTML = card_name + " successfully added to " + deck_name;
+			    	// reload page
 			    	location.reload();
 			    },
 	            error: function(error) {
 	                console.log(error);
-	                //document.getElementById("success").innerHTML = "Error adding card";
+	                //error response in DOM
+	                document.getElementById("success").innerHTML = "Error adding card";
 	            }
 			});
 		}	

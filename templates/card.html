@@ -43,20 +43,32 @@
 					"image_url":image_url
 			    },
 			    success: function(data) {
+
+			    	$("#success").removeClass();
 			    	$("#success").fadeOut();
+			    	
+			    	var response = data;
+
+			    	// console.log(response);
+			    	// console.log(typeof(response));
+			    	// console.log(response['status']);			    	
+
+			    	// Check response - check for too many cards in deck
+			    	if (response == '{"status": "TOO_MANY"}') {
+				    	$("#success").addClass("alert alert-danger");
+				    	document.getElementById("success").innerHTML = deck_name + " cannot have more than 4 " + card_name;
+			    	}
+			    	// 
+			    	else {
+				    	$("#success").addClass("alert alert-success");
+				    	document.getElementById("success").innerHTML = card_name + " added to " + deck_name;
+			    	}
+
 			    	$("#success").fadeIn();
 
-
-			    	// document.getElementById("success").classList.add("alert alert-success");
-			    	$("#success").addClass("alert alert-success");
-			    	
-			    	document.getElementById("success").innerHTML = card_name + " added to " + deck_name;
-
-			 
-			    	//$("#success").fadeOut();
 			    },
 	            error: function(error) {
-	                console.log(error);
+	                $("#success").addClass("alert alert-danger");
 	                document.getElementById("success").innerHTML = "Error adding card";
 	            }
 			});

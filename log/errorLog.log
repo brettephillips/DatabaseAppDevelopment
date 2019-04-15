@@ -113,54 +113,54 @@
 2019-04-01 17:15:17 : DB Insert New USER - connection already closed
 2019-04-01 17:17:39 : DB Insert New USER - connection already closed
 2019-04-01 17:19:16 : DB Insert New USER - column "username" does not exist
-LINE 1: SELECT username FROM USER
-               ^
+LINE 1: SELECT username FROM USER
+               ^
 
 2019-04-01 17:21:39 : DB Insert New USER - syntax error at or near "USER"
-LINE 1: INSERT INTO USER (username, password) VALUES (?,?)
-                    ^
+LINE 1: INSERT INTO USER (username, password) VALUES (?,?)
+                    ^
 
 2019-04-01 17:24:00 : DB Insert New USER - syntax error at or near "USER"
-LINE 1: INSERT INTO USER (username, password) VALUES (?,?)
-                    ^
+LINE 1: INSERT INTO USER (username, password) VALUES (?,?)
+                    ^
 
 2019-04-01 17:24:10 : DB Insert New USER - syntax error at or near "USER"
-LINE 1: INSERT INTO USER (username, password) VALUES (?,?)
-                    ^
+LINE 1: INSERT INTO USER (username, password) VALUES (?,?)
+                    ^
 
 2019-04-01 17:25:42 : DB Insert New USER - syntax error at or near ","
-LINE 1: INSERT INTO users (username, password) VALUES (?,?)
-                                                        ^
+LINE 1: INSERT INTO users (username, password) VALUES (?,?)
+                                                        ^
 
 2019-04-01 17:36:31 : DB Insert New USER - syntax error at or near ","
-LINE 1: INSERT INTO users (username, password) VALUES (?,?)
-                                                        ^
+LINE 1: INSERT INTO users (username, password) VALUES (?,?)
+                                                        ^
 
 2019-04-01 17:37:51 : DB User Auth - Unicode-objects must be encoded before checking
 2019-04-01 17:38:17 : DB User Auth - Unicode-objects must be encoded before checking
 2019-04-01 18:54:36 : DB Add Card to Deck - invalid input syntax for integer: ""
-LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
-                                                             ^
+LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
+                                                             ^
 
 2019-04-01 18:54:36 : DB Get User's Decks - current transaction is aborted, commands ignored until end of transaction block
 
 2019-04-01 18:54:37 : API Get Card Details - Unexpected end of template. Jinja was looking for the following tags: 'endif'. The innermost block that needs to be closed is 'if'.
 2019-04-01 18:54:45 : DB Add Card to Deck - invalid input syntax for integer: ""
-LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
-                                                             ^
+LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
+                                                             ^
 
 2019-04-01 18:54:45 : DB Get User's Decks - current transaction is aborted, commands ignored until end of transaction block
 
 2019-04-01 18:54:46 : API Get Card Details - Unexpected end of template. Jinja was looking for the following tags: 'endif'. The innermost block that needs to be closed is 'if'.
 2019-04-01 18:55:13 : DB Add Card to Deck - invalid input syntax for integer: ""
-LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
-                                                             ^
+LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
+                                                             ^
 
 2019-04-01 18:55:13 : DB Get User's Decks - current transaction is aborted, commands ignored until end of transaction block
 
 2019-04-01 18:57:17 : DB Add Card to Deck - invalid input syntax for integer: ""
-LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
-                                                             ^
+LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
+                                                             ^
 
 2019-04-01 19:24:36 : DB Add Card to Deck - name 'conn1' is not defined
 2019-04-01 19:25:09 : DB Add Card to Deck - name 'conn1' is not defined
@@ -168,7 +168,7 @@ LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
 2019-04-01 19:31:34 : DB Add Card to Deck - name 'jsonify' is not defined
 2019-04-01 19:32:45 : DB Add Card to Deck - name 'json' is not defined
 2019-04-01 20:03:06 : DB Insert/Delete Deck - duplicate key value violates unique constraint "deck_pkey"
-DETAIL:  Key (deck_id)=(1) already exists.
+DETAIL:  Key (deck_id)=(1) already exists.
 
 2019-04-01 22:10:56 : DB Get User Decks - 'user_id'
 2019-04-01 22:51:55 : DB User Auth - list index out of range
@@ -194,13 +194,13 @@ DETAIL:  Key (deck_id)=(1) already exists.
 2019-04-01 23:03:38 : DB User Auth - list index out of range
 2019-04-01 23:03:51 : DB User Auth - list index out of range
 2019-04-01 23:12:12 : DB Insert/Delete Deck - duplicate key value violates unique constraint "deck_pkey"
-DETAIL:  Key (deck_id)=(4) already exists.
+DETAIL:  Key (deck_id)=(4) already exists.
 
 2019-04-01 23:37:14 : DB Create Deck - update or delete on table "deck" violates foreign key constraint "deck_card_deck_id_fkey" on table "deck_card"
-DETAIL:  Key (deck_id)=(2) is still referenced from table "deck_card".
+DETAIL:  Key (deck_id)=(2) is still referenced from table "deck_card".
 
 2019-04-01 23:37:19 : DB Create Deck - update or delete on table "deck" violates foreign key constraint "deck_card_deck_id_fkey" on table "deck_card"
-DETAIL:  Key (deck_id)=(2) is still referenced from table "deck_card".
+DETAIL:  Key (deck_id)=(2) is still referenced from table "deck_card".
 
 2019-04-01 23:40:58 : DB Create Deck - name 'cur' is not defined
 2019-04-02 18:59:45 : DB Create Deck - not all arguments converted during string formatting
@@ -286,19 +286,19 @@ DETAIL:  Key (deck_id)=(2) is still referenced from table "deck_card".
 2019-04-03 20:03:55 : SearchName DEBUG 0 - cat
 2019-04-03 20:03:55 : SearchName DEBUG 1  - cat
 2019-04-03 20:12:03 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
-DETAIL:  Key (deck_id)=(24) is not present in table "deck".
+DETAIL:  Key (deck_id)=(24) is not present in table "deck".
 
 2019-04-03 20:12:03 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
-DETAIL:  Key (deck_id)=(24) is not present in table "deck".
+DETAIL:  Key (deck_id)=(24) is not present in table "deck".
 
 2019-04-03 20:12:03 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
-DETAIL:  Key (deck_id)=(24) is not present in table "deck".
+DETAIL:  Key (deck_id)=(24) is not present in table "deck".
 
 2019-04-03 20:12:03 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
-DETAIL:  Key (deck_id)=(24) is not present in table "deck".
+DETAIL:  Key (deck_id)=(24) is not present in table "deck".
 
 2019-04-03 20:12:04 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
-DETAIL:  Key (deck_id)=(24) is not present in table "deck".
+DETAIL:  Key (deck_id)=(24) is not present in table "deck".
 
 2019-04-03 20:14:58 : button_value DEBUG 0 - search
 2019-04-03 20:14:58 : SearchName DEBUG 0 - Z
@@ -318,4 +318,66 @@ DETAIL:  Key (deck_id)=(24) is not present in table "deck".
 2019-04-03 21:05:16 : button_value DEBUG 0 - search
 2019-04-03 21:05:16 : SearchName DEBUG 0 - watcher
 2019-04-03 21:05:16 : SearchName DEBUG 1  - watcher
+2019-04-04 19:13:01 : button_value DEBUG 0 - search
+2019-04-04 19:13:01 : SearchName DEBUG 0 - gog
+2019-04-04 19:13:01 : SearchName DEBUG 1  - gog
+2019-04-04 21:18:21 : button_value DEBUG 0 - search
+2019-04-04 21:18:21 : SearchName DEBUG 0 - 
+2019-04-04 21:18:21 : SearchName DEBUG 1  - 
+2019-04-04 21:20:58 : button_value DEBUG 0 - search
+2019-04-04 21:20:58 : SearchName DEBUG 0 - kil
+2019-04-04 21:20:58 : SearchName DEBUG 1  - kil
+2019-04-05 12:40:55 : button_value DEBUG 0 - search
+2019-04-05 12:40:55 : SearchName DEBUG 0 - 
+2019-04-05 12:40:55 : SearchName DEBUG 1  - 
+2019-04-05 12:46:10 : button_value DEBUG 0 - search
+2019-04-05 12:46:10 : SearchName DEBUG 0 - 
+2019-04-05 12:46:10 : SearchName DEBUG 1  - 
+2019-04-05 12:47:50 : button_value DEBUG 0 - search
+2019-04-05 12:47:50 : SearchName DEBUG 0 - 
+2019-04-05 12:47:50 : SearchName DEBUG 1  - 
+2019-04-05 12:47:58 : button_value DEBUG 0 - search
+2019-04-05 12:47:58 : SearchName DEBUG 0 - 
+2019-04-05 12:47:58 : SearchName DEBUG 1  - 
+2019-04-05 12:48:02 : button_value DEBUG 0 - search
+2019-04-05 12:48:02 : SearchName DEBUG 0 - 
+2019-04-05 12:48:02 : SearchName DEBUG 1  - 
+2019-04-05 12:48:18 : button_value DEBUG 0 - search
+2019-04-05 12:48:18 : SearchName DEBUG 0 - ss
+2019-04-05 12:48:18 : SearchName DEBUG 1  - ss
+2019-04-05 12:49:11 : button_value DEBUG 0 - search
+2019-04-05 12:49:11 : SearchName DEBUG 0 - ss
+2019-04-05 12:49:11 : SearchName DEBUG 1  - ss
+2019-04-05 12:51:07 : button_value DEBUG 0 - search
+2019-04-05 12:51:07 : SearchName DEBUG 0 - ss
+2019-04-05 12:51:07 : SearchName DEBUG 1  - ss
+2019-04-05 12:52:28 : button_value DEBUG 0 - search
+2019-04-05 12:52:28 : SearchName DEBUG 0 - gt
+2019-04-05 12:52:28 : SearchName DEBUG 1  - gt
+2019-04-05 12:53:19 : button_value DEBUG 0 - search
+2019-04-05 12:53:19 : SearchName DEBUG 0 - ty
+2019-04-05 12:53:19 : SearchName DEBUG 1  - ty
+2019-04-08 15:45:59 : button_value DEBUG 0 - search
+2019-04-08 15:45:59 : SearchName DEBUG 0 - Icatian Store
+2019-04-08 15:45:59 : SearchName DEBUG 1  - Icatian Store
+2019-04-15 13:21:29 : button_value DEBUG 0 - search
+2019-04-15 13:21:29 : SearchName DEBUG 0 - dog
+2019-04-15 13:21:29 : SearchName DEBUG 1  - dog
+2019-04-15 13:21:43 : Count DEBUG - [(0,)]
+2019-04-15 13:22:34 : Count DEBUG - (0,)
+2019-04-15 13:23:32 : Count DEBUG - 0
+2019-04-15 13:24:51 : DB Add Card to Deck - column "deck_card.api_id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT api_id, COUNT(*) FROM deck_card WHERE deck_id = '1' A...
+               ^
+
+2019-04-15 13:25:56 : Count DEBUG - []
+2019-04-15 13:36:51 : Count DEBUG - 1 83433 [(0,)]
+2019-04-15 13:40:11 : DB Add Card to Deck - local variable 'count' referenced before assignment
+2019-04-15 13:41:03 : Count DEBUG - 1 83433 0
+2019-04-15 13:41:16 : Count DEBUG - 1 83433 1
+2019-04-15 13:41:18 : Count DEBUG - 1 83433 2
+2019-04-15 13:41:55 : Count DEBUG - 1 83433 3
+2019-04-15 13:41:57 : Count DEBUG - 1 83433 4
+2019-04-15 13:41:58 : Count DEBUG - 1 83433 4
+2019-04-15 13:41:59 : Count DEBUG - 1 83433 4
 

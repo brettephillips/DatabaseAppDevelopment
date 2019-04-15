@@ -62,7 +62,7 @@ def home():
 
 
 # `sudo -u postgres psql`
-# `ALTER USER postgres PASSWORD 'student';`
+# `ALTER USER postgres PASSWORD '<db password>';`
 # `\q`
 # `sudo systemctl restart postgresql`
 
@@ -260,6 +260,8 @@ def card(card_id):
 def add_to_deck():
 	try:
 		if request.method == "POST":
+
+			# get POST data
 			deck_id   = request.form.get('deck_id')
 			card_name = request.form.get('card_name')
 			api_id    = request.form.get('api_id')
@@ -269,12 +271,23 @@ def add_to_deck():
 
 			cursor = conn.cursor()
 
-			# Insert new username and hashed password
-			cursor.execute("INSERT INTO deck_card (deck_id, api_id, card_name, image_url) VALUES (%s,%s,%s,%s)", (deck_id, api_id, card_name, image_url))
-			# Save (commit) the changes to DB
-			conn.commit()
+			# see how many of this card are currently in the selected deck (cannot have more than 4)
+			cursor.execute("SELECT COUNT(api_id) FROM deck_card WHERE deck_id = %s AND api_id = %s", (deck_id, api_id,))
+			count_db = cursor.fetchall()
 
-			return json.dumps({'status':'OK'});
+			count = count_db[0][0]
+
+			#logError("Count DEBUG",(str(deck_id)+" "+str(api_id)+" "+str(count)))
+
+			if int(count) < 4:
+				# Insert new username and hashed password
+				cursor.execute("INSERT INTO deck_card (deck_id, api_id, card_name, image_url) VALUES (%s,%s,%s,%s)", (deck_id, api_id, card_name, image_url))
+				# Save (commit) the changes to DB
+				conn.commit()
+
+				return json.dumps({'status':'OK'});
+			else:
+				return json.dumps({'status':'TOO_MANY'});
 
 	except Exception as ex:
 		logError("DB Add Card to Deck",ex)
@@ -380,8 +393,10 @@ def add_deck():
 		# Insert Deck
 		cursor.execute("INSERT INTO deck (name, user_id) VALUES (%s,%s)", (add_deck_name, session['user_id'],))
 
+		# commint insert
 		conn.commit()
 
+		# close cursor
 		cursor.close()
 
 		return json.dumps({'status':'OK'});
