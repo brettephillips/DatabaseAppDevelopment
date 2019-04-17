@@ -461,6 +461,50 @@ def explore_decks():
 
 
 #########################################################################################################################
+# View a User's Deck Page
+@app.route("/view_deck/<string:deck_id>", methods=['GET','POST'])
+def view_deck(deck_id):
+	# check if user is logged in
+	logged_in = 'not'
+	if 'username' in session:
+		logged_in = session['username']
+		user_id = session['user_id']
+
+	title = "MTG Deck Planner | View Deck"
+
+
+	# see if add deck is empty - render normal page
+	try:
+		# Connect to DB
+		conn = dbConnect()
+
+		# Get / List all decks of user
+		cursor = conn.cursor()
+
+		# Get all decks with with 60 or more cards from all users
+		cursor.execute("SELECT * FROM deck WHERE deck_id = %s", (deck_id,))
+
+		deck = cursor.fetchall()
+
+	
+		return render_template('view_deck.html',
+			title=title,
+			username=session['user_id'],
+			logged_in=logged_in,
+			deck=deck
+		)
+	except Exception as ex:
+		logError("DB Get Complete Decks",ex)
+
+		return render_template('view_deck.html',
+			title=title,
+			username=session['user_id'],
+			logged_in=logged_in,
+			deck="error"
+		)
+
+
+#########################################################################################################################
 # add_deck
 @app.route("/add_deck", methods=['GET','POST'])
 def add_deck():
@@ -564,10 +608,10 @@ def signup():
 	# hash password
 	hashed_pw = bcrypt.hashpw(password.encode('utf8'), bcrypt.gensalt())
 
-	logError("DEBUG pass hash 1",hashed_pw)
-	logError("DEBUG pass hash 2",hashed_pw.decode("utf-8") )
+	#logError("DEBUG pass hash 1",hashed_pw)
+	#logError("DEBUG pass hash 2",hashed_pw.decode("utf-8") )
 
-	hashed_pw_decode = hashed_pw.decode("utf-8")
+	hashed_pw_decode = hashed_pw.decode("utf-8") # need to decode this to store in Postgres properly
 
 	try:
 		# Connect to DB
@@ -658,8 +702,8 @@ def login():
 		# Get Password
 		hashed = cursor.fetchall()
 
-		logError("users pass/id debug",type(hashed))
-		logError("users pass/id debug",hashed)
+		#logError("users pass/id debug",type(hashed))
+		#logError("users pass/id debug",hashed)
 
 		# Check if nothing is returned from DB (bad username)
 		if not hashed:

@@ -555,4 +555,33 @@ DETAIL:  Key (user_id)=(8) already exists.
 2019-04-17 12:14:30 : average rating! - 4.166666666666667
 2019-04-17 12:14:30 : get scorees! - []
 2019-04-17 12:14:30 : average rating! - 0.0
+2019-04-17 12:31:27 : users pass/id debug - <class 'list'>
+2019-04-17 12:31:27 : users pass/id debug - [('$2b$12$FA6HClAal0W9JqRHUU5BCe/9tQCyPDV1.5jK8QAfEbD.xyUte1wo2', 13)]
+2019-04-17 12:35:14 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-17 12:35:14 : average rating! - 4.166666666666667
+2019-04-17 12:35:14 : get scorees! - []
+2019-04-17 12:35:14 : average rating! - 0.0
+2019-04-17 12:44:59 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-17 12:44:59 : average rating! - 4.166666666666667
+2019-04-17 12:44:59 : get scorees! - []
+2019-04-17 12:44:59 : average rating! - 0.0
+2019-04-17 12:44:59 : DB Get Complete Decks - Could not build url for endpoint 'view_deck/{{d[0]}}'. Did you mean 'view_deck' instead?
+2019-04-17 12:47:15 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-17 12:47:15 : average rating! - 4.166666666666667
+2019-04-17 12:47:15 : get scorees! - []
+2019-04-17 12:47:15 : average rating! - 0.0
+2019-04-17 12:47:15 : DB Get Complete Decks - expected token ':', got '}'
+2019-04-17 12:49:20 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-17 12:49:20 : average rating! - 4.166666666666667
+2019-04-17 12:49:20 : get scorees! - []
+2019-04-17 12:49:20 : average rating! - 0.0
+2019-04-17 12:49:20 : DB Get Complete Decks - unexpected '}', expected ')'
+2019-04-17 12:49:42 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-17 12:49:42 : average rating! - 4.166666666666667
+2019-04-17 12:49:42 : get scorees! - []
+2019-04-17 12:49:42 : average rating! - 0.0
+2019-04-17 12:50:53 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-17 12:50:53 : average rating! - 4.166666666666667
+2019-04-17 12:50:53 : get scorees! - []
+2019-04-17 12:50:53 : average rating! - 0.0
 

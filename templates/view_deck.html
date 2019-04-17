@@ -15,23 +15,12 @@
 
 
 <!-- Content -------------------------------------------------------------------->
-{% if decks_to_show == 'error' %}
+{% if deck == 'error' %}
 
-	<h2 id="card_name">Error Finding Decks</h2>
+	<h2 id="card_name">Error Finding Deck</h2>
 	
 {% else %}
-	<ul class="list-group">
-		{% for d in decks_to_show %}
-		<a href='{{url_for("view_deck", deck_id=d[0])}}'>
-			<li class="list-group-item">
-				{{d[2]}}
-				from user: {{d[3]}}
-				{{d[1]}} cards
-				<span class="badge badge-primary badge-pill">{{d[4]}}</span>	
-			</li>
-		</a>
-		{% endfor %}
-	</ul>
+	<p>{{deck}}</p>
 {% endif %} 
 <!-- end error if -->
 
