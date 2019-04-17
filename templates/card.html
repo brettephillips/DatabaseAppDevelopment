@@ -47,19 +47,21 @@
 			    	$("#success").removeClass();
 			    	$("#success").fadeOut();
 			    	
-			    	var response = data;
-
-			    	// console.log(response);
-			    	// console.log(typeof(response));
-			    	// console.log(response['status']);			    	
+			    	var response = data;    	
+			    	console.log(response);
 
 			    	// Check response - check for too many cards in deck
 			    	if (response == '{"status": "TOO_MANY"}') {
 				    	$("#success").addClass("alert alert-danger");
 				    	document.getElementById("success").innerHTML = deck_name + " cannot have more than 4 " + card_name;
 			    	}
-			    	// 
-			    	else {
+			    	// error response
+			    	else if (response == '{"status": "BAD"}') {
+		                $("#success").addClass("alert alert-danger");
+		                document.getElementById("success").innerHTML = "Error adding card";
+			    	}
+			    	// good response
+			    	else if (response == '{"status": "OK"}') {
 				    	$("#success").addClass("alert alert-success");
 				    	document.getElementById("success").innerHTML = card_name + " added to " + deck_name;
 			    	}
@@ -68,8 +70,11 @@
 
 			    },
 	            error: function(error) {
+			    	$("#success").removeClass();
+			    	$("#success").fadeOut();
 	                $("#success").addClass("alert alert-danger");
 	                document.getElementById("success").innerHTML = "Error adding card";
+	                $("#success").fadeIn();
 	            }
 			});
 		}

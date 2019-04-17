@@ -380,4 +380,167 @@
 2019-04-15 13:41:57 : Count DEBUG - 1 83433 4
 2019-04-15 13:41:58 : Count DEBUG - 1 83433 4
 2019-04-15 13:41:59 : Count DEBUG - 1 83433 4
+2019-04-15 15:10:17 : DB Add Card to Deck - 'ImmutableMultiDict' object has no attribute 'getX'
+2019-04-15 15:11:36 : DB Add Card to Deck - 'ImmutableMultiDict' object has no attribute 'getX'
+2019-04-15 15:13:25 : DB Add Card to Deck - 'ImmutableMultiDict' object has no attribute 'getX'
+2019-04-15 15:40:05 : DB Get Complete Decks - can't execute an empty query
+2019-04-15 15:42:27 : debug decks! - [(1, 63)]
+2019-04-15 15:45:35 : debug big decks! - [(1, 63)]
+2019-04-15 15:45:35 : debug deck names! - [('My First Deck', 2, 'dan')]
+2019-04-15 15:50:40 : debug big decks! - [(1, 63)]
+2019-04-15 15:50:40 : debug deck names! - [('My First Deck', 'dan')]
+2019-04-15 15:50:40 : DB Get Complete Decks - float() argument must be a string or a number, not 'tuple'
+2019-04-15 15:51:21 : debug big decks! - [(1, 63)]
+2019-04-15 15:51:21 : debug deck names! - [('My First Deck', 'dan')]
+2019-04-15 15:51:21 : get scorees! - [(5,), (3,), (4,)]
+2019-04-15 15:51:47 : debug big decks! - [(1, 63)]
+2019-04-15 15:51:47 : debug deck names! - [('My First Deck', 'dan')]
+2019-04-15 15:51:47 : get scorees! - [(5,), (3,), (4,)]
+2019-04-15 15:51:47 : average rating! - 4.0
+2019-04-15 15:52:42 : debug big decks! - [(1, 63)]
+2019-04-15 15:52:42 : debug deck names! - [('My First Deck', 'dan')]
+2019-04-15 15:52:42 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-15 15:52:42 : average rating! - 4.166666666666667
+2019-04-15 15:56:27 : debug big decks! - [(1, 63)]
+2019-04-15 15:56:27 : debug deck names! - [('My First Deck', 'dan')]
+2019-04-15 15:56:27 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-15 15:56:27 : average rating! - 4.166666666666667
+2019-04-15 16:00:26 : debug big decks! - [(1, 63)]
+2019-04-15 16:00:26 : debug deck names! - [('My First Deck', 'dan')]
+2019-04-15 16:00:26 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-15 16:00:26 : average rating! - 4.166666666666667
+2019-04-15 16:01:59 : debug big decks! - [(1, 63)]
+2019-04-15 16:01:59 : debug deck names! - [('My First Deck', 'dan')]
+2019-04-15 16:01:59 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-15 16:01:59 : average rating! - 4.166666666666667
+2019-04-15 16:02:53 : debug big decks! - [(1, 63)]
+2019-04-15 16:02:53 : debug deck names! - [('My First Deck', 'dan')]
+2019-04-15 16:02:53 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-15 16:02:53 : average rating! - 4.166666666666667
+2019-04-15 16:03:15 : debug big decks! - [(1, 63)]
+2019-04-15 16:03:15 : debug deck names! - [('My First Deck', 'dan')]
+2019-04-15 16:03:15 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-15 16:03:15 : average rating! - 4.166666666666667
+2019-04-15 16:03:58 : debug big decks! - [(1, 63)]
+2019-04-15 16:03:58 : debug deck names! - [('My First Deck', 'dan')]
+2019-04-15 16:03:58 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-15 16:03:58 : average rating! - 4.166666666666667
+2019-04-15 16:10:16 : DB Insert New USER - duplicate key value violates unique constraint "users_pkey"
+DETAIL:  Key (user_id)=(2) already exists.
+
+2019-04-15 16:11:11 : DB Insert New USER - duplicate key value violates unique constraint "users_pkey"
+DETAIL:  Key (user_id)=(3) already exists.
+
+2019-04-15 16:11:54 : DB User Auth - Invalid salt
+2019-04-15 16:12:03 : DB User Auth - Invalid salt
+2019-04-15 16:12:16 : debug big decks! - [(1, 63)]
+2019-04-15 16:12:16 : debug deck names! - [('My First Deck', 'dan')]
+2019-04-15 16:12:16 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-15 16:12:16 : average rating! - 4.166666666666667
+2019-04-15 16:12:24 : button_value DEBUG 0 - search
+2019-04-15 16:12:24 : SearchName DEBUG 0 - asd
+2019-04-15 16:12:24 : SearchName DEBUG 1  - asd
+2019-04-15 16:14:09 : DB User Auth - Invalid salt
+2019-04-15 16:15:40 : DB User Auth - Invalid salt
+2019-04-15 16:18:25 : DB User Auth - Invalid salt
+2019-04-15 16:18:35 : DB User Auth - Unicode-objects must be encoded before checking
+2019-04-15 16:18:43 : DB User Auth - Unicode-objects must be encoded before checking
+2019-04-15 16:18:58 : DB User Auth - list index out of range
+2019-04-15 16:19:26 : DB User Auth - list index out of range
+2019-04-15 16:19:42 : DB User Auth - list index out of range
+2019-04-15 16:19:55 : DB User Auth - list index out of range
+2019-04-15 16:20:46 : DB User Auth - list index out of range
+2019-04-15 16:20:52 : DB User Auth - list index out of range
+2019-04-15 16:20:56 : DB User Auth - list index out of range
+2019-04-15 16:21:27 : users pass/id debug - <class 'list'>
+2019-04-15 16:21:27 : users pass/id debug - []
+2019-04-15 16:21:27 : DB User Auth - list index out of range
+2019-04-15 16:21:31 : users pass/id debug - <class 'list'>
+2019-04-15 16:21:31 : users pass/id debug - []
+2019-04-15 16:21:31 : DB User Auth - list index out of range
+2019-04-15 16:22:00 : users pass/id debug - <class 'list'>
+2019-04-15 16:22:00 : users pass/id debug - [('$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)]
+2019-04-15 16:22:58 : users pass/id debug - <class 'list'>
+2019-04-15 16:22:58 : users pass/id debug - [('\\x243262243132246e30575439684537692f59363630666532316547647574517670435a79704f457a5a364a4e5964364336496b616446394456413679', 4)]
+2019-04-15 16:22:58 : DB User Auth - Invalid salt
+2019-04-15 16:29:44 : users pass/id debug - <class 'list'>
+2019-04-15 16:29:44 : users pass/id debug - [('\\x243262243132246e30575439684537692f59363630666532316547647574517670435a79704f457a5a364a4e5964364336496b616446394456413679', 4)]
+2019-04-15 16:29:44 : DB User Auth - Invalid salt
+2019-04-15 16:30:09 : users pass/id debug - <class 'list'>
+2019-04-15 16:30:09 : users pass/id debug - [('\\x24326224313224446e38494f5659475a764768767346706939677a4565776c766c4b6f366a6b712e62344d312e7656616c69433178687a384a704c75', 6)]
+2019-04-15 16:30:09 : DB User Auth - Invalid salt
+2019-04-15 16:32:31 : users pass/id debug - <class 'list'>
+2019-04-15 16:32:31 : users pass/id debug - [('\\x24326224313224446e38494f5659475a764768767346706939677a4565776c766c4b6f366a6b712e62344d312e7656616c69433178687a384a704c75', 6)]
+2019-04-15 16:32:31 : DB User Auth - Invalid salt
+2019-04-15 16:32:44 : users pass/id debug - <class 'list'>
+2019-04-15 16:32:44 : users pass/id debug - []
+2019-04-15 16:32:44 : DB User Auth - list index out of range
+2019-04-15 16:32:52 : users pass/id debug - <class 'list'>
+2019-04-15 16:32:52 : users pass/id debug - []
+2019-04-15 16:32:52 : DB User Auth - list index out of range
+2019-04-15 16:33:11 : users pass/id debug - <class 'list'>
+2019-04-15 16:33:11 : users pass/id debug - [('\\x24326224313224394c6c4339366c6e7731394a6a767a4854556e7a592e7143356a5753432e79423038684d4d35546275476e637a5a524e312f63612e', 7)]
+2019-04-15 16:33:11 : DB User Auth - Invalid salt
+2019-04-15 16:36:28 : users pass/id debug - <class 'list'>
+2019-04-15 16:36:28 : users pass/id debug - [('\\x24326224313224394c6c4339366c6e7731394a6a767a4854556e7a592e7143356a5753432e79423038684d4d35546275476e637a5a524e312f63612e', 7)]
+2019-04-15 16:36:28 : DB User Auth - Invalid salt
+2019-04-15 16:37:46 : users pass/id debug - <class 'list'>
+2019-04-15 16:37:46 : users pass/id debug - []
+2019-04-15 16:37:46 : DB User Auth - list index out of range
+2019-04-15 16:38:08 : users pass/id debug - <class 'list'>
+2019-04-15 16:38:08 : users pass/id debug - []
+2019-04-15 16:38:08 : DB User Auth - list index out of range
+2019-04-15 16:38:52 : users pass/id debug - <class 'list'>
+2019-04-15 16:38:52 : users pass/id debug - []
+2019-04-15 16:39:51 : users pass/id debug - <class 'list'>
+2019-04-15 16:39:51 : users pass/id debug - []
+2019-04-15 16:39:55 : users pass/id debug - <class 'list'>
+2019-04-15 16:39:55 : users pass/id debug - []
+2019-04-15 16:40:01 : users pass/id debug - <class 'list'>
+2019-04-15 16:40:01 : users pass/id debug - []
+2019-04-15 16:40:01 : DB User Auth - 'NoneType' object has no attribute 'encode'
+2019-04-15 16:40:15 : users pass/id debug - <class 'list'>
+2019-04-15 16:40:15 : users pass/id debug - []
+2019-04-15 16:40:15 : DB User Auth - list index out of range
+2019-04-15 16:44:16 : users pass/id debug - <class 'list'>
+2019-04-15 16:44:16 : users pass/id debug - []
+2019-04-15 16:44:16 : DB User Auth - list index out of range
+2019-04-15 16:45:17 : DB User Auth - list index out of range
+2019-04-15 16:46:08 : users pass/id debug - <class 'list'>
+2019-04-15 16:46:08 : users pass/id debug - []
+2019-04-15 16:46:16 : users pass/id debug - <class 'list'>
+2019-04-15 16:46:16 : users pass/id debug - []
+2019-04-15 16:46:24 : users pass/id debug - <class 'list'>
+2019-04-15 16:46:24 : users pass/id debug - [('$2b$12$dgJN3Hxu7FrBCzePRvdKGO.xwRb7SkE2B.K/erE4xDDslYPn1Pf6i', 8)]
+2019-04-15 16:48:28 : DEBUG pass hash - b'$2b$12$qMJBZYi247OzPBZbZ0hiA.JW/DvWIlxU3Cs9iQ15wpygyvd.ThuuS'
+2019-04-15 16:48:28 : DB Insert New USER - duplicate key value violates unique constraint "users_pkey"
+DETAIL:  Key (user_id)=(8) already exists.
+
+2019-04-15 16:48:47 : users pass/id debug - <class 'list'>
+2019-04-15 16:48:47 : users pass/id debug - []
+2019-04-15 16:48:56 : DEBUG pass hash - b'$2b$12$hWjMTC/pRxrqpVamwcuhSuwVUYP4URGyFuad8LPuSREso/XKsnXjS'
+2019-04-15 16:49:02 : users pass/id debug - <class 'list'>
+2019-04-15 16:49:02 : users pass/id debug - [('\\x2432622431322468576a4d54432f70527872717056616d7763756853757756555950345552477946756164384c5075535245736f2f584b736e586a53', 9)]
+2019-04-15 16:49:02 : DB User Auth - Unicode-objects must be encoded before checking
+2019-04-15 16:49:17 : users pass/id debug - <class 'list'>
+2019-04-15 16:49:17 : users pass/id debug - [('\\x2432622431322468576a4d54432f70527872717056616d7763756853757756555950345552477946756164384c5075535245736f2f584b736e586a53', 9)]
+2019-04-15 16:49:17 : DB User Auth - Invalid salt
+2019-04-15 16:49:23 : users pass/id debug - <class 'list'>
+2019-04-15 16:49:23 : users pass/id debug - [('\\x2432622431322468576a4d54432f70527872717056616d7763756853757756555950345552477946756164384c5075535245736f2f584b736e586a53', 9)]
+2019-04-15 16:49:23 : DB User Auth - Invalid salt
+2019-04-17 11:59:03 : users pass/id debug - <class 'list'>
+2019-04-17 11:59:03 : users pass/id debug - [('\\x2432622431322468576a4d54432f70527872717056616d7763756853757756555950345552477946756164384c5075535245736f2f584b736e586a53', 9)]
+2019-04-17 11:59:03 : DB User Auth - Invalid salt
+2019-04-17 11:59:19 : DEBUG pass hash 1 - b'$2b$12$./DO.9KCSuN5NWk/KWe5XucuEH4xEgmzFTaHmzQAF/E25dnKePjR6'
+2019-04-17 11:59:19 : DEBUG pass hash 2 - b'$2b$12$./DO.9KCSuN5NWk/KWe5XucuEH4xEgmzFTaHmzQAF/E25dnKePjR6'
+2019-04-17 12:01:26 : DEBUG pass hash 1 - b'$2b$12$DNjtofpFInJA5s5Q6Hg63.gPT5aGqg5Ms29Jr6rImxe09ZIMLrJ2K'
+2019-04-17 12:01:26 : DEBUG pass hash 2 - $2b$12$DNjtofpFInJA5s5Q6Hg63.gPT5aGqg5Ms29Jr6rImxe09ZIMLrJ2K
+2019-04-17 12:02:53 : users pass/id debug - <class 'list'>
+2019-04-17 12:02:53 : users pass/id debug - []
+2019-04-17 12:03:01 : DEBUG pass hash 1 - b'$2b$12$rLJGHzL5CLXHqOIaKsVPsu0pKcLAf/ig9ZjTbpCGnco/4ewVbjn3y'
+2019-04-17 12:03:01 : DEBUG pass hash 2 - $2b$12$rLJGHzL5CLXHqOIaKsVPsu0pKcLAf/ig9ZjTbpCGnco/4ewVbjn3y
+2019-04-17 12:03:07 : users pass/id debug - <class 'list'>
+2019-04-17 12:03:07 : users pass/id debug - [('$2b$12$rLJGHzL5CLXHqOIaKsVPsu0pKcLAf/ig9ZjTbpCGnco/4ewVbjn3y', 12)]
+2019-04-17 12:03:38 : users pass/id debug - <class 'list'>
+2019-04-17 12:03:38 : users pass/id debug - [('$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)]
 

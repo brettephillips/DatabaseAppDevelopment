@@ -122,12 +122,12 @@ def search():
 	# Get some cards
 	try:
 		cards = []
-		logError("button_value DEBUG 0",button_value)
-		logError("SearchName DEBUG 0",search_name)
+		# logError("button_value DEBUG 0",button_value)
+		# logError("SearchName DEBUG 0",search_name)
 		if button_value == 'search' or (cmc_value == '' and power_value == '' and toughness_value == ''):
-			logError("SearchName DEBUG 1 ",search_name)
+			# logError("SearchName DEBUG 1 ",search_name)
 			if cmc_value == '' and power_value == '' and toughness_value == '':
-				logError("SearchName DEBUG 2",search_name)
+				# logError("SearchName DEBUG 2",search_name)
 				search_name = '';		
 			cards += Card.where(page=1).where(pageSize=40).where(name=search_name).all()
 		else:
@@ -279,6 +279,7 @@ def add_to_deck():
 
 			#logError("Count DEBUG",(str(deck_id)+" "+str(api_id)+" "+str(count)))
 
+			# as long as there are less than 4 cards in that deck - add it
 			if int(count) < 4:
 				# Insert new username and hashed password
 				cursor.execute("INSERT INTO deck_card (deck_id, api_id, card_name, image_url) VALUES (%s,%s,%s,%s)", (deck_id, api_id, card_name, image_url))
@@ -287,6 +288,7 @@ def add_to_deck():
 
 				return json.dumps({'status':'OK'});
 			else:
+				# return TOO_MANY response
 				return json.dumps({'status':'TOO_MANY'});
 
 	except Exception as ex:
@@ -374,6 +376,88 @@ def mydecks():
 			decks="error"
 		)
 
+
+
+#########################################################################################################################
+# Mydecks Page
+@app.route("/explore_decks", methods=['GET','POST'])
+def explore_decks():
+	# check if user is logged in
+	logged_in = 'not'
+	if 'username' in session:
+		logged_in = session['username']
+		user_id = session['user_id']
+
+	title = "MTG Deck Planner | Explore Decks"
+
+
+	# see if add deck is empty - render normal page
+	try:
+		# Connect to DB
+		conn = dbConnect()
+
+		# Get / List all decks of user
+		cursor = conn.cursor()
+
+		# Get all decks with with 60 or more cards from all users
+		cursor.execute("SELECT deck_id, count(*) FROM deck_card GROUP BY deck_id HAVING count(*) > 59")
+
+		decks = cursor.fetchall()
+
+		# logError("debug big decks!",decks)
+
+		decks_to_show = []
+		for deck in decks:
+
+			deck_id = deck[0]
+			deck_count = deck[1]
+
+			#get deck name and username it belongs to
+			cursor.execute("SELECT d.name, u.username FROM deck d JOIN users u ON u.user_id = d.user_id WHERE d.deck_id = %s", (deck_id,))
+
+			deck_names = cursor.fetchall()
+			# logError("debug deck names!",deck_names)
+			deck_name = deck_names[0][0]
+			user_name = deck_names[0][1]
+
+
+			# get deck rating
+			cursor.execute("SELECT score FROM rating WHERE deck_id = %s", (deck_id,))
+
+			scores = cursor.fetchall()
+
+			logError("get scorees!",scores)
+
+			rating = 0.0
+			r = 0.0
+			for score in scores:
+				r += float(score[0])
+				rating = r/len(scores)
+
+			logError("average rating!",rating)
+
+			decks_to_show.append([deck_id, deck_count, deck_name, user_name, rating])
+
+
+
+
+
+	
+		return render_template('explore_decks.html',
+			title=title,
+			username=session['user_id'],
+			logged_in=logged_in,
+			decks_to_show=decks_to_show
+		)
+	except Exception as ex:
+		logError("DB Get Complete Decks",ex)
+
+		return render_template('explore_decks.html',
+			title=title,
+			username=session['user_id'],
+			logged_in=logged_in,
+			decks_to_show="error"
+		)
 
 
 #########################################################################################################################
@@ -480,6 +564,11 @@ def signup():
 	# hash password
 	hashed_pw = bcrypt.hashpw(password.encode('utf8'), bcrypt.gensalt())
 
+	logError("DEBUG pass hash 1",hashed_pw)
+	logError("DEBUG pass hash 2",hashed_pw.decode("utf-8") )
+
+	hashed_pw_decode = hashed_pw.decode("utf-8")
+
 	try:
 		# Connect to DB
 		conn = dbConnect()
@@ -509,7 +598,7 @@ def signup():
 			cursor2 = conn.cursor()
 
 			# Insert new username and hashed password
-			cursor2.execute("INSERT INTO users (username, password) VALUES (%s,%s)", (username, hashed_pw))
+			cursor2.execute("INSERT INTO users (username, password) VALUES (%s,%s)", (username, hashed_pw_decode))
 
 			# Save (commit) the changes to DB
 			conn.commit()
@@ -569,11 +658,11 @@ def login():
 		# Get Password
 		hashed = cursor.fetchall()
 
-		# logError("users pass/id debug",type(hashed[0][0]))
-		# logError("users pass/id debug",hashed[0][1])
+		logError("users pass/id debug",type(hashed))
+		logError("users pass/id debug",hashed)
 
 		# Check if nothing is returned from DB (bad username)
-		if hashed is None:
+		if not hashed:
 			return render_template('home.html',
 				title="MTG Deck Planner",
 				bad_login="yes",
