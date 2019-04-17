@@ -272,7 +272,7 @@ def add_to_deck():
 			cursor = conn.cursor()
 
 			# see how many of this card are currently in the selected deck (cannot have more than 4)
-			cursor.execute("SELECT COUNT(api_id) FROM deck_card WHERE deck_id = %s AND api_id = %s", (deck_id, api_id,))
+			cursor.execute("SELECT COUNT(card_name) FROM deck_card WHERE deck_id = %s AND card_name = %s", (deck_id, card_name,))
 			count_db = cursor.fetchall()
 
 			count = count_db[0][0]

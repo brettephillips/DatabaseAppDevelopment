@@ -543,4 +543,16 @@ DETAIL:  Key (user_id)=(8) already exists.
 2019-04-17 12:03:07 : users pass/id debug - [('$2b$12$rLJGHzL5CLXHqOIaKsVPsu0pKcLAf/ig9ZjTbpCGnco/4ewVbjn3y', 12)]
 2019-04-17 12:03:38 : users pass/id debug - <class 'list'>
 2019-04-17 12:03:38 : users pass/id debug - [('$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)]
+2019-04-17 12:05:01 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-17 12:05:01 : average rating! - 4.166666666666667
+2019-04-17 12:06:28 : users pass/id debug - <class 'list'>
+2019-04-17 12:06:28 : users pass/id debug - [('$2b$12$itK2aMPdXT20hMCyJNcqo.nimwNbQy6dn64JNWXO4xi4pnfVPurJa', 3)]
+2019-04-17 12:06:43 : DEBUG pass hash 1 - b'$2b$12$FA6HClAal0W9JqRHUU5BCe/9tQCyPDV1.5jK8QAfEbD.xyUte1wo2'
+2019-04-17 12:06:43 : DEBUG pass hash 2 - $2b$12$FA6HClAal0W9JqRHUU5BCe/9tQCyPDV1.5jK8QAfEbD.xyUte1wo2
+2019-04-17 12:08:13 : users pass/id debug - <class 'list'>
+2019-04-17 12:08:13 : users pass/id debug - [('$2b$12$FA6HClAal0W9JqRHUU5BCe/9tQCyPDV1.5jK8QAfEbD.xyUte1wo2', 13)]
+2019-04-17 12:14:30 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-17 12:14:30 : average rating! - 4.166666666666667
+2019-04-17 12:14:30 : get scorees! - []
+2019-04-17 12:14:30 : average rating! - 0.0
 

@@ -210,7 +210,8 @@ ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.u
 COPY public.deck (deck_id, name, user_id) FROM stdin;
 1	My First Deck	2
 19	Test21	2
-25	Blue	2
+26	Test	2
+28	Blue Power	8
 \.
 
 
@@ -219,7 +220,6 @@ COPY public.deck (deck_id, name, user_id) FROM stdin;
 --
 
 COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdin;
-55	1	130550	Ancestor's Chosen	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130550&type=card
 64	19	129477	Ballista Squad	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129477&type=card
 70	19	338472	Greater Mossdog	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=338472&type=card
 72	1	152059	Parapet Watchers	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=152059&type=card
@@ -227,24 +227,85 @@ COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdi
 77	1	4184	Icatian Store	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=4184&type=card
 78	1	4184	Icatian Store	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=4184&type=card
 79	1	4184	Icatian Store	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=4184&type=card
-86	25	4184	Icatian Store	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=4184&type=card
 88	1	2141	Zombie Master	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2141&type=card
 89	19	2141	Zombie Master	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2141&type=card
 91	19	130550	Ancestor's Chosen	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130550&type=card
-92	25	130550	Ancestor's Chosen	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130550&type=card
-93	25	129572	Glorious Anthem	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129572&type=card
 95	19	129572	Glorious Anthem	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129572&type=card
 96	1	130554	Cho-Manno, Revolutionary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130554&type=card
-97	25	130554	Cho-Manno, Revolutionary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130554&type=card
-98	19	130554	Cho-Manno, Revolutionary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130554&type=card
 100	19	130554	Cho-Manno, Revolutionary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130554&type=card
-102	19	130554	Cho-Manno, Revolutionary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130554&type=card
 104	19	130554	Cho-Manno, Revolutionary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130554&type=card
 105	1	130528	Condemn	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130528&type=card
 106	19	130528	Condemn	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130528&type=card
-111	25	130528	Condemn	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130528&type=card
 112	19	74237	Our Market Research Shows That Players Like Really Long Card Names So We Made this Card to Have the Absolute Longest Card Name Ever Elemental	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=74237&type=card
 114	1	74237	Our Market Research Shows That Players Like Really Long Card Names So We Made this Card to Have the Absolute Longest Card Name Ever Elemental	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=74237&type=card
+115	1	394088	Watcher of the Roost	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=394088&type=card
+116	26	394088	Watcher of the Roost	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=394088&type=card
+117	1	398427	Pyromancer's Goggles	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=398427&type=card
+120	19	129710	Angelic Chorus	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129710&type=card
+121	19	129710	Angelic Chorus	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129710&type=card
+123	19	129710	Angelic Chorus	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129710&type=card
+124	1	26638	Killer Whale	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=26638&type=card
+125	1	26638	Killer Whale	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=26638&type=card
+126	1	135216	Dross Crocodile	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135216&type=card
+127	1	135216	Dross Crocodile	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135216&type=card
+128	1	135216	Dross Crocodile	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135216&type=card
+129	1	135216	Dross Crocodile	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135216&type=card
+131	19	135216	Dross Crocodile	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135216&type=card
+132	19	135216	Dross Crocodile	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135216&type=card
+134	19	135216	Dross Crocodile	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135216&type=card
+135	19	135216	Dross Crocodile	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135216&type=card
+136	1	129743	Spineless Thug	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129743&type=card
+137	1	129743	Spineless Thug	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129743&type=card
+138	1	129743	Spineless Thug	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129743&type=card
+139	1	129743	Spineless Thug	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129743&type=card
+140	1	129743	Spineless Thug	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129743&type=card
+141	1	129743	Spineless Thug	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129743&type=card
+151	1	2279	Giant Strength	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2279&type=card
+152	1	2279	Giant Strength	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2279&type=card
+153	1	2279	Giant Strength	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2279&type=card
+154	1	2279	Giant Strength	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2279&type=card
+155	1	2279	Giant Strength	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2279&type=card
+156	1	2279	Giant Strength	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2279&type=card
+157	1	2279	Giant Strength	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2279&type=card
+158	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+159	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+160	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+161	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+162	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+163	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+164	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+165	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+166	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+167	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+168	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+169	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+170	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+171	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+172	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+173	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+174	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+175	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+176	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+177	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+178	1	704	Invisibility	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=704&type=card
+179	1	2189	Sunken City	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2189&type=card
+180	1	2189	Sunken City	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2189&type=card
+181	1	2189	Sunken City	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2189&type=card
+182	1	2189	Sunken City	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2189&type=card
+183	1	2189	Sunken City	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2189&type=card
+184	1	2189	Sunken City	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2189&type=card
+185	1	2189	Sunken City	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2189&type=card
+186	1	2189	Sunken City	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2189&type=card
+187	1	2189	Sunken City	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2189&type=card
+188	1	83433	Hollow Dogs	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=83433&type=card
+189	1	83433	Hollow Dogs	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=83433&type=card
+190	1	83433	Hollow Dogs	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=83433&type=card
+191	1	83433	Hollow Dogs	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=83433&type=card
+192	19	83433	Hollow Dogs	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=83433&type=card
+193	19	83433	Hollow Dogs	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=83433&type=card
+194	26	83433	Hollow Dogs	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=83433&type=card
+195	19	83433	Hollow Dogs	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=83433&type=card
+196	19	83433	Hollow Dogs	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=83433&type=card
 \.
 
 
@@ -253,6 +314,12 @@ COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdi
 --
 
 COPY public.rating (rating_id, deck_id, score) FROM stdin;
+1	1	5
+2	1	3
+3	1	4
+4	1	5
+5	1	4
+6	1	4
 \.
 
 
@@ -264,7 +331,7 @@ COPY public.users (user_id, username, password) FROM stdin;
 2	dan	$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ
 3	Alex	$2b$12$itK2aMPdXT20hMCyJNcqo.nimwNbQy6dn64JNWXO4xi4pnfVPurJa
 8	test	$2b$12$dgJN3Hxu7FrBCzePRvdKGO.xwRb7SkE2B.K/erE4xDDslYPn1Pf6i
-1	test3	\\x24326224313224576830546a47584a546f426847364f393773794150654b65306756394867416f2e34464952705a4a6f2e334a505943786a6e554771
+13	billy	$2b$12$FA6HClAal0W9JqRHUU5BCe/9tQCyPDV1.5jK8QAfEbD.xyUte1wo2
 \.
 
 
@@ -272,28 +339,28 @@ COPY public.users (user_id, username, password) FROM stdin;
 -- Name: deck_card_card_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_card_card_id_seq', 114, true);
+SELECT pg_catalog.setval('public.deck_card_card_id_seq', 196, true);
 
 
 --
 -- Name: deck_deck_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_deck_id_seq', 25, true);
+SELECT pg_catalog.setval('public.deck_deck_id_seq', 28, true);
 
 
 --
 -- Name: rating_rating_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.rating_rating_id_seq', 1, false);
+SELECT pg_catalog.setval('public.rating_rating_id_seq', 6, true);
 
 
 --
 -- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.users_user_id_seq', 1, true);
+SELECT pg_catalog.setval('public.users_user_id_seq', 13, true);
 
 
 --
