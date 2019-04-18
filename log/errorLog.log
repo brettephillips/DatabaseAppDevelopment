@@ -584,4 +584,40 @@ DETAIL:  Key (user_id)=(8) already exists.
 2019-04-17 12:50:53 : average rating! - 4.166666666666667
 2019-04-17 12:50:53 : get scorees! - []
 2019-04-17 12:50:53 : average rating! - 0.0
+2019-04-18 15:44:43 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-18 15:44:43 : average rating! - 4.166666666666667
+2019-04-18 15:44:43 : get scorees! - []
+2019-04-18 15:44:43 : average rating! - 0.0
+2019-04-18 15:51:24 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-18 15:51:24 : average rating! - 4.166666666666667
+2019-04-18 15:51:24 : get scorees! - []
+2019-04-18 15:51:24 : average rating! - 0.0
+2019-04-18 15:51:30 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
+2019-04-18 15:51:30 : average rating! - 4.166666666666667
+2019-04-18 15:51:30 : get scorees! - []
+2019-04-18 15:51:30 : average rating! - 0.0
+2019-04-18 16:11:44 : average rating! - 4.166666666666667
+2019-04-18 16:11:44 : average rating! - 0.0
+2019-04-18 16:11:57 : average rating! - 4.166666666666667
+2019-04-18 16:11:57 : average rating! - 0.0
+2019-04-18 16:38:44 : average rating! - 4.166666666666667
+2019-04-18 16:38:44 : average rating! - 0.0
+2019-04-18 16:38:47 : average rating! - 4.166666666666667
+2019-04-18 16:38:47 : average rating! - 0.0
+2019-04-18 16:38:55 : average rating! - 4.166666666666667
+2019-04-18 16:38:55 : average rating! - 0.0
+2019-04-18 16:44:54 : DB Get Complete Decks - invalid input syntax for integer: "jquery.rateyo.js"
+LINE 1: ...sers u ON u.user_id = d.user_id WHERE d.deck_id = 'jquery.ra...
+                                                             ^
+
+2019-04-18 17:12:19 : average rating! - 4.166666666666667
+2019-04-18 17:12:19 : average rating! - 0.0
+2019-04-18 17:20:39 : DB Rate Deck - invalid input syntax for integer: "3.4"
+LINE 1: INSERT INTO rating (deck_id, score) VALUES ('29','3.4')
+                                                         ^
+
+2019-04-18 17:24:21 : average rating! - 4.166666666666667
+2019-04-18 17:24:21 : average rating! - 1.776923076923077
+2019-04-18 17:24:36 : average rating! - 4.166666666666667
+2019-04-18 17:24:36 : average rating! - 1.776923076923077
 

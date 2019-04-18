@@ -1,3 +1,8 @@
+DROP DATABASE IF EXISTS mtg;
+CREATE DATABASE mtg;
+
+\c mtg;
+
 --
 -- PostgreSQL database dump
 --
@@ -112,7 +117,7 @@ ALTER SEQUENCE public.deck_deck_id_seq OWNED BY public.deck.deck_id;
 CREATE TABLE public.rating (
     rating_id integer NOT NULL,
     deck_id integer NOT NULL,
-    score integer NOT NULL
+    score real NOT NULL
 );
 
 
@@ -212,6 +217,7 @@ COPY public.deck (deck_id, name, user_id) FROM stdin;
 19	Test21	2
 26	Test	2
 28	Blue Power	8
+29	Awesome Black Deck	13
 \.
 
 
@@ -306,6 +312,75 @@ COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdi
 194	26	83433	Hollow Dogs	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=83433&type=card
 195	19	83433	Hollow Dogs	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=83433&type=card
 196	19	83433	Hollow Dogs	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=83433&type=card
+197	29	129529	Drudge Skeletons	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129529&type=card
+200	29	129529	Drudge Skeletons	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129529&type=card
+202	29	1157	Drudge Skeletons	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1157&type=card
+203	29	1157	Drudge Skeletons	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1157&type=card
+209	29	442138	Skeletonize	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442138&type=card
+210	29	442138	Skeletonize	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442138&type=card
+211	29	442138	Skeletonize	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442138&type=card
+212	29	442138	Skeletonize	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442138&type=card
+213	29	175119	Skeletal Kathari	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=175119&type=card
+214	29	175119	Skeletal Kathari	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=175119&type=card
+215	29	175119	Skeletal Kathari	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=175119&type=card
+216	29	175119	Skeletal Kathari	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=175119&type=card
+217	29	220515	Reassembling Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=220515&type=card
+218	29	220515	Reassembling Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=220515&type=card
+219	29	220515	Reassembling Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=220515&type=card
+220	29	220515	Reassembling Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=220515&type=card
+221	29	175097	Viashino Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=175097&type=card
+222	29	175097	Viashino Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=175097&type=card
+223	29	175097	Viashino Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=175097&type=card
+224	29	175097	Viashino Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=175097&type=card
+225	29	389674	Skeletal Scrying	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=389674&type=card
+226	29	389674	Skeletal Scrying	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=389674&type=card
+227	29	389674	Skeletal Scrying	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=389674&type=card
+228	29	389674	Skeletal Scrying	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=389674&type=card
+229	29	446962	Triskelavus	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=446962&type=card
+230	29	446962	Triskelavus	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=446962&type=card
+231	29	446962	Triskelavus	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=446962&type=card
+232	29	446962	Triskelavus	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=446962&type=card
+233	29	201809	Skeletal Vampire	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=201809&type=card
+234	29	201809	Skeletal Vampire	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=201809&type=card
+235	29	201809	Skeletal Vampire	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=201809&type=card
+236	29	201809	Skeletal Vampire	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=201809&type=card
+237	29	222743	Serrated Biskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222743&type=card
+238	29	222743	Serrated Biskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222743&type=card
+239	29	222743	Serrated Biskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222743&type=card
+240	29	222743	Serrated Biskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222743&type=card
+241	29	222715	Triskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222715&type=card
+242	29	222715	Triskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222715&type=card
+243	29	222715	Triskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222715&type=card
+244	29	222715	Triskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222715&type=card
+245	29	368986	Rot Farm Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=368986&type=card
+246	29	368986	Rot Farm Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=368986&type=card
+247	29	368986	Rot Farm Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=368986&type=card
+248	29	368986	Rot Farm Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=368986&type=card
+249	29	205306	Skeleton Shard	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=205306&type=card
+250	29	205306	Skeleton Shard	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=205306&type=card
+251	29	205306	Skeleton Shard	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=205306&type=card
+252	29	205306	Skeleton Shard	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=205306&type=card
+253	29	2737	Skeleton Ship	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2737&type=card
+254	29	2737	Skeleton Ship	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2737&type=card
+255	29	2737	Skeleton Ship	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2737&type=card
+256	29	2737	Skeleton Ship	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2737&type=card
+257	29	45311	Drudge Skeletons	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45311&type=card
+258	29	45311	Drudge Skeletons	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45311&type=card
+259	29	394621	Marang River Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=394621&type=card
+260	29	394621	Marang River Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=394621&type=card
+261	29	394621	Marang River Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=394621&type=card
+262	29	394621	Marang River Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=394621&type=card
+263	29	690	Zombie Master	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=690&type=card
+264	29	690	Zombie Master	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=690&type=card
+265	29	3890	Zombie Master	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=3890&type=card
+266	29	3890	Zombie Master	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=3890&type=card
+267	29	16627	Scathe Zombies	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=16627&type=card
+268	29	16627	Scathe Zombies	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=16627&type=card
+269	29	16627	Scathe Zombies	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=16627&type=card
+270	29	31763	Bog Wreckage	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=31763&type=card
+271	29	31763	Bog Wreckage	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=31763&type=card
+272	29	31763	Bog Wreckage	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=31763&type=card
+273	29	31763	Bog Wreckage	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=31763&type=card
 \.
 
 
@@ -339,14 +414,14 @@ COPY public.users (user_id, username, password) FROM stdin;
 -- Name: deck_card_card_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_card_card_id_seq', 196, true);
+SELECT pg_catalog.setval('public.deck_card_card_id_seq', 273, true);
 
 
 --
 -- Name: deck_deck_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_deck_id_seq', 28, true);
+SELECT pg_catalog.setval('public.deck_deck_id_seq', 29, true);
 
 
 --

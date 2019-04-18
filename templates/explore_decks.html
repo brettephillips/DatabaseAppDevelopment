@@ -22,7 +22,15 @@
 {% else %}
 	<ul class="list-group">
 		{% for d in decks_to_show %}
-		<a href='{{url_for("view_deck", deck_id=d[0])}}'>
+		<!-- 	
+		d[0] = deck_id
+		d[1] = deck_count
+		d[2] = deck_name
+		d[3] = user_name
+		d[4] = rating 		
+		-->
+
+		<a href='{{ url_for("view_deck", deck_id=d[0]) }}'>
 			<li class="list-group-item">
 				{{d[2]}}
 				from user: {{d[3]}}

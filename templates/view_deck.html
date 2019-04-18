@@ -4,8 +4,14 @@
 
 <title>{{title}}</title>
 
+
+<!-- RATING PLUGIN: https://rateyo.fundoocode.ninja/#method-rating -->
+<link rel="stylesheet" href="{{url_for('static', filename='js/jquery.rateyo.min.css')}}"/>
+
 <!-- Header Resources -------------------------------------------------------------------->
 {% include 'resources.html' %}
+
+
 <!-- ================================================= -->
 </head>
 <body>
@@ -16,11 +22,99 @@
 
 <!-- Content -------------------------------------------------------------------->
 {% if deck == 'error' %}
-
 	<h2 id="card_name">Error Finding Deck</h2>
 	
 {% else %}
-	<p>{{deck}}</p>
+	<!--
+		deck[0][0] = deck name
+		deck[0][1] = username	
+	-->
+	<p>Deck Name: {{deck[0][0]}}</p>
+	<p>From User: {{deck[0][1]}}</p>
+	<p>Rating:</p>
+
+	<!-- rating div -->
+	<div id="rateYo"></div>
+
+	<!-- rating submit button -->
+	<div>
+	  <button id="rateDeck">Rate Deck</button>
+	</div>
+
+	<!-- Rating Scripts -->
+	<script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='js/jquery.rateyo.js')}}"></script>
+	<script type="text/javascript">
+		// function to get the rating that is set on stars
+		function getRating() {
+			var $rateYo = $("#rateYo").rateYo();
+			var rating = $rateYo.rateYo("rating");
+			return rating;
+		}
+
+		//Set star rating when dom is ready
+		$(function () {
+		 
+		  $("#rateYo").rateYo({
+		    starWidth: "40px",
+		    rating: "{{rating}}"
+		  });
+		 
+		});
+
+		// function to send the rating to the database
+		$("#rateDeck").click(function () {
+			var rating = getRating();
+			console.log("Rating: "+rating);
+
+
+			$.ajax({
+			    url: "{{url_for('rate_deck')}}",
+			    method: "POST",
+			    data:{
+					"deck_id":"{{deck_id}}",
+					"score":rating
+			    },
+			    success: function(data) {
+			    	location.reload();
+			    },
+	            error: function(error) {
+
+	            }
+			});
+
+
+		});
+	</script>
+
+	<!-- for each card in deck -->
+	<!--
+		deck_cards[3] = card name
+		deck_cards[2] = multiverse id	
+		deck_cards[4] = image URL
+	-->
+	<div class="card card-body deck_cards_holder">
+	{% for card in deck_cards %}
+		<div class="deck_card" id="card{{ card[0] }}">
+
+
+			<!-- {{ loop.index }} -->
+			<span class="count"></span> <br/>
+
+
+			<a href="{{ url_for('card', card_id=card[2]) }}">
+			
+				<div class="card_name">
+				{{ card[3] }}
+				</div> <!-- Card Name --> <br/>
+				<img src="{{ card[4] }}" height="125">
+			</a>
+			<br/>
+
+		</div>
+		
+	{% endfor %}	
+	</div> <!-- end card -->
 {% endif %} 
 <!-- end error if -->
 

@@ -68,6 +68,7 @@ def home():
 
 #IMPORT DB
 # psql < ./DB\ Scripts/createTables.sql
+# psql < ./DB\ Scripts/databaseExport.sql
 
 #DUMP DB
 # pg_dump mtg > ./DB\ Scripts/databaseExport.sql
@@ -379,7 +380,30 @@ def mydecks():
 
 
 #########################################################################################################################
-# Mydecks Page
+# Explore decks Page
+
+def getRating(deck_id):
+	try:
+		conn = dbConnect()
+		cursor = conn.cursor()
+
+		# get deck rating
+		cursor.execute("SELECT score FROM rating WHERE deck_id = %s", (deck_id,))
+
+		scores = cursor.fetchall()
+
+		rating = 0.0
+		r = 0.0
+		for score in scores:
+			r += float(score[0])
+			rating = r/len(scores)	
+
+		return rating
+
+	except Exception as ex:
+		logError("DB Deck Rating",ex)
+		return "error"
+
 @app.route("/explore_decks", methods=['GET','POST'])
 def explore_decks():
 	# check if user is logged in
@@ -420,29 +444,15 @@ def explore_decks():
 			deck_name = deck_names[0][0]
 			user_name = deck_names[0][1]
 
+			#get deck rating
+			rating = getRating(deck_id)
 
-			# get deck rating
-			cursor.execute("SELECT score FROM rating WHERE deck_id = %s", (deck_id,))
-
-			scores = cursor.fetchall()
-
-			logError("get scorees!",scores)
-
-			rating = 0.0
-			r = 0.0
-			for score in scores:
-				r += float(score[0])
-				rating = r/len(scores)
 
 			logError("average rating!",rating)
 
 			decks_to_show.append([deck_id, deck_count, deck_name, user_name, rating])
 
 
-
-
-
-	
 		return render_template('explore_decks.html',
 			title=title,
 			username=session['user_id'],
@@ -481,17 +491,28 @@ def view_deck(deck_id):
 		# Get / List all decks of user
 		cursor = conn.cursor()
 
-		# Get all decks with with 60 or more cards from all users
-		cursor.execute("SELECT * FROM deck WHERE deck_id = %s", (deck_id,))
+		# Get deck name and username 
+		cursor.execute("SELECT d.name, u.username FROM deck d JOIN users u ON u.user_id = d.user_id WHERE d.deck_id = %s", (deck_id,))
 
 		deck = cursor.fetchall()
+
+		#get cards in this deck
+		cursor.execute("SELECT * FROM deck_card WHERE deck_id = %s", (deck_id,))
+
+		deck_cards = cursor.fetchall()
+
+		#get deck rating
+		rating = getRating(deck_id)
 
 	
 		return render_template('view_deck.html',
 			title=title,
 			username=session['user_id'],
 			logged_in=logged_in,
-			deck=deck
+			deck=deck,
+			deck_cards=deck_cards,
+			rating=rating,
+			deck_id=deck_id
 		)
 	except Exception as ex:
 		logError("DB Get Complete Decks",ex)
@@ -502,6 +523,39 @@ def view_deck(deck_id):
 			logged_in=logged_in,
 			deck="error"
 		)
+
+
+#########################################################################################################################
+# rate_deck
+@app.route("/rate_deck", methods=['GET','POST'])
+def rate_deck():
+	# get rate deck form value
+	deck_id = request.form.get('deck_id')
+	score = request.form.get('score')
+	# rate deck INSERT
+	try:
+		# Connect to DB
+		conn = dbConnect()
+
+		#create cursor
+		cursor = conn.cursor()
+
+		# Insert Deck
+		cursor.execute("INSERT INTO rating (deck_id, score) VALUES (%s,%s)", (deck_id, score,))
+
+		# commint insert
+		conn.commit()
+
+		# close cursor
+		cursor.close()
+
+		return json.dumps({'status':'OK'});
+
+	# catch and log DB error
+	except Exception as ex:
+		logError("DB Rate Deck",ex)
+		return json.dumps({'status':'BAD'});
+
 
 
 #########################################################################################################################
