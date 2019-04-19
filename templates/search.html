@@ -17,28 +17,34 @@
 <!-- Content -------------------------------------------------------------------->
 <div class="container">
     <form action="{{ url_for('search') }}" method="POST">
+
+
+      <!-- name form -->	
+      <label class="form-check-label">Card Name:</label>
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" value="{{search_name}}" name="search">
+
 	    <div class="form-row filters">
 	      <div class="col">
 		      <label class="form-check-label">Filter By Color:
 		      <div class="form-check">
-			<input class="form-check-input" name="check" type="checkbox" value="White">
-			<label class="form-check-label">White</label>
+					<input class="form-check-input" name="check_white" type="checkbox" value="">
+					<label class="form-check-label">White</label>
 		      </div>
 		      <div class="form-check">
-			<input class="form-check-input" name="check" type="checkbox" value="Blue">
-			<label class="form-check-label">Blue</label>
+					<input class="form-check-input" name="check_blue" type="checkbox" value="">
+					<label class="form-check-label">Blue</label>
 		      </div>
 		      <div class="form-check">
-			<input class="form-check-input" name="check" type="checkbox" value="Black">
-			<label class="form-check-label">Black</label>
+					<input class="form-check-input" name="check_black" type="checkbox" value="">
+					<label class="form-check-label">Black</label>
 		      </div>
 		      <div class="form-check">
-			<input class="form-check-input" name="check" type="checkbox" value="Red">
-			<label class="form-check-label">Red</label>
+					<input class="form-check-input" name="check_red" type="checkbox" value="">
+					<label class="form-check-label">Red</label>
 		      </div>
 		      <div class="form-check">
-			<input class="form-check-input" name="check" type="checkbox" value="Green">
-			<label class="form-check-label">Green</label>
+					<input class="form-check-input" name="check_green" type="checkbox" value="">
+					<label class="form-check-label">Green</label>
 		      </div>
 	      </div>
 	      <div class="col">

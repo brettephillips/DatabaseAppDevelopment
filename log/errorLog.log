@@ -1,623 +1,198 @@
-2019-03-20 15:37:12 : API Get Card - type object 'Card' has no attribute 'Xfind'
-2019-03-20 15:37:12 : API Get Card - type object 'Card' has no attribute 'Xfind'
-2019-03-20 15:37:40 : API Get Card - type object 'Card' has no attribute 'Xfind'
-2019-03-20 15:37:40 : API Get Card - type object 'Card' has no attribute 'Xfind'
-2019-03-20 15:37:43 : API Get Card - type object 'Card' has no attribute 'Xfind'
-2019-03-20 15:37:43 : API Get Card - type object 'Card' has no attribute 'Xfind'
-2019-03-20 15:46:44 : API Get Card - type object 'Card' has no attribute 'Xfind'
-2019-03-20 15:47:30 : API Get Card - type object 'Card' has no attribute 'Xfind'
-2019-03-20 16:07:30 : API Get Card Search - type object 'Card' has no attribute 'Xwhere'
-2019-03-21 19:35:16 : DB User Auth - Incorrect number of bindings supplied. The current statement uses 1, and there are 3 supplied.
-2019-03-21 19:43:48 : DB User Auth - 'tuple' object has no attribute 'encode'
-2019-03-21 19:47:59 : DB User Auth - 'bytes' object has no attribute 'encode'
-2019-03-21 19:48:43 : DB User Auth - Invalid salt
-2019-03-21 19:51:59 : DB User Auth - 'NoneType' object is not subscriptable
-2019-03-22 14:14:22 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
-2019-03-22 14:14:27 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
-2019-03-22 14:14:35 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
-2019-03-22 14:16:15 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
-2019-03-22 14:18:15 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
-2019-03-22 14:18:59 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
-2019-03-22 14:19:18 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
-2019-03-22 14:20:26 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
-2019-03-22 14:23:55 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
-2019-03-22 14:25:54 : API Get Card Details - list object has no element {'format': '1v1', 'legality': 'Legal'}
-2019-03-25 12:28:07 : DB User Auth - name 'session' is not defined
-2019-03-25 12:29:13 : DB User Auth - The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
-2019-03-25 12:37:39 : DB User Auth - The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
-2019-03-25 12:41:09 : DB User Auth - mydecks.html
-2019-03-25 13:33:42 : DB User Auth - name 'logged_in' is not defined
-2019-03-25 13:41:51 : DB User Auth - name 'logged_in' is not defined
-2019-03-25 15:21:56 : users debug - [('dan',), ('Alex',), ('test',)]
-2019-03-25 15:22:14 : users debug - [('dan',), ('Alex',), ('test',), ('test',)]
-2019-03-25 15:25:15 : users debug - ['dan', 'Alex', 'test', 'test', 'test']
-2019-03-25 15:26:13 : users debug - ['dan', 'Alex', 'test']
-2019-03-25 15:26:34 : users debug - ['dan', 'Alex', 'test']
-2019-03-25 15:27:03 : users debug - ['dan', 'Alex']
-2019-03-25 15:56:55 : DB User Auth - list index out of range
-2019-03-25 15:58:43 : users pass/id debug - [(b'$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)]
-2019-03-25 15:58:43 : DB User Auth - list index out of range
-2019-03-25 16:00:08 : users pass/id debug - [(b'$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)]
-2019-03-25 16:00:08 : DB User Auth - expected string or bytes-like object
-2019-03-25 16:02:05 : users pass/id debug - [(b'$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)]
-2019-03-25 16:02:05 : DB User Auth - list index out of range
-2019-03-25 16:03:51 : DB User Auth - unsupported operand type(s) for +: 'type' and 'tuple'
-2019-03-25 16:04:50 : users pass/id debug - <class 'tuple'>
-2019-03-25 16:04:50 : users pass/id debug - (b'$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)
-2019-03-25 16:04:50 : DB User Auth - expected string or bytes-like object
-2019-03-25 16:06:15 : users pass/id debug - <class 'bytes'>
-2019-03-25 16:06:15 : users pass/id debug - (b'$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)
-2019-03-25 16:06:15 : DB User Auth - expected string or bytes-like object
-2019-03-25 16:07:18 : users pass/id debug - <class 'bytes'>
-2019-03-25 16:07:18 : users pass/id debug - 2
-2019-03-25 16:20:01 : DB Get User Decks - 'mydecks' is undefined
-2019-03-25 16:20:08 : DB Get User Decks - 'mydecks' is undefined
-2019-03-25 19:19:57 : DB Get User Decks - 'int' object is not subscriptable
-2019-03-25 19:22:54 : DB Get User Decks - 'int' object is not subscriptable
-2019-03-25 19:24:18 : deck debug1 - [(1, 'My First Deck'), (2, 'My Second Deck')]
-2019-03-25 19:24:18 : DB Get User Decks - 'int' object is not subscriptable
-2019-03-25 19:24:55 : deck debug1 - [(1, 'My First Deck'), (2, 'My Second Deck')]
-2019-03-25 19:24:55 : deck debug2 - [1, 2]
-2019-03-25 19:24:55 : deck debug3 - ['My First Deck', 'My Second Deck']
-2019-03-25 19:33:28 : DB Get User Decks - no such column: api_id
-2019-03-25 19:33:36 : DB Get User Decks - no such column: api_id
-2019-03-25 19:38:54 : DB Get User Decks - expected token ':', got '}'
-2019-03-25 19:46:29 : DB Get User Decks - 'list' object is not callable
-2019-03-27 12:03:46 : DB Get User Decks - name 'deck_card_ids' is not defined
-2019-03-27 12:03:50 : DB Get User Decks - name 'deck_card_ids' is not defined
-2019-03-27 13:36:25 : DB Get User Decks - list object has no element 2
-2019-03-27 13:36:52 : DB Get User Decks - list object has no element 2
-2019-03-27 13:37:18 : DB Get User Decks - list object has no element 2
-2019-03-27 13:37:19 : DB Get User Decks - list object has no element 2
-2019-03-27 13:38:13 : DB Get User Decks - list object has no element 2
-2019-03-27 13:39:58 : DB Get User Decks - list object has no element 2
-2019-03-27 13:44:25 : DB Get User Decks - expected token 'end of print statement', got 'c'
-2019-03-27 13:44:51 : DB Get User Decks - expected token 'end of print statement', got 'c'
-2019-03-27 13:44:52 : DB Get User Decks - expected token 'end of print statement', got 'c'
-2019-03-27 13:48:42 : DB Get User Decks - list object has no element 2
-2019-03-27 15:23:18 : API Get Card Details - Could not build url for endpoint 'card'. Did you forget to specify values ['card_id']?
-2019-04-01 16:57:50 : DB Get User Decks - name 'sqlite3' is not defined
-2019-04-01 16:57:55 : DB Connection - could not create SSL context: library has no ciphers
-FATAL:  password authentication failed for user "student"
-
-2019-04-01 16:57:56 : DB Connection - could not create SSL context: library has no ciphers
-FATAL:  password authentication failed for user "student"
-
-2019-04-01 16:57:58 : DB Get User Decks - name 'sqlite3' is not defined
-2019-04-01 16:58:00 : DB Connection - could not create SSL context: library has no ciphers
-FATAL:  password authentication failed for user "student"
-
-2019-04-01 16:58:07 : DB User Auth - name 'sqlite3' is not defined
-2019-04-01 17:01:33 : DB Connection - could not create SSL context: library has no ciphers
-FATAL:  password authentication failed for user "student"
-
-2019-04-01 17:01:33 : DB User Auth - 'NoneType' object has no attribute 'cursor'
-2019-04-01 17:05:15 : DB Connection - fe_sendauth: no password supplied
-
-2019-04-01 17:05:15 : DB User Auth - 'NoneType' object has no attribute 'cursor'
-2019-04-01 17:05:22 : DB Connection - fe_sendauth: no password supplied
-
-2019-04-01 17:05:22 : DB User Auth - 'NoneType' object has no attribute 'cursor'
-2019-04-01 17:05:54 : DB Connection - fe_sendauth: no password supplied
-
-2019-04-01 17:05:54 : DB Insert New USER - 'NoneType' object has no attribute 'cursor'
-2019-04-01 17:10:58 : DB Connection - could not create SSL context: library has no ciphers
-FATAL:  password authentication failed for user "postgres"
-
-2019-04-01 17:10:58 : DB Insert New USER - 'NoneType' object has no attribute 'cursor'
-2019-04-01 17:11:12 : DB Connection - could not create SSL context: library has no ciphers
-FATAL:  password authentication failed for user "postgres"
-
-2019-04-01 17:11:12 : DB Insert New USER - 'NoneType' object has no attribute 'cursor'
-2019-04-01 17:15:01 : DB Insert New USER - connection already closed
-2019-04-01 17:15:17 : DB Insert New USER - connection already closed
-2019-04-01 17:17:39 : DB Insert New USER - connection already closed
-2019-04-01 17:19:16 : DB Insert New USER - column "username" does not exist
-LINE 1: SELECT username FROM USER
-               ^
-
-2019-04-01 17:21:39 : DB Insert New USER - syntax error at or near "USER"
-LINE 1: INSERT INTO USER (username, password) VALUES (?,?)
-                    ^
-
-2019-04-01 17:24:00 : DB Insert New USER - syntax error at or near "USER"
-LINE 1: INSERT INTO USER (username, password) VALUES (?,?)
-                    ^
-
-2019-04-01 17:24:10 : DB Insert New USER - syntax error at or near "USER"
-LINE 1: INSERT INTO USER (username, password) VALUES (?,?)
-                    ^
-
-2019-04-01 17:25:42 : DB Insert New USER - syntax error at or near ","
-LINE 1: INSERT INTO users (username, password) VALUES (?,?)
-                                                        ^
-
-2019-04-01 17:36:31 : DB Insert New USER - syntax error at or near ","
-LINE 1: INSERT INTO users (username, password) VALUES (?,?)
-                                                        ^
-
-2019-04-01 17:37:51 : DB User Auth - Unicode-objects must be encoded before checking
-2019-04-01 17:38:17 : DB User Auth - Unicode-objects must be encoded before checking
-2019-04-01 18:54:36 : DB Add Card to Deck - invalid input syntax for integer: ""
-LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
-                                                             ^
-
-2019-04-01 18:54:36 : DB Get User's Decks - current transaction is aborted, commands ignored until end of transaction block
-
-2019-04-01 18:54:37 : API Get Card Details - Unexpected end of template. Jinja was looking for the following tags: 'endif'. The innermost block that needs to be closed is 'if'.
-2019-04-01 18:54:45 : DB Add Card to Deck - invalid input syntax for integer: ""
-LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
-                                                             ^
-
-2019-04-01 18:54:45 : DB Get User's Decks - current transaction is aborted, commands ignored until end of transaction block
-
-2019-04-01 18:54:46 : API Get Card Details - Unexpected end of template. Jinja was looking for the following tags: 'endif'. The innermost block that needs to be closed is 'if'.
-2019-04-01 18:55:13 : DB Add Card to Deck - invalid input syntax for integer: ""
-LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
-                                                             ^
-
-2019-04-01 18:55:13 : DB Get User's Decks - current transaction is aborted, commands ignored until end of transaction block
-
-2019-04-01 18:57:17 : DB Add Card to Deck - invalid input syntax for integer: ""
-LINE 1: ...d (deck_id, api_id, card_name, image_url) VALUES ('','23056'...
-                                                             ^
-
-2019-04-01 19:24:36 : DB Add Card to Deck - name 'conn1' is not defined
-2019-04-01 19:25:09 : DB Add Card to Deck - name 'conn1' is not defined
-2019-04-01 19:25:15 : DB Add Card to Deck - name 'conn1' is not defined
-2019-04-01 19:31:34 : DB Add Card to Deck - name 'jsonify' is not defined
-2019-04-01 19:32:45 : DB Add Card to Deck - name 'json' is not defined
-2019-04-01 20:03:06 : DB Insert/Delete Deck - duplicate key value violates unique constraint "deck_pkey"
-DETAIL:  Key (deck_id)=(1) already exists.
-
-2019-04-01 22:10:56 : DB Get User Decks - 'user_id'
-2019-04-01 22:51:55 : DB User Auth - list index out of range
-2019-04-01 22:52:41 : DB User Auth - list index out of range
-2019-04-01 22:54:03 : DB User Auth - list index out of range
-2019-04-01 22:54:49 : DB User Auth - list index out of range
-2019-04-01 22:54:59 : DB User Auth - list index out of range
-2019-04-01 22:56:05 : DB User Auth - list index out of range
-2019-04-01 22:56:18 : DB User Auth - list index out of range
-2019-04-01 22:57:18 : DB User Auth - list index out of range
-2019-04-01 22:58:18 : DB User Auth - list index out of range
-2019-04-01 22:58:51 : DB User Auth - list index out of range
-2019-04-01 22:58:57 : DB User Auth - list index out of range
-2019-04-01 22:59:26 : DB User Auth - list index out of range
-2019-04-01 22:59:48 : DB User Auth - list index out of range
-2019-04-01 23:01:50 : DB User Auth - list index out of range
-2019-04-01 23:02:10 : DB User Auth - list index out of range
-2019-04-01 23:02:27 : DB User Auth - list index out of range
-2019-04-01 23:02:34 : DB User Auth - list index out of range
-2019-04-01 23:02:38 : DB User Auth - list index out of range
-2019-04-01 23:02:47 : DB User Auth - list index out of range
-2019-04-01 23:02:55 : DB User Auth - list index out of range
-2019-04-01 23:03:38 : DB User Auth - list index out of range
-2019-04-01 23:03:51 : DB User Auth - list index out of range
-2019-04-01 23:12:12 : DB Insert/Delete Deck - duplicate key value violates unique constraint "deck_pkey"
-DETAIL:  Key (deck_id)=(4) already exists.
-
-2019-04-01 23:37:14 : DB Create Deck - update or delete on table "deck" violates foreign key constraint "deck_card_deck_id_fkey" on table "deck_card"
-DETAIL:  Key (deck_id)=(2) is still referenced from table "deck_card".
-
-2019-04-01 23:37:19 : DB Create Deck - update or delete on table "deck" violates foreign key constraint "deck_card_deck_id_fkey" on table "deck_card"
-DETAIL:  Key (deck_id)=(2) is still referenced from table "deck_card".
-
-2019-04-01 23:40:58 : DB Create Deck - name 'cur' is not defined
-2019-04-02 18:59:45 : DB Create Deck - not all arguments converted during string formatting
-2019-04-02 18:59:47 : DB Create Deck - not all arguments converted during string formatting
-2019-04-02 18:59:56 : DB Create Deck - not all arguments converted during string formatting
-2019-04-02 19:00:22 : DB Create Deck - not all arguments converted during string formatting
-2019-04-02 19:00:34 : DB Create Deck - not all arguments converted during string formatting
-2019-04-02 19:00:50 : DB Create Deck - not all arguments converted during string formatting
-2019-04-02 19:02:04 : DB remove_deck - not all arguments converted during string formatting
-2019-04-02 19:04:25 : DB remove_deck - unsupported format character 'd' (0x64) at index 39
-2019-04-02 19:28:22 : DB Get User Decks - 'card' is undefined
-2019-04-02 19:28:27 : DB Get User Decks - 'card' is undefined
-2019-04-02 19:29:24 : DB Get User Decks - 'card' is undefined
-2019-04-02 19:29:25 : DB Get User Decks - 'card' is undefined
-2019-04-02 20:46:44 : DB Get User Decks - expected token 'end of print statement', got 'n'
-2019-04-03 14:06:31 : SearchName DEBUG 0 - dog
-2019-04-03 14:06:38 : SearchName DEBUG 0 - ascasc
-2019-04-03 14:08:31 : button_value DEBUG 0 - None
-2019-04-03 14:08:31 : SearchName DEBUG 0 - test
-2019-04-03 14:12:30 : button_value DEBUG 0 - 
-2019-04-03 14:12:30 : SearchName DEBUG 0 - dog
-2019-04-03 14:13:07 : button_value DEBUG 0 - filter
-2019-04-03 14:13:07 : SearchName DEBUG 0 - None
-2019-04-03 14:13:07 : SearchName DEBUG 1  - None
-2019-04-03 14:13:07 : SearchName DEBUG 2 - None
-2019-04-03 14:15:24 : button_value DEBUG 0 - 
-2019-04-03 14:15:24 : SearchName DEBUG 0 - dog
-2019-04-03 14:15:32 : button_value DEBUG 0 - search
-2019-04-03 14:15:32 : SearchName DEBUG 0 - dragon
-2019-04-03 14:15:32 : SearchName DEBUG 1  - dragon
-2019-04-03 14:15:46 : button_value DEBUG 0 - search
-2019-04-03 14:15:46 : SearchName DEBUG 0 - dragon
-2019-04-03 14:15:46 : SearchName DEBUG 1  - dragon
-2019-04-03 14:15:56 : button_value DEBUG 0 - search
-2019-04-03 14:15:56 : SearchName DEBUG 0 - dog
-2019-04-03 14:15:56 : SearchName DEBUG 1  - dog
-2019-04-03 14:20:41 : button_value DEBUG 0 - search
-2019-04-03 14:20:41 : SearchName DEBUG 0 - 
-2019-04-03 14:20:41 : SearchName DEBUG 1  - 
-2019-04-03 14:26:46 : button_value DEBUG 0 - search
-2019-04-03 14:26:46 : SearchName DEBUG 0 - 
-2019-04-03 14:26:46 : SearchName DEBUG 1  - 
-2019-04-03 14:27:02 : button_value DEBUG 0 - filter
-2019-04-03 14:27:02 : SearchName DEBUG 0 - None
-2019-04-03 14:27:02 : API Get Card Search - name 'cmc' is not defined
-2019-04-03 14:33:16 : button_value DEBUG 0 - search
-2019-04-03 14:33:16 : SearchName DEBUG 0 - cat
-2019-04-03 14:33:16 : SearchName DEBUG 1  - cat
-2019-04-03 14:33:35 : button_value DEBUG 0 - search
-2019-04-03 14:33:35 : SearchName DEBUG 0 - cat
-2019-04-03 14:33:35 : SearchName DEBUG 1  - cat
-2019-04-03 14:33:43 : button_value DEBUG 0 - filter
-2019-04-03 14:33:43 : SearchName DEBUG 0 - None
-2019-04-03 14:33:43 : API Get Card Search - name 'cmc' is not defined
-2019-04-03 14:43:22 : button_value DEBUG 0 - filter
-2019-04-03 14:43:22 : SearchName DEBUG 0 - None
-2019-04-03 14:44:05 : button_value DEBUG 0 - filter
-2019-04-03 14:44:05 : SearchName DEBUG 0 - None
-2019-04-03 14:44:09 : button_value DEBUG 0 - search
-2019-04-03 14:44:09 : SearchName DEBUG 0 - cat
-2019-04-03 14:44:09 : SearchName DEBUG 1  - cat
-2019-04-03 14:48:59 : button_value DEBUG 0 - search
-2019-04-03 14:48:59 : SearchName DEBUG 0 - cat
-2019-04-03 14:48:59 : SearchName DEBUG 1  - cat
-2019-04-03 14:49:06 : button_value DEBUG 0 - filter
-2019-04-03 14:49:06 : SearchName DEBUG 0 - None
-2019-04-03 14:49:33 : button_value DEBUG 0 - search
-2019-04-03 14:49:33 : SearchName DEBUG 0 - dog
-2019-04-03 14:49:33 : SearchName DEBUG 1  - dog
-2019-04-03 19:48:42 : button_value DEBUG 0 - search
-2019-04-03 19:48:42 : SearchName DEBUG 0 - watcher
-2019-04-03 19:48:42 : SearchName DEBUG 1  - watcher
-2019-04-03 19:48:55 : button_value DEBUG 0 - search
-2019-04-03 19:48:55 : SearchName DEBUG 0 - watcher
-2019-04-03 19:48:55 : SearchName DEBUG 1  - watcher
-2019-04-03 20:03:42 : button_value DEBUG 0 - search
-2019-04-03 20:03:42 : SearchName DEBUG 0 - robot
-2019-04-03 20:03:42 : SearchName DEBUG 1  - robot
-2019-04-03 20:03:48 : button_value DEBUG 0 - search
-2019-04-03 20:03:48 : SearchName DEBUG 0 - cyb
-2019-04-03 20:03:48 : SearchName DEBUG 1  - cyb
-2019-04-03 20:03:55 : button_value DEBUG 0 - search
-2019-04-03 20:03:55 : SearchName DEBUG 0 - cat
-2019-04-03 20:03:55 : SearchName DEBUG 1  - cat
-2019-04-03 20:12:03 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
-DETAIL:  Key (deck_id)=(24) is not present in table "deck".
-
-2019-04-03 20:12:03 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
-DETAIL:  Key (deck_id)=(24) is not present in table "deck".
-
-2019-04-03 20:12:03 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
-DETAIL:  Key (deck_id)=(24) is not present in table "deck".
-
-2019-04-03 20:12:03 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
-DETAIL:  Key (deck_id)=(24) is not present in table "deck".
-
-2019-04-03 20:12:04 : DB Add Card to Deck - insert or update on table "deck_card" violates foreign key constraint "deck_card_deck_id_fkey"
-DETAIL:  Key (deck_id)=(24) is not present in table "deck".
-
-2019-04-03 20:14:58 : button_value DEBUG 0 - search
-2019-04-03 20:14:58 : SearchName DEBUG 0 - Z
-2019-04-03 20:14:58 : SearchName DEBUG 1  - Z
-2019-04-03 20:15:15 : button_value DEBUG 0 - search
-2019-04-03 20:15:15 : SearchName DEBUG 0 - 
-2019-04-03 20:15:15 : SearchName DEBUG 1  - 
-2019-04-03 20:19:52 : button_value DEBUG 0 - search
-2019-04-03 20:19:52 : SearchName DEBUG 0 - 
-2019-04-03 20:19:52 : SearchName DEBUG 1  - 
-2019-04-03 20:23:43 : button_value DEBUG 0 - search
-2019-04-03 20:23:43 : SearchName DEBUG 0 - 
-2019-04-03 20:23:43 : SearchName DEBUG 1  - 
-2019-04-03 20:30:38 : button_value DEBUG 0 - search
-2019-04-03 20:30:38 : SearchName DEBUG 0 - card
-2019-04-03 20:30:38 : SearchName DEBUG 1  - card
-2019-04-03 21:05:16 : button_value DEBUG 0 - search
-2019-04-03 21:05:16 : SearchName DEBUG 0 - watcher
-2019-04-03 21:05:16 : SearchName DEBUG 1  - watcher
-2019-04-04 19:13:01 : button_value DEBUG 0 - search
-2019-04-04 19:13:01 : SearchName DEBUG 0 - gog
-2019-04-04 19:13:01 : SearchName DEBUG 1  - gog
-2019-04-04 21:18:21 : button_value DEBUG 0 - search
-2019-04-04 21:18:21 : SearchName DEBUG 0 - 
-2019-04-04 21:18:21 : SearchName DEBUG 1  - 
-2019-04-04 21:20:58 : button_value DEBUG 0 - search
-2019-04-04 21:20:58 : SearchName DEBUG 0 - kil
-2019-04-04 21:20:58 : SearchName DEBUG 1  - kil
-2019-04-05 12:40:55 : button_value DEBUG 0 - search
-2019-04-05 12:40:55 : SearchName DEBUG 0 - 
-2019-04-05 12:40:55 : SearchName DEBUG 1  - 
-2019-04-05 12:46:10 : button_value DEBUG 0 - search
-2019-04-05 12:46:10 : SearchName DEBUG 0 - 
-2019-04-05 12:46:10 : SearchName DEBUG 1  - 
-2019-04-05 12:47:50 : button_value DEBUG 0 - search
-2019-04-05 12:47:50 : SearchName DEBUG 0 - 
-2019-04-05 12:47:50 : SearchName DEBUG 1  - 
-2019-04-05 12:47:58 : button_value DEBUG 0 - search
-2019-04-05 12:47:58 : SearchName DEBUG 0 - 
-2019-04-05 12:47:58 : SearchName DEBUG 1  - 
-2019-04-05 12:48:02 : button_value DEBUG 0 - search
-2019-04-05 12:48:02 : SearchName DEBUG 0 - 
-2019-04-05 12:48:02 : SearchName DEBUG 1  - 
-2019-04-05 12:48:18 : button_value DEBUG 0 - search
-2019-04-05 12:48:18 : SearchName DEBUG 0 - ss
-2019-04-05 12:48:18 : SearchName DEBUG 1  - ss
-2019-04-05 12:49:11 : button_value DEBUG 0 - search
-2019-04-05 12:49:11 : SearchName DEBUG 0 - ss
-2019-04-05 12:49:11 : SearchName DEBUG 1  - ss
-2019-04-05 12:51:07 : button_value DEBUG 0 - search
-2019-04-05 12:51:07 : SearchName DEBUG 0 - ss
-2019-04-05 12:51:07 : SearchName DEBUG 1  - ss
-2019-04-05 12:52:28 : button_value DEBUG 0 - search
-2019-04-05 12:52:28 : SearchName DEBUG 0 - gt
-2019-04-05 12:52:28 : SearchName DEBUG 1  - gt
-2019-04-05 12:53:19 : button_value DEBUG 0 - search
-2019-04-05 12:53:19 : SearchName DEBUG 0 - ty
-2019-04-05 12:53:19 : SearchName DEBUG 1  - ty
-2019-04-08 15:45:59 : button_value DEBUG 0 - search
-2019-04-08 15:45:59 : SearchName DEBUG 0 - Icatian Store
-2019-04-08 15:45:59 : SearchName DEBUG 1  - Icatian Store
-2019-04-15 13:21:29 : button_value DEBUG 0 - search
-2019-04-15 13:21:29 : SearchName DEBUG 0 - dog
-2019-04-15 13:21:29 : SearchName DEBUG 1  - dog
-2019-04-15 13:21:43 : Count DEBUG - [(0,)]
-2019-04-15 13:22:34 : Count DEBUG - (0,)
-2019-04-15 13:23:32 : Count DEBUG - 0
-2019-04-15 13:24:51 : DB Add Card to Deck - column "deck_card.api_id" must appear in the GROUP BY clause or be used in an aggregate function
-LINE 1: SELECT api_id, COUNT(*) FROM deck_card WHERE deck_id = '1' A...
-               ^
-
-2019-04-15 13:25:56 : Count DEBUG - []
-2019-04-15 13:36:51 : Count DEBUG - 1 83433 [(0,)]
-2019-04-15 13:40:11 : DB Add Card to Deck - local variable 'count' referenced before assignment
-2019-04-15 13:41:03 : Count DEBUG - 1 83433 0
-2019-04-15 13:41:16 : Count DEBUG - 1 83433 1
-2019-04-15 13:41:18 : Count DEBUG - 1 83433 2
-2019-04-15 13:41:55 : Count DEBUG - 1 83433 3
-2019-04-15 13:41:57 : Count DEBUG - 1 83433 4
-2019-04-15 13:41:58 : Count DEBUG - 1 83433 4
-2019-04-15 13:41:59 : Count DEBUG - 1 83433 4
-2019-04-15 15:10:17 : DB Add Card to Deck - 'ImmutableMultiDict' object has no attribute 'getX'
-2019-04-15 15:11:36 : DB Add Card to Deck - 'ImmutableMultiDict' object has no attribute 'getX'
-2019-04-15 15:13:25 : DB Add Card to Deck - 'ImmutableMultiDict' object has no attribute 'getX'
-2019-04-15 15:40:05 : DB Get Complete Decks - can't execute an empty query
-2019-04-15 15:42:27 : debug decks! - [(1, 63)]
-2019-04-15 15:45:35 : debug big decks! - [(1, 63)]
-2019-04-15 15:45:35 : debug deck names! - [('My First Deck', 2, 'dan')]
-2019-04-15 15:50:40 : debug big decks! - [(1, 63)]
-2019-04-15 15:50:40 : debug deck names! - [('My First Deck', 'dan')]
-2019-04-15 15:50:40 : DB Get Complete Decks - float() argument must be a string or a number, not 'tuple'
-2019-04-15 15:51:21 : debug big decks! - [(1, 63)]
-2019-04-15 15:51:21 : debug deck names! - [('My First Deck', 'dan')]
-2019-04-15 15:51:21 : get scorees! - [(5,), (3,), (4,)]
-2019-04-15 15:51:47 : debug big decks! - [(1, 63)]
-2019-04-15 15:51:47 : debug deck names! - [('My First Deck', 'dan')]
-2019-04-15 15:51:47 : get scorees! - [(5,), (3,), (4,)]
-2019-04-15 15:51:47 : average rating! - 4.0
-2019-04-15 15:52:42 : debug big decks! - [(1, 63)]
-2019-04-15 15:52:42 : debug deck names! - [('My First Deck', 'dan')]
-2019-04-15 15:52:42 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-15 15:52:42 : average rating! - 4.166666666666667
-2019-04-15 15:56:27 : debug big decks! - [(1, 63)]
-2019-04-15 15:56:27 : debug deck names! - [('My First Deck', 'dan')]
-2019-04-15 15:56:27 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-15 15:56:27 : average rating! - 4.166666666666667
-2019-04-15 16:00:26 : debug big decks! - [(1, 63)]
-2019-04-15 16:00:26 : debug deck names! - [('My First Deck', 'dan')]
-2019-04-15 16:00:26 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-15 16:00:26 : average rating! - 4.166666666666667
-2019-04-15 16:01:59 : debug big decks! - [(1, 63)]
-2019-04-15 16:01:59 : debug deck names! - [('My First Deck', 'dan')]
-2019-04-15 16:01:59 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-15 16:01:59 : average rating! - 4.166666666666667
-2019-04-15 16:02:53 : debug big decks! - [(1, 63)]
-2019-04-15 16:02:53 : debug deck names! - [('My First Deck', 'dan')]
-2019-04-15 16:02:53 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-15 16:02:53 : average rating! - 4.166666666666667
-2019-04-15 16:03:15 : debug big decks! - [(1, 63)]
-2019-04-15 16:03:15 : debug deck names! - [('My First Deck', 'dan')]
-2019-04-15 16:03:15 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-15 16:03:15 : average rating! - 4.166666666666667
-2019-04-15 16:03:58 : debug big decks! - [(1, 63)]
-2019-04-15 16:03:58 : debug deck names! - [('My First Deck', 'dan')]
-2019-04-15 16:03:58 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-15 16:03:58 : average rating! - 4.166666666666667
-2019-04-15 16:10:16 : DB Insert New USER - duplicate key value violates unique constraint "users_pkey"
-DETAIL:  Key (user_id)=(2) already exists.
-
-2019-04-15 16:11:11 : DB Insert New USER - duplicate key value violates unique constraint "users_pkey"
-DETAIL:  Key (user_id)=(3) already exists.
-
-2019-04-15 16:11:54 : DB User Auth - Invalid salt
-2019-04-15 16:12:03 : DB User Auth - Invalid salt
-2019-04-15 16:12:16 : debug big decks! - [(1, 63)]
-2019-04-15 16:12:16 : debug deck names! - [('My First Deck', 'dan')]
-2019-04-15 16:12:16 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-15 16:12:16 : average rating! - 4.166666666666667
-2019-04-15 16:12:24 : button_value DEBUG 0 - search
-2019-04-15 16:12:24 : SearchName DEBUG 0 - asd
-2019-04-15 16:12:24 : SearchName DEBUG 1  - asd
-2019-04-15 16:14:09 : DB User Auth - Invalid salt
-2019-04-15 16:15:40 : DB User Auth - Invalid salt
-2019-04-15 16:18:25 : DB User Auth - Invalid salt
-2019-04-15 16:18:35 : DB User Auth - Unicode-objects must be encoded before checking
-2019-04-15 16:18:43 : DB User Auth - Unicode-objects must be encoded before checking
-2019-04-15 16:18:58 : DB User Auth - list index out of range
-2019-04-15 16:19:26 : DB User Auth - list index out of range
-2019-04-15 16:19:42 : DB User Auth - list index out of range
-2019-04-15 16:19:55 : DB User Auth - list index out of range
-2019-04-15 16:20:46 : DB User Auth - list index out of range
-2019-04-15 16:20:52 : DB User Auth - list index out of range
-2019-04-15 16:20:56 : DB User Auth - list index out of range
-2019-04-15 16:21:27 : users pass/id debug - <class 'list'>
-2019-04-15 16:21:27 : users pass/id debug - []
-2019-04-15 16:21:27 : DB User Auth - list index out of range
-2019-04-15 16:21:31 : users pass/id debug - <class 'list'>
-2019-04-15 16:21:31 : users pass/id debug - []
-2019-04-15 16:21:31 : DB User Auth - list index out of range
-2019-04-15 16:22:00 : users pass/id debug - <class 'list'>
-2019-04-15 16:22:00 : users pass/id debug - [('$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)]
-2019-04-15 16:22:58 : users pass/id debug - <class 'list'>
-2019-04-15 16:22:58 : users pass/id debug - [('\\x243262243132246e30575439684537692f59363630666532316547647574517670435a79704f457a5a364a4e5964364336496b616446394456413679', 4)]
-2019-04-15 16:22:58 : DB User Auth - Invalid salt
-2019-04-15 16:29:44 : users pass/id debug - <class 'list'>
-2019-04-15 16:29:44 : users pass/id debug - [('\\x243262243132246e30575439684537692f59363630666532316547647574517670435a79704f457a5a364a4e5964364336496b616446394456413679', 4)]
-2019-04-15 16:29:44 : DB User Auth - Invalid salt
-2019-04-15 16:30:09 : users pass/id debug - <class 'list'>
-2019-04-15 16:30:09 : users pass/id debug - [('\\x24326224313224446e38494f5659475a764768767346706939677a4565776c766c4b6f366a6b712e62344d312e7656616c69433178687a384a704c75', 6)]
-2019-04-15 16:30:09 : DB User Auth - Invalid salt
-2019-04-15 16:32:31 : users pass/id debug - <class 'list'>
-2019-04-15 16:32:31 : users pass/id debug - [('\\x24326224313224446e38494f5659475a764768767346706939677a4565776c766c4b6f366a6b712e62344d312e7656616c69433178687a384a704c75', 6)]
-2019-04-15 16:32:31 : DB User Auth - Invalid salt
-2019-04-15 16:32:44 : users pass/id debug - <class 'list'>
-2019-04-15 16:32:44 : users pass/id debug - []
-2019-04-15 16:32:44 : DB User Auth - list index out of range
-2019-04-15 16:32:52 : users pass/id debug - <class 'list'>
-2019-04-15 16:32:52 : users pass/id debug - []
-2019-04-15 16:32:52 : DB User Auth - list index out of range
-2019-04-15 16:33:11 : users pass/id debug - <class 'list'>
-2019-04-15 16:33:11 : users pass/id debug - [('\\x24326224313224394c6c4339366c6e7731394a6a767a4854556e7a592e7143356a5753432e79423038684d4d35546275476e637a5a524e312f63612e', 7)]
-2019-04-15 16:33:11 : DB User Auth - Invalid salt
-2019-04-15 16:36:28 : users pass/id debug - <class 'list'>
-2019-04-15 16:36:28 : users pass/id debug - [('\\x24326224313224394c6c4339366c6e7731394a6a767a4854556e7a592e7143356a5753432e79423038684d4d35546275476e637a5a524e312f63612e', 7)]
-2019-04-15 16:36:28 : DB User Auth - Invalid salt
-2019-04-15 16:37:46 : users pass/id debug - <class 'list'>
-2019-04-15 16:37:46 : users pass/id debug - []
-2019-04-15 16:37:46 : DB User Auth - list index out of range
-2019-04-15 16:38:08 : users pass/id debug - <class 'list'>
-2019-04-15 16:38:08 : users pass/id debug - []
-2019-04-15 16:38:08 : DB User Auth - list index out of range
-2019-04-15 16:38:52 : users pass/id debug - <class 'list'>
-2019-04-15 16:38:52 : users pass/id debug - []
-2019-04-15 16:39:51 : users pass/id debug - <class 'list'>
-2019-04-15 16:39:51 : users pass/id debug - []
-2019-04-15 16:39:55 : users pass/id debug - <class 'list'>
-2019-04-15 16:39:55 : users pass/id debug - []
-2019-04-15 16:40:01 : users pass/id debug - <class 'list'>
-2019-04-15 16:40:01 : users pass/id debug - []
-2019-04-15 16:40:01 : DB User Auth - 'NoneType' object has no attribute 'encode'
-2019-04-15 16:40:15 : users pass/id debug - <class 'list'>
-2019-04-15 16:40:15 : users pass/id debug - []
-2019-04-15 16:40:15 : DB User Auth - list index out of range
-2019-04-15 16:44:16 : users pass/id debug - <class 'list'>
-2019-04-15 16:44:16 : users pass/id debug - []
-2019-04-15 16:44:16 : DB User Auth - list index out of range
-2019-04-15 16:45:17 : DB User Auth - list index out of range
-2019-04-15 16:46:08 : users pass/id debug - <class 'list'>
-2019-04-15 16:46:08 : users pass/id debug - []
-2019-04-15 16:46:16 : users pass/id debug - <class 'list'>
-2019-04-15 16:46:16 : users pass/id debug - []
-2019-04-15 16:46:24 : users pass/id debug - <class 'list'>
-2019-04-15 16:46:24 : users pass/id debug - [('$2b$12$dgJN3Hxu7FrBCzePRvdKGO.xwRb7SkE2B.K/erE4xDDslYPn1Pf6i', 8)]
-2019-04-15 16:48:28 : DEBUG pass hash - b'$2b$12$qMJBZYi247OzPBZbZ0hiA.JW/DvWIlxU3Cs9iQ15wpygyvd.ThuuS'
-2019-04-15 16:48:28 : DB Insert New USER - duplicate key value violates unique constraint "users_pkey"
-DETAIL:  Key (user_id)=(8) already exists.
-
-2019-04-15 16:48:47 : users pass/id debug - <class 'list'>
-2019-04-15 16:48:47 : users pass/id debug - []
-2019-04-15 16:48:56 : DEBUG pass hash - b'$2b$12$hWjMTC/pRxrqpVamwcuhSuwVUYP4URGyFuad8LPuSREso/XKsnXjS'
-2019-04-15 16:49:02 : users pass/id debug - <class 'list'>
-2019-04-15 16:49:02 : users pass/id debug - [('\\x2432622431322468576a4d54432f70527872717056616d7763756853757756555950345552477946756164384c5075535245736f2f584b736e586a53', 9)]
-2019-04-15 16:49:02 : DB User Auth - Unicode-objects must be encoded before checking
-2019-04-15 16:49:17 : users pass/id debug - <class 'list'>
-2019-04-15 16:49:17 : users pass/id debug - [('\\x2432622431322468576a4d54432f70527872717056616d7763756853757756555950345552477946756164384c5075535245736f2f584b736e586a53', 9)]
-2019-04-15 16:49:17 : DB User Auth - Invalid salt
-2019-04-15 16:49:23 : users pass/id debug - <class 'list'>
-2019-04-15 16:49:23 : users pass/id debug - [('\\x2432622431322468576a4d54432f70527872717056616d7763756853757756555950345552477946756164384c5075535245736f2f584b736e586a53', 9)]
-2019-04-15 16:49:23 : DB User Auth - Invalid salt
-2019-04-17 11:59:03 : users pass/id debug - <class 'list'>
-2019-04-17 11:59:03 : users pass/id debug - [('\\x2432622431322468576a4d54432f70527872717056616d7763756853757756555950345552477946756164384c5075535245736f2f584b736e586a53', 9)]
-2019-04-17 11:59:03 : DB User Auth - Invalid salt
-2019-04-17 11:59:19 : DEBUG pass hash 1 - b'$2b$12$./DO.9KCSuN5NWk/KWe5XucuEH4xEgmzFTaHmzQAF/E25dnKePjR6'
-2019-04-17 11:59:19 : DEBUG pass hash 2 - b'$2b$12$./DO.9KCSuN5NWk/KWe5XucuEH4xEgmzFTaHmzQAF/E25dnKePjR6'
-2019-04-17 12:01:26 : DEBUG pass hash 1 - b'$2b$12$DNjtofpFInJA5s5Q6Hg63.gPT5aGqg5Ms29Jr6rImxe09ZIMLrJ2K'
-2019-04-17 12:01:26 : DEBUG pass hash 2 - $2b$12$DNjtofpFInJA5s5Q6Hg63.gPT5aGqg5Ms29Jr6rImxe09ZIMLrJ2K
-2019-04-17 12:02:53 : users pass/id debug - <class 'list'>
-2019-04-17 12:02:53 : users pass/id debug - []
-2019-04-17 12:03:01 : DEBUG pass hash 1 - b'$2b$12$rLJGHzL5CLXHqOIaKsVPsu0pKcLAf/ig9ZjTbpCGnco/4ewVbjn3y'
-2019-04-17 12:03:01 : DEBUG pass hash 2 - $2b$12$rLJGHzL5CLXHqOIaKsVPsu0pKcLAf/ig9ZjTbpCGnco/4ewVbjn3y
-2019-04-17 12:03:07 : users pass/id debug - <class 'list'>
-2019-04-17 12:03:07 : users pass/id debug - [('$2b$12$rLJGHzL5CLXHqOIaKsVPsu0pKcLAf/ig9ZjTbpCGnco/4ewVbjn3y', 12)]
-2019-04-17 12:03:38 : users pass/id debug - <class 'list'>
-2019-04-17 12:03:38 : users pass/id debug - [('$2b$12$36EKImw626h4xG/DHEU4QeTklFoXWB.RMXv9SBEvYPE4UrlUX0Equ', 2)]
-2019-04-17 12:05:01 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-17 12:05:01 : average rating! - 4.166666666666667
-2019-04-17 12:06:28 : users pass/id debug - <class 'list'>
-2019-04-17 12:06:28 : users pass/id debug - [('$2b$12$itK2aMPdXT20hMCyJNcqo.nimwNbQy6dn64JNWXO4xi4pnfVPurJa', 3)]
-2019-04-17 12:06:43 : DEBUG pass hash 1 - b'$2b$12$FA6HClAal0W9JqRHUU5BCe/9tQCyPDV1.5jK8QAfEbD.xyUte1wo2'
-2019-04-17 12:06:43 : DEBUG pass hash 2 - $2b$12$FA6HClAal0W9JqRHUU5BCe/9tQCyPDV1.5jK8QAfEbD.xyUte1wo2
-2019-04-17 12:08:13 : users pass/id debug - <class 'list'>
-2019-04-17 12:08:13 : users pass/id debug - [('$2b$12$FA6HClAal0W9JqRHUU5BCe/9tQCyPDV1.5jK8QAfEbD.xyUte1wo2', 13)]
-2019-04-17 12:14:30 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-17 12:14:30 : average rating! - 4.166666666666667
-2019-04-17 12:14:30 : get scorees! - []
-2019-04-17 12:14:30 : average rating! - 0.0
-2019-04-17 12:31:27 : users pass/id debug - <class 'list'>
-2019-04-17 12:31:27 : users pass/id debug - [('$2b$12$FA6HClAal0W9JqRHUU5BCe/9tQCyPDV1.5jK8QAfEbD.xyUte1wo2', 13)]
-2019-04-17 12:35:14 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-17 12:35:14 : average rating! - 4.166666666666667
-2019-04-17 12:35:14 : get scorees! - []
-2019-04-17 12:35:14 : average rating! - 0.0
-2019-04-17 12:44:59 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-17 12:44:59 : average rating! - 4.166666666666667
-2019-04-17 12:44:59 : get scorees! - []
-2019-04-17 12:44:59 : average rating! - 0.0
-2019-04-17 12:44:59 : DB Get Complete Decks - Could not build url for endpoint 'view_deck/{{d[0]}}'. Did you mean 'view_deck' instead?
-2019-04-17 12:47:15 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-17 12:47:15 : average rating! - 4.166666666666667
-2019-04-17 12:47:15 : get scorees! - []
-2019-04-17 12:47:15 : average rating! - 0.0
-2019-04-17 12:47:15 : DB Get Complete Decks - expected token ':', got '}'
-2019-04-17 12:49:20 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-17 12:49:20 : average rating! - 4.166666666666667
-2019-04-17 12:49:20 : get scorees! - []
-2019-04-17 12:49:20 : average rating! - 0.0
-2019-04-17 12:49:20 : DB Get Complete Decks - unexpected '}', expected ')'
-2019-04-17 12:49:42 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-17 12:49:42 : average rating! - 4.166666666666667
-2019-04-17 12:49:42 : get scorees! - []
-2019-04-17 12:49:42 : average rating! - 0.0
-2019-04-17 12:50:53 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-17 12:50:53 : average rating! - 4.166666666666667
-2019-04-17 12:50:53 : get scorees! - []
-2019-04-17 12:50:53 : average rating! - 0.0
-2019-04-18 15:44:43 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-18 15:44:43 : average rating! - 4.166666666666667
-2019-04-18 15:44:43 : get scorees! - []
-2019-04-18 15:44:43 : average rating! - 0.0
-2019-04-18 15:51:24 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-18 15:51:24 : average rating! - 4.166666666666667
-2019-04-18 15:51:24 : get scorees! - []
-2019-04-18 15:51:24 : average rating! - 0.0
-2019-04-18 15:51:30 : get scorees! - [(5,), (3,), (4,), (5,), (4,), (4,)]
-2019-04-18 15:51:30 : average rating! - 4.166666666666667
-2019-04-18 15:51:30 : get scorees! - []
-2019-04-18 15:51:30 : average rating! - 0.0
-2019-04-18 16:11:44 : average rating! - 4.166666666666667
-2019-04-18 16:11:44 : average rating! - 0.0
-2019-04-18 16:11:57 : average rating! - 4.166666666666667
-2019-04-18 16:11:57 : average rating! - 0.0
-2019-04-18 16:38:44 : average rating! - 4.166666666666667
-2019-04-18 16:38:44 : average rating! - 0.0
-2019-04-18 16:38:47 : average rating! - 4.166666666666667
-2019-04-18 16:38:47 : average rating! - 0.0
-2019-04-18 16:38:55 : average rating! - 4.166666666666667
-2019-04-18 16:38:55 : average rating! - 0.0
-2019-04-18 16:44:54 : DB Get Complete Decks - invalid input syntax for integer: "jquery.rateyo.js"
-LINE 1: ...sers u ON u.user_id = d.user_id WHERE d.deck_id = 'jquery.ra...
-                                                             ^
-
-2019-04-18 17:12:19 : average rating! - 4.166666666666667
-2019-04-18 17:12:19 : average rating! - 0.0
-2019-04-18 17:20:39 : DB Rate Deck - invalid input syntax for integer: "3.4"
-LINE 1: INSERT INTO rating (deck_id, score) VALUES ('29','3.4')
-                                                         ^
-
-2019-04-18 17:24:21 : average rating! - 4.166666666666667
-2019-04-18 17:24:21 : average rating! - 1.776923076923077
-2019-04-18 17:24:36 : average rating! - 4.166666666666667
-2019-04-18 17:24:36 : average rating! - 1.776923076923077
+2019-04-19 11:36:09 : DEBUG Color: - [None, None, None, None, None]
+2019-04-19 11:36:14 : DEBUG Color: - ['', None, '', None, None]
+2019-04-19 11:43:53 : DEBUG Color: - []
+2019-04-19 11:44:04 : DEBUG Color: - []
+2019-04-19 11:44:41 : DEBUG Color: - []
+2019-04-19 11:44:54 : DEBUG Color: - ['white', 'black']
+2019-04-19 11:45:09 : DEBUG Color: - ['white', 'blue', 'red']
+2019-04-19 11:45:59 : DEBUG Color: - []
+2019-04-19 11:46:08 : DEBUG Color: - ['red', 'green']
+2019-04-19 11:55:47 : DEBUG Color: - []
+2019-04-19 11:57:05 : DEBUG Color: - []
+2019-04-19 11:57:26 : DEBUG Color: - []
+2019-04-19 11:58:00 : DEBUG Color: - []
+2019-04-19 11:58:15 : DEBUG Color: - []
+2019-04-19 12:00:38 : DEBUG Search Term: - frog
+2019-04-19 12:00:38 : DEBUG Color(s): - []
+2019-04-19 12:00:56 : DEBUG Search Term: - cat
+2019-04-19 12:00:56 : DEBUG Color(s): - []
+2019-04-19 12:04:38 : DEBUG Search Term: - None
+2019-04-19 12:04:38 : DEBUG Color(s): - []
+2019-04-19 12:07:12 : DEBUG Search Term: - None
+2019-04-19 12:07:12 : DEBUG Color(s): - []
+2019-04-19 12:07:23 : DEBUG Search Term: - tree
+2019-04-19 12:07:23 : DEBUG Color(s): - []
+2019-04-19 12:07:37 : DEBUG Search Term: - dog
+2019-04-19 12:07:37 : DEBUG Color(s): - []
+2019-04-19 12:09:17 : DEBUG Search Term: - tree
+2019-04-19 12:09:17 : DEBUG Color(s): - []
+2019-04-19 12:09:27 : DEBUG Search Term: - None
+2019-04-19 12:09:27 : DEBUG Color(s): - []
+2019-04-19 12:13:55 : DEBUG Search Term: - fish
+2019-04-19 12:13:55 : DEBUG Color(s): - ['blue']
+2019-04-19 12:14:08 : DEBUG Search Term: - fish
+2019-04-19 12:14:08 : DEBUG Color(s): - ['red']
+2019-04-19 12:15:21 : DEBUG Search Term: - t
+2019-04-19 12:15:21 : DEBUG Color(s): - ['blue']
+2019-04-19 12:15:26 : DEBUG color trigger: - [['blue'], 't']
+2019-04-19 12:16:45 : DEBUG Search Term: - t
+2019-04-19 12:16:45 : DEBUG Color(s): - ['red']
+2019-04-19 12:16:49 : DEBUG color trigger: - ['red', 't']
+2019-04-19 12:17:26 : DEBUG Search Term: - None
+2019-04-19 12:17:26 : DEBUG Color(s): - []
+2019-04-19 12:17:48 : DEBUG Search Term: - gr
+2019-04-19 12:17:48 : DEBUG Color(s): - ['red']
+2019-04-19 12:17:52 : DEBUG color trigger: - ['red', 'gr']
+2019-04-19 12:18:03 : DEBUG Search Term: - gr
+2019-04-19 12:18:03 : DEBUG Color(s): - ['blue']
+2019-04-19 12:18:07 : DEBUG color trigger: - ['blue', 'gr']
+2019-04-19 12:18:13 : DEBUG Search Term: - gr
+2019-04-19 12:18:13 : DEBUG Color(s): - ['green']
+2019-04-19 12:18:18 : DEBUG color trigger: - ['green', 'gr']
+2019-04-19 12:21:27 : DEBUG Search Term: - 
+2019-04-19 12:21:27 : DEBUG Color(s): - ['blue']
+2019-04-19 12:23:43 : DEBUG Search Term: - None
+2019-04-19 12:23:43 : DEBUG Color(s): - []
+2019-04-19 12:25:21 : DEBUG Search Term: - None
+2019-04-19 12:25:21 : DEBUG Color(s): - []
+2019-04-19 12:25:32 : DEBUG Search Term: - 
+2019-04-19 12:25:32 : DEBUG Color(s): - ['black']
+2019-04-19 12:26:10 : DEBUG Search Term: - zombie
+2019-04-19 12:26:10 : DEBUG Color(s): - ['black']
+2019-04-19 12:26:18 : DEBUG color trigger: - ['black', 'zombie']
+2019-04-19 12:26:23 : DEBUG Search Term: - zombie
+2019-04-19 12:26:23 : DEBUG Color(s): - ['red']
+2019-04-19 12:26:28 : DEBUG color trigger: - ['red', 'zombie']
+2019-04-19 12:27:27 : DEBUG Search Term: - 
+2019-04-19 12:27:27 : DEBUG Color(s): - ['white', 'blue']
+2019-04-19 12:27:36 : DEBUG Search Term: - 
+2019-04-19 12:27:36 : DEBUG Color(s): - ['white', 'black']
+2019-04-19 12:32:23 : DEBUG Search Term: - None
+2019-04-19 12:32:23 : DEBUG Color(s): - []
+2019-04-19 12:32:37 : DEBUG Search Term: - tree
+2019-04-19 12:32:37 : DEBUG Color(s): - ['green']
+2019-04-19 12:36:39 : DEBUG Search Term: - bomb
+2019-04-19 12:36:39 : DEBUG Color(s): - []
+2019-04-19 12:36:55 : DEBUG Search Term: - bomb
+2019-04-19 12:36:55 : DEBUG Color(s): - ['red']
+2019-04-19 12:36:55 : API Get Card Search - invalid syntax (<string>, line 1)
+2019-04-19 12:37:02 : DEBUG Search Term: - dog
+2019-04-19 12:37:02 : DEBUG Color(s): - ['blue']
+2019-04-19 12:37:02 : API Get Card Search - invalid syntax (<string>, line 1)
+2019-04-19 12:37:35 : DEBUG Search Term: - dog
+2019-04-19 12:37:35 : DEBUG Color(s): - []
+2019-04-19 12:37:43 : DEBUG Search Term: - dog
+2019-04-19 12:37:43 : DEBUG Color(s): - ['green']
+2019-04-19 12:37:55 : DEBUG Search Term: - dog
+2019-04-19 12:37:55 : DEBUG Color(s): - ['blue']
+2019-04-19 12:40:21 : DEBUG Search Term: - t
+2019-04-19 12:40:21 : DEBUG Color(s): - ['white']
+2019-04-19 12:40:47 : DEBUG Search Term: - 
+2019-04-19 12:40:47 : DEBUG Color(s): - ['red']
+2019-04-19 12:41:04 : DEBUG Search Term: - 
+2019-04-19 12:41:04 : DEBUG Color(s): - ['green']
+2019-04-19 12:41:33 : DEBUG Search Term: - elven
+2019-04-19 12:41:33 : DEBUG Color(s): - ['green']
+2019-04-19 12:43:01 : DEBUG Search Term: - Vampire
+2019-04-19 12:43:01 : DEBUG Color(s): - []
+2019-04-19 12:44:12 : DEBUG Search Term: - millstone
+2019-04-19 12:44:12 : DEBUG Color(s): - []
+2019-04-19 12:44:21 : DEBUG Search Term: - None
+2019-04-19 12:44:21 : DEBUG Color(s): - []
+2019-04-19 12:44:37 : DEBUG Search Term: - millstone
+2019-04-19 12:44:37 : DEBUG Color(s): - []
+2019-04-19 12:44:43 : DEBUG Search Term: - None
+2019-04-19 12:44:43 : DEBUG Color(s): - []
+2019-04-19 12:45:22 : DEBUG Search Term: - None
+2019-04-19 12:45:22 : DEBUG Color(s): - []
+2019-04-19 12:46:30 : DEBUG Search Term: - Vampire
+2019-04-19 12:46:30 : DEBUG Color(s): - []
+2019-04-19 12:46:33 : DEBUG Search Term: - None
+2019-04-19 12:46:33 : DEBUG Color(s): - []
+2019-04-19 12:46:58 : DEBUG Search Term: - test
+2019-04-19 12:46:58 : DEBUG Color(s): - []
+2019-04-19 12:47:05 : DEBUG Search Term: - None
+2019-04-19 12:47:05 : DEBUG Color(s): - []
+2019-04-19 12:47:42 : DEBUG Search Term: - None
+2019-04-19 12:47:42 : DEBUG Color(s): - []
+2019-04-19 14:59:38 : average rating! - 3.6
+2019-04-19 14:59:38 : average rating! - 1.776923076923077
+2019-04-19 14:59:46 : average rating! - 3.6
+2019-04-19 14:59:46 : average rating! - 1.776923076923077
+2019-04-19 15:01:29 : average rating! - 3.6
+2019-04-19 15:01:29 : average rating! - 2.1599999999999997
+2019-04-19 15:07:16 : average rating! - 3.6
+2019-04-19 15:07:16 : average rating! - 2.24375
+2019-04-19 15:13:59 : average rating! - 0.0
+2019-04-19 15:13:59 : average rating! - 3.6
+2019-04-19 15:13:59 : average rating! - 2.24375
+2019-04-19 15:15:22 : average rating! - 5.0
+2019-04-19 15:15:22 : average rating! - 3.6
+2019-04-19 15:15:22 : average rating! - 2.24375
+2019-04-19 15:15:35 : average rating! - 5.0
+2019-04-19 15:15:35 : average rating! - 3.6
+2019-04-19 15:15:35 : average rating! - 2.24375
+2019-04-19 15:16:02 : average rating! - 5.0
+2019-04-19 15:16:02 : average rating! - 3.6
+2019-04-19 15:16:02 : average rating! - 2.24375
+2019-04-19 15:25:33 : average rating! - 5.0
+2019-04-19 15:25:33 : average rating! - 3.6
+2019-04-19 15:25:33 : average rating! - 2.24375
+2019-04-19 15:30:42 : average rating! - 5.0
+2019-04-19 15:30:42 : average rating! - 3.6
+2019-04-19 15:30:42 : average rating! - 2.24375
+2019-04-19 15:31:15 : average rating! - 5.0
+2019-04-19 15:31:15 : average rating! - 3.6
+2019-04-19 15:31:15 : average rating! - 2.24375
+2019-04-19 15:33:02 : average rating! - 5.0
+2019-04-19 15:33:02 : average rating! - 3.6
+2019-04-19 15:33:02 : average rating! - 0.0
+2019-04-19 15:33:02 : average rating! - 2.24375
+2019-04-19 15:33:42 : average rating! - 5.0
+2019-04-19 15:33:42 : average rating! - 3.6
+2019-04-19 15:33:42 : average rating! - 5.0
+2019-04-19 15:33:42 : average rating! - 2.24375
+2019-04-19 15:34:01 : average rating! - 5.0
+2019-04-19 15:34:01 : average rating! - 3.6
+2019-04-19 15:34:01 : average rating! - 4.905769230769231
+2019-04-19 15:34:01 : average rating! - 2.24375
+2019-04-19 16:21:54 : average rating! - 5.0
+2019-04-19 16:21:54 : average rating! - 3.6
+2019-04-19 16:21:54 : average rating! - 4.905769230769231
+2019-04-19 16:21:54 : average rating! - 2.24375
+2019-04-19 16:22:48 : DEBUG Search Term: - None
+2019-04-19 16:24:57 : DEBUG Search Term: - None
+2019-04-19 16:25:01 : DEBUG Search Term: - None
+2019-04-19 16:25:30 : DEBUG Search Term: - None
+2019-04-19 16:26:40 : DEBUG Search Term: - None
+2019-04-19 16:26:40 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=cmc_value).where(power=power_value).where(toughness=toughness_value).all()
+2019-04-19 16:30:02 : DEBUG Search Term: - None
+2019-04-19 16:30:10 : DEBUG Search Term: - None
+2019-04-19 16:30:16 : DEBUG Search Term: - None
+2019-04-19 16:31:18 : DEBUG Search Term: - None
+2019-04-19 16:31:18 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 16:31:31 : DEBUG Search Term: - 
+2019-04-19 16:31:31 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name=).all()
+2019-04-19 16:31:59 : DEBUG Search Term: - 
+2019-04-19 16:31:59 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 16:32:03 : DEBUG Search Term: - 
+2019-04-19 16:32:03 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 16:32:23 : DEBUG Search Term: - chosen
+2019-04-19 16:32:23 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name=chosen).where(colors=white).where(cmc=4).all()
+2019-04-19 16:33:21 : DEBUG Search Term: - chosen
+2019-04-19 16:33:21 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='chosen').where(colors='white').where(cmc=4).all()
+2019-04-19 16:33:52 : DEBUG Search Term: - chosen
+2019-04-19 16:33:52 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='chosen').where(colors='white').where(cmc=7).all()
+2019-04-19 16:34:08 : DEBUG Search Term: - chosen
+2019-04-19 16:34:08 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='chosen').where(toughness=4).all()
+2019-04-19 16:34:15 : DEBUG Search Term: - chosen
+2019-04-19 16:34:15 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='chosen').where(colors='blue').all()
+2019-04-19 16:34:42 : DEBUG Search Term: - 
+2019-04-19 16:34:42 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='blue').where(cmc=5).where(power=3).where(toughness=2).all()
+2019-04-19 16:34:48 : DEBUG Search Term: - None
+2019-04-19 16:34:48 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 16:34:55 : DEBUG Search Term: - watcher
+2019-04-19 16:34:55 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='watcher').all()
+2019-04-19 16:35:08 : DEBUG Search Term: - watcher
+2019-04-19 16:35:08 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='watcher').where(colors='black').all()
 

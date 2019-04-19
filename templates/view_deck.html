@@ -89,15 +89,16 @@
 
 	<!-- for each card in deck -->
 	<!--
-		deck_cards[3] = card name
-		deck_cards[2] = multiverse id	
-		deck_cards[4] = image URL
+		card[0] = card_id
+		card[3] = card name
+		card[2] = multiverse id	
+		card[4] = image URL
 	-->
 	<div class="card card-body deck_cards_holder">
 	{% for card in deck_cards %}
 		<div class="deck_card" id="card{{ card[0] }}">
 
-
+			
 			<!-- {{ loop.index }} -->
 			<span class="count"></span> <br/>
 
@@ -115,6 +116,26 @@
 		
 	{% endfor %}	
 	</div> <!-- end card -->
+
+<script>
+	// print count first tim eon page load
+	$(document).ready(function() { countCards(); });
+
+	// function to order the cards by printing the count
+	function countCards() {
+			var cards = document.getElementsByClassName("count");
+
+			// for each card
+			for (var j =1; j <= cards.length; j++) {
+				//console.log(""+j);
+				// set card number
+				cards[j-1].innerHTML = ""+j;
+			}
+	}
+</script>
+
+
+
 {% endif %} 
 <!-- end error if -->
 
