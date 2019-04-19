@@ -3,8 +3,8 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-# Create a new instance of the Chrome driver
-driver = webdriver.Chrome()
+# Create a new instance of the FireFox driver
+driver = webdriver.Firefox("geckodriver.exe")
 
 # go to the site
 driver.get("http://localhost:5000")
@@ -13,9 +13,10 @@ driver.get("http://localhost:5000")
 isTestingIncorrect = sys.argv[0]
 
 # find the elements
-usernameElement = driver.find_element_by_name("q")
-passwordElement = driver.find_element_by_name("q")
-loginElement = driver.find_element_by_name("q")
+loginElement = driver.find_element_by_id("login")
+usernameElement = loginElement.find_element_by_name("username")
+passwordElement = loginElement.find_element_by_name("password")
+buttonElement = loginElement.find_elements_by_class_name("btn")[0]
 
 if isTestingIncorrect:
 	# type in the input boxes
@@ -27,21 +28,21 @@ else:
 	passwordElement.send_keys("1234")
 
 # submit the form (although google automatically searches now without submitting)
-loginElement.click()
+buttonElement.click()
 
 try:
 	if isTestingIncorrect:
 		# wait for the page to refresh
-		WebDriverWait(driver, 10).until(EC.title_contains("cheese!"))
-		
+		WebDriverWait(driver,10).until(EC.title_contains("MTG Deck Planner"))
+
 		# assert to see if the user is logged in
-		assert element.text == 'Example Domains'
-	else:
+		assert loginElement.find_elements_by_tag_name("p")[0] == 'Bad Username or Password'
+	else:	
 		# wait for the page to refresh
-		WebDriverWait(driver, 10).until(EC.title_contains("cheese!"))
-		
+		WebDriverWait(driver,10).until(EC.title_contains("MTG Deck Planner | My Saved Decks"))
+
 		# assert to see if the user is logged in
-		assert element.text == 'Example Domains'
+		assert driver.title("MTG Deck Planner | My Saved Decks")
 	
 finally:
     driver.quit()
