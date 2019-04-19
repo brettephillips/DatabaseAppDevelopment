@@ -195,4 +195,32 @@
 2019-04-19 16:34:55 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='watcher').all()
 2019-04-19 16:35:08 : DEBUG Search Term: - watcher
 2019-04-19 16:35:08 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='watcher').where(colors='black').all()
+2019-04-19 16:39:10 : DEBUG Search Term: - None
+2019-04-19 16:39:10 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 16:39:32 : DEBUG Search Term: - None
+2019-04-19 16:39:32 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 16:39:34 : DEBUG Search Term: - 
+2019-04-19 16:39:34 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 16:39:36 : DEBUG Search Term: - None
+2019-04-19 16:39:36 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 16:39:57 : DEBUG Search Term: - None
+2019-04-19 16:39:57 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 16:40:08 : DEBUG Search Term: - gun
+2019-04-19 16:40:08 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='gun').where(colors='red').where(cmc=3).all()
+2019-04-19 16:40:12 : DEBUG Search Term: - gun
+2019-04-19 16:40:12 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='gun').where(colors='red').all()
+2019-04-19 16:40:24 : DEBUG Search Term: - gun
+2019-04-19 16:40:24 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='gun').where(colors='white').all()
+2019-04-19 16:40:28 : DEBUG Search Term: - gun
+2019-04-19 16:40:28 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='gun').where(colors='black').all()
+2019-04-19 16:40:31 : DEBUG Search Term: - gun
+2019-04-19 16:40:31 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='gun').where(colors='green').all()
+2019-04-19 16:40:36 : DEBUG Search Term: - g
+2019-04-19 16:40:36 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='g').where(colors='green').all()
+2019-04-19 16:40:50 : DEBUG Search Term: - g
+2019-04-19 16:40:50 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='g').where(power=8).where(toughness=8).all()
+2019-04-19 16:41:12 : DEBUG Search Term: - mi
+2019-04-19 16:41:12 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='mi').where(cmc=8).all()
+2019-04-19 16:46:25 : DEBUG Search Term: - None
+2019-04-19 16:46:25 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
 

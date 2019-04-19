@@ -143,102 +143,102 @@ def search():
 	button_value = request.form.get('button')
 
 	# Get some cards
-	#try:
-	cards = []
+	try:
+		cards = []
 
-	#BRETS FILTER -------------------------------------------------------------------------------
-
-
-	# logError("button_value DEBUG 0",button_value)
-	# logError("SearchName DEBUG 0",search_name)
-	# if button_value == 'search' or (cmc_value == '' and power_value == '' and toughness_value == ''):
-	# 	# logError("SearchName DEBUG 1 ",search_name)
-	# 	if cmc_value == '' and power_value == '' and toughness_value == '':
-	# 		# logError("SearchName DEBUG 2",search_name)
-	# 		search_name = '';		
-	# 	cards += Card.where(page=1).where(pageSize=40).where(name=search_name).all()
-	# else:
-	# 	if cmc_value != '':
-	# 		if cmc_sign == 'equals':
-	# 			cards += Card.where(page=1).where(pageSize=40).where(cmc=cmc_value).all()
-	# 		# elif cmc_sign == 'greater':
-	# 		# 	cards += Card.where(page=1).where(pageSize=40).where(cmc=cmc_value).all()
-	# 		#elif cmc_sign == 'less':
-	# 		#	cards += Card.where(page=1).where(pageSize=40).where(cmc<=cmc_value).all()
-	# 	if power_value != '':
-	# 		if power_sign == 'equals':
-	# 			cards += Card.where(page=1).where(pageSize=40).where(power=power_value).all()
-	# 		#elif power_sign == 'greater':
-	# 		#	cards += Card.where(page=1).where(pageSize=40).where(power>=power_value).all()
-	# 		#elif power_sign == 'less':
-	# 		#	cards += Card.where(page=1).where(pageSize=40).where(power<=power_value).all()
-	# 	if toughness_value != '':
-	# 		if toughness_sign == 'equals':
-	# 			cards += Card.where(page=1).where(pageSize=40).where(toughness=toughness_value).all()
-	# 		#elif toughness_sign == 'greater':
-	# 		#	cards += Card.where(page=1).where(pageSize=40).where(toughness>=toughness_value).all()
-	# 		#elif toughness_sign == 'less':
-	# 		#	cards += Card.where(page=1).where(pageSize=40).where(toughness<=toughness_value).all()
+		#BRETS FILTER -------------------------------------------------------------------------------
 
 
-	#DANS FILTER -------------------------------------------------------------------------------
-	
-	#start base api call
-	api_call = "cards += Card.where(page=1).where(pageSize=40)"
+		# logError("button_value DEBUG 0",button_value)
+		# logError("SearchName DEBUG 0",search_name)
+		# if button_value == 'search' or (cmc_value == '' and power_value == '' and toughness_value == ''):
+		# 	# logError("SearchName DEBUG 1 ",search_name)
+		# 	if cmc_value == '' and power_value == '' and toughness_value == '':
+		# 		# logError("SearchName DEBUG 2",search_name)
+		# 		search_name = '';		
+		# 	cards += Card.where(page=1).where(pageSize=40).where(name=search_name).all()
+		# else:
+		# 	if cmc_value != '':
+		# 		if cmc_sign == 'equals':
+		# 			cards += Card.where(page=1).where(pageSize=40).where(cmc=cmc_value).all()
+		# 		# elif cmc_sign == 'greater':
+		# 		# 	cards += Card.where(page=1).where(pageSize=40).where(cmc=cmc_value).all()
+		# 		#elif cmc_sign == 'less':
+		# 		#	cards += Card.where(page=1).where(pageSize=40).where(cmc<=cmc_value).all()
+		# 	if power_value != '':
+		# 		if power_sign == 'equals':
+		# 			cards += Card.where(page=1).where(pageSize=40).where(power=power_value).all()
+		# 		#elif power_sign == 'greater':
+		# 		#	cards += Card.where(page=1).where(pageSize=40).where(power>=power_value).all()
+		# 		#elif power_sign == 'less':
+		# 		#	cards += Card.where(page=1).where(pageSize=40).where(power<=power_value).all()
+		# 	if toughness_value != '':
+		# 		if toughness_sign == 'equals':
+		# 			cards += Card.where(page=1).where(pageSize=40).where(toughness=toughness_value).all()
+		# 		#elif toughness_sign == 'greater':
+		# 		#	cards += Card.where(page=1).where(pageSize=40).where(toughness>=toughness_value).all()
+		# 		#elif toughness_sign == 'less':
+		# 		#	cards += Card.where(page=1).where(pageSize=40).where(toughness<=toughness_value).all()
 
-	# if search name is set
-	if search_name != '' and search_name != None: 
-		api_call += ".where(name='"+search_name+"')"
 
-	# if color is set
-	if len(selected_colors) == 1:
-		api_call += ".where(colors='"+selected_colors[0]+"')"
+		#DANS FILTER -------------------------------------------------------------------------------
+		
+		#start base api call
+		api_call = "cards += Card.where(page=1).where(pageSize=40)"
 
-	# if cmc is set
-	if cmc_value != '' and cmc_value != None:
-		api_call += ".where(cmc="+cmc_value+")"
+		# if search name is set
+		if search_name != '' and search_name != None: 
+			api_call += ".where(name='"+search_name+"')"
 
-	# if power is set
-	if power_value != '' and power_value != None:
-		api_call += ".where(power="+power_value+")"
+		# if color is set
+		if len(selected_colors) == 1:
+			api_call += ".where(colors='"+selected_colors[0]+"')"
 
-	# if toughness is set
-	if toughness_value != '' and toughness_value != None:
-		api_call += ".where(toughness="+toughness_value+")"
+		# if cmc is set
+		if cmc_value != '' and cmc_value != None:
+			api_call += ".where(cmc="+cmc_value+")"
 
-	#finish api call
-	api_call += ".all()"
+		# if power is set
+		if power_value != '' and power_value != None:
+			api_call += ".where(power="+power_value+")"
+
+		# if toughness is set
+		if toughness_value != '' and toughness_value != None:
+			api_call += ".where(toughness="+toughness_value+")"
+
+		#finish api call
+		api_call += ".all()"
 
 
-	logError("DEBUG API Call:", api_call)
-	exec(api_call)
+		logError("DEBUG API Call:", api_call)
+		exec(api_call)
 
-	# Set card name list to sent to template
-	c_names = []
+		# Set card name list to sent to template
+		c_names = []
 
-	# Put card names in list
-	for c in cards:
-		if [c.name, c.image_url, c.multiverse_id] in c_names:
-			continue
-		if str(c.image_url) != "None":
-			c_names.append([c.name, c.image_url, c.multiverse_id])
+		# Put card names in list
+		for c in cards:
+			if [c.name, c.image_url, c.multiverse_id] in c_names:
+				continue
+			if str(c.image_url) != "None":
+				c_names.append([c.name, c.image_url, c.multiverse_id])
 
-	return render_template('search.html',
-		title=title,
-		cards=c_names,
-		search_name=search_name,
-		logged_in=logged_in
-	)
+		return render_template('search.html',
+			title=title,
+			cards=c_names,
+			search_name=search_name,
+			logged_in=logged_in
+		)
 
-	# catch and log error
-	# except Exception as ex:
-	# 	#logError("API Get Card Search",ex)
+	#catch and log error
+	except Exception as ex:
+		#logError("API Get Card Search",ex)
 
-	# 	return render_template('search.html',
-	# 		title=title,
-	# 		cards="error",
-	# 		logged_in=logged_in
-	# 	)
+		return render_template('search.html',
+			title=title,
+			cards="error",
+			logged_in=logged_in
+		)
 
 
 

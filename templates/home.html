@@ -33,7 +33,7 @@
       <form id="login" class="bg-white p-3" action="{{ url_for('login') }}" method="POST">
 
 	{% if bad_login == 'yes' %}
-		<p style='color:red'>Bad Username or Password</p>
+		<p id='bad_login' style='color:red'>Bad Username or Password</p>
 	{% endif %}
 
 	{% if registered is defined %}
