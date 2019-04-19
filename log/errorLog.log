@@ -223,4 +223,190 @@
 2019-04-19 16:41:12 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='mi').where(cmc=8).all()
 2019-04-19 16:46:25 : DEBUG Search Term: - None
 2019-04-19 16:46:25 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 17:26:39 : DEBUG Search Term: - 
+2019-04-19 17:26:39 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 17:33:07 : DEBUG Search Term: - 
+2019-04-19 17:33:07 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').where(cmc=2).where(power=4).where(toughness=5).all()
+2019-04-19 17:33:11 : DEBUG Search Term: - 
+2019-04-19 17:33:11 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').all()
+2019-04-19 17:33:26 : DEBUG Search Term: - 
+2019-04-19 17:33:26 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').where(cmc=7).where(power=4).where(toughness=4).all()
+2019-04-19 17:33:50 : DEBUG Search Term: - 
+2019-04-19 17:33:50 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=7).where(power=4).where(toughness=4).all()
+2019-04-19 17:34:08 : DEBUG Search Term: - 
+2019-04-19 17:34:08 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').where(cmc=7).where(power=4).where(toughness=4).all()
+2019-04-19 17:34:42 : DEBUG Search Term: - Gabriel Angelfire
+2019-04-19 17:34:42 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Gabriel Angelfire').all()
+2019-04-19 17:35:01 : DEBUG Search Term: - Gabriel Angelfire
+2019-04-19 17:35:01 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Gabriel Angelfire').all()
+2019-04-19 17:36:23 : DEBUG Search Term: - Scryb Sprites
+2019-04-19 17:36:23 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Scryb Sprites').all()
+2019-04-19 17:37:08 : DEBUG Search Term: - Mental misstep
+2019-04-19 17:37:08 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Mental misstep').all()
+2019-04-19 17:39:53 : DEBUG Search Term: - Pyrostatic Pillar
+2019-04-19 17:39:53 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Pyrostatic Pillar').all()
+2019-04-19 17:40:06 : DEBUG Search Term: - Pyrostatic Pillar
+2019-04-19 17:40:06 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Pyrostatic Pillar').where(colors='red').where(cmc=2).all()
+2019-04-19 17:40:13 : DEBUG Search Term: - Pyrostatic Pillar
+2019-04-19 17:40:13 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Pyrostatic Pillar').where(colors='red').where(cmc=6).all()
+2019-04-19 17:40:40 : DEBUG Search Term: - Pyrostatic Pillar
+2019-04-19 17:40:40 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Pyrostatic Pillar').where(colors='red').where(cmc=2).all()
+2019-04-19 17:40:42 : DEBUG Search Term: - Pyrostatic Pillar
+2019-04-19 17:40:42 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Pyrostatic Pillar').all()
+2019-04-19 17:40:43 : DEBUG Search Term: - Mental misstep
+2019-04-19 17:40:43 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Mental misstep').all()
+2019-04-19 17:41:03 : DEBUG Search Term: - Emrakul, the Promised End
+2019-04-19 17:41:03 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Emrakul, the Promised End').all()
+2019-04-19 17:53:37 : DEBUG Search Term: - None
+2019-04-19 17:53:37 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 17:54:56 : DEBUG Search Term: - None
+2019-04-19 17:54:56 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 17:56:24 : DEBUG Search Term: - None
+2019-04-19 17:56:24 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 17:56:28 : DEBUG Search Term: - NoneMental Misstep
+2019-04-19 17:56:28 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='NoneMental Misstep').all()
+2019-04-19 17:57:24 : DEBUG Search Term: - None
+2019-04-19 17:57:24 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 17:57:29 : DEBUG Search Term: - Mental Misstep
+2019-04-19 17:57:29 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Mental Misstep').all()
+2019-04-19 17:58:02 : DEBUG Search Term: - None
+2019-04-19 17:58:02 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 17:58:06 : DEBUG Search Term: - Mental Misstep
+2019-04-19 17:58:06 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Mental Misstep').all()
+2019-04-19 17:59:09 : DEBUG Search Term: - Emrakul, the Promised End
+2019-04-19 17:59:09 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Emrakul, the Promised End').where(colors='red').where(cmc=6).where(power=7).where(toughness=8).all()
+2019-04-19 17:59:14 : DEBUG Search Term: - Emrakul, the Promised End
+2019-04-19 17:59:14 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Emrakul, the Promised End').where(colors='red').all()
+2019-04-19 17:59:18 : DEBUG Search Term: - 
+2019-04-19 17:59:18 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='red').all()
+2019-04-19 17:59:53 : DEBUG Search Term: - 
+2019-04-19 17:59:53 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='red').where(cmc=6).where(power=6).where(toughness=1).all()
+2019-04-19 18:00:34 : DEBUG Search Term: - Pyrostatic Pillar
+2019-04-19 18:00:34 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Pyrostatic Pillar').all()
+2019-04-19 18:00:45 : DEBUG Search Term: - Emrakul, the Promised End
+2019-04-19 18:00:45 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Emrakul, the Promised End').all()
+2019-04-19 18:00:56 : DEBUG Search Term: - Emrakul, the Promised End
+2019-04-19 18:00:56 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Emrakul, the Promised End').where(colors='black').where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:01:06 : DEBUG Search Term: - Emrakul, the Promised En
+2019-04-19 18:01:06 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Emrakul, the Promised En').where(colors='black').where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:01:16 : DEBUG Search Term: - 
+2019-04-19 18:01:16 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='black').where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:01:23 : DEBUG Search Term: - 
+2019-04-19 18:01:23 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='black').where(power=13).where(toughness=13).all()
+2019-04-19 18:01:40 : DEBUG Search Term: - 
+2019-04-19 18:01:40 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='black').where(cmc=1).where(power=13).where(toughness=13).all()
+2019-04-19 18:01:43 : DEBUG Search Term: - 
+2019-04-19 18:01:43 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='black').where(power=13).where(toughness=13).all()
+2019-04-19 18:01:45 : DEBUG Search Term: - 
+2019-04-19 18:01:45 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='black').where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:01:48 : DEBUG Search Term: - Emrakul, the Promised En
+2019-04-19 18:01:48 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Emrakul, the Promised En').where(colors='black').where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:01:49 : DEBUG Search Term: - Emrakul, the Promised End
+2019-04-19 18:01:49 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Emrakul, the Promised End').where(colors='black').where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:01:51 : DEBUG Search Term: - Emrakul, the Promised End
+2019-04-19 18:01:51 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Emrakul, the Promised End').all()
+2019-04-19 18:02:15 : DEBUG Search Term: - 
+2019-04-19 18:02:15 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:02:25 : DEBUG Search Term: - 
+2019-04-19 18:02:25 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:02:37 : DEBUG Search Term: - 
+2019-04-19 18:02:37 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=13).all()
+2019-04-19 18:02:47 : DEBUG Search Term: - 
+2019-04-19 18:02:47 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(power=13).all()
+2019-04-19 18:03:35 : DEBUG Search Term: - 
+2019-04-19 18:03:35 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(power=*).all()
+2019-04-19 18:03:39 : DEBUG Search Term: - 
+2019-04-19 18:03:39 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(power=*).all()
+2019-04-19 18:03:41 : DEBUG Search Term: - 
+2019-04-19 18:03:41 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(toughness=*).all()
+2019-04-19 18:03:56 : DEBUG Search Term: - Aeon Chronicler
+2019-04-19 18:03:56 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Aeon Chronicler').all()
+2019-04-19 18:04:18 : DEBUG Search Term: - Aeon Chronicler
+2019-04-19 18:04:18 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Aeon Chronicler').all()
+2019-04-19 18:04:43 : DEBUG Search Term: - 
+2019-04-19 18:04:43 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(toughness=*).all()
+2019-04-19 18:04:45 : DEBUG Search Term: - 
+2019-04-19 18:04:45 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(power=*).all()
+2019-04-19 18:04:46 : DEBUG Search Term: - 
+2019-04-19 18:04:46 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(power=*).all()
+2019-04-19 18:04:58 : DEBUG Search Term: - 
+2019-04-19 18:04:58 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=13).where(toughness=13).all()
+2019-04-19 18:10:14 : DEBUG Search Term: - None
+2019-04-19 18:10:14 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 18:10:19 : DEBUG Search Term: - Mental Misstep
+2019-04-19 18:10:19 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Mental Misstep').all()
+2019-04-19 18:12:07 : DEBUG Search Term: - None
+2019-04-19 18:12:07 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 18:12:11 : DEBUG Search Term: - Mental Misstep
+2019-04-19 18:12:11 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Mental Misstep').all()
+2019-04-19 18:12:12 : DEBUG Search Term: - 
+2019-04-19 18:12:12 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:12:47 : DEBUG Search Term: - 
+2019-04-19 18:12:47 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').all()
+2019-04-19 18:12:54 : DEBUG Search Term: - 
+2019-04-19 18:12:54 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='blue').all()
+2019-04-19 18:13:00 : DEBUG Search Term: - 
+2019-04-19 18:13:00 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='black').all()
+2019-04-19 18:13:05 : DEBUG Search Term: - 
+2019-04-19 18:13:05 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='black').all()
+2019-04-19 18:13:08 : DEBUG Search Term: - 
+2019-04-19 18:13:08 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='red').all()
+2019-04-19 18:13:14 : DEBUG Search Term: - 
+2019-04-19 18:13:14 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').all()
+2019-04-19 18:16:04 : DEBUG Search Term: - 
+2019-04-19 18:16:04 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').all()
+2019-04-19 18:16:33 : DEBUG Search Term: - an
+2019-04-19 18:16:33 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='an').where(colors='white').all()
+2019-04-19 18:16:47 : DEBUG Search Term: - ancestor
+2019-04-19 18:16:47 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='ancestor').all()
+2019-04-19 18:16:54 : DEBUG Search Term: - ancestor
+2019-04-19 18:16:54 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='ancestor').where(colors='white').all()
+2019-04-19 18:20:34 : DEBUG Search Term: - ancestor
+2019-04-19 18:20:34 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='ancestor').where(colors='white').all()
+2019-04-19 18:21:31 : DEBUG Search Term: - 
+2019-04-19 18:21:31 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='blue').all()
+2019-04-19 18:21:49 : DEBUG Search Term: - 
+2019-04-19 18:21:49 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='black').all()
+2019-04-19 18:22:01 : DEBUG Search Term: - 
+2019-04-19 18:22:01 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='red').all()
+2019-04-19 18:22:16 : DEBUG Search Term: - 
+2019-04-19 18:22:16 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').all()
+2019-04-19 18:24:06 : DEBUG Search Term: - None
+2019-04-19 18:24:06 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 18:24:10 : DEBUG Search Term: - Mental Misstep
+2019-04-19 18:24:10 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Mental Misstep').all()
+2019-04-19 18:24:12 : DEBUG Search Term: - 
+2019-04-19 18:24:12 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:25:12 : DEBUG Search Term: - None
+2019-04-19 18:25:12 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 18:25:18 : DEBUG Search Term: - Mental Misstep
+2019-04-19 18:25:18 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Mental Misstep').all()
+2019-04-19 18:25:19 : DEBUG Search Term: - 
+2019-04-19 18:25:19 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:27:27 : DEBUG Search Term: - None
+2019-04-19 18:27:27 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 18:27:30 : DEBUG Search Term: - Mental Misstep
+2019-04-19 18:27:30 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Mental Misstep').all()
+2019-04-19 18:27:31 : DEBUG Search Term: - 
+2019-04-19 18:27:31 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:27:33 : DEBUG Search Term: - 
+2019-04-19 18:27:33 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').all()
+2019-04-19 18:33:56 : DEBUG Search Term: - 
+2019-04-19 18:33:56 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='blue').all()
+2019-04-19 18:36:05 : DEBUG Search Term: - None
+2019-04-19 18:36:05 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 18:36:10 : DEBUG Search Term: - Mental Misstep
+2019-04-19 18:36:10 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Mental Misstep').all()
+2019-04-19 18:36:11 : DEBUG Search Term: - 
+2019-04-19 18:36:11 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:36:13 : DEBUG Search Term: - 
+2019-04-19 18:36:13 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').all()
+2019-04-19 18:36:15 : DEBUG Search Term: - 
+2019-04-19 18:36:15 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='blue').all()
+2019-04-19 18:36:17 : DEBUG Search Term: - 
+2019-04-19 18:36:17 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='black').all()
+2019-04-19 18:36:19 : DEBUG Search Term: - 
+2019-04-19 18:36:19 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='red').all()
+2019-04-19 18:36:21 : DEBUG Search Term: - 
+2019-04-19 18:36:21 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').all()
 
