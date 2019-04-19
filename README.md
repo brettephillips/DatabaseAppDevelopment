@@ -535,21 +535,53 @@ function removeDeck(deck_id) {
 }
 ```
 ## Testing
-For our testing, we decided to use Selenium. Selenium is an open-source web browser automation tool that allows us to simulate user actions. As a result, this allows us to test the full functionality of the website. Selenium provides us the ability to create complex tests utilizing many different scripting and programming languages. To maintain consistency between our application and tests, we decided to use Python. In the testing directory, you can find the following tests: login.py.
+For our testing, we decided to use Selenium. Selenium is an open-source web browser automation tool that allows us to simulate user actions. As a result, this allows us to test the full functionality of the website. Selenium provides us the ability to create complex tests utilizing many different scripting and programming languages. To maintain consistency between our application and tests, we decided to use Python. In the testing directory, you can find the following tests: login.py, filter.py, explore_decks.py.
 
-#### Configuration
+These automated tests were executed on a Windows 10 system that has network communication with the Ubuntu VM running the application.  To run the Selenium automation server on Windows, first launch the server using the jar file:
+
+`java -jar selenium-server-standalone-3.13.0.jar`
+
+#### Script Configuration
 *Before running the Selenium tests, you must first install the selenium package*
+
 `pip3 install selenium`
+
+The path of the Selenium web driver must be specified.  In each script, the driver path is pointing to the location in our environment that contains the Chrome web driver. 
+
+`driver = webdriver.Chrome("C:\\_cuts\\Selenium\\chromedriver.exe")` 
+
+In addition, each script points to a base URL variable that specifies the URL to access the root of the application.  For these tests, the URL is set to:
+
+`base_url = "http://192.168.1.33:8333"`
 
 #### Running Tests
 *In order to run the Selenium tests, you must run the following command*
+
 `python3 <filename> [args]`
 
 ##### login.py
-This will test to see if the user can login correctly with valid credentials. It will also test, with invalid credentials, if the user is prevented access to explore the site further. This test requires a boolean argument of true or false. True tests invalid credentials, whereas false tests valid credentials.
+This will test to see if the user can login correctly with valid credentials. It will also test, with invalid credentials, if the user is prevented access to explore the site further. This test requires a Boolean argument of true or false. True tests invalid credentials, whereas false tests valid credentials.
 
 To run this test run the following command:
+
 `python3 login.py true` or `python3 login.py false`
+
+##### filter.py
+This test will go through the various filter options and verify each function is returning the cards from the MTG API properly.
+* Test 1: Finding a card just by the name field.
+* Test 2: Finding a card using CMC, Power, & Toughness.
+* Test 3: Finding cards using color check-boxes.
+
+To run this test run the following command:
+
+`python3 filter.py`
+
+##### explore_decks.py
+This test will confirm that each deck listed on the 'Explore Decks' page.  It will iterate over each deck URL and confirm that 60 or more cards are listed in the deck.
+
+To run this test run the following command:
+
+`python3 explore_decks.py`
 
 ## Glossary
 * CMC

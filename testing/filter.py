@@ -11,8 +11,8 @@ import time
 driver = webdriver.Chrome("C:\\_cuts\\Selenium\\chromedriver.exe")
 
 # go to the site
-base_url = "http://192.168.1.33:8333/search"
-driver.get(base_url)
+base_url = "http://192.168.1.33:8333"
+driver.get(base_url+"/search")
 
 # wait for the page to load
 WebDriverWait(driver,10).until(EC.title_contains("MTG Deck Planner | Card Search"))
