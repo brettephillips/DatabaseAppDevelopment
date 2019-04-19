@@ -409,4 +409,49 @@
 2019-04-19 18:36:19 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='red').all()
 2019-04-19 18:36:21 : DEBUG Search Term: - 
 2019-04-19 18:36:21 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').all()
+2019-04-19 18:51:51 : DB Get Complete Decks - 'user_id'
+2019-04-19 18:52:45 : DEBUG Search Term: - None
+2019-04-19 18:52:45 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 18:52:49 : DEBUG Search Term: - Mental Misstep
+2019-04-19 18:52:49 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Mental Misstep').all()
+2019-04-19 18:52:51 : DEBUG Search Term: - 
+2019-04-19 18:52:51 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=13).where(power=13).where(toughness=13).all()
+2019-04-19 18:52:54 : DEBUG Search Term: - 
+2019-04-19 18:52:54 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').all()
+2019-04-19 18:52:56 : DEBUG Search Term: - 
+2019-04-19 18:52:56 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='blue').all()
+2019-04-19 18:52:58 : DEBUG Search Term: - 
+2019-04-19 18:52:58 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='black').all()
+2019-04-19 18:53:00 : DEBUG Search Term: - 
+2019-04-19 18:53:00 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='red').all()
+2019-04-19 18:53:03 : DEBUG Search Term: - 
+2019-04-19 18:53:03 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').all()
+2019-04-19 18:53:20 : DB Get Complete Decks - 'user_id'
+2019-04-19 18:54:11 : DB Get Complete Decks - 'user_id'
+2019-04-19 18:55:15 : DB Get Complete Decks - 'user_id'
+2019-04-19 18:55:50 : DB Get Complete Decks - 'user_id'
+2019-04-19 18:56:17 : DEBUG Search Term: - None
+2019-04-19 18:56:17 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 18:56:38 : DB Get Complete Decks - 'user_id'
+2019-04-19 18:56:50 : DB Get Complete Decks - 'user_id'
+2019-04-19 18:57:10 : DB Get Complete Decks - 'user_id'
+2019-04-19 18:58:20 : DB Get Complete Decks - 'user_id'
+2019-04-19 18:58:22 : DEBUG Search Term: - None
+2019-04-19 18:58:22 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 18:58:26 : DB Get Complete Decks - 'user_id'
+2019-04-19 18:58:28 : DEBUG Search Term: - None
+2019-04-19 18:58:28 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 18:58:49 : DB Get Complete Decks - 'user_id'
+2019-04-19 18:59:02 : DEBUG Search Term: - None
+2019-04-19 18:59:02 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-19 18:59:12 : DEBUG Search Term: - Tt
+2019-04-19 18:59:12 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Tt').where(colors='blue').where(cmc=3).all()
+2019-04-19 18:59:29 : DB Get Complete Decks - 'user_id'
+2019-04-19 19:01:56 : DB Get Complete Decks - 'user_id'
+2019-04-19 19:02:32 : DB Get Complete Decks - 'user_id'
+2019-04-19 19:04:17 : DB Get Complete Decks - 'user_id'
+2019-04-19 19:05:09 : DB Get Complete Decks - 'user_id'
+2019-04-19 19:09:46 : DB Get Complete Decks - 'user_id'
+2019-04-19 19:11:43 : DB Get Complete Decks - 'user_id'
+2019-04-19 19:21:21 : DB Get Complete Decks - 'user_id'
 

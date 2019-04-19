@@ -30,9 +30,9 @@
 		d[4] = rating 		
 		-->
 
-		<a href='{{ url_for("view_deck", deck_id=d[0]) }}'>
+		<a class="deck_link" href='{{ url_for("view_deck", deck_id=d[0]) }}'>
 			<li class="list-group-item">
-				{{d[2]}}
+				<span class="deck_name">{{d[2]}}</span>
 				from user: {{d[3]}}
 				{{d[1]}} cards
 				<span class="badge badge-primary badge-pill">{{d[4]}}</span>	

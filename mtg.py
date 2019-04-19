@@ -515,7 +515,7 @@ def explore_decks():
 
 		return render_template('explore_decks.html',
 			title=title,
-			username=session['user_id'],
+			#username=session['user_id'],
 			logged_in=logged_in,
 			decks_to_show=decks_to_show
 		)
@@ -524,7 +524,7 @@ def explore_decks():
 
 		return render_template('explore_decks.html',
 			title=title,
-			username=session['user_id'],
+			#username=session['user_id'],
 			logged_in=logged_in,
 			decks_to_show="error"
 		)
@@ -567,7 +567,7 @@ def view_deck(deck_id):
 	
 		return render_template('view_deck.html',
 			title=title,
-			username=session['user_id'],
+			#username=session['user_id'],
 			logged_in=logged_in,
 			deck=deck,
 			deck_cards=deck_cards,
@@ -579,7 +579,7 @@ def view_deck(deck_id):
 
 		return render_template('view_deck.html',
 			title=title,
-			username=session['user_id'],
+			#username=session['user_id'],
 			logged_in=logged_in,
 			deck="error"
 		)
