@@ -534,6 +534,22 @@ function removeDeck(deck_id) {
     });
 }
 ```
+## Testing
+For our testing, we decided to use Selenium. Selenium is an open-source web browser automation tool that allows us to simulate user actions. As a result, this allows us to test the full functionality of the website. Selenium provides us the ability to create complex tests utilizing many different scripting and programming languages. To maintain consistency between our application and tests, we decided to use Python. In the testing directory, you can find the following tests: login.py.
+
+#### Configuration
+*Before running the Selenium tests, you must first install the selenium package*
+`pip3 install selenium`
+
+#### Running Tests
+*In order to run the Selenium tests, you must run the following command*
+`python3 <filename> [args]`
+
+##### login.py
+This will test to see if the user can login correctly with valid credentials. It will also test, with invalid credentials, if the user is prevented access to explore the site further. This test requires a boolean argument of true or false. True tests invalid credentials, whereas false tests valid credentials.
+
+To run this test run the following command:
+`python3 login.py true` or `python3 login.py false`
 
 ## Glossary
 * CMC
