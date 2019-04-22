@@ -454,4 +454,140 @@
 2019-04-19 19:09:46 : DB Get Complete Decks - 'user_id'
 2019-04-19 19:11:43 : DB Get Complete Decks - 'user_id'
 2019-04-19 19:21:21 : DB Get Complete Decks - 'user_id'
+2019-04-22 16:04:38 : DEBUG Search Term: - None
+2019-04-22 16:04:38 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 16:05:53 : DEBUG Search Term: - None
+2019-04-22 16:05:53 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 16:06:46 : DEBUG Search Term: - None
+2019-04-22 16:06:46 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 16:07:07 : DEBUG Search Term: - None
+2019-04-22 16:07:07 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 16:07:47 : DEBUG Search Term: - None
+2019-04-22 16:07:47 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 16:07:50 : DEBUG Search Term: - None
+2019-04-22 16:07:50 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 16:07:56 : DEBUG Search Term: - tt
+2019-04-22 16:07:56 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='tt').all()
+2019-04-22 16:08:13 : DEBUG Search Term: - tt
+2019-04-22 16:08:13 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='tt').all()
+2019-04-22 16:08:14 : API Get Card Search - list index out of range
+2019-04-22 16:08:48 : DEBUG Search Term: - tt
+2019-04-22 16:08:48 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='tt').all()
+2019-04-22 16:08:49 : API Get Card Search - list index out of range
+2019-04-22 16:10:22 : DEBUG Search Term: - tt
+2019-04-22 16:10:22 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='tt').all()
+2019-04-22 16:10:36 : DEBUG Search Term: - tt
+2019-04-22 16:10:36 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='tt').where(cmc=4).all()
+2019-04-22 16:11:34 : DEBUG Search Term: - 
+2019-04-22 16:11:34 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 16:12:18 : DEBUG Search Term: - 
+2019-04-22 16:12:18 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 16:12:49 : DEBUG Search Term: - 
+2019-04-22 16:12:49 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 16:13:18 : DEBUG Search Term: - 
+2019-04-22 16:13:18 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 16:13:20 : DEBUG Search Term: - 
+2019-04-22 16:13:20 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 16:14:04 : DEBUG Search Term: - 
+2019-04-22 16:14:04 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 16:16:07 : DEBUG Search Term: - 
+2019-04-22 16:16:07 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 16:16:16 : DEBUG Search Term: - 
+2019-04-22 16:16:16 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=4).where(power=3).where(toughness=3).all()
+2019-04-22 16:16:27 : DEBUG Search Term: - Bog
+2019-04-22 16:16:27 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Bog').where(cmc=4).where(power=3).where(toughness=3).all()
+2019-04-22 16:16:41 : DEBUG Search Term: - Bog
+2019-04-22 16:16:41 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Bog').where(power=3).where(toughness=3).all()
+2019-04-22 16:16:55 : DEBUG Search Term: - Wraith
+2019-04-22 16:16:55 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Wraith').where(power=3).where(toughness=3).all()
+2019-04-22 16:17:05 : DEBUG Search Term: - Wra
+2019-04-22 16:17:05 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Wra').where(power=3).where(toughness=3).all()
+2019-04-22 16:17:12 : DEBUG Search Term: - bo
+2019-04-22 16:17:12 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='bo').where(power=3).where(toughness=3).all()
+2019-04-22 16:17:28 : DEBUG Search Term: - bo
+2019-04-22 16:17:28 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='bo').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:21:41 : DEBUG Search Term: - bo
+2019-04-22 16:21:41 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='bo').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:22:35 : DEBUG Search Term: - bo
+2019-04-22 16:22:35 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='bo').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:25:15 : DEBUG Search Term: - bo
+2019-04-22 16:25:15 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='bo').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:25:52 : DEBUG Search Term: - bo
+2019-04-22 16:25:52 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='bo').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:26:44 : DEBUG Search Term: - bo
+2019-04-22 16:26:44 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='bo').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:30:57 : DEBUG Search Term: - bo
+2019-04-22 16:30:57 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='bo').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:31:54 : DEBUG Search Term: - bo
+2019-04-22 16:31:54 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='bo').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:32:16 : DEBUG Search Term: - bo
+2019-04-22 16:32:16 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='bo').where(colors='red').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:34:29 : DEBUG Search Term: - bo
+2019-04-22 16:34:29 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='bo').where(colors='red').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:34:35 : DEBUG Search Term: - bo
+2019-04-22 16:34:35 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='bo').where(colors='red').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:34:41 : DEBUG Search Term: - 
+2019-04-22 16:34:41 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:38:54 : DEBUG Search Term: - 
+2019-04-22 16:38:54 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:39:19 : DEBUG Search Term: - 
+2019-04-22 16:39:19 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:39:24 : DEBUG Search Term: - 
+2019-04-22 16:39:24 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:39:29 : DEBUG Search Term: - 
+2019-04-22 16:39:29 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:40:10 : DEBUG Search Term: - 
+2019-04-22 16:40:10 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='white').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:41:48 : DEBUG Search Term: - 
+2019-04-22 16:41:48 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='blue').where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 16:42:08 : DEBUG Search Term: - 
+2019-04-22 16:42:08 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='blue').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:42:25 : DEBUG Search Term: - Sire
+2019-04-22 16:42:25 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sire').where(colors='blue').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:43:33 : DEBUG Search Term: - Sire
+2019-04-22 16:43:33 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sire').where(colors='blue').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:43:48 : DEBUG Search Term: - Sire
+2019-04-22 16:43:48 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sire').where(colors='blue').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:44:16 : DEBUG Search Term: - Sire
+2019-04-22 16:44:16 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sire').where(colors='blue').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:44:55 : DEBUG Search Term: - Sire
+2019-04-22 16:44:55 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sire').where(colors='blue').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:45:30 : DEBUG Search Term: - Sire
+2019-04-22 16:45:30 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sire').where(colors='blue').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:50:04 : DEBUG Search Term: - Sire
+2019-04-22 16:50:04 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sire').where(colors='blue').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:50:44 : DEBUG Search Term: - Sire
+2019-04-22 16:50:44 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sire').where(colors='blue').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:51:07 : DEBUG Search Term: - Sire
+2019-04-22 16:51:07 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sire').where(colors='blue').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:52:21 : DEBUG Search Term: - Sire
+2019-04-22 16:52:21 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sire').where(colors='blue').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:54:02 : DEBUG Search Term: - Sire
+2019-04-22 16:54:02 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sire').where(colors='blue').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:54:48 : DEBUG Search Term: - Sire
+2019-04-22 16:54:48 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sire').where(colors='blue').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:55:06 : DEBUG Search Term: - Sire
+2019-04-22 16:55:06 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sire').where(colors='green').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:55:10 : DEBUG Search Term: - 
+2019-04-22 16:55:10 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:58:49 : DEBUG Search Term: - 
+2019-04-22 16:58:49 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 16:59:55 : DEBUG Search Term: - 
+2019-04-22 16:59:55 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 17:01:20 : DEBUG Search Term: - 
+2019-04-22 17:01:20 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 17:01:26 : DEBUG Search Term: - 
+2019-04-22 17:01:26 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 17:02:02 : DEBUG Search Term: - 
+2019-04-22 17:02:02 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 17:09:01 : DEBUG Search Term: - 
+2019-04-22 17:09:01 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').where(cmc=6).where(power=3).where(toughness=3).all()
+2019-04-22 17:09:19 : DEBUG Search Term: - 
+2019-04-22 17:09:19 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(power=33).all()
+2019-04-22 17:09:25 : DEBUG Search Term: - 
+2019-04-22 17:09:25 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=33).where(power=33).all()
+2019-04-22 17:09:30 : DEBUG Search Term: - 
+2019-04-22 17:09:30 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=3).where(power=3).all()
+2019-04-22 17:09:40 : DEBUG Search Term: - 
+2019-04-22 17:09:40 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=3).where(power=3).where(toughness=3).all()
 

@@ -159,3 +159,6 @@ span:hover {
     margin-bottom: 6px;
 }
 
+#clear_filter_button {
+  width: 100px;
+}

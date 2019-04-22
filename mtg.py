@@ -191,20 +191,28 @@ def search():
 			api_call += ".where(name='"+search_name+"')"
 
 		# if color is set
+		selected_color = ""
 		if len(selected_colors) == 1:
-			api_call += ".where(colors='"+selected_colors[0]+"')"
+			selected_color = selected_colors[0]
+			api_call += ".where(colors='"+selected_color+"')"
 
+		cmc = ""
 		# if cmc is set
 		if cmc_value != '' and cmc_value != None:
-			api_call += ".where(cmc="+cmc_value+")"
+			cmc = cmc_value
+			api_call += ".where(cmc="+cmc+")"
 
+		power = ""
 		# if power is set
 		if power_value != '' and power_value != None:
-			api_call += ".where(power="+power_value+")"
+			power = power_value
+			api_call += ".where(power="+power+")"
 
+		toughness = ""
 		# if toughness is set
 		if toughness_value != '' and toughness_value != None:
-			api_call += ".where(toughness="+toughness_value+")"
+			toughness = toughness_value
+			api_call += ".where(toughness="+toughness+")"
 
 		#finish api call
 		api_call += ".all()"
@@ -227,12 +235,16 @@ def search():
 			title=title,
 			cards=c_names,
 			search_name=search_name,
+			selected_color=selected_color,
+			cmc=cmc,
+			power=power,
+			toughness=toughness,
 			logged_in=logged_in
 		)
 
 	#catch and log error
 	except Exception as ex:
-		#logError("API Get Card Search",ex)
+		logError("API Get Card Search",ex)
 
 		return render_template('search.html',
 			title=title,

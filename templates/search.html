@@ -27,23 +27,23 @@
 	      <div class="col">
 		      <label class="form-check-label">Filter By Color:
 		      <div class="form-check">
-					<input class="form-check-input" name="check_white" type="checkbox" value="">
+					<input class="form-check-input color" name="check_white" type="checkbox" {% if selected_color == 'white' %}checked{% endif %} onchange="toggleCheckbox(this)" value="">
 					<label class="form-check-label">White</label>
 		      </div>
 		      <div class="form-check">
-					<input class="form-check-input" name="check_blue" type="checkbox" value="">
+					<input class="form-check-input color" name="check_blue" type="checkbox" {% if selected_color == 'blue' %}checked{% endif %} onchange="toggleCheckbox(this)" value="">
 					<label class="form-check-label">Blue</label>
 		      </div>
 		      <div class="form-check">
-					<input class="form-check-input" name="check_black" type="checkbox" value="">
+					<input class="form-check-input color" name="check_black" type="checkbox" {% if selected_color == 'black' %}checked{% endif %} onchange="toggleCheckbox(this)" value="">
 					<label class="form-check-label">Black</label>
 		      </div>
 		      <div class="form-check">
-					<input class="form-check-input" name="check_red" type="checkbox" value="">
+					<input class="form-check-input color" name="check_red" type="checkbox" {% if selected_color == 'red' %}checked{% endif %} onchange="toggleCheckbox(this)" value="">
 					<label class="form-check-label">Red</label>
 		      </div>
 		      <div class="form-check">
-					<input class="form-check-input" name="check_green" type="checkbox" value="">
+					<input class="form-check-input color" name="check_green" type="checkbox" {% if selected_color == 'green' %}checked{% endif %} onchange="toggleCheckbox(this)" value="">
 					<label class="form-check-label">Green</label>
 		      </div>
 	      </div>
@@ -62,7 +62,7 @@
 		        <label class="form-check-label"><=</label>
 		      </div> -->
 		      <div class="form-group">
-	      		<input type="text" class="form-control" name="cmcValue">
+	      		<input type="text" class="form-control" id="cmcValue" name="cmcValue" value="{{cmc}}">
 		      </div>
 	      </div>
 	      <div class="col">
@@ -80,7 +80,7 @@
 		        <label class="form-check-label"><=</label>
 		      </div> -->
 		      <div class="form-group">
-	      		<input type="text" class="form-control" name="powerValue">
+	      		<input type="text" class="form-control" id="powerValue" name="powerValue" value="{{power}}">
 		      </div>
 	      </div>
 	      <div class="col">
@@ -98,10 +98,11 @@
 		        <label class="form-check-label"><=</label>
 		      </div> -->
 		      <div class="form-group">
-	      		<input type="text" class="form-control" name="toughnessValue">
+	      		<input type="text" class="form-control" id="toughnessValue" name="toughnessValue" value="{{toughness}}">
 		      </div>
 	      </div>
           </div>
+          <div class="btn btn-info btn-block" id="clear_filter_button" onclick="clearFilter()">Clear FIlter</div>
 	  <div class="form-row">
 	      <div class="col">
 		      <div class="form-group">
@@ -128,5 +129,48 @@
 {% endif %} 
 </div>
 </div>
+<script>
+	// funciton to make it so only one color is selected at a time
+	function toggleCheckbox(thisBox) {
+		// get initial state of changed box
+		var check = false;
+		if (thisBox.checked == false) {
+			console.log("false");
+			check = true;
+		}
+		// clear previously selected boxes
+		var checkBoxes = document.getElementsByClassName("color");
+		for (var i = 0; i < checkBoxes.length; i++) {
+			checkBoxes[i].checked = false;
+		}
+		// set changed box to correct state
+		if (check === false) {
+			console.log("true");
+			thisBox.checked = true;
+		}
+	}
+
+	// function to clear filter
+	function clearFilter() {
+
+		//clear search name
+		document.getElementById("in_page_search").value = "";
+
+		//clear color
+		var checkBoxes = document.getElementsByClassName("color");
+		for (var i = 0; i < checkBoxes.length; i++) {
+			checkBoxes[i].checked = false;
+		}
+
+		//clear cmc
+		document.getElementById("cmcValue").value = "";
+
+		//clear power
+		document.getElementById("powerValue").value = "";
+
+		//clear toughness
+		document.getElementById("toughnessValue").value = "";
+	}
+</script>
 </body>
 </html>
