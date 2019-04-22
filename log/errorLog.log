@@ -590,4 +590,64 @@
 2019-04-22 17:09:30 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=3).where(power=3).all()
 2019-04-22 17:09:40 : DEBUG Search Term: - 
 2019-04-22 17:09:40 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(cmc=3).where(power=3).where(toughness=3).all()
+2019-04-22 17:13:14 : DEBUG Search Term: - Junún
+2019-04-22 17:13:14 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Junún').all()
+2019-04-22 17:16:22 : DB Get Complete Decks - list object has no element 0
+2019-04-22 17:16:56 : DEBUG Search Term: - Junún
+2019-04-22 17:16:56 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Junún').all()
+2019-04-22 17:17:08 : DB Get Complete Decks - list object has no element 0
+2019-04-22 17:18:18 : DEBUG Search Term: - Island
+2019-04-22 17:18:18 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Island').all()
+2019-04-22 17:19:42 : DEBUG Search Term: - None
+2019-04-22 17:19:42 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-22 17:19:54 : DEBUG Search Term: - Island
+2019-04-22 17:19:54 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Island').all()
+2019-04-22 17:21:30 : DEBUG Search Term: - Merfolk Trickster
+2019-04-22 17:21:30 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Merfolk Trickster').all()
+2019-04-22 17:22:03 : DEBUG Search Term: -  Mist-Cloaked Herald
+2019-04-22 17:22:03 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name=' Mist-Cloaked Herald').all()
+2019-04-22 17:22:11 : DEBUG Search Term: - Cloaked Heral
+2019-04-22 17:22:11 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Cloaked Heral').all()
+2019-04-22 17:22:29 : DEBUG Search Term: - Siren Stormtamer
+2019-04-22 17:22:29 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Siren Stormtamer').all()
+2019-04-22 17:22:50 : DEBUG Search Term: - Tempest Djinn
+2019-04-22 17:22:50 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Tempest Djinn').all()
+2019-04-22 17:23:07 : DEBUG Search Term: - Warkite Marauder
+2019-04-22 17:23:07 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Warkite Marauder').all()
+2019-04-22 17:23:21 : DEBUG Search Term: - Blink of an Eye
+2019-04-22 17:23:21 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Blink of an Eye').all()
+2019-04-22 17:23:31 : DEBUG Search Term: - Dive Down
+2019-04-22 17:23:31 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Dive Down').all()
+2019-04-22 17:23:45 : DEBUG Search Term: - Spell Pierce
+2019-04-22 17:23:45 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Spell Pierce').all()
+2019-04-22 17:23:58 : DEBUG Search Term: - Wizard’s Retort
+2019-04-22 17:23:58 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Wizard’s Retort').all()
+2019-04-22 17:24:05 : DEBUG Search Term: - Wizard Retort
+2019-04-22 17:24:05 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Wizard Retort').all()
+2019-04-22 17:24:09 : DEBUG Search Term: - Retort
+2019-04-22 17:24:09 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Retort').all()
+2019-04-22 17:24:22 : DEBUG Search Term: - Curious Obsession
+2019-04-22 17:24:22 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Curious Obsession').all()
+2019-04-22 17:24:35 : DEBUG Search Term: - Opt
+2019-04-22 17:24:35 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Opt').all()
+2019-04-22 17:24:55 : DEBUG Search Term: - Chart a Course
+2019-04-22 17:24:55 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Chart a Course').all()
+2019-04-22 17:25:06 : DEBUG Search Term: - Daring Saboteur
+2019-04-22 17:25:06 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Daring Saboteur').all()
+2019-04-22 17:25:15 : DEBUG Search Term: - Deep Freeze
+2019-04-22 17:25:15 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Deep Freeze').all()
+2019-04-22 17:25:26 : DEBUG Search Term: - Entrancing Melody
+2019-04-22 17:25:26 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Entrancing Melody').all()
+2019-04-22 17:25:43 : DEBUG Search Term: - Essence Scatter
+2019-04-22 17:25:43 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Essence Scatter').all()
+2019-04-22 17:25:59 : DEBUG Search Term: - Cunning Castaway
+2019-04-22 17:25:59 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Cunning Castaway').all()
+2019-04-22 17:26:11 : DEBUG Search Term: - Scion of Urza
+2019-04-22 17:26:11 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Scion of Urza').all()
+2019-04-22 17:26:23 : DEBUG Search Term: - Negate
+2019-04-22 17:26:23 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Negate').all()
+2019-04-22 17:26:34 : DEBUG Search Term: - Nightveil Sprite
+2019-04-22 17:26:34 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Nightveil Sprite').all()
+2019-04-22 17:26:45 : DEBUG Search Term: - Sorcerous Spyglass
+2019-04-22 17:26:45 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sorcerous Spyglass').all()
 

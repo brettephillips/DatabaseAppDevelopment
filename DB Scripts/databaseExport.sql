@@ -1,8 +1,3 @@
-DROP DATABASE IF EXISTS mtg;
-CREATE DATABASE mtg;
-
-\c mtg;
-
 --
 -- PostgreSQL database dump
 --
@@ -218,6 +213,7 @@ COPY public.deck (deck_id, name, user_id) FROM stdin;
 26	Test	2
 28	Blue Power	8
 29	Awesome Black Deck	13
+30	Mono-Blue Aggro	14
 \.
 
 
@@ -381,6 +377,81 @@ COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdi
 271	29	31763	Bog Wreckage	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=31763&type=card
 272	29	31763	Bog Wreckage	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=31763&type=card
 273	29	31763	Bog Wreckage	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=31763&type=card
+274	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+275	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+276	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+277	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+278	30	884	Tropical Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=884&type=card
+279	30	884	Tropical Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=884&type=card
+280	30	884	Tropical Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=884&type=card
+281	30	884	Tropical Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=884&type=card
+282	30	887	Volcanic Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=887&type=card
+283	30	887	Volcanic Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=887&type=card
+284	30	887	Volcanic Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=887&type=card
+285	30	887	Volcanic Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=887&type=card
+286	30	2346	Island Sanctuary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2346&type=card
+287	30	2346	Island Sanctuary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2346&type=card
+288	30	2346	Island Sanctuary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2346&type=card
+289	30	2346	Island Sanctuary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2346&type=card
+290	30	2161	Island Fish Jasconius	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2161&type=card
+291	30	2161	Island Fish Jasconius	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2161&type=card
+292	30	2161	Island Fish Jasconius	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2161&type=card
+293	30	2161	Island Fish Jasconius	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2161&type=card
+294	30	442944	Merfolk Trickster	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442944&type=card
+295	30	442944	Merfolk Trickster	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442944&type=card
+296	30	442944	Merfolk Trickster	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442944&type=card
+297	30	442944	Merfolk Trickster	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442944&type=card
+298	30	450257	Mist-Cloaked Herald	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=450257&type=card
+299	30	450257	Mist-Cloaked Herald	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=450257&type=card
+300	30	450257	Mist-Cloaked Herald	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=450257&type=card
+301	30	450257	Mist-Cloaked Herald	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=450257&type=card
+302	30	435232	Siren Stormtamer	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435232&type=card
+303	30	435232	Siren Stormtamer	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435232&type=card
+304	30	435232	Siren Stormtamer	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435232&type=card
+305	30	435232	Siren Stormtamer	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435232&type=card
+306	30	442956	Tempest Djinn	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442956&type=card
+307	30	442956	Tempest Djinn	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442956&type=card
+308	30	442956	Tempest Djinn	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442956&type=card
+309	30	442956	Tempest Djinn	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442956&type=card
+310	30	439717	Warkite Marauder	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=439717&type=card
+311	30	439717	Warkite Marauder	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=439717&type=card
+312	30	439717	Warkite Marauder	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=439717&type=card
+313	30	439717	Warkite Marauder	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=439717&type=card
+314	30	442934	Blink of an Eye	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442934&type=card
+315	30	435205	Dive Down	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435205&type=card
+316	30	435205	Dive Down	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435205&type=card
+317	30	435205	Dive Down	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435205&type=card
+318	30	435205	Dive Down	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435205&type=card
+319	30	429876	Spell Pierce	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=429876&type=card
+320	30	429876	Spell Pierce	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=429876&type=card
+321	30	429876	Spell Pierce	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=429876&type=card
+322	30	442963	Wizard's Retort	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442963&type=card
+323	30	442963	Wizard's Retort	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442963&type=card
+324	30	442963	Wizard's Retort	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442963&type=card
+325	30	442963	Wizard's Retort	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442963&type=card
+326	30	439692	Curious Obsession	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=439692&type=card
+327	30	439692	Curious Obsession	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=439692&type=card
+328	30	439692	Curious Obsession	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=439692&type=card
+329	30	439692	Curious Obsession	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=439692&type=card
+330	30	22988	Opt	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=22988&type=card
+331	30	22988	Opt	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=22988&type=card
+332	30	22988	Opt	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=22988&type=card
+333	30	22988	Opt	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=22988&type=card
+334	30	435200	Chart a Course	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435200&type=card
+335	30	435200	Chart a Course	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435200&type=card
+336	30	435201	Daring Saboteur	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435201&type=card
+337	30	442938	Deep Freeze	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442938&type=card
+338	30	442938	Deep Freeze	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442938&type=card
+339	30	435207	Entrancing Melody	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435207&type=card
+340	30	435207	Entrancing Melody	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435207&type=card
+341	30	435207	Entrancing Melody	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435207&type=card
+342	30	426754	Essence Scatter	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=426754&type=card
+343	30	435212	Jace, Cunning Castaway	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435212&type=card
+344	30	442889	Karn, Scion of Urza	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442889&type=card
+345	30	416874	Negate	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=416874&type=card
+346	30	416874	Negate	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=416874&type=card
+347	30	452798	Nightveil Sprite	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=452798&type=card
+348	30	435407	Sorcerous Spyglass	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435407&type=card
 \.
 
 
@@ -395,6 +466,8 @@ COPY public.rating (rating_id, deck_id, score) FROM stdin;
 4	1	5
 5	1	4
 6	1	4
+7	29	3.4000001
+8	30	3.4000001
 \.
 
 
@@ -407,6 +480,7 @@ COPY public.users (user_id, username, password) FROM stdin;
 3	Alex	$2b$12$itK2aMPdXT20hMCyJNcqo.nimwNbQy6dn64JNWXO4xi4pnfVPurJa
 8	test	$2b$12$dgJN3Hxu7FrBCzePRvdKGO.xwRb7SkE2B.K/erE4xDDslYPn1Pf6i
 13	billy	$2b$12$FA6HClAal0W9JqRHUU5BCe/9tQCyPDV1.5jK8QAfEbD.xyUte1wo2
+14	john12	$2b$12$bb1tO6wnfMB78Yn.ZI/WL.nBXBA7tr.oDUQKjMvHbjfhPCROO3dlS
 \.
 
 
@@ -414,28 +488,28 @@ COPY public.users (user_id, username, password) FROM stdin;
 -- Name: deck_card_card_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_card_card_id_seq', 273, true);
+SELECT pg_catalog.setval('public.deck_card_card_id_seq', 348, true);
 
 
 --
 -- Name: deck_deck_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_deck_id_seq', 29, true);
+SELECT pg_catalog.setval('public.deck_deck_id_seq', 30, true);
 
 
 --
 -- Name: rating_rating_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.rating_rating_id_seq', 6, true);
+SELECT pg_catalog.setval('public.rating_rating_id_seq', 8, true);
 
 
 --
 -- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.users_user_id_seq', 13, true);
+SELECT pg_catalog.setval('public.users_user_id_seq', 14, true);
 
 
 --

@@ -162,3 +162,8 @@ span:hover {
 #clear_filter_button {
   width: 100px;
 }
+
+#rateDeck {
+  width: 100px;
+  margin: 5px;
+}
