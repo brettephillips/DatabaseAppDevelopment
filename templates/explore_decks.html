@@ -20,7 +20,18 @@
 	<h2 id="card_name">Error Finding Decks</h2>
 	
 {% else %}
-	<ul class="list-group">
+	<!-- <ul class="list-group"> -->
+	<table style="width:100%" id="deck_table">
+	<thead>
+	<tr id="deck_table_header">
+	  <th scope="col">#</th>
+	  <th scope="col">Deck Name</th>
+	  <th scope="col">User Name</th>
+	  <th scope="col">Number of Cards</th>
+	  <th scope="col">Rating</th>
+	</tr>
+	</thead>
+	<tbody>
 		{% for d in decks_to_show %}
 		<!-- 	
 		d[0] = deck_id
@@ -30,18 +41,58 @@
 		d[4] = rating 		
 		-->
 
-		<a class="deck_link" href='{{ url_for("view_deck", deck_id=d[0]) }}'>
-			<li class="list-group-item">
-				<span class="deck_name">{{d[2]}}</span>
-				from user: {{d[3]}}
-				{{d[1]}} cards
-				<span class="badge badge-primary badge-pill">{{d[4]}}</span>	
-			</li>
-		</a>
+		
+			<!-- <li class="list-group-item"> -->
+				
+				<tr>
+					<th scope="row" class="deck_order"></th>
+					<td class="deck_name"><a class="deck_link" href='{{ url_for("view_deck", deck_id=d[0]) }}'>{{d[2]}}</a></td>
+					<td>{{d[3]}}</td>
+					<td>{{d[1]}}</td>
+					<td><span class="stars">{{d[4]}}</span></td>	
+				</tr>
+
+			<!-- </li> -->
+		
 		{% endfor %}
-	</ul>
+	<!-- </ul> -->
+	</tbody>
+	</table>
 {% endif %} 
 <!-- end error if -->
+
+<script>
+
+	// FUNCTION to set deck order
+	$(function () {
+	 
+	  var deck_orders = document.getElementsByClassName("deck_order");
+
+	  for (var i = deck_orders.length - 1; i >= 0; i--) {
+	  	console.log(""+i);
+	  	deck_orders[i].innerHTML = ""+(i+1);
+	  }
+	 
+	});
+
+	// FUNCTIONS to display rating
+	$.fn.stars = function() {
+	    return $(this).each(function() {
+	        // Get the value
+	        var val = parseFloat($(this).html());
+	        // Make sure that the value is in 0 - 5 range, multiply to get width
+	        var size = Math.max(0, (Math.min(5, val))) * 16;
+	        // Create stars holder
+	        var $span = $('<span />').width(size);
+	        // Replace the numerical value with stars
+	        $(this).html($span);
+	    });
+	}
+
+	$(function() {
+	    $('span.stars').stars();
+	});
+</script>
 
 </body>
 </html>

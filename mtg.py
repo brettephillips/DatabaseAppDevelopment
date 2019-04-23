@@ -68,7 +68,7 @@ def home():
 
 #IMPORT DB
 # psql < ./DB\ Scripts/createTables.sql
-# psql < ./DB\ Scripts/databaseExport.sql
+# psql mtg < ./DB\ Scripts/databaseExport.sql
 
 #DUMP DB
 # pg_dump mtg > ./DB\ Scripts/databaseExport.sql
@@ -470,7 +470,7 @@ def getRating(deck_id):
 			r += float(score[0])
 			rating = r/len(scores)	
 
-		return rating
+		return round(rating,1)
 
 	except Exception as ex:
 		logError("DB Deck Rating",ex)
@@ -521,15 +521,16 @@ def explore_decks():
 
 
 			#logError("average rating!",rating)
-
 			decks_to_show.append([deck_id, deck_count, deck_name, user_name, rating])
 
+
+		sorted_decks = sorted(decks_to_show, key=lambda x: x[4], reverse=True)
 
 		return render_template('explore_decks.html',
 			title=title,
 			#username=session['user_id'],
 			logged_in=logged_in,
-			decks_to_show=decks_to_show
+			decks_to_show=sorted_decks
 		)
 	except Exception as ex:
 		logError("DB Get Complete Decks",ex)

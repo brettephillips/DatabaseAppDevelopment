@@ -650,4 +650,14 @@
 2019-04-22 17:26:34 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Nightveil Sprite').all()
 2019-04-22 17:26:45 : DEBUG Search Term: - Sorcerous Spyglass
 2019-04-22 17:26:45 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='Sorcerous Spyglass').all()
+2019-04-23 17:27:54 : DEBUG Search Term: - None
+2019-04-23 17:27:54 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-23 17:28:12 : DEBUG Search Term: - 
+2019-04-23 17:28:12 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='black').all()
+2019-04-23 17:29:50 : DEBUG Search Term: - None
+2019-04-23 17:29:50 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-23 17:29:58 : DEBUG Search Term: - None
+2019-04-23 17:29:58 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(name='None').where(colors='green').where(cmc=5).all()
+2019-04-23 17:30:06 : DEBUG Search Term: - 
+2019-04-23 17:30:06 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').where(cmc=5).all()
 
