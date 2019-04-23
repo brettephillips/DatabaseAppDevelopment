@@ -214,6 +214,7 @@ COPY public.deck (deck_id, name, user_id) FROM stdin;
 28	Blue Power	8
 29	Awesome Black Deck	13
 30	Mono-Blue Aggro	14
+32	Green Nature Power	14
 \.
 
 
@@ -452,6 +453,9 @@ COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdi
 346	30	416874	Negate	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=416874&type=card
 347	30	452798	Nightveil Sprite	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=452798&type=card
 348	30	435407	Sorcerous Spyglass	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435407&type=card
+349	32	129655	Natural Spring	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129655&type=card
+350	32	129655	Natural Spring	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129655&type=card
+351	32	129655	Natural Spring	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129655&type=card
 \.
 
 
@@ -468,6 +472,17 @@ COPY public.rating (rating_id, deck_id, score) FROM stdin;
 6	1	4
 7	29	3.4000001
 8	30	3.4000001
+9	29	1.70000005
+10	1	1.29999995
+11	1	1.20000005
+12	1	1.39999998
+13	30	4.80000019
+14	30	5
+15	30	5
+16	30	4.9000001
+17	30	2.4000001
+18	30	5
+19	30	4.80000019
 \.
 
 
@@ -488,21 +503,21 @@ COPY public.users (user_id, username, password) FROM stdin;
 -- Name: deck_card_card_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_card_card_id_seq', 348, true);
+SELECT pg_catalog.setval('public.deck_card_card_id_seq', 352, true);
 
 
 --
 -- Name: deck_deck_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_deck_id_seq', 30, true);
+SELECT pg_catalog.setval('public.deck_deck_id_seq', 32, true);
 
 
 --
 -- Name: rating_rating_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.rating_rating_id_seq', 8, true);
+SELECT pg_catalog.setval('public.rating_rating_id_seq', 19, true);
 
 
 --
