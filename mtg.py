@@ -58,9 +58,7 @@ def home():
 
 #########################################################################################################################
 
-# Import Database
-
-
+# Setup Database
 # `sudo -u postgres psql`
 # `ALTER USER postgres PASSWORD '<db password>';`
 # `\q`
@@ -112,7 +110,7 @@ def search():
 	# Search parameters:
 	search_name = request.form.get('search')
 
-	logError("DEBUG Search Term:", search_name)
+	# logError("DEBUG Search Term:", search_name)
 
 	#get colors from form
 	white = request.form.get('check_white')
@@ -187,8 +185,10 @@ def search():
 		api_call = "cards += Card.where(page=1).where(pageSize=40)"
 
 		# if search name is set
+		search_name_value = ""
 		if search_name != '' and search_name != None: 
-			api_call += ".where(name='"+search_name+"')"
+			search_name_value = search_name
+			api_call += ".where(name='"+search_name_value+"')"
 
 		# if color is set
 		selected_color = ""
@@ -218,7 +218,7 @@ def search():
 		api_call += ".all()"
 
 
-		logError("DEBUG API Call:", api_call)
+		# logError("DEBUG API Call:", api_call)
 		exec(api_call)
 
 		# Set card name list to sent to template
@@ -234,7 +234,7 @@ def search():
 		return render_template('search.html',
 			title=title,
 			cards=c_names,
-			search_name=search_name,
+			search_name=search_name_value,
 			selected_color=selected_color,
 			cmc=cmc,
 			power=power,

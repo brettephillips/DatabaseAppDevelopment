@@ -20,7 +20,6 @@
 	<h2 id="card_name">Error Finding Decks</h2>
 	
 {% else %}
-	<!-- <ul class="list-group"> -->
 	<table style="width:100%" id="deck_table">
 	<thead>
 	<tr id="deck_table_header">
@@ -33,29 +32,21 @@
 	</thead>
 	<tbody>
 		{% for d in decks_to_show %}
-		<!-- 	
-		d[0] = deck_id
-		d[1] = deck_count
-		d[2] = deck_name
-		d[3] = user_name
-		d[4] = rating 		
-		-->
-
-		
-			<!-- <li class="list-group-item"> -->
-				
-				<tr>
-					<th scope="row" class="deck_order"></th>
-					<td class="deck_name"><a class="deck_link" href='{{ url_for("view_deck", deck_id=d[0]) }}'>{{d[2]}}</a></td>
-					<td>{{d[3]}}</td>
-					<td>{{d[1]}}</td>
-					<td><span class="stars">{{d[4]}}</span></td>	
-				</tr>
-
-			<!-- </li> -->
-		
+			<!-- 	
+			d[0] = deck_id
+			d[1] = deck_count
+			d[2] = deck_name
+			d[3] = user_name
+			d[4] = rating 		
+			-->
+			<tr>
+				<th scope="row" class="deck_order"></th>
+				<td class="deck_name"><a class="deck_link" href='{{ url_for("view_deck", deck_id=d[0]) }}'>{{d[2]}}</a></td>
+				<td>{{d[3]}}</td>
+				<td>{{d[1]}}</td>
+				<td><span class="stars">{{d[4]}}</span></td>	
+			</tr>
 		{% endfor %}
-	<!-- </ul> -->
 	</tbody>
 	</table>
 {% endif %} 
