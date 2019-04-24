@@ -382,22 +382,6 @@ COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdi
 275	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
 276	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
 277	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
-278	30	884	Tropical Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=884&type=card
-279	30	884	Tropical Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=884&type=card
-280	30	884	Tropical Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=884&type=card
-281	30	884	Tropical Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=884&type=card
-282	30	887	Volcanic Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=887&type=card
-283	30	887	Volcanic Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=887&type=card
-284	30	887	Volcanic Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=887&type=card
-285	30	887	Volcanic Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=887&type=card
-286	30	2346	Island Sanctuary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2346&type=card
-287	30	2346	Island Sanctuary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2346&type=card
-288	30	2346	Island Sanctuary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2346&type=card
-289	30	2346	Island Sanctuary	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2346&type=card
-290	30	2161	Island Fish Jasconius	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2161&type=card
-291	30	2161	Island Fish Jasconius	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2161&type=card
-292	30	2161	Island Fish Jasconius	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2161&type=card
-293	30	2161	Island Fish Jasconius	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=2161&type=card
 294	30	442944	Merfolk Trickster	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442944&type=card
 295	30	442944	Merfolk Trickster	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442944&type=card
 296	30	442944	Merfolk Trickster	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442944&type=card
@@ -456,6 +440,26 @@ COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdi
 349	32	129655	Natural Spring	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129655&type=card
 350	32	129655	Natural Spring	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129655&type=card
 351	32	129655	Natural Spring	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129655&type=card
+353	32	158747	Dawnglow Infusion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=158747&type=card
+354	32	158747	Dawnglow Infusion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=158747&type=card
+355	32	158747	Dawnglow Infusion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=158747&type=card
+356	32	158747	Dawnglow Infusion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=158747&type=card
+357	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+358	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+359	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+360	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+361	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+362	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+363	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+364	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+365	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+366	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+367	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+368	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+369	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+370	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+371	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+372	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
 \.
 
 
@@ -503,7 +507,7 @@ COPY public.users (user_id, username, password) FROM stdin;
 -- Name: deck_card_card_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_card_card_id_seq', 352, true);
+SELECT pg_catalog.setval('public.deck_card_card_id_seq', 372, true);
 
 
 --
