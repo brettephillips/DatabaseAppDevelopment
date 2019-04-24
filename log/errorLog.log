@@ -662,4 +662,6 @@
 2019-04-23 17:30:06 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).where(colors='green').where(cmc=5).all()
 2019-04-23 17:43:34 : DEBUG Search Term: - None
 2019-04-23 17:43:34 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
+2019-04-24 12:16:01 : API Get Card Search - invalid syntax (<string>, line 1)
+2019-04-24 12:16:26 : API Get Card Search - invalid syntax (<string>, line 1)
 

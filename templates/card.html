@@ -30,6 +30,7 @@
 			var card_name = document.getElementById("card_name").value;
 			var api_id = document.getElementById("api_id").value;
 			var image_url = document.getElementById("image_url").value;
+			var type = document.getElementById("type").value;
 
 			// console.log(deck_name);
 
@@ -40,6 +41,7 @@
 					"deck_id":deck_id,
 					"card_name":card_name,
 					"api_id":api_id,
+					"type":type,
 					"image_url":image_url
 			    },
 			    success: function(data) {
@@ -101,6 +103,7 @@
 				<input type="hidden" id="card_name" name="card_name" value="{{name}}">
 				<input type="hidden" id="api_id" name="api_id" value="{{multiverse_id}}">
 				<input type="hidden" id="image_url" name="image_url" value="{{image_url}}">
+				<input type="hidden" id="type" name="type" value="{{type}}">
 				<br/>
 				<button class="btn btn-success" onclick="setDeckId();">Add to Deck</button>
 

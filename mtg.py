@@ -339,6 +339,7 @@ def add_to_deck():
 			card_name = request.form.get('card_name')
 			api_id    = request.form.get('api_id')
 			image_url = request.form.get('image_url')
+			card_type = request.form.get('type')
 
 			conn = dbConnect()
 
@@ -352,8 +353,8 @@ def add_to_deck():
 
 			#logError("Count DEBUG",(str(deck_id)+" "+str(api_id)+" "+str(count)))
 
-			# as long as there are less than 4 cards in that deck - add it
-			if int(count) < 4:
+			# as long as there are less than 4 cards in that deck OR it is a Basic Land- add it
+			if int(count) < 4 or "Basic Land" in card_type:
 				# Insert new username and hashed password
 				cursor.execute("INSERT INTO deck_card (deck_id, api_id, card_name, image_url) VALUES (%s,%s,%s,%s)", (deck_id, api_id, card_name, image_url))
 				# Save (commit) the changes to DB
