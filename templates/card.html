@@ -233,35 +233,35 @@ window.onload = function(){
 					temp = temp+cost.charAt(i)+cost.charAt(i+2)
 					i++
 					i++
-					cost_html += "<img src='../static/media/"+temp+".png' width='40'/>"
+					cost_html += "<img src='../static/media/"+temp+".png' height='40'/>"
 					temp = ''
 					continue
 				}
 				if(cost.charAt(i) == '/'){
 					temp = temp+cost.charAt(i-1)+cost.charAt(i+1)
 					i++
-					cost_html += "<img src='../static/media/"+temp+".png' width='40'/>"
+					cost_html += "<img src='../static/media/"+temp+".png' height='40'/>"
 					temp = ''
 				}
 			}
 			if(!isNaN(cost.charAt(i)) && !isNaN(cost.charAt(i+1))){
 				if(!isNaN(cost.charAt(i+2))){
 					if(!isNaN(cost.charAt(i+3))){
-						cost_html += "<img src='../static/media/1000000.png' width='40'/>"
+						cost_html += "<img src='../static/media/1000000.png' height='40'/>"
 						break
 					}
 					else{
-						cost_html += "<img src='../static/media/100.png' width='40'/>"
+						cost_html += "<img src='../static/media/100.png' height='40'/>"
 						break
 					}
 				}
 				else{
-					cost_html += "<img src='../static/media/"+cost.charAt(i)+cost.charAt(i+1)+".png' width='40'/>"
+					cost_html += "<img src='../static/media/"+cost.charAt(i)+cost.charAt(i+1)+".png' height='40'/>"
 					i++
 				}
 			}
 			else{
-				cost_html += "<img src='../static/media/"+cost.charAt(i)+".png' width='40'/>"
+				cost_html += "<img src='../static/media/"+cost.charAt(i)+".png' height='40'/>"
 			}   		
 	    	}
 	    }
