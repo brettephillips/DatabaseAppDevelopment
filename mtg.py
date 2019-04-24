@@ -108,7 +108,7 @@ def search():
 	title = "MTG Deck Planner | Card Search"
 
 	# Search parameters:
-	search_name = request.form.get('search')
+	search_name = (request.form.get('search')).strip()
 
 	# logError("DEBUG Search Term:", search_name)
 
@@ -133,11 +133,11 @@ def search():
 
 
 	cmc_sign = request.form.get('cmcSign')
-	cmc_value = request.form.get('cmcValue')
+	cmc_value = (request.form.get('cmcValue')).strip()
 	power_sign = request.form.get('powerSign')
-	power_value = request.form.get('powerValue')
+	power_value = (request.form.get('powerValue')).strip()
 	toughness_sign = request.form.get('toughnessSign')
-	toughness_value = request.form.get('toughnessValue')
+	toughness_value = (request.form.get('toughnessValue')).strip()
 	button_value = request.form.get('button')
 
 	# Get some cards
