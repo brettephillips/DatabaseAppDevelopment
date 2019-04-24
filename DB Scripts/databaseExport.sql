@@ -215,6 +215,7 @@ COPY public.deck (deck_id, name, user_id) FROM stdin;
 29	Awesome Black Deck	13
 30	Mono-Blue Aggro	14
 32	Green Nature Power	14
+33	ESPER CONTROL DECK	15
 \.
 
 
@@ -312,16 +313,13 @@ COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdi
 197	29	129529	Drudge Skeletons	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129529&type=card
 200	29	129529	Drudge Skeletons	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129529&type=card
 202	29	1157	Drudge Skeletons	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1157&type=card
-203	29	1157	Drudge Skeletons	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=1157&type=card
 209	29	442138	Skeletonize	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442138&type=card
 210	29	442138	Skeletonize	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442138&type=card
 211	29	442138	Skeletonize	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442138&type=card
-212	29	442138	Skeletonize	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442138&type=card
 213	29	175119	Skeletal Kathari	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=175119&type=card
 214	29	175119	Skeletal Kathari	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=175119&type=card
 215	29	175119	Skeletal Kathari	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=175119&type=card
 216	29	175119	Skeletal Kathari	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=175119&type=card
-217	29	220515	Reassembling Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=220515&type=card
 218	29	220515	Reassembling Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=220515&type=card
 219	29	220515	Reassembling Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=220515&type=card
 220	29	220515	Reassembling Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=220515&type=card
@@ -331,29 +329,22 @@ COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdi
 224	29	175097	Viashino Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=175097&type=card
 225	29	389674	Skeletal Scrying	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=389674&type=card
 226	29	389674	Skeletal Scrying	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=389674&type=card
-227	29	389674	Skeletal Scrying	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=389674&type=card
 228	29	389674	Skeletal Scrying	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=389674&type=card
 229	29	446962	Triskelavus	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=446962&type=card
-230	29	446962	Triskelavus	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=446962&type=card
 231	29	446962	Triskelavus	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=446962&type=card
 232	29	446962	Triskelavus	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=446962&type=card
 233	29	201809	Skeletal Vampire	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=201809&type=card
 234	29	201809	Skeletal Vampire	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=201809&type=card
 235	29	201809	Skeletal Vampire	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=201809&type=card
 236	29	201809	Skeletal Vampire	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=201809&type=card
-237	29	222743	Serrated Biskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222743&type=card
 238	29	222743	Serrated Biskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222743&type=card
 239	29	222743	Serrated Biskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222743&type=card
 240	29	222743	Serrated Biskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222743&type=card
 241	29	222715	Triskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222715&type=card
-242	29	222715	Triskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222715&type=card
-243	29	222715	Triskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222715&type=card
-244	29	222715	Triskelion	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=222715&type=card
 245	29	368986	Rot Farm Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=368986&type=card
 246	29	368986	Rot Farm Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=368986&type=card
 247	29	368986	Rot Farm Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=368986&type=card
 248	29	368986	Rot Farm Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=368986&type=card
-249	29	205306	Skeleton Shard	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=205306&type=card
 250	29	205306	Skeleton Shard	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=205306&type=card
 251	29	205306	Skeleton Shard	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=205306&type=card
 252	29	205306	Skeleton Shard	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=205306&type=card
@@ -365,7 +356,6 @@ COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdi
 258	29	45311	Drudge Skeletons	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45311&type=card
 259	29	394621	Marang River Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=394621&type=card
 260	29	394621	Marang River Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=394621&type=card
-261	29	394621	Marang River Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=394621&type=card
 262	29	394621	Marang River Skeleton	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=394621&type=card
 263	29	690	Zombie Master	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=690&type=card
 264	29	690	Zombie Master	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=690&type=card
@@ -460,6 +450,150 @@ COPY public.deck_card (card_id, deck_id, api_id, card_name, image_url) FROM stdi
 370	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
 371	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
 372	30	129606	Island	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129606&type=card
+373	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+374	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+375	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+376	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+377	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+378	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+379	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+380	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+381	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+382	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+383	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+384	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+385	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+386	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+387	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+388	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+389	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+390	32	129560	Forest	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129560&type=card
+391	32	130483	Abundance	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130483&type=card
+392	32	130483	Abundance	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130483&type=card
+393	32	130483	Abundance	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130483&type=card
+394	32	130483	Abundance	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130483&type=card
+395	32	130521	Commune with Nature	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130521&type=card
+396	32	130521	Commune with Nature	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130521&type=card
+397	32	130521	Commune with Nature	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130521&type=card
+398	32	130521	Commune with Nature	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130521&type=card
+399	32	135266	Elven Riders	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135266&type=card
+400	32	135266	Elven Riders	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135266&type=card
+401	32	135266	Elven Riders	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135266&type=card
+402	32	135266	Elven Riders	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135266&type=card
+403	32	129512	Creeping Mold	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129512&type=card
+404	32	129512	Creeping Mold	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129512&type=card
+405	32	129512	Creeping Mold	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129512&type=card
+406	32	129512	Creeping Mold	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129512&type=card
+407	32	135185	Canopy Spider	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135185&type=card
+408	32	135185	Canopy Spider	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135185&type=card
+409	32	135185	Canopy Spider	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135185&type=card
+410	32	135185	Canopy Spider	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135185&type=card
+411	32	135226	Lure	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135226&type=card
+412	32	135226	Lure	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135226&type=card
+413	32	135226	Lure	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135226&type=card
+414	32	135226	Lure	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=135226&type=card
+415	32	129511	Kavu Climber	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129511&type=card
+416	32	129511	Kavu Climber	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129511&type=card
+417	32	129511	Kavu Climber	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129511&type=card
+418	32	129511	Kavu Climber	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129511&type=card
+419	32	51161	Tornado Elemental	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=51161&type=card
+420	32	51161	Tornado Elemental	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=51161&type=card
+421	32	51161	Tornado Elemental	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=51161&type=card
+422	32	51161	Tornado Elemental	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=51161&type=card
+423	32	45448	Thorn Elemental	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45448&type=card
+424	32	45448	Thorn Elemental	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45448&type=card
+425	32	45448	Thorn Elemental	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45448&type=card
+426	32	45448	Thorn Elemental	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45448&type=card
+427	32	185053	Bloodbraid Elf	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=185053&type=card
+428	32	185053	Bloodbraid Elf	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=185053&type=card
+429	32	185053	Bloodbraid Elf	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=185053&type=card
+430	32	185053	Bloodbraid Elf	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=185053&type=card
+431	32	423786	Peema Aether-Seer	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=423786&type=card
+432	32	423786	Peema Aether-Seer	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=423786&type=card
+433	32	423786	Peema Aether-Seer	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=423786&type=card
+434	32	423786	Peema Aether-Seer	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=423786&type=card
+435	29	129754	Swamp	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129754&type=card
+436	29	129754	Swamp	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129754&type=card
+437	29	129754	Swamp	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129754&type=card
+438	29	129754	Swamp	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129754&type=card
+439	29	129754	Swamp	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129754&type=card
+440	29	129754	Swamp	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129754&type=card
+441	29	129754	Swamp	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129754&type=card
+442	29	129754	Swamp	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129754&type=card
+443	29	129754	Swamp	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129754&type=card
+444	29	129754	Swamp	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129754&type=card
+445	29	129754	Swamp	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129754&type=card
+446	29	129754	Swamp	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129754&type=card
+447	33	23155	Absorb	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=23155&type=card
+448	33	23155	Absorb	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=23155&type=card
+449	33	23155	Absorb	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=23155&type=card
+450	33	442969	Cast Down	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442969&type=card
+451	33	442969	Cast Down	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442969&type=card
+452	33	442969	Cast Down	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442969&type=card
+453	33	452782	Chemister's Insight	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=452782&type=card
+454	33	452782	Chemister's Insight	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=452782&type=card
+455	33	452782	Chemister's Insight	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=452782&type=card
+456	33	420829	Mortify	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420829&type=card
+457	33	420829	Mortify	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420829&type=card
+458	33	420829	Mortify	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420829&type=card
+459	33	423707	Negate	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=423707&type=card
+460	33	423707	Negate	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=423707&type=card
+461	33	435283	Vraska's Contempt	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435283&type=card
+462	33	435283	Vraska's Contempt	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435283&type=card
+463	33	435283	Vraska's Contempt	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435283&type=card
+464	33	457214	Cry of the Carnarium	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=457214&type=card
+465	33	457214	Cry of the Carnarium	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=457214&type=card
+466	33	457331	Kaya's Wrath	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=457331&type=card
+467	33	457331	Kaya's Wrath	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=457331&type=card
+468	33	457331	Kaya's Wrath	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=457331&type=card
+469	33	452956	Thought Erasure	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=452956&type=card
+470	33	452956	Thought Erasure	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=452956&type=card
+471	33	452956	Thought Erasure	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=452956&type=card
+472	33	452956	Thought Erasure	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=452956&type=card
+473	33	435226	Search for Azcanta	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435226&type=card
+474	33	435226	Search for Azcanta	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435226&type=card
+475	33	442978	The Eldest Reborn	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442978&type=card
+476	33	442889	Karn, Scion of Urza	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442889&type=card
+477	33	443095	Teferi, Hero of Dominaria	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=443095&type=card
+478	33	443095	Teferi, Hero of Dominaria	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=443095&type=card
+479	33	443095	Teferi, Hero of Dominaria	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=443095&type=card
+480	33	443095	Teferi, Hero of Dominaria	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=443095&type=card
+481	33	430633	Drowned Catacomb	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=430633&type=card
+482	33	430633	Drowned Catacomb	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=430633&type=card
+483	33	430633	Drowned Catacomb	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=430633&type=card
+484	33	430633	Drowned Catacomb	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=430633&type=card
+485	33	190562	Glacial Fortress	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=190562&type=card
+486	33	190562	Glacial Fortress	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=190562&type=card
+487	33	190562	Glacial Fortress	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=190562&type=card
+488	33	190562	Glacial Fortress	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=190562&type=card
+489	33	405099	Godless Shrine	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=405099&type=card
+490	33	405099	Godless Shrine	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=405099&type=card
+491	33	405099	Godless Shrine	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=405099&type=card
+492	33	405099	Godless Shrine	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=405099&type=card
+493	33	405100	Hallowed Fountain	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=405100&type=card
+494	33	405100	Hallowed Fountain	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=405100&type=card
+495	33	405100	Hallowed Fountain	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=405100&type=card
+496	33	405100	Hallowed Fountain	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=405100&type=card
+497	33	241979	Isolated Chapel	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=241979&type=card
+498	33	241979	Isolated Chapel	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=241979&type=card
+499	33	241979	Isolated Chapel	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=241979&type=card
+500	33	241979	Isolated Chapel	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=241979&type=card
+501	33	129681	Plains	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129681&type=card
+502	33	129754	Swamp	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129754&type=card
+503	33	366335	Watery Grave	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=366335&type=card
+504	33	366335	Watery Grave	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=366335&type=card
+505	33	366335	Watery Grave	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=366335&type=card
+506	33	366335	Watery Grave	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=366335&type=card
+507	33	442978	The Eldest Reborn	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442978&type=card
+508	33	197004	Duress	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=197004&type=card
+509	33	197004	Duress	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=197004&type=card
+510	33	435379	Hostage Taker	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435379&type=card
+511	33	435379	Hostage Taker	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435379&type=card
+512	33	435379	Hostage Taker	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=435379&type=card
+513	33	442914	Lyra Dawnbringer	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442914&type=card
+514	33	442914	Lyra Dawnbringer	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442914&type=card
+515	33	439736	Moment of Craving	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=439736&type=card
+516	33	439736	Moment of Craving	http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=439736&type=card
 \.
 
 
@@ -487,6 +621,7 @@ COPY public.rating (rating_id, deck_id, score) FROM stdin;
 17	30	2.4000001
 18	30	5
 19	30	4.80000019
+20	33	5
 \.
 
 
@@ -500,6 +635,7 @@ COPY public.users (user_id, username, password) FROM stdin;
 8	test	$2b$12$dgJN3Hxu7FrBCzePRvdKGO.xwRb7SkE2B.K/erE4xDDslYPn1Pf6i
 13	billy	$2b$12$FA6HClAal0W9JqRHUU5BCe/9tQCyPDV1.5jK8QAfEbD.xyUte1wo2
 14	john12	$2b$12$bb1tO6wnfMB78Yn.ZI/WL.nBXBA7tr.oDUQKjMvHbjfhPCROO3dlS
+15	mtg_master	$2b$12$0vYNuQFs44zcLTCrfI5BfONkfRdcokQ1WNiS1jWgg6X8ZtsNOcI4m
 \.
 
 
@@ -507,28 +643,28 @@ COPY public.users (user_id, username, password) FROM stdin;
 -- Name: deck_card_card_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_card_card_id_seq', 372, true);
+SELECT pg_catalog.setval('public.deck_card_card_id_seq', 516, true);
 
 
 --
 -- Name: deck_deck_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.deck_deck_id_seq', 32, true);
+SELECT pg_catalog.setval('public.deck_deck_id_seq', 33, true);
 
 
 --
 -- Name: rating_rating_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.rating_rating_id_seq', 19, true);
+SELECT pg_catalog.setval('public.rating_rating_id_seq', 20, true);
 
 
 --
 -- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: student
 --
 
-SELECT pg_catalog.setval('public.users_user_id_seq', 14, true);
+SELECT pg_catalog.setval('public.users_user_id_seq', 15, true);
 
 
 --

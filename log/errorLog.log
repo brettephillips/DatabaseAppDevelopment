@@ -664,4 +664,5 @@
 2019-04-23 17:43:34 : DEBUG API Call: - cards += Card.where(page=1).where(pageSize=40).all()
 2019-04-24 12:16:01 : API Get Card Search - invalid syntax (<string>, line 1)
 2019-04-24 12:16:26 : API Get Card Search - invalid syntax (<string>, line 1)
+2019-04-24 12:31:37 : API Get Card Search - invalid syntax (<string>, line 1)
 
