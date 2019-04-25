@@ -108,7 +108,7 @@ def search():
 	title = "MTG Deck Planner | Card Search"
 
 	# Search parameters:
-	search_name = (request.form.get('search')).strip()
+	search_name = request.form.get('search')
 
 	# logError("DEBUG Search Term:", search_name)
 
@@ -133,11 +133,11 @@ def search():
 
 
 	cmc_sign = request.form.get('cmcSign')
-	cmc_value = (request.form.get('cmcValue')).strip()
+	cmc_value = request.form.get('cmcValue')
 	power_sign = request.form.get('powerSign')
-	power_value = (request.form.get('powerValue')).strip()
+	power_value = request.form.get('powerValue')
 	toughness_sign = request.form.get('toughnessSign')
-	toughness_value = (request.form.get('toughnessValue')).strip()
+	toughness_value = request.form.get('toughnessValue')
 	button_value = request.form.get('button')
 
 	# Get some cards
@@ -187,7 +187,7 @@ def search():
 		# if search name is set
 		search_name_value = ""
 		if search_name != '' and search_name != None: 
-			search_name_value = search_name
+			search_name_value = search_name.strip()
 			api_call += ".where(name='"+search_name_value+"')"
 
 		# if color is set
@@ -199,19 +199,19 @@ def search():
 		cmc = ""
 		# if cmc is set
 		if cmc_value != '' and cmc_value != None:
-			cmc = cmc_value
+			cmc = cmc_value.strip()
 			api_call += ".where(cmc="+cmc+")"
 
 		power = ""
 		# if power is set
 		if power_value != '' and power_value != None:
-			power = power_value
+			power = power_value.strip()
 			api_call += ".where(power="+power+")"
 
 		toughness = ""
 		# if toughness is set
 		if toughness_value != '' and toughness_value != None:
-			toughness = toughness_value
+			toughness = toughness_value.strip()
 			api_call += ".where(toughness="+toughness+")"
 
 		#finish api call
