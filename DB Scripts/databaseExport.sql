@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS mtg;
+CREATE DATABASE mtg;
+
+\c mtg;
 --
 -- PostgreSQL database dump
 --
