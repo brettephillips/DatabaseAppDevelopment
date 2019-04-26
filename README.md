@@ -379,46 +379,66 @@ EX: (this will include the navigation menu)
 EX:
 `<img src="/static/media/magic_logo.png" alt="logo" width="150">`
 
-## Deploy Python 3 Flask Virtual Development Environment
+## Packaging - Deploy Python 3 Flask Virtual Development Environment
 https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04
 
 First Install dependencies
 
 `sudo apt update`
 
-`sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools`
+`sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools postgresql-server-dev-all`
 
 Start by installing the python3-venv package, which will install the venv module:
 
 `sudo apt install python3-venv`
 
-Next, let's make a parent directory for our Flask project. Move into the directory after you create it:
+Next, move to your home directory and clone the git repositroy:
 
-`mkdir ~/mtg`
+```
+cd
+git clone https://github.com/brettephillips/DatabaseAppDevelopment.git
+```
 
-`cd ~/mtg`
+Create a folder 'mtg' and copy the repo files into it.  Then move into that directory.
+```
+mkdir mtg
+cp -R DatabaseAppDevelopment/* mtg/
+cd mtg
+```
 
-Repo files will go in this directory
+Next, let's install Python dependencies:
 
-Create a virtual environment to store your Flask project's Python requirements by typing:
-
-`python3.6 -m venv mtg`
-
-Before installing applications within the virtual environment, you need to activate it. Do so by typing:
-
-`source mtg/bin/activate`
-
-Next, let's install dependencies:
-
-`pip install wheel uwsgi flask mtgsdk bcrypt`
+`pip3 install wheel uwsgi flask mtgsdk bcrypt psycopg2`
 
 you need to allow access to port 5000:
 
 `sudo ufw allow 5000`
 
-Now, you can test your Flask app by typing:
+The next step is to configure the PostgreSQL databae user and password.
 
-`python mtg.py`
+Enter these commands to set the password for the 'postgres' user:
+```
+sudo -u postgres psql
+ALTER USER postgres PASSWORD '<PASSWORD>';
+\q
+sudo systemctl restart postgresql
+```
+
+The password must also be set in the file `database.ini`
+
+`vi database.ini`
+
+```
+[postgresql]
+host=localhost
+database=mtg
+user=postgres
+password=<PASSWORD>
+```
+
+Now, you can run the Flask app by typing:
+
+`python3 mtg.py`
 
 Visit your server's IP address followed by :5000 in your web browser:
 
