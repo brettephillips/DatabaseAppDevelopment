@@ -391,11 +391,7 @@ First Install dependencies
 
 `sudo apt update`
 
-`sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools postgresql-server-dev-all`
-
-Start by installing the python3-venv package, which will install the venv module:
-
-`sudo apt install python3-venv`
+`sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools postgresql-server-dev-all chromium-browser`
 
 Next, move to your home directory and clone the git repositroy:
 
@@ -441,11 +437,15 @@ user=postgres
 password=<PASSWORD>
 ```
 
+To load the test data into the database, enter the following command:
+
+`psql < ./DB\ Scripts/databaseExport.sql`
+
 Now, you can run the Flask app by typing:
 
 `python3 mtg.py`
 
-Visit your server's IP address followed by :5000 in your web browser:
+Visit your server's IP address followed by :5000 in your web browser (Best viewed in Chomium):
 
 http://localhost:5000
 
