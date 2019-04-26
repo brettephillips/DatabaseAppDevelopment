@@ -380,6 +380,11 @@ EX:
 `<img src="/static/media/magic_logo.png" alt="logo" width="150">`
 
 ## Packaging - Deploy Python 3 Flask Virtual Development Environment
+
+This app is meant to run on Ubuntu 18.04.
+
+Primary developemnt is done on the RIT Ubuntu 18.04 Virtual Machine.
+
 https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04
 
 First Install dependencies
