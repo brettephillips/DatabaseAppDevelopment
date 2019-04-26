@@ -379,7 +379,7 @@ EX: (this will include the navigation menu)
 EX:
 `<img src="/static/media/magic_logo.png" alt="logo" width="150">`
 
-## Packaging - Deploy Python 3 Flask Virtual Development Environment
+## Packaging - Deploy Python 3 Flask Application
 
 This app is meant to run on Ubuntu 18.04.
 
